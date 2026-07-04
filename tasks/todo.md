@@ -6,7 +6,7 @@
 
 - [x] `ci.yml.example` の action バージョン更新（checkout v7 / setup-node v6 / pnpm-action-setup v6）
 - [x] `claude-code-review.yml` に draft・dependabot スキップの `if:` と concurrency を追加
-- [ ] リポジトリ設定 `can_approve_pull_request_reviews` を true に変更（要手動実行・下記参照）
+- [x] リポジトリ設定 `can_approve_pull_request_reviews` を true に変更（ユーザーが手動実行、2026-07-04 反映確認済み）
 - [x] YAML 構文検証（全 4 ワークフロー OK）
 - [x] `ci:` プレフィックスでコミット
 
