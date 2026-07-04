@@ -10,25 +10,28 @@
 
 ### Phase A: 基盤構築（M3）
 
-- [ ] Next.js + TypeScript + Tailwind の初期セットアップ（pnpm）
-- [ ] Prisma スキーマ定義（`users` / `parts` / `settings`）とマイグレーション
-- [ ] Supabase Auth（または Auth.js）で登録 / ログイン / ログアウト
-- [ ] パーツマスタの seed 投入（[02](./02-parts-data.md) の CSV → `prisma/seed.ts`）
-- **完了条件**: ユーザー登録・ログインが動作し、DB にパーツマスタが入っている。
+- [ ] TanStack Start + TypeScript + Tailwind の初期セットアップ（pnpm）
+- [ ] Cloudflare 連携（`wrangler.jsonc`・`@cloudflare/vite-plugin` / Nitro `cloudflare-module` プリセット・D1 バインディング）
+- [ ] TanStack Query の導入と `QueryClientProvider` 配置（`src/router.tsx`、[04 §5.1](./04-architecture.md)）
+- [ ] Drizzle スキーマ定義（`parts` / `settings`）と drizzle-kit マイグレーションを D1 に適用
+- [ ] better-auth（D1 アダプタ）で登録 / ログイン / ログアウト
+- [ ] パーツマスタの seed 投入（[02](./02-parts-data.md) の CSV → `src/db/seed.ts`）
+- **完了条件**: ユーザー登録・ログインが動作し、D1 にパーツマスタが入っている。
 
 ### Phase B: コア機能（M4）
 
-- [ ] `GET /api/parts` — カテゴリ別パーツ取得
+- [ ] `getParts` server function — カテゴリ別パーツ取得
 - [ ] セッティング作成画面 — バレル/シャフト/フライト/チップのセレクトボックス
-- [ ] リアルタイム合算表示（`lib/calcSpec.ts` を共有・Framer Motion でカウントアップ）
-- [ ] `POST /api/settings` — サーバ側で合算再計算して保存
-- [ ] マイページ（一覧）・編集・削除
-- [ ] 公開ページ `/s/{id}`（非認証で閲覧可能・セッティングカード表示）
+- [ ] リアルタイム合算表示（`src/lib/calcSpec.ts` を共有・Framer Motion でカウントアップ）
+- [ ] `createSetting` server function — サーバ側で合算再計算して保存
+- [ ] マイページ（一覧）・編集・削除（`getMySettings` / `updateSetting` / `deleteSetting`）
+- [ ] 公開ページ `s/$id`（loader で SSR・非認証で閲覧可能・セッティングカード表示）
 - **完了条件**: 「選択 → 合算 → 保存 → 公開 URL 閲覧」が一気通貫で通る。
 
 ### Phase C: 動的 OGP & シェア（M5）
 
-- [ ] `GET /api/og/{id}` — `next/og` で PNG 動的生成（[03 §6](./03-design-system.md)）
+- [ ] `GET /api/og/{id}` server route — **workers-og**（Satori + resvg-wasm）で PNG 動的生成（[03 §6](./03-design-system.md)）
+- [ ] WASM の static import 設定・埋め込み画像の base64 化・PNG/JPEG 限定（Workers の落とし穴対応）
 - [ ] 公開ページに OGP メタタグ付与（`summary_large_image`）
 - [ ] シェアボタン（X Web Intent・URL コピー）を作成完了 / マイページに大きく配置
 - [ ] OGP のキャッシュ制御・日本語フォントのサブセット化
@@ -38,29 +41,31 @@
 
 | 環境 | 用途 | ブランチ | ホスティング |
 |---|---|---|---|
-| local | 開発 | feature ブランチ | `pnpm dev` |
-| preview | PR レビュー / 動作確認 | PR ごと | Vercel Preview Deploy |
-| production | 本番 | `main` | Vercel Production |
+| local | 開発 | feature ブランチ | `pnpm dev`（Vite + ローカル D1 ミラー） |
+| preview | PR レビュー / 動作確認 | PR ごと | Cloudflare Workers Preview（`wrangler versions upload` 等） |
+| production | 本番 | `main` | Cloudflare Workers（`wrangler deploy`） |
 
-- Vercel は PR ごとに **Preview URL** を自動発行するため、OGP や UI をレビュー段階で実機確認できる。
+- Cloudflare の **Preview デプロイ / プレビュー URL** で、OGP や UI をレビュー段階で実機確認できる。ローカルでも `@cloudflare/vite-plugin` が本番バインディング（D1）をミラーする。
 
 ## 3. 開発コマンド（想定）
 
 実装確定後、[CLAUDE.md](../CLAUDE.md) と [package.json](../package.json) に反映する。
 
 ```sh
-pnpm install          # 依存インストール
-pnpm dev              # 開発サーバ起動
-pnpm build            # 本番ビルド
-pnpm start            # 本番サーバ起動（ローカル確認）
+pnpm install                # 依存インストール
+pnpm dev                    # 開発サーバ起動（Vite + ローカル D1）
+pnpm build                  # 本番ビルド
+pnpm preview                # ビルド成果物をローカルで確認（wrangler dev 相当）
 
-pnpm lint             # ESLint
-pnpm typecheck        # tsc --noEmit
-pnpm test             # テスト
+pnpm lint                   # ESLint
+pnpm typecheck              # tsc --noEmit
+pnpm test                   # テスト
 
-pnpm prisma migrate dev   # マイグレーション
-pnpm prisma db seed       # パーツマスタ投入
-pnpm prisma studio        # DB GUI
+pnpm drizzle-kit generate   # マイグレーション生成
+pnpm wrangler d1 migrations apply dartsspec   # D1 にマイグレーション適用
+pnpm db:seed                # パーツマスタ投入（src/db/seed.ts）
+
+pnpm wrangler deploy        # 本番デプロイ（Cloudflare Workers）
 ```
 
 ## 4. テスト方針
@@ -76,17 +81,18 @@ pnpm prisma studio        # DB GUI
 
 ## 5. デプロイ手順（本番公開）
 
-1. **ホスティング設定**: Vercel にリポジトリを接続し、`main` を production に紐付け。
-2. **環境変数**: Vercel のプロジェクト設定に [04 §7](./04-architecture.md) の環境変数を登録（`.env` はコミットしない）。
-3. **DB**: Supabase / Neon 等で production DB を用意し、`prisma migrate deploy` を実行。seed で本番マスタを投入。
-4. **ドメイン**: 独自ドメイン（例: `dartsspec.app`）を Vercel に設定し、DNS を向ける。HTTPS は自動。
-5. **OGP 確認**: 公開 URL を X の Card Validator 等で確認し、画像が表示されることを検証。
-6. **本番スモークテスト**: 登録・作成・公開・シェアの一連を本番環境で通す。
+1. **D1 作成**: `wrangler d1 create dartsspec` で本番 DB を作成し、`wrangler.jsonc` の `d1_databases` に `database_id` を設定。
+2. **シークレット**: `wrangler secret put BETTER_AUTH_SECRET` 等、秘匿値を登録（[04 §7](./04-architecture.md)、`.env` はコミットしない）。
+3. **マイグレーション & seed**: `wrangler d1 migrations apply dartsspec` を本番に適用し、seed で本番マスタを投入。
+4. **デプロイ**: `wrangler deploy` で Cloudflare Workers に公開。
+5. **ドメイン**: 独自ドメイン（例: `dartsspec.example`）を Cloudflare の Workers Routes / Custom Domain に割り当てる。HTTPS は自動。
+6. **OGP 確認**: 公開 URL を X の Card Validator 等で確認し、画像が表示されることを検証。
+7. **本番スモークテスト**: 登録・作成・公開・シェアの一連を本番環境で通す。
 
 ## 6. CI / CD
 
 - リポジトリには [`.github/workflows/ci.yml.example`](../.github/workflows/ci.yml.example) が同梱されている。`ci.yml` にリネームし、`pnpm lint` / `pnpm typecheck` / `pnpm test` を実行するよう調整する。
-- Vercel が push / PR を検知して自動デプロイするため、デプロイ用の追加 CI は最小限でよい。
+- デプロイは `wrangler deploy` を GitHub Actions（`cloudflare/wrangler-action` 等）に組み込み、`main` への push で自動化できる。Secret に `CLOUDFLARE_API_TOKEN` を設定する。
 - Dependabot（[`.github/dependabot.yml`](../.github/dependabot.yml)）で依存を週次更新。TS リポなので npm + github-actions を対象にする。
 
 ## 7. リリース前チェックリスト

@@ -52,6 +52,8 @@
 | `is_active` | boolean | 表示可否 | `true` |
 | `created_at` | timestamp | 登録日時 | |
 
+> ここでの型は**論理型**である。物理的には Cloudflare D1（SQLite）に格納するため、`UUID`→`TEXT`、`enum`→`TEXT`、`JSON`→`TEXT`(JSON 文字列)、`boolean`→`INTEGER`、`timestamp`→`INTEGER`(epoch) にマップされる。詳細は [04. アーキテクチャ §3](./04-architecture.md) を参照。`spec` は Drizzle の `text({ mode: 'json' })` でアプリ層は型付きに扱える。
+
 ### 種別固有スペック（`spec` の中身）
 
 **バレル (barrel)**
@@ -112,8 +114,9 @@
 | 項目 | 方針 |
 |---|---|
 | 原本 | スプレッドシート（Google Sheets 等）で管理 |
-| 取り込み | CSV エクスポート → seed スクリプトで DB へ投入 |
-| 配置 | `prisma/seed.ts` もしくは `db/seed/parts.csv`（実装時に確定） |
+| 取り込み | CSV エクスポート → seed スクリプト（Drizzle）で D1 へ投入 |
+| 配置 | `src/db/seed.ts` ＋ `src/db/seed/parts.csv`（実装時に確定） |
+| 実行 | ローカル: `pnpm db:seed` / 本番: `wrangler d1 execute` 経由 |
 | 更新運用 | ブランド追加・新製品は原本を更新し、差分を再投入 |
 
 ### CSV カラム例
