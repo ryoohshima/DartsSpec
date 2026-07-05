@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap");
+@import "tailwindcss";
+
+/* カラートークン（docs/03 §2 で確定） */
+@theme {
+  --font-sans: "Inter", "Noto Sans JP", ui-sans-serif, system-ui, sans-serif;
+
+  --color-base: #0a0a0f;
+  --color-surface: #14141c;
+  --color-elevated: #1e1e2a;
+  --color-primary: #f5f5f7;
+  --color-secondary: #9a9aaf;
+  --color-line: #2a2a38;
+  --color-accent: #00e5c7;
+  --color-accent-alt: #7b5cff;
+  --color-danger: #ff5c7a;
+}
+
+html {
+  background-color: var(--color-base);
+  color: var(--color-primary);
+  color-scheme: dark;
+}
+
+/* 数値表示用（tabular figures・docs/03 §3） */
+.numeric {
+  font-family: "Inter", "Noto Sans JP", ui-sans-serif, system-ui, sans-serif;
+  font-feature-settings: "tnum";
+  font-variant-numeric: tabular-nums;
+}
