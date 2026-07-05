@@ -131,7 +131,7 @@ better-auth が `user` / `session` / `account` / `verification` を D1 に生成
 | `updated_at` | INTEGER | | 更新日時（epoch） |
 
 - **合算値の保存方針**: `total_weight_g` / `total_length_mm` を保存時にサーバ側で計算して**非正規化保存**する。理由は (1) 公開ページ / OGP 生成を高速化、(2) 後日パーツのマスタ値が変わっても「作成時点のスペック」を保持できるため。
-- 公開 URL は `settings.id` を用いる。推測されにくくしたい場合は UUID か、別途 `slug`（ランダム短縮 ID）を持たせる。
+- 公開 URL は `settings.id`（UUID）をそのまま用いる。短縮 `slug` は初期リリースでは持たせない（詳細は §8「決定済み」）。
 
 ### 3.3 Drizzle スキーマ（抜粋イメージ）
 
@@ -277,7 +277,15 @@ GOOGLE_CLIENT_SECRET=...         # wrangler secret
 
 ## 8. 技術的な決定事項と保留
 
-- [ ] 公開識別子を `crypto.randomUUID()` そのままにするか、短い `slug`（共有 URL を短く）を別途持たせるか。
+### 決定済み
+
+- **公開識別子: `crypto.randomUUID()` の直接使用**。短縮 `slug` は導入しない。
+  - 理由: 個人開発での最速リリースを優先し、slug の生成方式・衝突対策・予約語チェックなどの実装コストを避けるため。
+  - 影響: `settings.id`（UUID）がそのまま公開 URL `/s/{id}` の識別子になる（§3.2）。
+  - 将来課題: 短縮 URL が必要になった場合は `settings` に `slug`（UNIQUE, nullable）列を追加し、存在すれば `/s/{slug}` を優先する形で後方互換に拡張できる（現時点では対応しない）。
+
+### 保留
+
 - [ ] 認証は **メール+パスワードのみ**で始めるか、初期から **OAuth（Google / X）** も出すか。
 - [ ] OGP 生成の日本語フォントを D1/R2 のどこに置き、どうサブセット化して Worker バンドルに載せるか（[03 §6](./03-design-system.md)）。
 - [x] サービス正式名称（**darts spec** に決定、#4）。
