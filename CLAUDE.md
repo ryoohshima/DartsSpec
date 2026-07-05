@@ -5,17 +5,21 @@
 
 ## プロジェクト概要
 
-<!-- このリポジトリの目的・スコープを 2-3 行で記述 -->
+ダーツのマイセッティング（バレル / シャフト / フライト / チップ）を作成・保存し、公開 URL と動的 OGP で SNS にシェアできる CGM サービス。
 
 サービス正式名称: **darts spec**（決定済み、#4）。ドメインは未確定（取得作業は #41）。
 
 ## 技術スタック
 
-<!-- 言語 / フレームワーク / 主要ライブラリ / DB / インフラ など -->
+詳細と選定理由は [docs/04-architecture.md](./docs/04-architecture.md) を参照。
 
-- 言語:
-- フレームワーク:
-- パッケージマネージャ:
+- 言語: TypeScript
+- フレームワーク: TanStack Start v1（React + TanStack Router / Query）+ Tailwind CSS + Framer Motion
+- ホスティング / DB: Cloudflare Workers + D1（SQLite）、ORM は Drizzle
+- 認証: better-auth（メール+パスワード + Google OAuth）
+- 動的 OGP: workers-og（Satori + resvg-wasm）
+- テスト: vitest
+- パッケージマネージャ: pnpm
 
 ## ディレクトリ構成
 
@@ -31,26 +35,30 @@
 
 ## 開発コマンド
 
-<!-- よく使うコマンドを記載。Claude が即座に実行できるようコピペ可能な形で -->
-
 ```sh
-# 起動
-# pnpm dev
+# 起動（Workers ランタイム + ローカル D1）
+pnpm dev
 
 # テスト
-# pnpm test
+pnpm test
 
-# Lint / Type check
-# pnpm lint
-# pnpm typecheck
+# Type check
+pnpm typecheck
 
 # ビルド
-# pnpm build
+pnpm build
+
+# DB（ローカル D1）
+pnpm db:migrate   # マイグレーション適用
+pnpm db:seed      # パーツマスタ投入
 ```
 
 ## このリポジトリ固有の注意事項
 
-<!-- 落とし穴・既知の制約・特殊な規約があれば記述 -->
+- **Cloudflare Workers 前提**: Node API 依存のライブラリは避ける。WASM は static import（docs/04 §1）。
+- **D1 に RLS はない**: 認可は必ず server function 内で `session.user.id` と `settings.user_id` を突き合わせる（docs/04 §4）。
+- **合算ロジックは docs/02 §4 が唯一の仕様**: フロント / サーバで `src/lib/calcSpec.ts` を共有し、保存時はサーバで再計算する。
+- **パーツマスタは開発用モックデータ**: 実測未検証（正式な品質チェックは #11）。
 
 ## 参照ドキュメント
 
