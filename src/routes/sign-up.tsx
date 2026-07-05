@@ -1,13 +1,17 @@
 import { useState } from 'react'
-import { Link, createFileRoute, useNavigate } from '@tanstack/react-router'
+import { Link, createFileRoute, useNavigate, useRouter } from '@tanstack/react-router'
 import { signUp } from '@/lib/auth-client'
+import { validateRedirectSearch } from '@/routes/sign-in'
 
 export const Route = createFileRoute('/sign-up')({
+  validateSearch: validateRedirectSearch,
   component: SignUpPage,
 })
 
 function SignUpPage() {
   const navigate = useNavigate()
+  const router = useRouter()
+  const { redirect } = Route.useSearch()
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -24,7 +28,11 @@ function SignUpPage() {
       setError(error.message ?? '登録に失敗しました。時間をおいて再度お試しください。')
       return
     }
-    navigate({ to: '/' })
+    if (redirect) {
+      router.history.push(redirect)
+    } else {
+      navigate({ to: '/' })
+    }
   }
 
   return (
@@ -76,7 +84,7 @@ function SignUpPage() {
       <GoogleSignInButton />
       <p className="mt-6 text-sm text-secondary">
         アカウントをお持ちの方は{' '}
-        <Link to="/sign-in" className="text-accent hover:underline">
+        <Link to="/sign-in" search={{ redirect }} className="text-accent hover:underline">
           ログイン
         </Link>
       </p>

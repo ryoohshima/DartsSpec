@@ -1,14 +1,24 @@
 import { useState } from 'react'
-import { Link, createFileRoute, useNavigate } from '@tanstack/react-router'
+import { Link, createFileRoute, useNavigate, useRouter } from '@tanstack/react-router'
 import { signIn } from '@/lib/auth-client'
 import { GoogleSignInButton } from '@/routes/sign-up'
 
+/** ログイン後の戻り先（サイト内パスのみ許可） */
+export function validateRedirectSearch(search: Record<string, unknown>): { redirect?: string } {
+  return typeof search.redirect === 'string' && search.redirect.startsWith('/')
+    ? { redirect: search.redirect }
+    : {}
+}
+
 export const Route = createFileRoute('/sign-in')({
+  validateSearch: validateRedirectSearch,
   component: SignInPage,
 })
 
 function SignInPage() {
   const navigate = useNavigate()
+  const router = useRouter()
+  const { redirect } = Route.useSearch()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState<string | null>(null)
@@ -24,7 +34,11 @@ function SignInPage() {
       setError('メールアドレスまたはパスワードが正しくありません。')
       return
     }
-    navigate({ to: '/' })
+    if (redirect) {
+      router.history.push(redirect)
+    } else {
+      navigate({ to: '/' })
+    }
   }
 
   return (
@@ -64,7 +78,7 @@ function SignInPage() {
       <GoogleSignInButton />
       <p className="mt-6 text-sm text-secondary">
         アカウントをお持ちでない方は{' '}
-        <Link to="/sign-up" className="text-accent hover:underline">
+        <Link to="/sign-up" search={{ redirect }} className="text-accent hover:underline">
           アカウント登録
         </Link>
       </p>

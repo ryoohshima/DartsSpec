@@ -20,7 +20,7 @@ function LandingPage() {
         </p>
         <div className="flex flex-col items-center gap-3 sm:flex-row">
           <Link
-            to="/sign-up"
+            to="/settings/new"
             className="rounded-xl bg-accent px-8 py-4 text-lg font-bold text-base transition-opacity hover:opacity-90"
           >
             セッティングをつくる
@@ -32,6 +32,7 @@ function LandingPage() {
             ログイン
           </Link>
         </div>
+        <p className="text-xs text-secondary">登録なしでもお試しいただけます（保存時にログイン）</p>
       </section>
 
       <section className="grid gap-4 pb-24 sm:grid-cols-3">

@@ -1,6 +1,6 @@
 # ローカル開発用の環境変数（.dev.vars にコピーして使う。.dev.vars はコミットしない）
 # 本番は `wrangler secret put <NAME>` で登録する（#40）
-BETTER_AUTH_SECRET=dev-only-secret-change-me
+BETTER_AUTH_SECRET=dev-only-secret-please-change-me-0123456789abcdef
 BETTER_AUTH_URL=http://localhost:3000
 GOOGLE_CLIENT_ID=
 GOOGLE_CLIENT_SECRET=

@@ -20,9 +20,20 @@ export function Header() {
           </span>
         </Link>
         <nav className="flex items-center gap-2 text-sm">
+          <Link
+            to="/settings/new"
+            className="rounded-lg px-3 py-2 text-secondary transition-colors hover:text-primary"
+          >
+            つくる
+          </Link>
           {isPending ? null : session ? (
             <>
-              <span className="hidden text-secondary sm:inline">{session.user.name}</span>
+              <Link
+                to="/settings"
+                className="rounded-lg px-3 py-2 text-secondary transition-colors hover:text-primary"
+              >
+                マイページ
+              </Link>
               <button
                 type="button"
                 onClick={handleSignOut}
