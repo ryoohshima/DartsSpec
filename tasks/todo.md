@@ -27,12 +27,13 @@
 - [ ] ドラフト PR 作成
 
 ### PR3 `feature/core-features`（base: feature/foundation）
-- [ ] #26 getParts server function
-- [ ] #27 calcSpec 実装 + vitest ユニットテスト（欠損値・端数・チップ有無）
-- [ ] #28 セッティング作成画面（リアルタイム合算・アニメーション・非ログイン下書き）
-- [ ] #29 createSetting（サーバ側再計算・認証必須）
-- [ ] #30 マイページ（一覧・編集・削除・所有者認可 + 認可テスト）
-- [ ] #31 公開ページ /s/{id}（SSR・非認証閲覧）
+- [x] #26 getParts server function
+- [x] #27 calcSpec 実装 + vitest ユニットテスト（欠損値・端数・チップ有無、15 テスト緑）
+- [x] #28 セッティング作成画面（実ブラウザで検証: 選択→ 21.6g / 100.0mm リアルタイム更新）
+- [x] #29 createSetting（サーバ側再計算を DB 値で確認: 21.61g / 100mm）
+- [x] #30 マイページ（一覧・編集・削除・所有者認可。他人の編集ページで拒否表示を実証）
+- [x] #31 公開ページ /s/{id}（非認証 curl で SSR 閲覧・存在しない ID は 404）
+- [x] 非ログイン下書き → 登録 → 自動保存 → 公開ページの一気通貫を実ブラウザで実証
 - [ ] ドラフト PR 作成
 
 ### PR4 `feature/ogp-share-launch`（base: feature/core-features）
