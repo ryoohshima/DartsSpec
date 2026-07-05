@@ -174,7 +174,8 @@ export const settings = sqliteTable('settings', {
 - **better-auth** を D1 アダプタで用いる。メール+パスワード、必要に応じ OAuth（Google / X）を有効化。
 - 認証テーブル（`user` / `session` / `account` / `verification`）は better-auth が D1 に生成・管理する。
 - パスワードのハッシュ化・セッション管理は better-auth に委ねる（自前実装しない）。セッションは Cookie ベース。
-- **公開ページ（`/s/{id}`）と OGP は非認証で閲覧可能**、**作成 / 編集 / 削除は認証必須**。
+- **公開ページ（`/s/{id}`）と OGP は非認証で閲覧可能**。
+- **セッティング作成画面自体も非認証で利用可能**（パーツ選択・合算プレビューまで）。**認証が必須なのは永続化する `createSetting`（保存）以降** — 編集 / 削除 / マイページも同様に認証必須。非ログインで保存を試みた場合の挙動（下書きの `localStorage` 保持 → ログイン誘導 → 復帰後に自動保存）は [01. プロダクト要求仕様 §4.3](./01-product-requirements.md#43-非ログインお試し体験とログイン誘導フロー確定) を参照。
 - 認可: セッティングの編集・削除は所有者（`user_id` 一致）のみ。**server function 内で `session.user.id` と `settings.user_id` を突き合わせて検証**する（Supabase RLS のような DB 層ポリシーは D1 にないため、サーバー関数で必ず担保）。
 
 ## 5. API 設計（server routes / server functions）
