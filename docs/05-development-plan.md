@@ -21,12 +21,13 @@
 ### Phase B: コア機能（M4）
 
 - [ ] `getParts` server function — カテゴリ別パーツ取得
-- [ ] セッティング作成画面 — バレル/シャフト/フライト/チップのセレクトボックス
+- [ ] セッティング作成画面 — バレル/シャフト/フライト/チップのセレクトボックス（**非ログインでも利用可能**、[01 §4.3](./01-product-requirements.md#43-非ログインお試し体験とログイン誘導フロー確定)）
 - [ ] リアルタイム合算表示（`src/lib/calcSpec.ts` を共有・Framer Motion でカウントアップ）
-- [ ] `createSetting` server function — サーバ側で合算再計算して保存
+- [ ] 非ログイン保存時のログイン誘導フロー — 未ログイン検知 → 選択内容を `localStorage` に下書き保存 → ログイン画面へ誘導（`callbackURL` で復帰）→ 復帰後に下書き自動復元（[01 §4.3](./01-product-requirements.md#43-非ログインお試し体験とログイン誘導フロー確定)）
+- [ ] `createSetting` server function — サーバ側で合算再計算して保存（認証必須）
 - [ ] マイページ（一覧）・編集・削除（`getMySettings` / `updateSetting` / `deleteSetting`）
 - [ ] 公開ページ `s/$id`（loader で SSR・非認証で閲覧可能・セッティングカード表示）
-- **完了条件**: 「選択 → 合算 → 保存 → 公開 URL 閲覧」が一気通貫で通る。
+- **完了条件**: 「非ログインで選択 → 合算 → 保存（ログイン誘導 → 復帰）→ 公開 URL 閲覧」が一気通貫で通る。
 
 ### Phase C: 動的 OGP & シェア（M5）
 

@@ -131,7 +131,7 @@ better-auth が `user` / `session` / `account` / `verification` を D1 に生成
 | `updated_at` | INTEGER | | 更新日時（epoch） |
 
 - **合算値の保存方針**: `total_weight_g` / `total_length_mm` を保存時にサーバ側で計算して**非正規化保存**する。理由は (1) 公開ページ / OGP 生成を高速化、(2) 後日パーツのマスタ値が変わっても「作成時点のスペック」を保持できるため。
-- 公開 URL は `settings.id` を用いる。推測されにくくしたい場合は UUID か、別途 `slug`（ランダム短縮 ID）を持たせる。
+- 公開 URL は `settings.id`（UUID）をそのまま用いる。短縮 `slug` は初期リリースでは持たせない（詳細は §8「決定済み」）。
 
 ### 3.3 Drizzle スキーマ（抜粋イメージ）
 
@@ -175,7 +175,8 @@ export const settings = sqliteTable('settings', {
 - Google OAuth 利用に必要なシークレット: `GOOGLE_CLIENT_ID` / `GOOGLE_CLIENT_SECRET`（[§7](#7-環境変数-バインディング想定) 参照、`wrangler secret put` で登録）。
 - 認証テーブル（`user` / `session` / `account` / `verification`）は better-auth が D1 に生成・管理する。
 - パスワードのハッシュ化・セッション管理は better-auth に委ねる（自前実装しない）。セッションは Cookie ベース。
-- **公開ページ（`/s/{id}`）と OGP は非認証で閲覧可能**、**作成 / 編集 / 削除は認証必須**。
+- **公開ページ（`/s/{id}`）と OGP は非認証で閲覧可能**。
+- **セッティング作成画面自体も非認証で利用可能**（パーツ選択・合算プレビューまで）。**認証が必須なのは永続化する `createSetting`（保存）以降** — 編集 / 削除 / マイページも同様に認証必須。非ログインで保存を試みた場合の挙動（下書きの `localStorage` 保持 → ログイン誘導 → 復帰後に自動保存）は [01. プロダクト要求仕様 §4.3](./01-product-requirements.md#43-非ログインお試し体験とログイン誘導フロー確定) を参照。
 - 認可: セッティングの編集・削除は所有者（`user_id` 一致）のみ。**server function 内で `session.user.id` と `settings.user_id` を突き合わせて検証**する（Supabase RLS のような DB 層ポリシーは D1 にないため、サーバー関数で必ず担保）。
 
 ## 5. API 設計（server routes / server functions）
@@ -277,9 +278,18 @@ GOOGLE_CLIENT_SECRET=...         # wrangler secret
 
 ## 8. 技術的な決定事項と保留
 
-- [ ] 公開識別子を `crypto.randomUUID()` そのままにするか、短い `slug`（共有 URL を短く）を別途持たせるか。
+### 決定済み
+
+- **公開識別子: `crypto.randomUUID()` の直接使用**。短縮 `slug` は導入しない。
+  - 理由: 個人開発での最速リリースを優先し、slug の生成方式・衝突対策・予約語チェックなどの実装コストを避けるため。
+  - 影響: `settings.id`（UUID）がそのまま公開 URL `/s/{id}` の識別子になる（§3.2）。
+  - 将来課題: 短縮 URL が必要になった場合は `settings` に `slug`（UNIQUE, nullable）列を追加し、存在すれば `/s/{slug}` を優先する形で後方互換に拡張できる（現時点では対応しない）。
+
+### 保留
+
 - [x] 認証方式: **メール+パスワード + OAuth（Google のみ）** で初期リリースする。X（旧 Twitter）OAuth は将来検討。必要シークレットは `GOOGLE_CLIENT_ID` / `GOOGLE_CLIENT_SECRET`（§4・§7）。
 - [ ] OGP 生成の日本語フォントを D1/R2 のどこに置き、どうサブセット化して Worker バンドルに載せるか（[03 §6](./03-design-system.md)）。
-- [ ] サービス正式名称・ドメイン（本ドキュメントでは仮に `DartsSpec`）。
+- [x] サービス正式名称（**darts spec** に決定、#4）。
+- [ ] ドメイン（本ドキュメントでは仮に `dartsspec.example`、取得作業は #41）。
 
 > これらは実装着手前（M3 手前）に確定させる。決めたら本ドキュメントと [CLAUDE.md](../CLAUDE.md) の技術スタック欄を更新すること。
