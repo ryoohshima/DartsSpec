@@ -9,15 +9,23 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TermsRouteImport } from './routes/terms'
 import { Route as SignUpRouteImport } from './routes/sign-up'
 import { Route as SignInRouteImport } from './routes/sign-in'
+import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as SettingsIndexRouteImport } from './routes/settings/index'
 import { Route as SettingsNewRouteImport } from './routes/settings/new'
 import { Route as SIdRouteImport } from './routes/s/$id'
 import { Route as SettingsIdEditRouteImport } from './routes/settings/$id.edit'
+import { Route as ApiOgIdRouteImport } from './routes/api/og/$id'
 import { Route as ApiAuthSplatRouteImport } from './routes/api/auth/$'
 
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SignUpRoute = SignUpRouteImport.update({
   id: '/sign-up',
   path: '/sign-up',
@@ -26,6 +34,11 @@ const SignUpRoute = SignUpRouteImport.update({
 const SignInRoute = SignInRouteImport.update({
   id: '/sign-in',
   path: '/sign-in',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -53,6 +66,11 @@ const SettingsIdEditRoute = SettingsIdEditRouteImport.update({
   path: '/settings/$id/edit',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiOgIdRoute = ApiOgIdRouteImport.update({
+  id: '/api/og/$id',
+  path: '/api/og/$id',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ApiAuthSplatRoute = ApiAuthSplatRouteImport.update({
   id: '/api/auth/$',
   path: '/api/auth/$',
@@ -61,81 +79,109 @@ const ApiAuthSplatRoute = ApiAuthSplatRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/privacy': typeof PrivacyRoute
   '/sign-in': typeof SignInRoute
   '/sign-up': typeof SignUpRoute
+  '/terms': typeof TermsRoute
   '/s/$id': typeof SIdRoute
   '/settings/new': typeof SettingsNewRoute
   '/settings/': typeof SettingsIndexRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
+  '/api/og/$id': typeof ApiOgIdRoute
   '/settings/$id/edit': typeof SettingsIdEditRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/privacy': typeof PrivacyRoute
   '/sign-in': typeof SignInRoute
   '/sign-up': typeof SignUpRoute
+  '/terms': typeof TermsRoute
   '/s/$id': typeof SIdRoute
   '/settings/new': typeof SettingsNewRoute
   '/settings': typeof SettingsIndexRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
+  '/api/og/$id': typeof ApiOgIdRoute
   '/settings/$id/edit': typeof SettingsIdEditRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/privacy': typeof PrivacyRoute
   '/sign-in': typeof SignInRoute
   '/sign-up': typeof SignUpRoute
+  '/terms': typeof TermsRoute
   '/s/$id': typeof SIdRoute
   '/settings/new': typeof SettingsNewRoute
   '/settings/': typeof SettingsIndexRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
+  '/api/og/$id': typeof ApiOgIdRoute
   '/settings/$id/edit': typeof SettingsIdEditRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/privacy'
     | '/sign-in'
     | '/sign-up'
+    | '/terms'
     | '/s/$id'
     | '/settings/new'
     | '/settings/'
     | '/api/auth/$'
+    | '/api/og/$id'
     | '/settings/$id/edit'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/privacy'
     | '/sign-in'
     | '/sign-up'
+    | '/terms'
     | '/s/$id'
     | '/settings/new'
     | '/settings'
     | '/api/auth/$'
+    | '/api/og/$id'
     | '/settings/$id/edit'
   id:
     | '__root__'
     | '/'
+    | '/privacy'
     | '/sign-in'
     | '/sign-up'
+    | '/terms'
     | '/s/$id'
     | '/settings/new'
     | '/settings/'
     | '/api/auth/$'
+    | '/api/og/$id'
     | '/settings/$id/edit'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  PrivacyRoute: typeof PrivacyRoute
   SignInRoute: typeof SignInRoute
   SignUpRoute: typeof SignUpRoute
+  TermsRoute: typeof TermsRoute
   SIdRoute: typeof SIdRoute
   SettingsNewRoute: typeof SettingsNewRoute
   SettingsIndexRoute: typeof SettingsIndexRoute
   ApiAuthSplatRoute: typeof ApiAuthSplatRoute
+  ApiOgIdRoute: typeof ApiOgIdRoute
   SettingsIdEditRoute: typeof SettingsIdEditRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/sign-up': {
       id: '/sign-up'
       path: '/sign-up'
@@ -148,6 +194,13 @@ declare module '@tanstack/react-router' {
       path: '/sign-in'
       fullPath: '/sign-in'
       preLoaderRoute: typeof SignInRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -185,6 +238,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SettingsIdEditRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/og/$id': {
+      id: '/api/og/$id'
+      path: '/api/og/$id'
+      fullPath: '/api/og/$id'
+      preLoaderRoute: typeof ApiOgIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/auth/$': {
       id: '/api/auth/$'
       path: '/api/auth/$'
@@ -197,12 +257,15 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  PrivacyRoute: PrivacyRoute,
   SignInRoute: SignInRoute,
   SignUpRoute: SignUpRoute,
+  TermsRoute: TermsRoute,
   SIdRoute: SIdRoute,
   SettingsNewRoute: SettingsNewRoute,
   SettingsIndexRoute: SettingsIndexRoute,
   ApiAuthSplatRoute: ApiAuthSplatRoute,
+  ApiOgIdRoute: ApiOgIdRoute,
   SettingsIdEditRoute: SettingsIdEditRoute,
 }
 export const routeTree = rootRouteImport

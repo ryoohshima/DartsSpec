@@ -4,6 +4,7 @@ import { mySettingsQueryOptions } from '@/lib/queries'
 import { deleteSetting } from '@/server/settings'
 import { getSession } from '@/server/session'
 import { SettingCard } from '@/components/SettingCard'
+import { ShareButtons } from '@/components/ShareButtons'
 import type { MySetting } from '@/server/settings'
 
 export const Route = createFileRoute('/settings/')({
@@ -76,10 +77,17 @@ function MySettingCard({ setting }: { setting: MySetting }) {
       }}
       footer={
         <div className="flex flex-wrap items-center gap-2 text-sm">
-          {setting.visibility === 'private' && (
+          {setting.visibility === 'private' ? (
             <span className="rounded-full border border-line px-2 py-0.5 text-xs text-secondary">
               非公開
             </span>
+          ) : (
+            <ShareButtons
+              settingId={setting.id}
+              title={setting.title}
+              totalWeightG={setting.totalWeightG}
+              totalLengthMm={setting.totalLengthMm}
+            />
           )}
           <Link
             to="/s/$id"

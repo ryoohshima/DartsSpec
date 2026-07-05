@@ -2,6 +2,11 @@ import { Link, createFileRoute, notFound } from '@tanstack/react-router'
 import { useSession } from '@/lib/auth-client'
 import { getSetting } from '@/server/settings'
 import { SettingCard } from '@/components/SettingCard'
+import { ShareButtons } from '@/components/ShareButtons'
+
+function formatSpec(value: number | null | undefined): string {
+  return typeof value === 'number' ? value.toFixed(1) : '—'
+}
 
 export const Route = createFileRoute('/s/$id')({
   validateSearch: (search: Record<string, unknown>): { created?: boolean } =>
@@ -10,6 +15,27 @@ export const Route = createFileRoute('/s/$id')({
     const setting = await getSetting({ data: { id: params.id } })
     if (!setting) throw notFound()
     return setting
+  },
+  // SNS クローラー向けの OGP メタタグ（#36）。og:image は動的生成 API を指し、
+  // `?v={updatedAt}` で編集時にキャッシュを実質破棄する（#38）
+  head: ({ loaderData }) => {
+    if (!loaderData) return {}
+    const site = import.meta.env.VITE_SITE_URL ?? ''
+    const version = loaderData.updatedAt ? new Date(loaderData.updatedAt).getTime() : 0
+    const title = `${loaderData.title} | darts spec`
+    const description = `総重量 ${formatSpec(loaderData.totalWeightG)}g / 全長 ${formatSpec(loaderData.totalLengthMm)}mm`
+    return {
+      meta: [
+        { title },
+        { name: 'description', content: description },
+        { property: 'og:title', content: title },
+        { property: 'og:description', content: description },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:url', content: `${site}/s/${loaderData.id}` },
+        { property: 'og:image', content: `${site}/api/og/${loaderData.id}?v=${version}` },
+        { name: 'twitter:card', content: 'summary_large_image' },
+      ],
+    }
   },
   component: PublicSettingPage,
   notFoundComponent: () => (
@@ -48,23 +74,32 @@ function PublicSettingPage() {
           tip: setting.tip,
         }}
         footer={
-          isOwner ? (
-            <div className="flex gap-2 text-sm">
-              <Link
-                to="/settings/$id/edit"
-                params={{ id: setting.id }}
-                className="rounded-lg border border-line px-3 py-2 text-secondary transition-colors hover:text-primary"
-              >
-                編集
-              </Link>
-              <Link
-                to="/settings"
-                className="rounded-lg border border-line px-3 py-2 text-secondary transition-colors hover:text-primary"
-              >
-                マイページ
-              </Link>
-            </div>
-          ) : undefined
+          <div className="flex flex-col gap-4">
+            <ShareButtons
+              settingId={setting.id}
+              title={setting.title}
+              totalWeightG={setting.totalWeightG}
+              totalLengthMm={setting.totalLengthMm}
+              prominent={created}
+            />
+            {isOwner && (
+              <div className="flex gap-2 text-sm">
+                <Link
+                  to="/settings/$id/edit"
+                  params={{ id: setting.id }}
+                  className="rounded-lg border border-line px-3 py-2 text-secondary transition-colors hover:text-primary"
+                >
+                  編集
+                </Link>
+                <Link
+                  to="/settings"
+                  className="rounded-lg border border-line px-3 py-2 text-secondary transition-colors hover:text-primary"
+                >
+                  マイページ
+                </Link>
+              </div>
+            )}
+          </div>
         }
       />
 
