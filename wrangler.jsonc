@@ -1,0 +1,25 @@
+/**
+ * Cloudflare Workers 設定。
+ * https://developers.cloudflare.com/workers/wrangler/configuration/
+ */
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "dartsspec",
+	"compatibility_date": "2025-09-02",
+	"compatibility_flags": ["nodejs_compat"],
+	"main": "@tanstack/react-start/server-entry",
+	"observability": {
+		"enabled": true
+	},
+	"upload_source_maps": true,
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "dartsspec",
+			// 本番 D1 作成後（#40）に `wrangler d1 create dartsspec` の出力で差し替える。
+			// ローカル開発（--local / vite dev）ではこの値は使われない。
+			"database_id": "00000000-0000-0000-0000-000000000000",
+			"migrations_dir": "drizzle"
+		}
+	]
+}

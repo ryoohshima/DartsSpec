@@ -53,3 +53,14 @@ coverage/
 *.tmp
 .tmp/
 tmp/
+
+# TanStack Start / Cloudflare
+.tanstack/
+.wrangler/
+.output/
+.nitro/
+.dev.vars*
+!.dev.vars.example
+
+# seed 生成物（pnpm db:seed が生成）
+.seed/
