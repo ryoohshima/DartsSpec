@@ -80,6 +80,17 @@ function SignUpPage() {
         >
           {submitting ? '登録中…' : '登録する'}
         </button>
+        <p className="text-xs text-secondary">
+          登録することで{' '}
+          <Link to="/terms" className="text-accent hover:underline">
+            利用規約
+          </Link>{' '}
+          と{' '}
+          <Link to="/privacy" className="text-accent hover:underline">
+            プライバシーポリシー
+          </Link>{' '}
+          に同意したものとみなされます。
+        </p>
       </form>
       <GoogleSignInButton />
       <p className="mt-6 text-sm text-secondary">
