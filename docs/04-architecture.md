@@ -280,6 +280,7 @@ GOOGLE_CLIENT_SECRET=...         # wrangler secret
 - [ ] 公開識別子を `crypto.randomUUID()` そのままにするか、短い `slug`（共有 URL を短く）を別途持たせるか。
 - [ ] 認証は **メール+パスワードのみ**で始めるか、初期から **OAuth（Google / X）** も出すか。
 - [ ] OGP 生成の日本語フォントを D1/R2 のどこに置き、どうサブセット化して Worker バンドルに載せるか（[03 §6](./03-design-system.md)）。
-- [ ] サービス正式名称・ドメイン（本ドキュメントでは仮に `DartsSpec`）。
+- [x] サービス正式名称（**darts spec** に決定、#4）。
+- [ ] ドメイン（本ドキュメントでは仮に `dartsspec.example`、取得作業は #41）。
 
 > これらは実装着手前（M3 手前）に確定させる。決めたら本ドキュメントと [CLAUDE.md](../CLAUDE.md) の技術スタック欄を更新すること。
