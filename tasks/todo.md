@@ -24,7 +24,7 @@
 - [x] #10 #11 パーツモックデータ CSV（138 件・出典付き・レンジ検証済み・モックと明記）
 - [x] #12 seed スクリプト（決定的 ID で冪等）
 - [x] #24 ローカル D1 への seed 投入確認（barrel 72 / shaft 32 / flight 22 / tip 12）
-- [x] ドラフト PR 作成（https://github.com/ryoohshima/DartsSpec/pull/60）
+- [x] ドラフト PR 作成（https://github.com/ryoohshima/DartsSpec/pull/58）
 
 ### PR3 `feature/core-features`（base: feature/foundation）
 - [x] #26 getParts server function
@@ -34,7 +34,7 @@
 - [x] #30 マイページ（一覧・編集・削除・所有者認可。他人の編集ページで拒否表示を実証）
 - [x] #31 公開ページ /s/{id}（非認証 curl で SSR 閲覧・存在しない ID は 404）
 - [x] 非ログイン下書き → 登録 → 自動保存 → 公開ページの一気通貫を実ブラウザで実証
-- [x] ドラフト PR 作成（https://github.com/ryoohshima/DartsSpec/pull/60）
+- [x] ドラフト PR 作成（https://github.com/ryoohshima/DartsSpec/pull/59）
 
 ### PR4 `feature/ogp-share-launch`（base: feature/core-features）
 - [x] #33 workers-og 統合（WASM static import はローカル Workers ランタイムで PNG 生成を確認）
