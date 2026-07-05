@@ -19,7 +19,7 @@
 | ホスティング | **Cloudflare Workers（無料枠）** | 100k req/日の無料枠・商用可・エッジ実行。Nitro `cloudflare-module` / `@cloudflare/vite-plugin` で `wrangler deploy` |
 | DB | **Cloudflare D1（SQLite）** | Workers ネイティブ・無料枠（5GB / 500万行読取毎日）。本サービスの小規模データに好適 |
 | ORM | **Drizzle ORM** | Workers / D1 を第一級サポート・軽量・型安全・マイグレーション（drizzle-kit） |
-| 認証 | **better-auth（D1 アダプタ）** | メール+パスワード / OAuth をエッジで完結。認証テーブルを D1 に生成 |
+| 認証 | **better-auth（D1 アダプタ）** | メール+パスワード + OAuth（Google）をエッジで完結。認証テーブルを D1 に生成 |
 | 動的 OGP | **workers-og（Satori + resvg-wasm）** | Workers 上で WASM 完結の OG 画像生成。`@vercel/og` 風 API |
 | パッケージ管理 | **pnpm** | 高速・省ディスク（リポジトリ既定と整合） |
 
@@ -171,7 +171,8 @@ export const settings = sqliteTable('settings', {
 
 ## 4. 認証設計（better-auth on D1）
 
-- **better-auth** を D1 アダプタで用いる。メール+パスワード、必要に応じ OAuth（Google / X）を有効化。
+- **better-auth** を D1 アダプタで用いる。初期リリースの認証方式は **メール+パスワード + OAuth（Google のみ）**。X（旧 Twitter）OAuth は初期リリース対象外・将来検討とする。
+- Google OAuth 利用に必要なシークレット: `GOOGLE_CLIENT_ID` / `GOOGLE_CLIENT_SECRET`（[§7](#7-環境変数-バインディング想定) 参照、`wrangler secret put` で登録）。
 - 認証テーブル（`user` / `session` / `account` / `verification`）は better-auth が D1 に生成・管理する。
 - パスワードのハッシュ化・セッション管理は better-auth に委ねる（自前実装しない）。セッションは Cookie ベース。
 - **公開ページ（`/s/{id}`）と OGP は非認証で閲覧可能**。
@@ -270,7 +271,7 @@ TanStack Start は RSC を持たない（v1.0 時点）。代わりに **SSR の
 VITE_SITE_URL=https://dartsspec.example
 BETTER_AUTH_SECRET=...          # サーバ専用・秘匿（本番は wrangler secret）
 BETTER_AUTH_URL=https://dartsspec.example
-# OAuth を使う場合
+# OAuth（Google のみ・初期リリース対応）
 GOOGLE_CLIENT_ID=...
 GOOGLE_CLIENT_SECRET=...         # wrangler secret
 ```
@@ -286,7 +287,7 @@ GOOGLE_CLIENT_SECRET=...         # wrangler secret
 
 ### 保留
 
-- [ ] 認証は **メール+パスワードのみ**で始めるか、初期から **OAuth（Google / X）** も出すか。
+- [x] 認証方式: **メール+パスワード + OAuth（Google のみ）** で初期リリースする。X（旧 Twitter）OAuth は将来検討。必要シークレットは `GOOGLE_CLIENT_ID` / `GOOGLE_CLIENT_SECRET`（§4・§7）。
 - [ ] OGP 生成の日本語フォントを D1/R2 のどこに置き、どうサブセット化して Worker バンドルに載せるか（[03 §6](./03-design-system.md)）。
 - [x] サービス正式名称（**darts spec** に決定、#4）。
 - [ ] ドメイン（本ドキュメントでは仮に `dartsspec.example`、取得作業は #41）。
