@@ -33,7 +33,7 @@ export function PartsSelector({ label, options, value, onChange }: PartsSelector
       <select
         value={value ?? ''}
         onChange={(e) => onChange(e.target.value || null)}
-        className="min-h-11 rounded-lg border border-line bg-surface px-3 py-3 outline-none focus:border-accent"
+        className="min-h-11 w-full min-w-0 rounded-lg border border-line bg-surface px-3 py-3 outline-none focus:border-accent"
       >
         <option value="">未選択</option>
         {[...byBrand.entries()].map(([brand, list]) => (

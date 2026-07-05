@@ -95,7 +95,7 @@ export function SettingForm({
 
   return (
     <form onSubmit={handleSubmit} className="grid gap-8 lg:grid-cols-2">
-      <div className="flex flex-col gap-4">
+      <div className="flex min-w-0 flex-col gap-4">
         <label className="flex flex-col gap-1 text-sm">
           <span className="text-secondary">セッティング名</span>
           <input
