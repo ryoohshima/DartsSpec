@@ -64,3 +64,6 @@ tmp/
 
 # seed 生成物（pnpm db:seed が生成）
 .seed/
+
+# tools
+.codegraph/
