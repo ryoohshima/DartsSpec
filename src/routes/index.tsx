@@ -1,10 +1,32 @@
+import { useSuspenseQuery } from '@tanstack/react-query'
 import { Link, createFileRoute } from '@tanstack/react-router'
+import { motion } from 'framer-motion'
+import { InteractiveDemo } from '@/components/InteractiveDemo'
+import { partsQueryOptions } from '@/lib/queries'
 
 export const Route = createFileRoute('/')({
+  loader: ({ context }) => context.queryClient.ensureQueryData(partsQueryOptions),
   component: LandingPage,
 })
 
+const FEATURES = [
+  {
+    title: '選ぶだけで自動計算',
+    body: 'パーツを選ぶと総重量・全長がリアルタイムに変わる。数字が動く気持ちよさを体験してほしい。',
+  },
+  {
+    title: '1 枚のカードに',
+    body: 'セッティングは美しいカードとして公開 URL に。ログインしていない相手にもそのまま見せられる。',
+  },
+  {
+    title: 'SNS 映えする OGP',
+    body: 'X に URL を貼るだけで、セッティング内容がカード画像として展開される。',
+  },
+]
+
 function LandingPage() {
+  const { data: partsList } = useSuspenseQuery(partsQueryOptions)
+
   return (
     <div className="mx-auto max-w-5xl px-4">
       <section className="flex flex-col items-center gap-6 py-24 text-center">
@@ -35,27 +57,29 @@ function LandingPage() {
         <p className="text-xs text-secondary">登録なしでもお試しいただけます（保存時にログイン）</p>
       </section>
 
-      <section className="grid gap-4 pb-24 sm:grid-cols-3">
-        {[
-          {
-            title: '選ぶだけで自動計算',
-            body: 'パーツを選ぶと総重量・全長がリアルタイムに変わる。数字が動く気持ちよさを体験してほしい。',
-          },
-          {
-            title: '1 枚のカードに',
-            body: 'セッティングは美しいカードとして公開 URL に。ログインしていない相手にもそのまま見せられる。',
-          },
-          {
-            title: 'SNS 映えする OGP',
-            body: 'X に URL を貼るだけで、セッティング内容がカード画像として展開される。',
-          },
-        ].map((f) => (
-          <div key={f.title} className="rounded-2xl border border-line bg-surface p-6">
+      <InteractiveDemo partsList={partsList} />
+
+      <motion.section
+        initial={{ opacity: 0, y: 24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: '-80px' }}
+        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+        className="grid gap-4 pb-24 sm:grid-cols-3"
+      >
+        {FEATURES.map((f, i) => (
+          <motion.div
+            key={f.title}
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-80px' }}
+            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: i * 0.08 }}
+            className="rounded-2xl border border-line bg-surface p-6"
+          >
             <h2 className="mb-2 font-bold">{f.title}</h2>
             <p className="text-sm leading-relaxed text-secondary">{f.body}</p>
-          </div>
+          </motion.div>
         ))}
-      </section>
+      </motion.section>
     </div>
   )
 }
