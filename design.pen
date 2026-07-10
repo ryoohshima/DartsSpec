@@ -1,0 +1,5475 @@
+{
+  "version": "2.14",
+  "children": [
+    {
+      "type": "frame",
+      "id": "jQiZC",
+      "x": 0,
+      "y": 0,
+      "name": "LP — darts spec (1a Cyber Precision)",
+      "clip": true,
+      "width": 1440,
+      "fill": "$color-base",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "eAoVy",
+          "name": "Header",
+          "width": "fill_container",
+          "height": 72,
+          "stroke": "$color-line",
+          "strokeWidth": {
+            "bottom": 1
+          },
+          "padding": [
+            0,
+            40
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "EoA5s",
+              "name": "Logo",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "xXJWx",
+                  "name": "Logo Darts",
+                  "fill": "$color-primary",
+                  "content": "darts ",
+                  "fontFamily": "Inter",
+                  "fontSize": 18,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "jOzZe",
+                  "name": "Logo Spec",
+                  "fill": "$color-accent",
+                  "content": "spec",
+                  "fontFamily": "Inter",
+                  "fontSize": 18,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "vB5VH",
+              "name": "Nav",
+              "gap": 8,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "LXsY0",
+                  "name": "Nav Item Create",
+                  "padding": [
+                    10,
+                    16
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "i34p0i",
+                      "name": "Nav Create Label",
+                      "fill": "$color-secondary",
+                      "content": "つくる",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "r4jN9",
+                  "name": "Nav Item Login",
+                  "padding": [
+                    10,
+                    16
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "iZgrk",
+                      "name": "Nav Login Label",
+                      "fill": "$color-secondary",
+                      "content": "ログイン",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "o58eRq",
+                  "name": "Nav CTA",
+                  "fill": "$color-accent",
+                  "cornerRadius": 10,
+                  "padding": [
+                    10,
+                    20
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "q7yOIm",
+                      "name": "Nav CTA Label",
+                      "fill": "$color-base",
+                      "content": "はじめる",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 14,
+                      "fontWeight": "700"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "qNUoY",
+          "name": "Hero",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": [
+            96,
+            40
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "j8lpNi",
+              "name": "Hero Label",
+              "fill": "$color-accent",
+              "content": "MY DARTS SETTING",
+              "fontFamily": "Inter",
+              "fontSize": 13,
+              "fontWeight": "700",
+              "letterSpacing": 2.6
+            },
+            {
+              "type": "text",
+              "id": "xW6Yr",
+              "name": "Hero Title",
+              "fill": "$color-primary",
+              "textGrowth": "fixed-width",
+              "width": 640,
+              "content": "マイセッティングを、\n美しくシェアしよう。",
+              "lineHeight": 1.35,
+              "textAlign": "center",
+              "fontFamily": "Noto Sans JP",
+              "fontSize": 52,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "u9RhaZ",
+              "name": "Hero Description",
+              "fill": "$color-secondary",
+              "textGrowth": "fixed-width",
+              "width": 520,
+              "content": "バレル・シャフト・フライト・チップを選ぶだけで、総重量と全長を自動計算。あなたのセッティングを 1 枚のカードにして、X でシェアできます。",
+              "lineHeight": 1.8,
+              "textAlign": "center",
+              "fontFamily": "Noto Sans JP",
+              "fontSize": 16,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "WwdW8",
+              "name": "Hero CTA Row",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "NKZ2D",
+                  "name": "CTA Primary",
+                  "fill": "$color-accent",
+                  "cornerRadius": 12,
+                  "padding": [
+                    16,
+                    32
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "ce0Ki",
+                      "name": "CTA Primary Label",
+                      "fill": "$color-base",
+                      "content": "セッティングをつくる",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 16,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "pMpKW",
+                  "name": "CTA Secondary",
+                  "cornerRadius": 12,
+                  "stroke": "$color-line",
+                  "strokeWidth": 1,
+                  "padding": [
+                    16,
+                    32
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "thh4y",
+                      "name": "CTA Secondary Label",
+                      "fill": "$color-secondary",
+                      "content": "ログイン",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "j5NJYw",
+              "name": "Hero Caption",
+              "fill": "$color-secondary",
+              "content": "登録なしでもお試しいただけます（保存時にログイン）",
+              "fontFamily": "Noto Sans JP",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "MGOwW",
+          "name": "Interactive Demo",
+          "width": "fill_container",
+          "gap": 32,
+          "padding": [
+            0,
+            40,
+            96,
+            40
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "gk6Lp",
+              "name": "Demo Parts",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 24,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "GJDgT",
+                  "name": "BARREL Group",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "WwOg3",
+                      "name": "BARREL Label",
+                      "fill": "$color-accent",
+                      "content": "BARREL",
+                      "fontFamily": "Inter",
+                      "fontSize": 11,
+                      "fontWeight": "700",
+                      "letterSpacing": 1
+                    },
+                    {
+                      "type": "frame",
+                      "id": "qQ5TW",
+                      "name": "BARREL Pill Row 1",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "id": "Yp4BA",
+                          "type": "ref",
+                          "ref": "xiBty",
+                          "name": "BARREL Pill 0",
+                          "fill": "$color-accent",
+                          "stroke": "$color-accent",
+                          "descendants": {
+                            "NuMqE": {
+                              "content": "COSMO DARTS 96 黒瀧摩紀",
+                              "fill": "$color-base"
+                            }
+                          }
+                        },
+                        {
+                          "id": "QIvHP",
+                          "type": "ref",
+                          "ref": "xiBty",
+                          "name": "BARREL Pill 1",
+                          "descendants": {
+                            "NuMqE": {
+                              "content": "DYNASTY ARCTIC REBIRTH"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "C5Wog5",
+                      "name": "BARREL Pill Row 2",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "id": "sZtiw",
+                          "type": "ref",
+                          "ref": "xiBty",
+                          "name": "BARREL Pill 2",
+                          "descendants": {
+                            "NuMqE": {
+                              "content": "Harrows Assassin 18gR"
+                            }
+                          }
+                        },
+                        {
+                          "id": "PEzAz",
+                          "type": "ref",
+                          "ref": "xiBty",
+                          "name": "BARREL Pill 3",
+                          "descendants": {
+                            "NuMqE": {
+                              "content": "TARGET 975 Q1"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "v5CPL",
+                  "name": "SHAFT Group",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "DwrkX",
+                      "name": "SHAFT Label",
+                      "fill": "$color-accent",
+                      "content": "SHAFT",
+                      "fontFamily": "Inter",
+                      "fontSize": 11,
+                      "fontWeight": "700",
+                      "letterSpacing": 1
+                    },
+                    {
+                      "type": "frame",
+                      "id": "FeREx",
+                      "name": "SHAFT Pill Row 1",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "id": "U39l95",
+                          "type": "ref",
+                          "ref": "xiBty",
+                          "name": "SHAFT Pill 0",
+                          "fill": "$color-accent",
+                          "stroke": "$color-accent",
+                          "descendants": {
+                            "NuMqE": {
+                              "content": "COSMO DARTS Fit Shaft Carbon Slim Spin 4",
+                              "fill": "$color-base"
+                            }
+                          }
+                        },
+                        {
+                          "id": "h3Sxgf",
+                          "type": "ref",
+                          "ref": "xiBty",
+                          "name": "SHAFT Pill 1",
+                          "descendants": {
+                            "NuMqE": {
+                              "content": "Harrows Supergrip Carbon Medium"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "l7jZT3",
+                      "name": "SHAFT Pill Row 2",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "id": "pwgv0",
+                          "type": "ref",
+                          "ref": "xiBty",
+                          "name": "SHAFT Pill 2",
+                          "descendants": {
+                            "NuMqE": {
+                              "content": "L-style L-SHaft Carbon Lock 130"
+                            }
+                          }
+                        },
+                        {
+                          "id": "DB2t8",
+                          "type": "ref",
+                          "ref": "xiBty",
+                          "name": "SHAFT Pill 3",
+                          "descendants": {
+                            "NuMqE": {
+                              "content": "TARGET PRO GRIP EVO Medium"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "EgAIE",
+                  "name": "FLIGHT Group",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "AB2Qs",
+                      "name": "FLIGHT Label",
+                      "fill": "$color-accent",
+                      "content": "FLIGHT",
+                      "fontFamily": "Inter",
+                      "fontSize": 11,
+                      "fontWeight": "700",
+                      "letterSpacing": 1
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Fpl6z",
+                      "name": "FLIGHT Pill Row 1",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "id": "yRSow",
+                          "type": "ref",
+                          "ref": "xiBty",
+                          "name": "FLIGHT Pill 0",
+                          "fill": "$color-accent",
+                          "stroke": "$color-accent",
+                          "descendants": {
+                            "NuMqE": {
+                              "content": "CONDOR CONDOR AXE Small S",
+                              "fill": "$color-base"
+                            }
+                          }
+                        },
+                        {
+                          "id": "vr9AS",
+                          "type": "ref",
+                          "ref": "xiBty",
+                          "name": "FLIGHT Pill 1",
+                          "descendants": {
+                            "NuMqE": {
+                              "content": "COSMO DARTS Fit Flight AIR Shape"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "xOWjH",
+                      "name": "FLIGHT Pill Row 2",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "id": "i1HH7",
+                          "type": "ref",
+                          "ref": "xiBty",
+                          "name": "FLIGHT Pill 2",
+                          "descendants": {
+                            "NuMqE": {
+                              "content": "Harrows Marathon Shape"
+                            }
+                          }
+                        },
+                        {
+                          "id": "pWp4j",
+                          "type": "ref",
+                          "ref": "xiBty",
+                          "name": "FLIGHT Pill 3",
+                          "descendants": {
+                            "NuMqE": {
+                              "content": "L-style L1 Standard"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "TojxL",
+                  "name": "TIP Group",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Iy12u",
+                      "name": "TIP Label",
+                      "fill": "$color-accent",
+                      "content": "TIP",
+                      "fontFamily": "Inter",
+                      "fontSize": 11,
+                      "fontWeight": "700",
+                      "letterSpacing": 1
+                    },
+                    {
+                      "type": "frame",
+                      "id": "D80Pft",
+                      "name": "TIP Pill Row 1",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "id": "h5O5g",
+                          "type": "ref",
+                          "ref": "xiBty",
+                          "name": "TIP Pill 0",
+                          "fill": "$color-accent",
+                          "stroke": "$color-accent",
+                          "descendants": {
+                            "NuMqE": {
+                              "content": "CONDOR CONDOR TIP",
+                              "fill": "$color-base"
+                            }
+                          }
+                        },
+                        {
+                          "id": "A8F09",
+                          "type": "ref",
+                          "ref": "xiBty",
+                          "name": "TIP Pill 1",
+                          "descendants": {
+                            "NuMqE": {
+                              "content": "COSMO DARTS Fit Point"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "WIJDq",
+                      "name": "TIP Pill Row 2",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "id": "owkbe",
+                          "type": "ref",
+                          "ref": "xiBty",
+                          "name": "TIP Pill 2",
+                          "descendants": {
+                            "NuMqE": {
+                              "content": "Harrows Clic Soft Tip"
+                            }
+                          }
+                        },
+                        {
+                          "id": "SiKp9",
+                          "type": "ref",
+                          "ref": "xiBty",
+                          "name": "TIP Pill 3",
+                          "descendants": {
+                            "NuMqE": {
+                              "content": "L-style Lippoint"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "OmMlz",
+              "type": "ref",
+              "ref": "avqKW",
+              "name": "Demo Setting Card",
+              "width": "fill_container"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "qgdrc",
+          "name": "Features",
+          "width": "fill_container",
+          "gap": 16,
+          "padding": [
+            0,
+            40,
+            96,
+            40
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "AQLju",
+              "name": "選ぶだけで自動計算 Card",
+              "width": "fill_container",
+              "fill": "$color-surface",
+              "cornerRadius": 16,
+              "stroke": "$color-line",
+              "strokeWidth": 1,
+              "layout": "vertical",
+              "gap": 8,
+              "padding": 24,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "fGHYt",
+                  "name": "選ぶだけで自動計算 Title",
+                  "fill": "$color-primary",
+                  "content": "選ぶだけで自動計算",
+                  "fontFamily": "Noto Sans JP",
+                  "fontSize": 16,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "AETUP",
+                  "name": "選ぶだけで自動計算 Body",
+                  "fill": "$color-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "パーツを選ぶと総重量・全長がリアルタイムに変わる。数字が動く気持ちよさを体験してほしい。",
+                  "lineHeight": 1.7,
+                  "fontFamily": "Noto Sans JP",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "YDS5T",
+              "name": "1 枚のカードに Card",
+              "width": "fill_container",
+              "fill": "$color-surface",
+              "cornerRadius": 16,
+              "stroke": "$color-line",
+              "strokeWidth": 1,
+              "layout": "vertical",
+              "gap": 8,
+              "padding": 24,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "B1JxS",
+                  "name": "1 枚のカードに Title",
+                  "fill": "$color-primary",
+                  "content": "1 枚のカードに",
+                  "fontFamily": "Noto Sans JP",
+                  "fontSize": 16,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "Jzn8j",
+                  "name": "1 枚のカードに Body",
+                  "fill": "$color-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "セッティングは美しいカードとして公開 URL に。ログインしていない相手にもそのまま見せられる。",
+                  "lineHeight": 1.7,
+                  "fontFamily": "Noto Sans JP",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "oKY8s",
+              "name": "SNS 映えする OGP Card",
+              "width": "fill_container",
+              "fill": "$color-surface",
+              "cornerRadius": 16,
+              "stroke": "$color-line",
+              "strokeWidth": 1,
+              "layout": "vertical",
+              "gap": 8,
+              "padding": 24,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "jEbVr",
+                  "name": "SNS 映えする OGP Title",
+                  "fill": "$color-primary",
+                  "content": "SNS 映えする OGP",
+                  "fontFamily": "Noto Sans JP",
+                  "fontSize": 16,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "SLTF7",
+                  "name": "SNS 映えする OGP Body",
+                  "fill": "$color-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "X に URL を貼るだけで、セッティング内容がカード画像として展開される。",
+                  "lineHeight": 1.7,
+                  "fontFamily": "Noto Sans JP",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "zn0Uy",
+          "name": "Footer",
+          "width": "fill_container",
+          "stroke": "$color-line",
+          "strokeWidth": {
+            "top": 1
+          },
+          "padding": [
+            20,
+            40
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "EV2Qz",
+              "name": "Footer Copyright",
+              "fill": "$color-secondary",
+              "content": "© 2026 darts spec",
+              "fontFamily": "Noto Sans JP",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "kV2XY",
+              "name": "Footer Nav",
+              "gap": 20,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "sQPgG",
+                  "name": "Footer 利用規約",
+                  "fill": "$color-secondary",
+                  "content": "利用規約",
+                  "fontFamily": "Noto Sans JP",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "nVRUa",
+                  "name": "Footer プライバシーポリシー",
+                  "fill": "$color-secondary",
+                  "content": "プライバシーポリシー",
+                  "fontFamily": "Noto Sans JP",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "uqClm",
+                  "name": "Footer お問い合わせ・バグ報告",
+                  "fill": "$color-secondary",
+                  "content": "お問い合わせ・バグ報告",
+                  "fontFamily": "Noto Sans JP",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "xiBty",
+      "x": 0,
+      "y": -124,
+      "name": "Pill",
+      "reusable": true,
+      "fill": "$color-surface",
+      "cornerRadius": 999,
+      "stroke": "$color-line",
+      "strokeWidth": 1,
+      "padding": [
+        10,
+        16
+      ],
+      "children": [
+        {
+          "type": "text",
+          "id": "NuMqE",
+          "name": "Pill Label",
+          "fill": "$color-secondary",
+          "content": "Label",
+          "fontFamily": "Noto Sans JP",
+          "fontSize": 13,
+          "fontWeight": "500"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "avqKW",
+      "x": 0,
+      "y": -624,
+      "name": "SettingCard",
+      "reusable": true,
+      "width": 420,
+      "fill": "$color-surface",
+      "cornerRadius": 16,
+      "stroke": "$color-line",
+      "strokeWidth": 1,
+      "layout": "vertical",
+      "gap": 20,
+      "padding": 32,
+      "children": [
+        {
+          "type": "text",
+          "id": "DVSgT",
+          "name": "Card Eyebrow",
+          "fill": "$color-secondary",
+          "content": "MY SETTING",
+          "fontFamily": "Inter",
+          "fontSize": 11,
+          "fontWeight": "600",
+          "letterSpacing": 1.5
+        },
+        {
+          "type": "frame",
+          "id": "i4Por",
+          "name": "Title Row",
+          "width": "fill_container",
+          "gap": 8,
+          "justifyContent": "space_between",
+          "alignItems": "end",
+          "children": [
+            {
+              "type": "text",
+              "id": "dtB3p",
+              "name": "Card Title",
+              "fill": "$color-primary",
+              "content": "週末リーグ用セッティング",
+              "fontFamily": "Noto Sans JP",
+              "fontSize": 22,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "V7indS",
+              "x": 0,
+              "y": 0,
+              "name": "Card Author",
+              "enabled": false,
+              "fill": "$color-secondary",
+              "content": "by @dartsuser",
+              "fontFamily": "Noto Sans JP",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "lpS5y",
+          "name": "Stats Row",
+          "width": "fill_container",
+          "gap": 16,
+          "children": [
+            {
+              "type": "frame",
+              "id": "Sr2PR",
+              "name": "Weight Col",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 4,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "j74dpU",
+                  "name": "Weight Label",
+                  "fill": "$color-secondary",
+                  "content": "TOTAL WEIGHT",
+                  "fontFamily": "Inter",
+                  "fontSize": 11,
+                  "fontWeight": "600",
+                  "letterSpacing": 1.2
+                },
+                {
+                  "type": "frame",
+                  "id": "NxmD6",
+                  "name": "Weight Value Row",
+                  "gap": 4,
+                  "alignItems": "end",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "V7puh",
+                      "name": "Weight Value",
+                      "fill": "$color-primary",
+                      "content": "21.1",
+                      "fontFamily": "Inter",
+                      "fontSize": 40,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "rMDGR",
+                      "name": "Weight Unit",
+                      "fill": "$color-secondary",
+                      "content": "g",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "gTLVr",
+              "name": "Length Col",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 4,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "PAoYj",
+                  "name": "Length Label",
+                  "fill": "$color-secondary",
+                  "content": "TOTAL LENGTH",
+                  "fontFamily": "Inter",
+                  "fontSize": 11,
+                  "fontWeight": "600",
+                  "letterSpacing": 1.2
+                },
+                {
+                  "type": "frame",
+                  "id": "yI3X1",
+                  "name": "Length Value Row",
+                  "gap": 4,
+                  "alignItems": "end",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "T8vIhT",
+                      "name": "Length Value",
+                      "fill": "$color-primary",
+                      "content": "99.5",
+                      "fontFamily": "Inter",
+                      "fontSize": 40,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "E2dcF",
+                      "name": "Length Unit",
+                      "fill": "$color-secondary",
+                      "content": "mm",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "Ucsiy",
+          "name": "Approx Note",
+          "fill": "$color-secondary",
+          "content": "※ 一部スペック未登録のため参考値",
+          "fontFamily": "Noto Sans JP",
+          "fontSize": 12,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "frame",
+          "id": "DIrJH",
+          "name": "Divider",
+          "width": "fill_container",
+          "height": 1,
+          "fill": "$color-line"
+        },
+        {
+          "type": "frame",
+          "id": "kl2Oh",
+          "name": "Parts List",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 12,
+          "children": [
+            {
+              "type": "frame",
+              "id": "oSzA4",
+              "name": "Part Row BARREL",
+              "width": "fill_container",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "dA0Ql",
+                  "name": "BARREL Tag",
+                  "fill": "$color-accent",
+                  "textGrowth": "fixed-width",
+                  "width": 56,
+                  "content": "BARREL",
+                  "fontFamily": "Inter",
+                  "fontSize": 11,
+                  "fontWeight": "700",
+                  "letterSpacing": 1
+                },
+                {
+                  "type": "text",
+                  "id": "Leasg",
+                  "name": "BARREL Brand",
+                  "fill": "$color-secondary",
+                  "content": "COSMO DARTS",
+                  "fontFamily": "Noto Sans JP",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "v31mt",
+                  "name": "BARREL Name",
+                  "fill": "$color-primary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "96 黒瀧摩紀",
+                  "fontFamily": "Noto Sans JP",
+                  "fontSize": 13,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "SkggM",
+              "name": "Part Row SHAFT",
+              "width": "fill_container",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Qt8V8",
+                  "name": "SHAFT Tag",
+                  "fill": "$color-accent",
+                  "textGrowth": "fixed-width",
+                  "width": 56,
+                  "content": "SHAFT",
+                  "fontFamily": "Inter",
+                  "fontSize": 11,
+                  "fontWeight": "700",
+                  "letterSpacing": 1
+                },
+                {
+                  "type": "text",
+                  "id": "W2nwc",
+                  "name": "SHAFT Brand",
+                  "fill": "$color-secondary",
+                  "content": "COSMO DARTS",
+                  "fontFamily": "Noto Sans JP",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "GARMp",
+                  "name": "SHAFT Name",
+                  "fill": "$color-primary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Fit Shaft Carbon Slim Spin 4",
+                  "fontFamily": "Noto Sans JP",
+                  "fontSize": 13,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "kKpGM",
+              "name": "Part Row FLIGHT",
+              "width": "fill_container",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "oLufZ",
+                  "name": "FLIGHT Tag",
+                  "fill": "$color-accent",
+                  "textGrowth": "fixed-width",
+                  "width": 56,
+                  "content": "FLIGHT",
+                  "fontFamily": "Inter",
+                  "fontSize": 11,
+                  "fontWeight": "700",
+                  "letterSpacing": 1
+                },
+                {
+                  "type": "text",
+                  "id": "ynDi5",
+                  "name": "FLIGHT Brand",
+                  "fill": "$color-secondary",
+                  "content": "CONDOR",
+                  "fontFamily": "Noto Sans JP",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "yoSii",
+                  "name": "FLIGHT Name",
+                  "fill": "$color-primary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "AXE CONDOR AXE Small S",
+                  "fontFamily": "Noto Sans JP",
+                  "fontSize": 13,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "FL32C",
+              "name": "Part Row TIP",
+              "width": "fill_container",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "GnbZS",
+                  "name": "TIP Tag",
+                  "fill": "$color-accent",
+                  "textGrowth": "fixed-width",
+                  "width": 56,
+                  "content": "TIP",
+                  "fontFamily": "Inter",
+                  "fontSize": 11,
+                  "fontWeight": "700",
+                  "letterSpacing": 1
+                },
+                {
+                  "type": "text",
+                  "id": "z9ngO",
+                  "name": "TIP Brand",
+                  "fill": "$color-secondary",
+                  "content": "CONDOR",
+                  "fontFamily": "Noto Sans JP",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "GEXlX",
+                  "name": "TIP Name",
+                  "fill": "$color-primary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "TIP CONDOR TIP",
+                  "fontFamily": "Noto Sans JP",
+                  "fontSize": 13,
+                  "fontWeight": "600"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "o2qnz",
+          "name": "Card CTA",
+          "width": "fill_container",
+          "fill": "$color-accent",
+          "cornerRadius": 12,
+          "padding": [
+            14,
+            24
+          ],
+          "justifyContent": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "vBmTM",
+              "name": "Card CTA Label",
+              "fill": "$color-base",
+              "content": "自分のセッティングをつくってシェアする",
+              "textAlign": "center",
+              "fontFamily": "Noto Sans JP",
+              "fontSize": 16,
+              "fontWeight": "700"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "Dj95u",
+      "x": -1900,
+      "y": -1144,
+      "name": "Header",
+      "reusable": true,
+      "width": 800,
+      "height": 56,
+      "fill": "$color-base",
+      "stroke": "$color-line",
+      "strokeWidth": {
+        "bottom": 1
+      },
+      "padding": [
+        0,
+        16
+      ],
+      "justifyContent": "space_between",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "frame",
+          "id": "dVIk3",
+          "name": "Logo",
+          "gap": 8,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "J9Xb5",
+              "name": "Logo Icon",
+              "fill": "$color-primary",
+              "content": "🎯",
+              "fontFamily": "Noto Sans JP",
+              "fontSize": 16,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "NCJeu",
+              "name": "Logo Text",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "t6KreC",
+                  "name": "Logo Darts",
+                  "fill": "$color-primary",
+                  "content": "darts ",
+                  "fontFamily": "Inter",
+                  "fontSize": 18,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "yeiZu",
+                  "name": "Logo Spec",
+                  "fill": "$color-accent",
+                  "content": "spec",
+                  "fontFamily": "Inter",
+                  "fontSize": 18,
+                  "fontWeight": "700"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Mpleq",
+          "name": "Nav",
+          "gap": 8,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "kvrGE",
+              "name": "Nav Create",
+              "padding": [
+                8,
+                12
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "oLknT",
+                  "name": "Nav Create Label",
+                  "fill": "$color-secondary",
+                  "content": "つくる",
+                  "fontFamily": "Noto Sans JP",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "SJB8d",
+              "x": 0,
+              "y": 0,
+              "name": "Nav MyPage",
+              "enabled": false,
+              "padding": [
+                8,
+                12
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "o8gzD",
+                  "name": "Nav MyPage Label",
+                  "fill": "$color-secondary",
+                  "content": "マイページ",
+                  "fontFamily": "Noto Sans JP",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "JKAlN",
+              "x": 0,
+              "y": 0,
+              "name": "Nav Logout",
+              "enabled": false,
+              "cornerRadius": 8,
+              "stroke": "$color-line",
+              "strokeWidth": 1,
+              "padding": [
+                8,
+                12
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "xCsjr",
+                  "name": "Nav Logout Label",
+                  "fill": "$color-secondary",
+                  "content": "ログアウト",
+                  "fontFamily": "Noto Sans JP",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "J1OCE",
+              "name": "Nav Login",
+              "padding": [
+                8,
+                12
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "dxZb1",
+                  "name": "Nav Login Label",
+                  "fill": "$color-secondary",
+                  "content": "ログイン",
+                  "fontFamily": "Noto Sans JP",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "p0vW9W",
+              "name": "Nav SignUp",
+              "fill": "$color-accent",
+              "cornerRadius": 8,
+              "padding": [
+                8,
+                12
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "aHOsC",
+                  "name": "Nav SignUp Label",
+                  "fill": "$color-base",
+                  "content": "はじめる",
+                  "fontFamily": "Noto Sans JP",
+                  "fontSize": 14,
+                  "fontWeight": "600"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "Fpf2a",
+      "x": -1900,
+      "y": -1040,
+      "name": "Footer",
+      "reusable": true,
+      "width": 800,
+      "stroke": "$color-line",
+      "strokeWidth": {
+        "top": 1
+      },
+      "layout": "vertical",
+      "gap": 12,
+      "padding": [
+        24,
+        16
+      ],
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "text",
+          "id": "F2NqJE",
+          "name": "Copyright",
+          "fill": "$color-secondary",
+          "content": "© 2026 darts spec",
+          "fontFamily": "Noto Sans JP",
+          "fontSize": 12,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "frame",
+          "id": "n7NMa",
+          "name": "Footer Nav",
+          "gap": 16,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "X3rC1",
+              "name": "Footer Terms",
+              "fill": "$color-secondary",
+              "content": "利用規約",
+              "fontFamily": "Noto Sans JP",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "B1rba",
+              "name": "Footer Privacy",
+              "fill": "$color-secondary",
+              "content": "プライバシーポリシー",
+              "fontFamily": "Noto Sans JP",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "frwLL",
+              "name": "Footer Contact",
+              "fill": "$color-secondary",
+              "content": "お問い合わせ・バグ報告",
+              "fontFamily": "Noto Sans JP",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "DqyTM",
+      "x": -1900,
+      "y": -880,
+      "name": "Share Buttons",
+      "reusable": true,
+      "gap": 8,
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "frame",
+          "id": "jFizq",
+          "name": "Share X Button",
+          "fill": "$color-accent",
+          "cornerRadius": 8,
+          "padding": [
+            12,
+            16
+          ],
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "GgEt4",
+              "name": "Share X Label",
+              "fill": "$color-base",
+              "content": "X でシェア",
+              "fontFamily": "Noto Sans JP",
+              "fontSize": 14,
+              "fontWeight": "600"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "UKIle",
+          "name": "Copy URL Button",
+          "cornerRadius": 8,
+          "stroke": "$color-line",
+          "strokeWidth": 1,
+          "padding": [
+            12,
+            16
+          ],
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "V3JaR",
+              "name": "Copy URL Label",
+              "fill": "$color-secondary",
+              "content": "URL をコピー",
+              "fontFamily": "Noto Sans JP",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "B7a7Z",
+      "x": -1900,
+      "y": -780,
+      "name": "Button Primary",
+      "reusable": true,
+      "fill": "$color-accent",
+      "cornerRadius": 12,
+      "padding": [
+        12,
+        16
+      ],
+      "justifyContent": "center",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "text",
+          "id": "FSHVZ",
+          "name": "Button Label",
+          "fill": "$color-base",
+          "content": "ボタン",
+          "fontFamily": "Noto Sans JP",
+          "fontSize": 16,
+          "fontWeight": "700"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "QifoW",
+      "x": -1750,
+      "y": -780,
+      "name": "Button Outline",
+      "reusable": true,
+      "cornerRadius": 8,
+      "stroke": "$color-line",
+      "strokeWidth": 1,
+      "padding": [
+        10,
+        16
+      ],
+      "justifyContent": "center",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "text",
+          "id": "xE7la",
+          "name": "Button Label",
+          "fill": "$color-secondary",
+          "content": "ボタン",
+          "fontFamily": "Noto Sans JP",
+          "fontSize": 14,
+          "fontWeight": "normal"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "AOV3e",
+      "x": -1900,
+      "y": -690,
+      "name": "Text Field",
+      "reusable": true,
+      "width": 343,
+      "layout": "vertical",
+      "gap": 4,
+      "children": [
+        {
+          "type": "text",
+          "id": "gda25",
+          "name": "Field Label",
+          "fill": "$color-secondary",
+          "content": "ラベル",
+          "fontFamily": "Noto Sans JP",
+          "fontSize": 14,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "frame",
+          "id": "RUBOF",
+          "name": "Field Box",
+          "width": "fill_container",
+          "fill": "$color-surface",
+          "cornerRadius": 8,
+          "stroke": "$color-line",
+          "strokeWidth": 1,
+          "padding": [
+            12,
+            16
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "ysQfe",
+              "name": "Field Value",
+              "fill": "$color-secondary",
+              "content": "入力値",
+              "fontFamily": "Noto Sans JP",
+              "fontSize": 16,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "jYPkd",
+      "x": -1500,
+      "y": -690,
+      "name": "Select Field",
+      "reusable": true,
+      "width": 343,
+      "layout": "vertical",
+      "gap": 4,
+      "children": [
+        {
+          "type": "text",
+          "id": "R770We",
+          "name": "Field Label",
+          "fill": "$color-secondary",
+          "content": "ラベル",
+          "fontFamily": "Noto Sans JP",
+          "fontSize": 14,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "frame",
+          "id": "Xmu31",
+          "name": "Select Box",
+          "width": "fill_container",
+          "fill": "$color-surface",
+          "cornerRadius": 8,
+          "stroke": "$color-line",
+          "strokeWidth": 1,
+          "padding": 12,
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "J8SxkW",
+              "name": "Select Value",
+              "fill": "$color-secondary",
+              "content": "未選択",
+              "fontFamily": "Noto Sans JP",
+              "fontSize": 16,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "icon",
+              "id": "OydO3",
+              "name": "Chevron",
+              "width": 16,
+              "height": 16,
+              "icon": "chevron-down",
+              "library": "lucide",
+              "fill": "$color-secondary"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "n1yzSW",
+      "x": 1640,
+      "y": 0,
+      "name": "02 Sign In / Mobile",
+      "clip": true,
+      "width": 375,
+      "fill": "$color-base",
+      "layout": "vertical",
+      "children": [
+        {
+          "id": "l8LMx3",
+          "type": "ref",
+          "ref": "Dj95u",
+          "name": "Header",
+          "width": "fill_container",
+          "padding": [
+            0,
+            12
+          ],
+          "descendants": {
+            "kvrGE": {
+              "padding": 8
+            },
+            "SJB8d": {
+              "padding": 8
+            },
+            "JKAlN": {
+              "padding": 8
+            },
+            "J1OCE": {
+              "padding": 8
+            },
+            "p0vW9W": {
+              "padding": 8
+            }
+          }
+        },
+        {
+          "type": "frame",
+          "id": "IAWem",
+          "name": "Main",
+          "width": "fill_container",
+          "layout": "vertical",
+          "padding": [
+            64,
+            16
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "g3K0d",
+              "name": "Content",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "g227ys",
+                  "name": "Title Wrap",
+                  "width": "fill_container",
+                  "padding": [
+                    0,
+                    0,
+                    16,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Buo5z",
+                      "name": "Page Title",
+                      "fill": "$color-primary",
+                      "content": "ログイン",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 24,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "id": "iw5Pl",
+                  "type": "ref",
+                  "ref": "AOV3e",
+                  "name": "Email Field",
+                  "width": "fill_container",
+                  "descendants": {
+                    "gda25": {
+                      "content": "メールアドレス"
+                    },
+                    "ysQfe": {
+                      "content": "you@example.com"
+                    }
+                  }
+                },
+                {
+                  "id": "J9fjT",
+                  "type": "ref",
+                  "ref": "AOV3e",
+                  "name": "Password Field",
+                  "width": "fill_container",
+                  "descendants": {
+                    "gda25": {
+                      "content": "パスワード"
+                    },
+                    "ysQfe": {
+                      "content": "••••••••"
+                    }
+                  }
+                },
+                {
+                  "type": "frame",
+                  "id": "gRorn",
+                  "name": "Submit Wrap",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "padding": [
+                    8,
+                    0,
+                    0,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "id": "Y82iE",
+                      "type": "ref",
+                      "ref": "B7a7Z",
+                      "name": "Submit Button",
+                      "width": "fill_container",
+                      "descendants": {
+                        "FSHVZ": {
+                          "content": "ログイン"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "rUmRl",
+                  "type": "ref",
+                  "ref": "QifoW",
+                  "name": "Google Button",
+                  "width": "fill_container",
+                  "cornerRadius": 12,
+                  "padding": [
+                    12,
+                    16
+                  ],
+                  "descendants": {
+                    "xE7la": {
+                      "content": "Google で続ける"
+                    }
+                  }
+                },
+                {
+                  "type": "frame",
+                  "id": "mEA8Y",
+                  "name": "Footnote",
+                  "gap": 4,
+                  "padding": [
+                    8,
+                    0,
+                    0,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Oj4e1",
+                      "name": "Footnote Text",
+                      "fill": "$color-secondary",
+                      "content": "アカウントをお持ちでない方は",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "WEdG5",
+                      "name": "Footnote Link",
+                      "fill": "$color-accent",
+                      "content": "アカウント登録",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "frFSW",
+          "type": "ref",
+          "ref": "Fpf2a",
+          "name": "Footer",
+          "width": "fill_container"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "SW10j",
+      "x": 2140,
+      "y": 0,
+      "name": "02 Sign In / Desktop",
+      "clip": true,
+      "width": 1280,
+      "fill": "$color-base",
+      "layout": "vertical",
+      "children": [
+        {
+          "id": "zvFzj",
+          "type": "ref",
+          "ref": "Dj95u",
+          "name": "Header",
+          "width": "fill_container",
+          "padding": [
+            0,
+            128
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "GAjgf",
+          "name": "Main",
+          "width": "fill_container",
+          "layout": "vertical",
+          "padding": [
+            64,
+            16
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "D6jrs",
+              "name": "Content",
+              "width": 448,
+              "layout": "vertical",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "E3O8a",
+                  "name": "Title Wrap",
+                  "width": "fill_container",
+                  "padding": [
+                    0,
+                    0,
+                    16,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Z9tjlC",
+                      "name": "Page Title",
+                      "fill": "$color-primary",
+                      "content": "ログイン",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 24,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "id": "sS2V7",
+                  "type": "ref",
+                  "ref": "AOV3e",
+                  "name": "Email Field",
+                  "width": "fill_container",
+                  "descendants": {
+                    "gda25": {
+                      "content": "メールアドレス"
+                    },
+                    "ysQfe": {
+                      "content": "you@example.com"
+                    }
+                  }
+                },
+                {
+                  "id": "UuGTg",
+                  "type": "ref",
+                  "ref": "AOV3e",
+                  "name": "Password Field",
+                  "width": "fill_container",
+                  "descendants": {
+                    "gda25": {
+                      "content": "パスワード"
+                    },
+                    "ysQfe": {
+                      "content": "••••••••"
+                    }
+                  }
+                },
+                {
+                  "type": "frame",
+                  "id": "GDbrN",
+                  "name": "Submit Wrap",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "padding": [
+                    8,
+                    0,
+                    0,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "id": "iue9q",
+                      "type": "ref",
+                      "ref": "B7a7Z",
+                      "name": "Submit Button",
+                      "width": "fill_container",
+                      "descendants": {
+                        "FSHVZ": {
+                          "content": "ログイン"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "B7NNp",
+                  "type": "ref",
+                  "ref": "QifoW",
+                  "name": "Google Button",
+                  "width": "fill_container",
+                  "cornerRadius": 12,
+                  "padding": [
+                    12,
+                    16
+                  ],
+                  "descendants": {
+                    "xE7la": {
+                      "content": "Google で続ける"
+                    }
+                  }
+                },
+                {
+                  "type": "frame",
+                  "id": "QORDr",
+                  "name": "Footnote",
+                  "gap": 4,
+                  "padding": [
+                    8,
+                    0,
+                    0,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "AhCyJ",
+                      "name": "Footnote Text",
+                      "fill": "$color-secondary",
+                      "content": "アカウントをお持ちでない方は",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "lVJRO",
+                      "name": "Footnote Link",
+                      "fill": "$color-accent",
+                      "content": "アカウント登録",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "T1DIvp",
+          "type": "ref",
+          "ref": "Fpf2a",
+          "name": "Footer",
+          "width": "fill_container",
+          "layout": "horizontal",
+          "justifyContent": "space_between",
+          "padding": [
+            24,
+            128
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "XXaYT",
+      "x": 1640,
+      "y": 878,
+      "name": "03 Sign Up / Mobile",
+      "clip": true,
+      "width": 375,
+      "fill": "$color-base",
+      "layout": "vertical",
+      "children": [
+        {
+          "id": "r51B1r",
+          "type": "ref",
+          "ref": "Dj95u",
+          "name": "Header",
+          "width": "fill_container",
+          "padding": [
+            0,
+            12
+          ],
+          "descendants": {
+            "kvrGE": {
+              "padding": 8
+            },
+            "SJB8d": {
+              "padding": 8
+            },
+            "JKAlN": {
+              "padding": 8
+            },
+            "J1OCE": {
+              "padding": 8
+            },
+            "p0vW9W": {
+              "padding": 8
+            }
+          }
+        },
+        {
+          "type": "frame",
+          "id": "sPWx3",
+          "name": "Main",
+          "width": "fill_container",
+          "layout": "vertical",
+          "padding": [
+            64,
+            16
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "wrbQm",
+              "name": "Content",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "HCQZ5",
+                  "name": "Title Wrap",
+                  "width": "fill_container",
+                  "padding": [
+                    0,
+                    0,
+                    16,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "AVuJp",
+                      "name": "Page Title",
+                      "fill": "$color-primary",
+                      "content": "アカウント登録",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 24,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "id": "t1El1",
+                  "type": "ref",
+                  "ref": "AOV3e",
+                  "name": "Name Field",
+                  "width": "fill_container",
+                  "descendants": {
+                    "gda25": {
+                      "content": "表示名"
+                    },
+                    "ysQfe": {
+                      "content": "ダーツ太郎"
+                    }
+                  }
+                },
+                {
+                  "id": "vRx7R",
+                  "type": "ref",
+                  "ref": "AOV3e",
+                  "name": "Email Field",
+                  "width": "fill_container",
+                  "descendants": {
+                    "gda25": {
+                      "content": "メールアドレス"
+                    },
+                    "ysQfe": {
+                      "content": "you@example.com"
+                    }
+                  }
+                },
+                {
+                  "id": "wLyvT",
+                  "type": "ref",
+                  "ref": "AOV3e",
+                  "name": "Password Field",
+                  "width": "fill_container",
+                  "descendants": {
+                    "gda25": {
+                      "content": "パスワード（8 文字以上）"
+                    },
+                    "ysQfe": {
+                      "content": "••••••••"
+                    }
+                  }
+                },
+                {
+                  "type": "frame",
+                  "id": "dvsbu",
+                  "name": "Submit Wrap",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "padding": [
+                    8,
+                    0,
+                    0,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "id": "Ttb4i",
+                      "type": "ref",
+                      "ref": "B7a7Z",
+                      "name": "Submit Button",
+                      "width": "fill_container",
+                      "descendants": {
+                        "FSHVZ": {
+                          "content": "登録する"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "AUFzj",
+                  "name": "Terms Note",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 2,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "K8oi8",
+                      "name": "Terms Line 1",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "ozmLN",
+                          "name": "T1a",
+                          "fill": "$color-secondary",
+                          "content": "登録することで ",
+                          "fontFamily": "Noto Sans JP",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "NdaJZ",
+                          "name": "T1b",
+                          "fill": "$color-accent",
+                          "content": "利用規約",
+                          "fontFamily": "Noto Sans JP",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "JzkzA",
+                          "name": "T1c",
+                          "fill": "$color-secondary",
+                          "content": " と ",
+                          "fontFamily": "Noto Sans JP",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "LqiPe",
+                          "name": "T1d",
+                          "fill": "$color-accent",
+                          "content": "プライバシーポリシー",
+                          "fontFamily": "Noto Sans JP",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "aM19O",
+                      "name": "T2",
+                      "fill": "$color-secondary",
+                      "content": "に同意したものとみなされます。",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "id": "ejDIH",
+                  "type": "ref",
+                  "ref": "QifoW",
+                  "name": "Google Button",
+                  "width": "fill_container",
+                  "cornerRadius": 12,
+                  "padding": [
+                    12,
+                    16
+                  ],
+                  "descendants": {
+                    "xE7la": {
+                      "content": "Google で続ける"
+                    }
+                  }
+                },
+                {
+                  "type": "frame",
+                  "id": "wWIxd",
+                  "name": "Footnote",
+                  "gap": 4,
+                  "padding": [
+                    8,
+                    0,
+                    0,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "KM3GF",
+                      "name": "Footnote Text",
+                      "fill": "$color-secondary",
+                      "content": "アカウントをお持ちの方は",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "srW7i",
+                      "name": "Footnote Link",
+                      "fill": "$color-accent",
+                      "content": "ログイン",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "AwjiW",
+          "type": "ref",
+          "ref": "Fpf2a",
+          "name": "Footer",
+          "width": "fill_container"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "urAtv",
+      "x": 2140,
+      "y": 878,
+      "name": "03 Sign Up / Desktop",
+      "clip": true,
+      "width": 1280,
+      "fill": "$color-base",
+      "layout": "vertical",
+      "children": [
+        {
+          "id": "wJNWc",
+          "type": "ref",
+          "ref": "Dj95u",
+          "name": "Header",
+          "width": "fill_container",
+          "padding": [
+            0,
+            128
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "HZCcZ",
+          "name": "Main",
+          "width": "fill_container",
+          "layout": "vertical",
+          "padding": [
+            64,
+            16
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "r2VIOw",
+              "name": "Content",
+              "width": 448,
+              "layout": "vertical",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "Z3EkqV",
+                  "name": "Title Wrap",
+                  "width": "fill_container",
+                  "padding": [
+                    0,
+                    0,
+                    16,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "jt745",
+                      "name": "Page Title",
+                      "fill": "$color-primary",
+                      "content": "アカウント登録",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 24,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "id": "LMdTx",
+                  "type": "ref",
+                  "ref": "AOV3e",
+                  "name": "Name Field",
+                  "width": "fill_container",
+                  "descendants": {
+                    "gda25": {
+                      "content": "表示名"
+                    },
+                    "ysQfe": {
+                      "content": "ダーツ太郎"
+                    }
+                  }
+                },
+                {
+                  "id": "Sk65s",
+                  "type": "ref",
+                  "ref": "AOV3e",
+                  "name": "Email Field",
+                  "width": "fill_container",
+                  "descendants": {
+                    "gda25": {
+                      "content": "メールアドレス"
+                    },
+                    "ysQfe": {
+                      "content": "you@example.com"
+                    }
+                  }
+                },
+                {
+                  "id": "UUTi6",
+                  "type": "ref",
+                  "ref": "AOV3e",
+                  "name": "Password Field",
+                  "width": "fill_container",
+                  "descendants": {
+                    "gda25": {
+                      "content": "パスワード（8 文字以上）"
+                    },
+                    "ysQfe": {
+                      "content": "••••••••"
+                    }
+                  }
+                },
+                {
+                  "type": "frame",
+                  "id": "oIyRM",
+                  "name": "Submit Wrap",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "padding": [
+                    8,
+                    0,
+                    0,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "id": "odpJc",
+                      "type": "ref",
+                      "ref": "B7a7Z",
+                      "name": "Submit Button",
+                      "width": "fill_container",
+                      "descendants": {
+                        "FSHVZ": {
+                          "content": "登録する"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "CATHq",
+                  "name": "Terms Note",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 2,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "PJS8x",
+                      "name": "Terms Line 1",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "Vl7OY",
+                          "name": "T1a",
+                          "fill": "$color-secondary",
+                          "content": "登録することで ",
+                          "fontFamily": "Noto Sans JP",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "q99YyM",
+                          "name": "T1b",
+                          "fill": "$color-accent",
+                          "content": "利用規約",
+                          "fontFamily": "Noto Sans JP",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "uieNz",
+                          "name": "T1c",
+                          "fill": "$color-secondary",
+                          "content": " と ",
+                          "fontFamily": "Noto Sans JP",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "Q7kre",
+                          "name": "T1d",
+                          "fill": "$color-accent",
+                          "content": "プライバシーポリシー",
+                          "fontFamily": "Noto Sans JP",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "Ew5yW",
+                      "name": "T2",
+                      "fill": "$color-secondary",
+                      "content": "に同意したものとみなされます。",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "id": "h84T4s",
+                  "type": "ref",
+                  "ref": "QifoW",
+                  "name": "Google Button",
+                  "width": "fill_container",
+                  "cornerRadius": 12,
+                  "padding": [
+                    12,
+                    16
+                  ],
+                  "descendants": {
+                    "xE7la": {
+                      "content": "Google で続ける"
+                    }
+                  }
+                },
+                {
+                  "type": "frame",
+                  "id": "qC5fB",
+                  "name": "Footnote",
+                  "gap": 4,
+                  "padding": [
+                    8,
+                    0,
+                    0,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "DP6XQ",
+                      "name": "Footnote Text",
+                      "fill": "$color-secondary",
+                      "content": "アカウントをお持ちの方は",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "WuZNy",
+                      "name": "Footnote Link",
+                      "fill": "$color-accent",
+                      "content": "ログイン",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "g6jDhn",
+          "type": "ref",
+          "ref": "Fpf2a",
+          "name": "Footer",
+          "width": "fill_container",
+          "layout": "horizontal",
+          "justifyContent": "space_between",
+          "padding": [
+            24,
+            128
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "upr9B",
+      "x": 1640,
+      "y": 1895,
+      "name": "01 Landing / Mobile",
+      "clip": true,
+      "width": 375,
+      "fill": "$color-base",
+      "layout": "vertical",
+      "children": [
+        {
+          "id": "emHxb",
+          "type": "ref",
+          "ref": "Dj95u",
+          "name": "Header",
+          "width": "fill_container",
+          "padding": [
+            0,
+            12
+          ],
+          "descendants": {
+            "kvrGE": {
+              "padding": 8
+            },
+            "SJB8d": {
+              "padding": 8
+            },
+            "JKAlN": {
+              "padding": 8
+            },
+            "J1OCE": {
+              "padding": 8
+            },
+            "p0vW9W": {
+              "padding": 8
+            }
+          }
+        },
+        {
+          "type": "frame",
+          "id": "upM8y",
+          "name": "Main",
+          "width": "fill_container",
+          "layout": "vertical",
+          "padding": [
+            0,
+            16
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "APf9N",
+              "name": "Hero",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 24,
+              "padding": [
+                96,
+                0
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "G0h1t",
+                  "name": "Hero Label",
+                  "fill": "$color-accent",
+                  "content": "MY DARTS SETTING",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "600",
+                  "letterSpacing": 2.8
+                },
+                {
+                  "type": "text",
+                  "id": "TsOey",
+                  "name": "Hero Title",
+                  "fill": "$color-primary",
+                  "content": "マイセッティングを、\n美しくシェアしよう。",
+                  "lineHeight": 1.3,
+                  "textAlign": "center",
+                  "fontFamily": "Noto Sans JP",
+                  "fontSize": 36,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "Y6i61N",
+                  "name": "Hero Description",
+                  "fill": "$color-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "バレル・シャフト・フライト・チップを選ぶだけで、総重量と全長を自動計算。あなたのセッティングを 1 枚のカードにして、X でシェアできます。",
+                  "lineHeight": 1.7,
+                  "textAlign": "center",
+                  "fontFamily": "Noto Sans JP",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "P4Dkcx",
+                  "name": "Hero CTA Row",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "id": "wOpM7",
+                      "type": "ref",
+                      "ref": "B7a7Z",
+                      "name": "CTA Create",
+                      "padding": [
+                        16,
+                        32
+                      ],
+                      "descendants": {
+                        "FSHVZ": {
+                          "content": "セッティングをつくる",
+                          "fontSize": 18
+                        }
+                      }
+                    },
+                    {
+                      "id": "V3pVi",
+                      "type": "ref",
+                      "ref": "QifoW",
+                      "name": "CTA Login",
+                      "padding": [
+                        16,
+                        32
+                      ],
+                      "cornerRadius": 12,
+                      "descendants": {
+                        "xE7la": {
+                          "content": "ログイン",
+                          "fontSize": 18
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "m6wk6",
+                  "name": "Hero Caption",
+                  "fill": "$color-secondary",
+                  "content": "登録なしでもお試しいただけます（保存時にログイン）",
+                  "fontFamily": "Noto Sans JP",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "SxCfq",
+              "name": "Features",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 16,
+              "padding": [
+                0,
+                0,
+                96,
+                0
+              ],
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "y9815P",
+                  "name": "選ぶだけで自動計算 Card",
+                  "width": "fill_container",
+                  "fill": "$color-surface",
+                  "cornerRadius": 16,
+                  "stroke": "$color-line",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": 24,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "m3Apd",
+                      "name": "Feature Title",
+                      "fill": "$color-primary",
+                      "content": "選ぶだけで自動計算",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 16,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "f855f",
+                      "name": "Feature Body",
+                      "fill": "$color-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "パーツを選ぶと総重量・全長がリアルタイムに変わる。数字が動く気持ちよさを体験してほしい。",
+                      "lineHeight": 1.7,
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "TQAOJ",
+                  "name": "1 枚のカードに Card",
+                  "width": "fill_container",
+                  "fill": "$color-surface",
+                  "cornerRadius": 16,
+                  "stroke": "$color-line",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": 24,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "PxdW7",
+                      "name": "Feature Title",
+                      "fill": "$color-primary",
+                      "content": "1 枚のカードに",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 16,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "z7Hug",
+                      "name": "Feature Body",
+                      "fill": "$color-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "セッティングは美しいカードとして公開 URL に。ログインしていない相手にもそのまま見せられる。",
+                      "lineHeight": 1.7,
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "wvq6n",
+                  "name": "SNS 映えする OGP Card",
+                  "width": "fill_container",
+                  "fill": "$color-surface",
+                  "cornerRadius": 16,
+                  "stroke": "$color-line",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": 24,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "YcCpH",
+                      "name": "Feature Title",
+                      "fill": "$color-primary",
+                      "content": "SNS 映えする OGP",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 16,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Z6vP1O",
+                      "name": "Feature Body",
+                      "fill": "$color-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "X に URL を貼るだけで、セッティング内容がカード画像として展開される。",
+                      "lineHeight": 1.7,
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "FjTo3",
+          "type": "ref",
+          "ref": "Fpf2a",
+          "name": "Footer",
+          "width": "fill_container"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "NWgVK",
+      "x": 2140,
+      "y": 1895,
+      "name": "01 Landing / Desktop",
+      "clip": true,
+      "width": 1280,
+      "fill": "$color-base",
+      "layout": "vertical",
+      "children": [
+        {
+          "id": "mennL",
+          "type": "ref",
+          "ref": "Dj95u",
+          "name": "Header",
+          "width": "fill_container",
+          "padding": [
+            0,
+            128
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "t0Qv9m",
+          "name": "Main",
+          "width": "fill_container",
+          "layout": "vertical",
+          "padding": [
+            0,
+            128
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "IvYS6",
+              "name": "Hero",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 24,
+              "padding": [
+                96,
+                0
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "wNKlM",
+                  "name": "Hero Label",
+                  "fill": "$color-accent",
+                  "content": "MY DARTS SETTING",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "600",
+                  "letterSpacing": 2.8
+                },
+                {
+                  "type": "text",
+                  "id": "pUtdB",
+                  "name": "Hero Title",
+                  "fill": "$color-primary",
+                  "content": "マイセッティングを、\n美しくシェアしよう。",
+                  "lineHeight": 1.3,
+                  "textAlign": "center",
+                  "fontFamily": "Noto Sans JP",
+                  "fontSize": 48,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "SH2tX",
+                  "name": "Hero Description",
+                  "fill": "$color-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": 576,
+                  "content": "バレル・シャフト・フライト・チップを選ぶだけで、総重量と全長を自動計算。あなたのセッティングを 1 枚のカードにして、X でシェアできます。",
+                  "lineHeight": 1.7,
+                  "textAlign": "center",
+                  "fontFamily": "Noto Sans JP",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "E6Ubz",
+                  "name": "Hero CTA Row",
+                  "gap": 12,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "id": "R39DAT",
+                      "type": "ref",
+                      "ref": "B7a7Z",
+                      "name": "CTA Create",
+                      "padding": [
+                        16,
+                        32
+                      ],
+                      "descendants": {
+                        "FSHVZ": {
+                          "content": "セッティングをつくる",
+                          "fontSize": 18
+                        }
+                      }
+                    },
+                    {
+                      "id": "LX4DW",
+                      "type": "ref",
+                      "ref": "QifoW",
+                      "name": "CTA Login",
+                      "padding": [
+                        16,
+                        32
+                      ],
+                      "cornerRadius": 12,
+                      "descendants": {
+                        "xE7la": {
+                          "content": "ログイン",
+                          "fontSize": 18
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "jD5RK",
+                  "name": "Hero Caption",
+                  "fill": "$color-secondary",
+                  "content": "登録なしでもお試しいただけます（保存時にログイン）",
+                  "fontFamily": "Noto Sans JP",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "h7UoYn",
+              "name": "Features",
+              "width": "fill_container",
+              "gap": 16,
+              "padding": [
+                0,
+                0,
+                96,
+                0
+              ],
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "kyYPU",
+                  "name": "選ぶだけで自動計算 Card",
+                  "width": "fill_container",
+                  "fill": "$color-surface",
+                  "cornerRadius": 16,
+                  "stroke": "$color-line",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": 24,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "ZH4pI",
+                      "name": "Feature Title",
+                      "fill": "$color-primary",
+                      "content": "選ぶだけで自動計算",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 16,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Wdyvd",
+                      "name": "Feature Body",
+                      "fill": "$color-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "パーツを選ぶと総重量・全長がリアルタイムに変わる。数字が動く気持ちよさを体験してほしい。",
+                      "lineHeight": 1.7,
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "ShBWL",
+                  "name": "1 枚のカードに Card",
+                  "width": "fill_container",
+                  "fill": "$color-surface",
+                  "cornerRadius": 16,
+                  "stroke": "$color-line",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": 24,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "m6nAFs",
+                      "name": "Feature Title",
+                      "fill": "$color-primary",
+                      "content": "1 枚のカードに",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 16,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "ETeZ3",
+                      "name": "Feature Body",
+                      "fill": "$color-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "セッティングは美しいカードとして公開 URL に。ログインしていない相手にもそのまま見せられる。",
+                      "lineHeight": 1.7,
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "KqAnx",
+                  "name": "SNS 映えする OGP Card",
+                  "width": "fill_container",
+                  "fill": "$color-surface",
+                  "cornerRadius": 16,
+                  "stroke": "$color-line",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": 24,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Yg5El",
+                      "name": "Feature Title",
+                      "fill": "$color-primary",
+                      "content": "SNS 映えする OGP",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 16,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "xJNH6",
+                      "name": "Feature Body",
+                      "fill": "$color-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "X に URL を貼るだけで、セッティング内容がカード画像として展開される。",
+                      "lineHeight": 1.7,
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "UzSQX",
+          "type": "ref",
+          "ref": "Fpf2a",
+          "name": "Footer",
+          "width": "fill_container",
+          "layout": "horizontal",
+          "justifyContent": "space_between",
+          "padding": [
+            24,
+            128
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "e6lNp",
+      "x": 1640,
+      "y": 3454,
+      "name": "07 Public Setting / Mobile",
+      "clip": true,
+      "width": 375,
+      "fill": "$color-base",
+      "layout": "vertical",
+      "children": [
+        {
+          "id": "y4Bha",
+          "type": "ref",
+          "ref": "Dj95u",
+          "name": "Header",
+          "width": "fill_container",
+          "padding": [
+            0,
+            12
+          ],
+          "descendants": {
+            "kvrGE": {
+              "padding": 8
+            },
+            "SJB8d": {
+              "padding": 8
+            },
+            "JKAlN": {
+              "padding": 8
+            },
+            "J1OCE": {
+              "padding": 8
+            },
+            "p0vW9W": {
+              "padding": 8
+            }
+          }
+        },
+        {
+          "type": "frame",
+          "id": "PlNLV",
+          "name": "Main",
+          "width": "fill_container",
+          "layout": "vertical",
+          "padding": [
+            40,
+            16
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "c94an",
+              "name": "Content",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 32,
+              "children": [
+                {
+                  "id": "bzpx4",
+                  "type": "ref",
+                  "ref": "avqKW",
+                  "name": "Setting Card",
+                  "width": "fill_container",
+                  "padding": 20,
+                  "descendants": {
+                    "i4Por": {
+                      "layout": "vertical",
+                      "alignItems": "start",
+                      "gap": 2
+                    },
+                    "dtB3p": {
+                      "fontSize": 20,
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container"
+                    },
+                    "V7indS": {
+                      "enabled": true
+                    },
+                    "V7puh": {
+                      "fontSize": 36
+                    },
+                    "T8vIhT": {
+                      "fontSize": 36
+                    },
+                    "Ucsiy": {
+                      "enabled": false
+                    },
+                    "o2qnz": {
+                      "type": "frame",
+                      "id": "kLdlF",
+                      "name": "Card Footer",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 16,
+                      "children": [
+                        {
+                          "id": "u8k3g",
+                          "type": "ref",
+                          "ref": "DqyTM",
+                          "name": "Share Buttons"
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "type": "frame",
+                  "id": "VhRIu",
+                  "name": "Create CTA Note",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 4,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "lzI9k",
+                      "name": "Note Text",
+                      "fill": "$color-secondary",
+                      "content": "自分のセッティングもつくってみませんか？",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "s5AqN",
+                      "name": "Note Link",
+                      "fill": "$color-accent",
+                      "content": "無料でつくる",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "WnblJ",
+          "type": "ref",
+          "ref": "Fpf2a",
+          "name": "Footer",
+          "width": "fill_container"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "n4CztL",
+      "x": 2140,
+      "y": 3454,
+      "name": "07 Public Setting / Desktop",
+      "clip": true,
+      "width": 1280,
+      "fill": "$color-base",
+      "layout": "vertical",
+      "children": [
+        {
+          "id": "s6IpGC",
+          "type": "ref",
+          "ref": "Dj95u",
+          "name": "Header",
+          "width": "fill_container",
+          "padding": [
+            0,
+            128
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "r2pFq",
+          "name": "Main",
+          "width": "fill_container",
+          "layout": "vertical",
+          "padding": [
+            40,
+            16
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "M8xeG",
+              "name": "Content",
+              "width": 672,
+              "layout": "vertical",
+              "gap": 32,
+              "children": [
+                {
+                  "id": "bF7Jw",
+                  "type": "ref",
+                  "ref": "avqKW",
+                  "name": "Setting Card",
+                  "width": "fill_container",
+                  "padding": 32,
+                  "descendants": {
+                    "dtB3p": {
+                      "fontSize": 24
+                    },
+                    "V7indS": {
+                      "enabled": true
+                    },
+                    "V7puh": {
+                      "fontSize": 48
+                    },
+                    "T8vIhT": {
+                      "fontSize": 48
+                    },
+                    "Ucsiy": {
+                      "enabled": false
+                    },
+                    "o2qnz": {
+                      "type": "frame",
+                      "id": "RkBLw",
+                      "name": "Card Footer",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 16,
+                      "children": [
+                        {
+                          "id": "CSOnm",
+                          "type": "ref",
+                          "ref": "DqyTM",
+                          "name": "Share Buttons"
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "type": "frame",
+                  "id": "QDzYD",
+                  "name": "Create CTA Note",
+                  "width": "fill_container",
+                  "gap": 4,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "PcY7I",
+                      "name": "Note Text",
+                      "fill": "$color-secondary",
+                      "content": "自分のセッティングもつくってみませんか？",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Yy1V1",
+                      "name": "Note Link",
+                      "fill": "$color-accent",
+                      "content": "無料でつくる",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "N0G1e0",
+          "type": "ref",
+          "ref": "Fpf2a",
+          "name": "Footer",
+          "width": "fill_container",
+          "layout": "horizontal",
+          "justifyContent": "space_between",
+          "padding": [
+            24,
+            128
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "STvIk",
+      "x": 1640,
+      "y": 4360,
+      "name": "04 My Page / Mobile",
+      "clip": true,
+      "width": 375,
+      "fill": "$color-base",
+      "layout": "vertical",
+      "children": [
+        {
+          "id": "p9LGg",
+          "type": "ref",
+          "ref": "Dj95u",
+          "name": "Header",
+          "width": "fill_container",
+          "padding": [
+            0,
+            12
+          ],
+          "descendants": {
+            "Mpleq": {
+              "gap": 4
+            },
+            "kvrGE": {
+              "padding": [
+                8,
+                6
+              ]
+            },
+            "SJB8d": {
+              "enabled": true,
+              "padding": [
+                8,
+                6
+              ]
+            },
+            "JKAlN": {
+              "enabled": true,
+              "padding": [
+                8,
+                6
+              ]
+            },
+            "J1OCE": {
+              "enabled": false
+            },
+            "p0vW9W": {
+              "enabled": false
+            }
+          }
+        },
+        {
+          "type": "frame",
+          "id": "ngAqI",
+          "name": "Main",
+          "width": "fill_container",
+          "layout": "vertical",
+          "padding": [
+            40,
+            16
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "obNio",
+              "name": "Content",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 32,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "p3xlyF",
+                  "name": "Page Head",
+                  "width": "fill_container",
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "gexxO",
+                      "name": "Page Title",
+                      "fill": "$color-primary",
+                      "content": "マイページ",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 24,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "id": "Eaukt",
+                      "type": "ref",
+                      "ref": "B7a7Z",
+                      "name": "New Setting Button",
+                      "padding": [
+                        8,
+                        16
+                      ],
+                      "cornerRadius": 8,
+                      "descendants": {
+                        "FSHVZ": {
+                          "content": "＋ 新しいセッティング",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "s4gjXd",
+                  "name": "Setting List",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 24,
+                  "children": [
+                    {
+                      "id": "vqLzX",
+                      "type": "ref",
+                      "ref": "avqKW",
+                      "name": "Setting Card Public",
+                      "width": "fill_container",
+                      "padding": 20,
+                      "descendants": {
+                        "dtB3p": {
+                          "fontSize": 20
+                        },
+                        "V7puh": {
+                          "fontSize": 36
+                        },
+                        "T8vIhT": {
+                          "fontSize": 36
+                        },
+                        "Ucsiy": {
+                          "enabled": false
+                        },
+                        "o2qnz": {
+                          "type": "frame",
+                          "id": "GqqPr",
+                          "name": "Card Footer",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 8,
+                          "children": [
+                            {
+                              "id": "uaNiz",
+                              "type": "ref",
+                              "ref": "DqyTM",
+                              "name": "Share Buttons"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "V6sz6t",
+                              "name": "Action Row",
+                              "gap": 8,
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "id": "zOtyG",
+                                  "type": "ref",
+                                  "ref": "QifoW",
+                                  "name": "公開ページ Button",
+                                  "padding": [
+                                    8,
+                                    12
+                                  ],
+                                  "descendants": {
+                                    "xE7la": {
+                                      "content": "公開ページ"
+                                    }
+                                  }
+                                },
+                                {
+                                  "id": "cogx4",
+                                  "type": "ref",
+                                  "ref": "QifoW",
+                                  "name": "編集 Button",
+                                  "padding": [
+                                    8,
+                                    12
+                                  ],
+                                  "descendants": {
+                                    "xE7la": {
+                                      "content": "編集"
+                                    }
+                                  }
+                                },
+                                {
+                                  "id": "n7DCl",
+                                  "type": "ref",
+                                  "ref": "QifoW",
+                                  "name": "削除 Button",
+                                  "padding": [
+                                    8,
+                                    12
+                                  ],
+                                  "descendants": {
+                                    "xE7la": {
+                                      "content": "削除",
+                                      "fill": "$color-danger"
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "id": "e1map",
+                      "type": "ref",
+                      "ref": "avqKW",
+                      "name": "Setting Card Private",
+                      "width": "fill_container",
+                      "padding": 20,
+                      "descendants": {
+                        "dtB3p": {
+                          "content": "サブセッティング（ハウス用）",
+                          "fontSize": 20
+                        },
+                        "V7puh": {
+                          "content": "19.8",
+                          "fontSize": 36
+                        },
+                        "T8vIhT": {
+                          "content": "96.0",
+                          "fontSize": 36
+                        },
+                        "Ucsiy": {
+                          "enabled": false
+                        },
+                        "o2qnz": {
+                          "type": "frame",
+                          "id": "eQ7Ja",
+                          "name": "Card Footer",
+                          "width": "fill_container",
+                          "gap": 8,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "id": "TFDt7",
+                              "type": "ref",
+                              "ref": "xiBty",
+                              "name": "Private Badge",
+                              "padding": [
+                                3,
+                                10
+                              ],
+                              "descendants": {
+                                "NuMqE": {
+                                  "content": "非公開",
+                                  "fontSize": 12
+                                }
+                              }
+                            },
+                            {
+                              "id": "oj7t7",
+                              "type": "ref",
+                              "ref": "QifoW",
+                              "name": "公開ページ Button",
+                              "padding": [
+                                8,
+                                12
+                              ],
+                              "descendants": {
+                                "xE7la": {
+                                  "content": "公開ページ"
+                                }
+                              }
+                            },
+                            {
+                              "id": "yyGIR",
+                              "type": "ref",
+                              "ref": "QifoW",
+                              "name": "編集 Button",
+                              "padding": [
+                                8,
+                                12
+                              ],
+                              "descendants": {
+                                "xE7la": {
+                                  "content": "編集"
+                                }
+                              }
+                            },
+                            {
+                              "id": "fBqRE",
+                              "type": "ref",
+                              "ref": "QifoW",
+                              "name": "削除 Button",
+                              "padding": [
+                                8,
+                                12
+                              ],
+                              "descendants": {
+                                "xE7la": {
+                                  "content": "削除",
+                                  "fill": "$color-danger"
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u8SwgT",
+          "type": "ref",
+          "ref": "Fpf2a",
+          "name": "Footer",
+          "width": "fill_container"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "y2tJ0",
+      "x": 2140,
+      "y": 4360,
+      "name": "04 My Page / Desktop",
+      "clip": true,
+      "width": 1280,
+      "fill": "$color-base",
+      "layout": "vertical",
+      "children": [
+        {
+          "id": "U608RZ",
+          "type": "ref",
+          "ref": "Dj95u",
+          "name": "Header",
+          "width": "fill_container",
+          "padding": [
+            0,
+            128
+          ],
+          "descendants": {
+            "SJB8d": {
+              "enabled": true
+            },
+            "JKAlN": {
+              "enabled": true
+            },
+            "J1OCE": {
+              "enabled": false
+            },
+            "p0vW9W": {
+              "enabled": false
+            }
+          }
+        },
+        {
+          "type": "frame",
+          "id": "nO7rJ",
+          "name": "Main",
+          "width": "fill_container",
+          "layout": "vertical",
+          "padding": [
+            40,
+            16
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "l6zVX",
+              "name": "Content",
+              "width": 768,
+              "layout": "vertical",
+              "gap": 32,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "eCzmq",
+                  "name": "Page Head",
+                  "width": "fill_container",
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Ebycj",
+                      "name": "Page Title",
+                      "fill": "$color-primary",
+                      "content": "マイページ",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 24,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "id": "z8pQ7",
+                      "type": "ref",
+                      "ref": "B7a7Z",
+                      "name": "New Setting Button",
+                      "padding": [
+                        8,
+                        16
+                      ],
+                      "cornerRadius": 8,
+                      "descendants": {
+                        "FSHVZ": {
+                          "content": "＋ 新しいセッティング",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "nWg9g",
+                  "name": "Setting List",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 24,
+                  "children": [
+                    {
+                      "id": "JCnL5",
+                      "type": "ref",
+                      "ref": "avqKW",
+                      "name": "Setting Card Public",
+                      "width": "fill_container",
+                      "padding": 32,
+                      "descendants": {
+                        "dtB3p": {
+                          "fontSize": 24
+                        },
+                        "V7puh": {
+                          "fontSize": 48
+                        },
+                        "T8vIhT": {
+                          "fontSize": 48
+                        },
+                        "Ucsiy": {
+                          "enabled": false
+                        },
+                        "o2qnz": {
+                          "type": "frame",
+                          "id": "K7x4a",
+                          "name": "Card Footer",
+                          "width": "fill_container",
+                          "gap": 8,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "id": "d2tzAI",
+                              "type": "ref",
+                              "ref": "DqyTM",
+                              "name": "Share Buttons"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "lxBoP",
+                              "name": "Action Row",
+                              "gap": 8,
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "id": "moVGx",
+                                  "type": "ref",
+                                  "ref": "QifoW",
+                                  "name": "公開ページ Button",
+                                  "padding": [
+                                    8,
+                                    12
+                                  ],
+                                  "descendants": {
+                                    "xE7la": {
+                                      "content": "公開ページ"
+                                    }
+                                  }
+                                },
+                                {
+                                  "id": "D2JZm",
+                                  "type": "ref",
+                                  "ref": "QifoW",
+                                  "name": "編集 Button",
+                                  "padding": [
+                                    8,
+                                    12
+                                  ],
+                                  "descendants": {
+                                    "xE7la": {
+                                      "content": "編集"
+                                    }
+                                  }
+                                },
+                                {
+                                  "id": "N7RE5L",
+                                  "type": "ref",
+                                  "ref": "QifoW",
+                                  "name": "削除 Button",
+                                  "padding": [
+                                    8,
+                                    12
+                                  ],
+                                  "descendants": {
+                                    "xE7la": {
+                                      "content": "削除",
+                                      "fill": "$color-danger"
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "id": "B33GNj",
+                      "type": "ref",
+                      "ref": "avqKW",
+                      "name": "Setting Card Private",
+                      "width": "fill_container",
+                      "padding": 32,
+                      "descendants": {
+                        "dtB3p": {
+                          "content": "サブセッティング（ハウス用）",
+                          "fontSize": 24
+                        },
+                        "V7puh": {
+                          "content": "19.8",
+                          "fontSize": 48
+                        },
+                        "T8vIhT": {
+                          "content": "96.0",
+                          "fontSize": 48
+                        },
+                        "Ucsiy": {
+                          "enabled": false
+                        },
+                        "o2qnz": {
+                          "type": "frame",
+                          "id": "b5XPij",
+                          "name": "Card Footer",
+                          "width": "fill_container",
+                          "gap": 8,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "id": "m6sCOy",
+                              "type": "ref",
+                              "ref": "xiBty",
+                              "name": "Private Badge",
+                              "padding": [
+                                3,
+                                10
+                              ],
+                              "descendants": {
+                                "NuMqE": {
+                                  "content": "非公開",
+                                  "fontSize": 12
+                                }
+                              }
+                            },
+                            {
+                              "id": "jgrBA",
+                              "type": "ref",
+                              "ref": "QifoW",
+                              "name": "公開ページ Button",
+                              "padding": [
+                                8,
+                                12
+                              ],
+                              "descendants": {
+                                "xE7la": {
+                                  "content": "公開ページ"
+                                }
+                              }
+                            },
+                            {
+                              "id": "QJh59",
+                              "type": "ref",
+                              "ref": "QifoW",
+                              "name": "編集 Button",
+                              "padding": [
+                                8,
+                                12
+                              ],
+                              "descendants": {
+                                "xE7la": {
+                                  "content": "編集"
+                                }
+                              }
+                            },
+                            {
+                              "id": "RSnnJ",
+                              "type": "ref",
+                              "ref": "QifoW",
+                              "name": "削除 Button",
+                              "padding": [
+                                8,
+                                12
+                              ],
+                              "descendants": {
+                                "xE7la": {
+                                  "content": "削除",
+                                  "fill": "$color-danger"
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "frahh",
+          "type": "ref",
+          "ref": "Fpf2a",
+          "name": "Footer",
+          "width": "fill_container",
+          "layout": "horizontal",
+          "justifyContent": "space_between",
+          "padding": [
+            24,
+            128
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "ium1b",
+      "x": 1640,
+      "y": 5718,
+      "name": "05 New Setting / Mobile",
+      "clip": true,
+      "width": 375,
+      "fill": "$color-base",
+      "layout": "vertical",
+      "children": [
+        {
+          "id": "U5h62",
+          "type": "ref",
+          "ref": "Dj95u",
+          "name": "Header",
+          "width": "fill_container",
+          "padding": [
+            0,
+            12
+          ],
+          "descendants": {
+            "Mpleq": {
+              "gap": 4
+            },
+            "kvrGE": {
+              "padding": [
+                8,
+                6
+              ]
+            },
+            "SJB8d": {
+              "enabled": true,
+              "padding": [
+                8,
+                6
+              ]
+            },
+            "JKAlN": {
+              "enabled": true,
+              "padding": [
+                8,
+                6
+              ]
+            },
+            "J1OCE": {
+              "enabled": false
+            },
+            "p0vW9W": {
+              "enabled": false
+            }
+          }
+        },
+        {
+          "type": "frame",
+          "id": "O4z5HA",
+          "name": "Main",
+          "width": "fill_container",
+          "layout": "vertical",
+          "padding": [
+            40,
+            16
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "qDLqf",
+              "name": "Content",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "DPQkT",
+                  "name": "Page Title",
+                  "fill": "$color-primary",
+                  "content": "セッティングをつくる",
+                  "fontFamily": "Noto Sans JP",
+                  "fontSize": 24,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "T2lLvl",
+                  "name": "Page Lead",
+                  "fill": "$color-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "パーツを選ぶと総重量・全長がリアルタイムに更新されます。",
+                  "fontFamily": "Noto Sans JP",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "VoGmS",
+                  "name": "Form",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 32,
+                  "padding": [
+                    24,
+                    0,
+                    0,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "DrfiV",
+                      "name": "Form Fields",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 16,
+                      "children": [
+                        {
+                          "id": "QzfpE",
+                          "type": "ref",
+                          "ref": "AOV3e",
+                          "name": "Title Field",
+                          "width": "fill_container",
+                          "descendants": {
+                            "gda25": {
+                              "content": "セッティング名"
+                            },
+                            "ysQfe": {
+                              "content": "週末リーグ用セッティング",
+                              "fill": "$color-primary"
+                            }
+                          }
+                        },
+                        {
+                          "id": "hznIC",
+                          "type": "ref",
+                          "ref": "jYPkd",
+                          "name": "バレル Selector",
+                          "width": "fill_container",
+                          "descendants": {
+                            "R770We": {
+                              "content": "バレル"
+                            },
+                            "J8SxkW": {
+                              "content": "96 黒瀧摩紀（18.0g / 40.5mm）",
+                              "fill": "$color-primary"
+                            }
+                          }
+                        },
+                        {
+                          "id": "is7Ou",
+                          "type": "ref",
+                          "ref": "jYPkd",
+                          "name": "シャフト Selector",
+                          "width": "fill_container",
+                          "descendants": {
+                            "R770We": {
+                              "content": "シャフト"
+                            },
+                            "J8SxkW": {
+                              "content": "Fit Shaft Carbon Slim Spin 4（1.1g /…",
+                              "fill": "$color-primary"
+                            }
+                          }
+                        },
+                        {
+                          "id": "A8PiH",
+                          "type": "ref",
+                          "ref": "jYPkd",
+                          "name": "フライト Selector",
+                          "width": "fill_container",
+                          "descendants": {
+                            "R770We": {
+                              "content": "フライト"
+                            },
+                            "J8SxkW": {
+                              "content": "AXE CONDOR AXE Small S（0.7g / Small）",
+                              "fill": "$color-primary"
+                            }
+                          }
+                        },
+                        {
+                          "id": "y309pY",
+                          "type": "ref",
+                          "ref": "jYPkd",
+                          "name": "チップ Selector",
+                          "width": "fill_container",
+                          "descendants": {
+                            "R770We": {
+                              "content": "チップ"
+                            },
+                            "J8SxkW": {
+                              "content": "未選択"
+                            }
+                          }
+                        },
+                        {
+                          "type": "frame",
+                          "id": "wQm5F",
+                          "name": "Visibility Checkbox",
+                          "gap": 8,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "rectangle",
+                              "cornerRadius": 4,
+                              "id": "Z4LcR",
+                              "name": "Checkbox Box",
+                              "width": 16,
+                              "height": 16,
+                              "stroke": "$color-line",
+                              "strokeWidth": 1
+                            },
+                            {
+                              "type": "text",
+                              "id": "JSAew",
+                              "name": "Checkbox Label",
+                              "fill": "$color-secondary",
+                              "content": "非公開にする（自分だけが閲覧できます）",
+                              "fontFamily": "Noto Sans JP",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "hECtr",
+                          "name": "Submit Wrap",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "padding": [
+                            8,
+                            0,
+                            0,
+                            0
+                          ],
+                          "children": [
+                            {
+                              "id": "PssZP",
+                              "type": "ref",
+                              "ref": "B7a7Z",
+                              "name": "Submit Button",
+                              "width": "fill_container",
+                              "descendants": {
+                                "FSHVZ": {
+                                  "content": "保存して公開ページをつくる"
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "qiQZC",
+                      "name": "Preview Col",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "WgEfm",
+                          "name": "Preview Label",
+                          "fill": "$color-secondary",
+                          "content": "プレビュー",
+                          "fontFamily": "Noto Sans JP",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "id": "S7XHL1",
+                          "type": "ref",
+                          "ref": "avqKW",
+                          "name": "Preview Card",
+                          "width": "fill_container",
+                          "padding": 20,
+                          "descendants": {
+                            "dtB3p": {
+                              "fontSize": 20
+                            },
+                            "V7puh": {
+                              "content": "19.8",
+                              "fontSize": 36
+                            },
+                            "T8vIhT": {
+                              "content": "69.0",
+                              "fontSize": 36
+                            },
+                            "z9ngO": {
+                              "enabled": false
+                            },
+                            "GEXlX": {
+                              "content": "未選択",
+                              "fill": "$color-secondary",
+                              "fontWeight": "normal"
+                            },
+                            "o2qnz": {
+                              "enabled": false
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "khyC6",
+          "type": "ref",
+          "ref": "Fpf2a",
+          "name": "Footer",
+          "width": "fill_container"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "YwAK7",
+      "x": 2140,
+      "y": 5718,
+      "name": "05 New Setting / Desktop",
+      "clip": true,
+      "width": 1280,
+      "fill": "$color-base",
+      "layout": "vertical",
+      "children": [
+        {
+          "id": "x4F5cU",
+          "type": "ref",
+          "ref": "Dj95u",
+          "name": "Header",
+          "width": "fill_container",
+          "padding": [
+            0,
+            128
+          ],
+          "descendants": {
+            "SJB8d": {
+              "enabled": true
+            },
+            "JKAlN": {
+              "enabled": true
+            },
+            "J1OCE": {
+              "enabled": false
+            },
+            "p0vW9W": {
+              "enabled": false
+            }
+          }
+        },
+        {
+          "type": "frame",
+          "id": "g6K6C",
+          "name": "Main",
+          "width": "fill_container",
+          "layout": "vertical",
+          "padding": [
+            40,
+            16
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "F9CqXV",
+              "name": "Content",
+              "width": 1024,
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "L6onX",
+                  "name": "Page Title",
+                  "fill": "$color-primary",
+                  "content": "セッティングをつくる",
+                  "fontFamily": "Noto Sans JP",
+                  "fontSize": 24,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "fzXkK",
+                  "name": "Page Lead",
+                  "fill": "$color-secondary",
+                  "content": "パーツを選ぶと総重量・全長がリアルタイムに更新されます。",
+                  "fontFamily": "Noto Sans JP",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "kSYH2",
+                  "name": "Form",
+                  "width": "fill_container",
+                  "gap": 32,
+                  "padding": [
+                    24,
+                    0,
+                    0,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "z4BUvi",
+                      "name": "Form Fields",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 16,
+                      "children": [
+                        {
+                          "id": "ABzBZ",
+                          "type": "ref",
+                          "ref": "AOV3e",
+                          "name": "Title Field",
+                          "width": "fill_container",
+                          "descendants": {
+                            "gda25": {
+                              "content": "セッティング名"
+                            },
+                            "ysQfe": {
+                              "content": "週末リーグ用セッティング",
+                              "fill": "$color-primary"
+                            }
+                          }
+                        },
+                        {
+                          "id": "JLFyp",
+                          "type": "ref",
+                          "ref": "jYPkd",
+                          "name": "バレル Selector",
+                          "width": "fill_container",
+                          "descendants": {
+                            "R770We": {
+                              "content": "バレル"
+                            },
+                            "J8SxkW": {
+                              "content": "96 黒瀧摩紀（18.0g / 40.5mm）",
+                              "fill": "$color-primary"
+                            }
+                          }
+                        },
+                        {
+                          "id": "cbUBM",
+                          "type": "ref",
+                          "ref": "jYPkd",
+                          "name": "シャフト Selector",
+                          "width": "fill_container",
+                          "descendants": {
+                            "R770We": {
+                              "content": "シャフト"
+                            },
+                            "J8SxkW": {
+                              "content": "Fit Shaft Carbon Slim Spin 4（1.1g / 28.5mm）",
+                              "fill": "$color-primary"
+                            }
+                          }
+                        },
+                        {
+                          "id": "n4HXu9",
+                          "type": "ref",
+                          "ref": "jYPkd",
+                          "name": "フライト Selector",
+                          "width": "fill_container",
+                          "descendants": {
+                            "R770We": {
+                              "content": "フライト"
+                            },
+                            "J8SxkW": {
+                              "content": "AXE CONDOR AXE Small S（0.7g / Small）",
+                              "fill": "$color-primary"
+                            }
+                          }
+                        },
+                        {
+                          "id": "j5PSG7",
+                          "type": "ref",
+                          "ref": "jYPkd",
+                          "name": "チップ Selector",
+                          "width": "fill_container",
+                          "descendants": {
+                            "R770We": {
+                              "content": "チップ"
+                            },
+                            "J8SxkW": {
+                              "content": "未選択"
+                            }
+                          }
+                        },
+                        {
+                          "type": "frame",
+                          "id": "UBQQ9",
+                          "name": "Visibility Checkbox",
+                          "gap": 8,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "rectangle",
+                              "cornerRadius": 4,
+                              "id": "pLeEz",
+                              "name": "Checkbox Box",
+                              "width": 16,
+                              "height": 16,
+                              "stroke": "$color-line",
+                              "strokeWidth": 1
+                            },
+                            {
+                              "type": "text",
+                              "id": "umA4z",
+                              "name": "Checkbox Label",
+                              "fill": "$color-secondary",
+                              "content": "非公開にする（自分だけが閲覧できます）",
+                              "fontFamily": "Noto Sans JP",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "wROvd",
+                          "name": "Submit Wrap",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "padding": [
+                            8,
+                            0,
+                            0,
+                            0
+                          ],
+                          "children": [
+                            {
+                              "id": "TZrhd",
+                              "type": "ref",
+                              "ref": "B7a7Z",
+                              "name": "Submit Button",
+                              "width": "fill_container",
+                              "descendants": {
+                                "FSHVZ": {
+                                  "content": "保存して公開ページをつくる"
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "x12dN",
+                      "name": "Preview Col",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "rRfmc",
+                          "name": "Preview Label",
+                          "fill": "$color-secondary",
+                          "content": "プレビュー",
+                          "fontFamily": "Noto Sans JP",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "id": "kWwn3",
+                          "type": "ref",
+                          "ref": "avqKW",
+                          "name": "Preview Card",
+                          "width": "fill_container",
+                          "padding": 32,
+                          "descendants": {
+                            "dtB3p": {
+                              "fontSize": 24
+                            },
+                            "V7puh": {
+                              "content": "19.8",
+                              "fontSize": 48
+                            },
+                            "T8vIhT": {
+                              "content": "69.0",
+                              "fontSize": 48
+                            },
+                            "z9ngO": {
+                              "enabled": false
+                            },
+                            "GEXlX": {
+                              "content": "未選択",
+                              "fill": "$color-secondary",
+                              "fontWeight": "normal"
+                            },
+                            "o2qnz": {
+                              "enabled": false
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "sq2e2",
+          "type": "ref",
+          "ref": "Fpf2a",
+          "name": "Footer",
+          "width": "fill_container",
+          "layout": "horizontal",
+          "justifyContent": "space_between",
+          "padding": [
+            24,
+            128
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "uxWfc",
+      "x": 1640,
+      "y": 7199,
+      "name": "06 Edit Setting / Mobile",
+      "clip": true,
+      "width": 375,
+      "fill": "$color-base",
+      "layout": "vertical",
+      "children": [
+        {
+          "id": "T9Mg3",
+          "type": "ref",
+          "ref": "Dj95u",
+          "name": "Header",
+          "width": "fill_container",
+          "padding": [
+            0,
+            12
+          ],
+          "descendants": {
+            "Mpleq": {
+              "gap": 4
+            },
+            "kvrGE": {
+              "padding": [
+                8,
+                6
+              ]
+            },
+            "SJB8d": {
+              "enabled": true,
+              "padding": [
+                8,
+                6
+              ]
+            },
+            "JKAlN": {
+              "enabled": true,
+              "padding": [
+                8,
+                6
+              ]
+            },
+            "J1OCE": {
+              "enabled": false
+            },
+            "p0vW9W": {
+              "enabled": false
+            }
+          }
+        },
+        {
+          "type": "frame",
+          "id": "KR910",
+          "name": "Main",
+          "width": "fill_container",
+          "layout": "vertical",
+          "padding": [
+            40,
+            16
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "zg9rM",
+              "name": "Content",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Trh5K",
+                  "name": "Page Title",
+                  "fill": "$color-primary",
+                  "content": "セッティングを編集",
+                  "fontFamily": "Noto Sans JP",
+                  "fontSize": 24,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "frame",
+                  "id": "Mxrcl",
+                  "name": "Form",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 32,
+                  "padding": [
+                    24,
+                    0,
+                    0,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "keQ47",
+                      "name": "Form Fields",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 16,
+                      "children": [
+                        {
+                          "id": "F1dxD",
+                          "type": "ref",
+                          "ref": "AOV3e",
+                          "name": "Title Field",
+                          "width": "fill_container",
+                          "descendants": {
+                            "gda25": {
+                              "content": "セッティング名"
+                            },
+                            "ysQfe": {
+                              "content": "週末リーグ用セッティング",
+                              "fill": "$color-primary"
+                            }
+                          }
+                        },
+                        {
+                          "id": "zOKYh",
+                          "type": "ref",
+                          "ref": "jYPkd",
+                          "name": "バレル Selector",
+                          "width": "fill_container",
+                          "descendants": {
+                            "R770We": {
+                              "content": "バレル"
+                            },
+                            "J8SxkW": {
+                              "content": "96 黒瀧摩紀（18.0g / 40.5mm）",
+                              "fill": "$color-primary"
+                            }
+                          }
+                        },
+                        {
+                          "id": "ITMQw",
+                          "type": "ref",
+                          "ref": "jYPkd",
+                          "name": "シャフト Selector",
+                          "width": "fill_container",
+                          "descendants": {
+                            "R770We": {
+                              "content": "シャフト"
+                            },
+                            "J8SxkW": {
+                              "content": "Fit Shaft Carbon Slim Spin 4（1.1g /…",
+                              "fill": "$color-primary"
+                            }
+                          }
+                        },
+                        {
+                          "id": "Z1XPz",
+                          "type": "ref",
+                          "ref": "jYPkd",
+                          "name": "フライト Selector",
+                          "width": "fill_container",
+                          "descendants": {
+                            "R770We": {
+                              "content": "フライト"
+                            },
+                            "J8SxkW": {
+                              "content": "AXE CONDOR AXE Small S（0.7g / Small）",
+                              "fill": "$color-primary"
+                            }
+                          }
+                        },
+                        {
+                          "id": "gscOx",
+                          "type": "ref",
+                          "ref": "jYPkd",
+                          "name": "チップ Selector",
+                          "width": "fill_container",
+                          "descendants": {
+                            "R770We": {
+                              "content": "チップ"
+                            },
+                            "J8SxkW": {
+                              "content": "TIP CONDOR TIP（1.3g / 30.5mm）",
+                              "fill": "$color-primary"
+                            }
+                          }
+                        },
+                        {
+                          "type": "frame",
+                          "id": "ZgTKj",
+                          "name": "Visibility Checkbox",
+                          "gap": 8,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "rectangle",
+                              "cornerRadius": 4,
+                              "id": "smmrm",
+                              "name": "Checkbox Box",
+                              "width": 16,
+                              "height": 16,
+                              "stroke": "$color-line",
+                              "strokeWidth": 1
+                            },
+                            {
+                              "type": "text",
+                              "id": "xYNdv",
+                              "name": "Checkbox Label",
+                              "fill": "$color-secondary",
+                              "content": "非公開にする（自分だけが閲覧できます）",
+                              "fontFamily": "Noto Sans JP",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "CtaqK",
+                          "name": "Submit Wrap",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "padding": [
+                            8,
+                            0,
+                            0,
+                            0
+                          ],
+                          "children": [
+                            {
+                              "id": "t3gP1j",
+                              "type": "ref",
+                              "ref": "B7a7Z",
+                              "name": "Submit Button",
+                              "width": "fill_container",
+                              "descendants": {
+                                "FSHVZ": {
+                                  "content": "更新する"
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "UPswq",
+                      "name": "Preview Col",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "RiEJh",
+                          "name": "Preview Label",
+                          "fill": "$color-secondary",
+                          "content": "プレビュー",
+                          "fontFamily": "Noto Sans JP",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "id": "atYLw",
+                          "type": "ref",
+                          "ref": "avqKW",
+                          "name": "Preview Card",
+                          "width": "fill_container",
+                          "padding": 20,
+                          "descendants": {
+                            "dtB3p": {
+                              "fontSize": 20
+                            },
+                            "V7puh": {
+                              "content": "21.1",
+                              "fontSize": 36
+                            },
+                            "T8vIhT": {
+                              "content": "99.5",
+                              "fontSize": 36
+                            },
+                            "Ucsiy": {
+                              "enabled": false
+                            },
+                            "o2qnz": {
+                              "enabled": false
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "FeNol",
+          "type": "ref",
+          "ref": "Fpf2a",
+          "name": "Footer",
+          "width": "fill_container"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "U3i5N",
+      "x": 2140,
+      "y": 7199,
+      "name": "06 Edit Setting / Desktop",
+      "clip": true,
+      "width": 1280,
+      "fill": "$color-base",
+      "layout": "vertical",
+      "children": [
+        {
+          "id": "vDkux",
+          "type": "ref",
+          "ref": "Dj95u",
+          "name": "Header",
+          "width": "fill_container",
+          "padding": [
+            0,
+            128
+          ],
+          "descendants": {
+            "SJB8d": {
+              "enabled": true
+            },
+            "JKAlN": {
+              "enabled": true
+            },
+            "J1OCE": {
+              "enabled": false
+            },
+            "p0vW9W": {
+              "enabled": false
+            }
+          }
+        },
+        {
+          "type": "frame",
+          "id": "wgqfb",
+          "name": "Main",
+          "width": "fill_container",
+          "layout": "vertical",
+          "padding": [
+            40,
+            16
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "J9VQF",
+              "name": "Content",
+              "width": 1024,
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "BFcSg",
+                  "name": "Page Title",
+                  "fill": "$color-primary",
+                  "content": "セッティングを編集",
+                  "fontFamily": "Noto Sans JP",
+                  "fontSize": 24,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "frame",
+                  "id": "M9O8y",
+                  "name": "Form",
+                  "width": "fill_container",
+                  "gap": 32,
+                  "padding": [
+                    24,
+                    0,
+                    0,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "YiJqB",
+                      "name": "Form Fields",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 16,
+                      "children": [
+                        {
+                          "id": "Gte1I",
+                          "type": "ref",
+                          "ref": "AOV3e",
+                          "name": "Title Field",
+                          "width": "fill_container",
+                          "descendants": {
+                            "gda25": {
+                              "content": "セッティング名"
+                            },
+                            "ysQfe": {
+                              "content": "週末リーグ用セッティング",
+                              "fill": "$color-primary"
+                            }
+                          }
+                        },
+                        {
+                          "id": "hPWXH",
+                          "type": "ref",
+                          "ref": "jYPkd",
+                          "name": "バレル Selector",
+                          "width": "fill_container",
+                          "descendants": {
+                            "R770We": {
+                              "content": "バレル"
+                            },
+                            "J8SxkW": {
+                              "content": "96 黒瀧摩紀（18.0g / 40.5mm）",
+                              "fill": "$color-primary"
+                            }
+                          }
+                        },
+                        {
+                          "id": "kfB5f",
+                          "type": "ref",
+                          "ref": "jYPkd",
+                          "name": "シャフト Selector",
+                          "width": "fill_container",
+                          "descendants": {
+                            "R770We": {
+                              "content": "シャフト"
+                            },
+                            "J8SxkW": {
+                              "content": "Fit Shaft Carbon Slim Spin 4（1.1g / 28.5mm）",
+                              "fill": "$color-primary"
+                            }
+                          }
+                        },
+                        {
+                          "id": "yT5gf",
+                          "type": "ref",
+                          "ref": "jYPkd",
+                          "name": "フライト Selector",
+                          "width": "fill_container",
+                          "descendants": {
+                            "R770We": {
+                              "content": "フライト"
+                            },
+                            "J8SxkW": {
+                              "content": "AXE CONDOR AXE Small S（0.7g / Small）",
+                              "fill": "$color-primary"
+                            }
+                          }
+                        },
+                        {
+                          "id": "Uom6H",
+                          "type": "ref",
+                          "ref": "jYPkd",
+                          "name": "チップ Selector",
+                          "width": "fill_container",
+                          "descendants": {
+                            "R770We": {
+                              "content": "チップ"
+                            },
+                            "J8SxkW": {
+                              "content": "TIP CONDOR TIP（1.3g / 30.5mm）",
+                              "fill": "$color-primary"
+                            }
+                          }
+                        },
+                        {
+                          "type": "frame",
+                          "id": "qqZbV",
+                          "name": "Visibility Checkbox",
+                          "gap": 8,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "rectangle",
+                              "cornerRadius": 4,
+                              "id": "S5cxp",
+                              "name": "Checkbox Box",
+                              "width": 16,
+                              "height": 16,
+                              "stroke": "$color-line",
+                              "strokeWidth": 1
+                            },
+                            {
+                              "type": "text",
+                              "id": "n0OHD",
+                              "name": "Checkbox Label",
+                              "fill": "$color-secondary",
+                              "content": "非公開にする（自分だけが閲覧できます）",
+                              "fontFamily": "Noto Sans JP",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "r10HTD",
+                          "name": "Submit Wrap",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "padding": [
+                            8,
+                            0,
+                            0,
+                            0
+                          ],
+                          "children": [
+                            {
+                              "id": "P3FFS",
+                              "type": "ref",
+                              "ref": "B7a7Z",
+                              "name": "Submit Button",
+                              "width": "fill_container",
+                              "descendants": {
+                                "FSHVZ": {
+                                  "content": "更新する"
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "EhZer",
+                      "name": "Preview Col",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "FoYNv",
+                          "name": "Preview Label",
+                          "fill": "$color-secondary",
+                          "content": "プレビュー",
+                          "fontFamily": "Noto Sans JP",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "id": "i9k1k2",
+                          "type": "ref",
+                          "ref": "avqKW",
+                          "name": "Preview Card",
+                          "width": "fill_container",
+                          "padding": 32,
+                          "descendants": {
+                            "dtB3p": {
+                              "fontSize": 24
+                            },
+                            "V7puh": {
+                              "content": "21.1",
+                              "fontSize": 48
+                            },
+                            "T8vIhT": {
+                              "content": "99.5",
+                              "fontSize": 48
+                            },
+                            "Ucsiy": {
+                              "enabled": false
+                            },
+                            "o2qnz": {
+                              "enabled": false
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "w6eXD9",
+          "type": "ref",
+          "ref": "Fpf2a",
+          "name": "Footer",
+          "width": "fill_container",
+          "layout": "horizontal",
+          "justifyContent": "space_between",
+          "padding": [
+            24,
+            128
+          ]
+        }
+      ]
+    }
+  ],
+  "variables": {
+    "color-base": {
+      "type": "color",
+      "value": "#0a0a0f"
+    },
+    "color-surface": {
+      "type": "color",
+      "value": "#14141c"
+    },
+    "color-elevated": {
+      "type": "color",
+      "value": "#1e1e2a"
+    },
+    "color-primary": {
+      "type": "color",
+      "value": "#f5f5f7"
+    },
+    "color-secondary": {
+      "type": "color",
+      "value": "#9a9aaf"
+    },
+    "color-line": {
+      "type": "color",
+      "value": "#2a2a38"
+    },
+    "color-accent": {
+      "type": "color",
+      "value": "#00e5c7"
+    },
+    "color-accent-alt": {
+      "type": "color",
+      "value": "#7b5cff"
+    },
+    "color-danger": {
+      "type": "color",
+      "value": "#ff5c7a"
+    }
+  },
+  "fileToken": "797ba6c7-da62-4b3b-96d7-b956bc5e7c3d"
+}
