@@ -13,124 +13,46 @@
       "layout": "vertical",
       "children": [
         {
-          "type": "frame",
-          "id": "eAoVy",
+          "type": "ellipse",
+          "id": "r5y6Ky",
+          "layoutPosition": "absolute",
+          "x": -160,
+          "y": -140,
+          "name": "Glow Accent",
+          "opacity": 0.42,
+          "fill": "$color-accent",
+          "width": 640,
+          "height": 640,
+          "effect": {
+            "type": "blur",
+            "radius": 95
+          }
+        },
+        {
+          "type": "ellipse",
+          "id": "Zg2Cv",
+          "layoutPosition": "absolute",
+          "x": 760,
+          "y": 80,
+          "name": "Glow Accent Alt",
+          "opacity": 0.36,
+          "fill": "$color-accent-alt",
+          "width": 560,
+          "height": 560,
+          "effect": {
+            "type": "blur",
+            "radius": 85
+          }
+        },
+        {
+          "id": "M28aJS",
+          "type": "ref",
+          "ref": "Dj95u",
           "name": "Header",
           "width": "fill_container",
-          "height": 72,
-          "stroke": "$color-line",
-          "strokeWidth": {
-            "bottom": 1
-          },
           "padding": [
             0,
             40
-          ],
-          "justifyContent": "space_between",
-          "alignItems": "center",
-          "children": [
-            {
-              "type": "frame",
-              "id": "EoA5s",
-              "name": "Logo",
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "text",
-                  "id": "xXJWx",
-                  "name": "Logo Darts",
-                  "fill": "$color-primary",
-                  "content": "darts ",
-                  "fontFamily": "Inter",
-                  "fontSize": 18,
-                  "fontWeight": "700"
-                },
-                {
-                  "type": "text",
-                  "id": "jOzZe",
-                  "name": "Logo Spec",
-                  "fill": "$color-accent",
-                  "content": "spec",
-                  "fontFamily": "Inter",
-                  "fontSize": 18,
-                  "fontWeight": "700"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "vB5VH",
-              "name": "Nav",
-              "gap": 8,
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "frame",
-                  "id": "LXsY0",
-                  "name": "Nav Item Create",
-                  "padding": [
-                    10,
-                    16
-                  ],
-                  "children": [
-                    {
-                      "type": "text",
-                      "id": "i34p0i",
-                      "name": "Nav Create Label",
-                      "fill": "$color-secondary",
-                      "content": "つくる",
-                      "fontFamily": "Noto Sans JP",
-                      "fontSize": 14,
-                      "fontWeight": "normal"
-                    }
-                  ]
-                },
-                {
-                  "type": "frame",
-                  "id": "r4jN9",
-                  "name": "Nav Item Login",
-                  "padding": [
-                    10,
-                    16
-                  ],
-                  "children": [
-                    {
-                      "type": "text",
-                      "id": "iZgrk",
-                      "name": "Nav Login Label",
-                      "fill": "$color-secondary",
-                      "content": "ログイン",
-                      "fontFamily": "Noto Sans JP",
-                      "fontSize": 14,
-                      "fontWeight": "normal"
-                    }
-                  ]
-                },
-                {
-                  "type": "frame",
-                  "id": "o58eRq",
-                  "name": "Nav CTA",
-                  "fill": "$color-accent",
-                  "cornerRadius": 10,
-                  "padding": [
-                    10,
-                    20
-                  ],
-                  "children": [
-                    {
-                      "type": "text",
-                      "id": "q7yOIm",
-                      "name": "Nav CTA Label",
-                      "fill": "$color-base",
-                      "content": "はじめる",
-                      "fontFamily": "Noto Sans JP",
-                      "fontSize": 14,
-                      "fontWeight": "700"
-                    }
-                  ]
-                }
-              ]
-            }
           ]
         },
         {
@@ -192,51 +114,37 @@
               "gap": 12,
               "children": [
                 {
-                  "type": "frame",
-                  "id": "NKZ2D",
-                  "name": "CTA Primary",
-                  "fill": "$color-accent",
-                  "cornerRadius": 12,
+                  "id": "jLZAq",
+                  "type": "ref",
+                  "ref": "B7a7Z",
+                  "name": "CTA Create",
                   "padding": [
                     16,
                     32
                   ],
-                  "children": [
-                    {
-                      "type": "text",
-                      "id": "ce0Ki",
-                      "name": "CTA Primary Label",
-                      "fill": "$color-base",
+                  "descendants": {
+                    "FSHVZ": {
                       "content": "セッティングをつくる",
-                      "fontFamily": "Noto Sans JP",
-                      "fontSize": 16,
-                      "fontWeight": "700"
+                      "fontSize": 18
                     }
-                  ]
+                  }
                 },
                 {
-                  "type": "frame",
-                  "id": "pMpKW",
-                  "name": "CTA Secondary",
-                  "cornerRadius": 12,
-                  "stroke": "$color-line",
-                  "strokeWidth": 1,
+                  "id": "Ok8aL",
+                  "type": "ref",
+                  "ref": "QifoW",
+                  "name": "CTA Login",
                   "padding": [
                     16,
                     32
                   ],
-                  "children": [
-                    {
-                      "type": "text",
-                      "id": "thh4y",
-                      "name": "CTA Secondary Label",
-                      "fill": "$color-secondary",
+                  "cornerRadius": 12,
+                  "descendants": {
+                    "xE7la": {
                       "content": "ログイン",
-                      "fontFamily": "Noto Sans JP",
-                      "fontSize": 16,
-                      "fontWeight": "normal"
+                      "fontSize": 18
                     }
-                  ]
+                  }
                 }
               ]
             },
@@ -303,8 +211,8 @@
                           "type": "ref",
                           "ref": "xiBty",
                           "name": "BARREL Pill 0",
-                          "fill": "$color-accent",
-                          "stroke": "$color-accent",
+                          "fill": "$glass-accent-fill",
+                          "stroke": "$glass-accent-border",
                           "descendants": {
                             "NuMqE": {
                               "content": "COSMO DARTS 96 黒瀧摩紀",
@@ -638,10 +546,28 @@
               "id": "AQLju",
               "name": "選ぶだけで自動計算 Card",
               "width": "fill_container",
-              "fill": "$color-surface",
-              "cornerRadius": 16,
-              "stroke": "$color-line",
+              "fill": "$glass-surface-elevated",
+              "cornerRadius": 20,
+              "stroke": "$glass-border",
               "strokeWidth": 1,
+              "strokeAlignment": "inner",
+              "effect": [
+                {
+                  "type": "background_blur",
+                  "radius": 22
+                },
+                {
+                  "type": "shadow",
+                  "shadowType": "outer",
+                  "color": "$glass-shadow",
+                  "offset": {
+                    "x": 0,
+                    "y": 8
+                  },
+                  "blur": 32,
+                  "spread": -6
+                }
+              ],
               "layout": "vertical",
               "gap": 8,
               "padding": 24,
@@ -676,10 +602,28 @@
               "id": "YDS5T",
               "name": "1 枚のカードに Card",
               "width": "fill_container",
-              "fill": "$color-surface",
-              "cornerRadius": 16,
-              "stroke": "$color-line",
+              "fill": "$glass-surface-elevated",
+              "cornerRadius": 20,
+              "stroke": "$glass-border",
               "strokeWidth": 1,
+              "strokeAlignment": "inner",
+              "effect": [
+                {
+                  "type": "background_blur",
+                  "radius": 22
+                },
+                {
+                  "type": "shadow",
+                  "shadowType": "outer",
+                  "color": "$glass-shadow",
+                  "offset": {
+                    "x": 0,
+                    "y": 8
+                  },
+                  "blur": 32,
+                  "spread": -6
+                }
+              ],
               "layout": "vertical",
               "gap": 8,
               "padding": 24,
@@ -714,10 +658,28 @@
               "id": "oKY8s",
               "name": "SNS 映えする OGP Card",
               "width": "fill_container",
-              "fill": "$color-surface",
-              "cornerRadius": 16,
-              "stroke": "$color-line",
+              "fill": "$glass-surface-elevated",
+              "cornerRadius": 20,
+              "stroke": "$glass-border",
               "strokeWidth": 1,
+              "strokeAlignment": "inner",
+              "effect": [
+                {
+                  "type": "background_blur",
+                  "radius": 22
+                },
+                {
+                  "type": "shadow",
+                  "shadowType": "outer",
+                  "color": "$glass-shadow",
+                  "offset": {
+                    "x": 0,
+                    "y": 8
+                  },
+                  "blur": 32,
+                  "spread": -6
+                }
+              ],
               "layout": "vertical",
               "gap": 8,
               "padding": 24,
@@ -750,69 +712,16 @@
           ]
         },
         {
-          "type": "frame",
-          "id": "zn0Uy",
+          "id": "Qmh6f",
+          "type": "ref",
+          "ref": "Fpf2a",
           "name": "Footer",
           "width": "fill_container",
-          "stroke": "$color-line",
-          "strokeWidth": {
-            "top": 1
-          },
-          "padding": [
-            20,
-            40
-          ],
+          "layout": "horizontal",
           "justifyContent": "space_between",
-          "alignItems": "center",
-          "children": [
-            {
-              "type": "text",
-              "id": "EV2Qz",
-              "name": "Footer Copyright",
-              "fill": "$color-secondary",
-              "content": "© 2026 darts spec",
-              "fontFamily": "Noto Sans JP",
-              "fontSize": 12,
-              "fontWeight": "normal"
-            },
-            {
-              "type": "frame",
-              "id": "kV2XY",
-              "name": "Footer Nav",
-              "gap": 20,
-              "children": [
-                {
-                  "type": "text",
-                  "id": "sQPgG",
-                  "name": "Footer 利用規約",
-                  "fill": "$color-secondary",
-                  "content": "利用規約",
-                  "fontFamily": "Noto Sans JP",
-                  "fontSize": 12,
-                  "fontWeight": "normal"
-                },
-                {
-                  "type": "text",
-                  "id": "nVRUa",
-                  "name": "Footer プライバシーポリシー",
-                  "fill": "$color-secondary",
-                  "content": "プライバシーポリシー",
-                  "fontFamily": "Noto Sans JP",
-                  "fontSize": 12,
-                  "fontWeight": "normal"
-                },
-                {
-                  "type": "text",
-                  "id": "uqClm",
-                  "name": "Footer お問い合わせ・バグ報告",
-                  "fill": "$color-secondary",
-                  "content": "お問い合わせ・バグ報告",
-                  "fontFamily": "Noto Sans JP",
-                  "fontSize": 12,
-                  "fontWeight": "normal"
-                }
-              ]
-            }
+          "padding": [
+            24,
+            40
           ]
         }
       ]
@@ -824,10 +733,15 @@
       "y": -124,
       "name": "Pill",
       "reusable": true,
-      "fill": "$color-surface",
+      "fill": "$glass-surface",
       "cornerRadius": 999,
-      "stroke": "$color-line",
+      "stroke": "$glass-border",
       "strokeWidth": 1,
+      "strokeAlignment": "inner",
+      "effect": {
+        "type": "background_blur",
+        "radius": 14
+      },
       "padding": [
         10,
         16
@@ -853,10 +767,28 @@
       "name": "SettingCard",
       "reusable": true,
       "width": 420,
-      "fill": "$color-surface",
-      "cornerRadius": 16,
-      "stroke": "$color-line",
+      "fill": "$glass-surface-elevated",
+      "cornerRadius": 20,
+      "stroke": "$glass-border",
       "strokeWidth": 1,
+      "strokeAlignment": "inner",
+      "effect": [
+        {
+          "type": "background_blur",
+          "radius": 22
+        },
+        {
+          "type": "shadow",
+          "shadowType": "outer",
+          "color": "$glass-shadow",
+          "offset": {
+            "x": 0,
+            "y": 8
+          },
+          "blur": 32,
+          "spread": -6
+        }
+      ],
       "layout": "vertical",
       "gap": 20,
       "padding": 32,
@@ -1031,7 +963,7 @@
           "name": "Divider",
           "width": "fill_container",
           "height": 1,
-          "fill": "$color-line"
+          "fill": "$glass-border-soft"
         },
         {
           "type": "frame",
@@ -1228,8 +1160,15 @@
           "id": "o2qnz",
           "name": "Card CTA",
           "width": "fill_container",
-          "fill": "$color-accent",
-          "cornerRadius": 12,
+          "fill": "$glass-accent-fill",
+          "cornerRadius": 14,
+          "stroke": "$glass-accent-border",
+          "strokeWidth": 1,
+          "strokeAlignment": "inner",
+          "effect": {
+            "type": "background_blur",
+            "radius": 14
+          },
           "padding": [
             14,
             24
@@ -1260,10 +1199,15 @@
       "reusable": true,
       "width": 800,
       "height": 56,
-      "fill": "$color-base",
-      "stroke": "$color-line",
+      "fill": "$glass-surface",
+      "stroke": "$glass-border",
       "strokeWidth": {
         "bottom": 1
+      },
+      "strokeAlignment": "inner",
+      "effect": {
+        "type": "background_blur",
+        "radius": 22
       },
       "padding": [
         0,
@@ -1454,9 +1398,15 @@
       "name": "Footer",
       "reusable": true,
       "width": 800,
-      "stroke": "$color-line",
+      "fill": "$glass-surface",
+      "stroke": "$glass-border",
       "strokeWidth": {
         "top": 1
+      },
+      "strokeAlignment": "inner",
+      "effect": {
+        "type": "background_blur",
+        "radius": 22
       },
       "layout": "vertical",
       "gap": 12,
@@ -1531,8 +1481,15 @@
           "type": "frame",
           "id": "jFizq",
           "name": "Share X Button",
-          "fill": "$color-accent",
-          "cornerRadius": 8,
+          "fill": "$glass-accent-fill",
+          "cornerRadius": 12,
+          "stroke": "$glass-accent-border",
+          "strokeWidth": 1,
+          "strokeAlignment": "inner",
+          "effect": {
+            "type": "background_blur",
+            "radius": 14
+          },
           "padding": [
             12,
             16
@@ -1556,9 +1513,15 @@
           "type": "frame",
           "id": "UKIle",
           "name": "Copy URL Button",
-          "cornerRadius": 8,
-          "stroke": "$color-line",
+          "fill": "$glass-surface",
+          "cornerRadius": 12,
+          "stroke": "$glass-border",
           "strokeWidth": 1,
+          "strokeAlignment": "inner",
+          "effect": {
+            "type": "background_blur",
+            "radius": 14
+          },
           "padding": [
             12,
             16
@@ -1587,8 +1550,15 @@
       "y": -780,
       "name": "Button Primary",
       "reusable": true,
-      "fill": "$color-accent",
-      "cornerRadius": 12,
+      "fill": "$glass-accent-fill",
+      "cornerRadius": 14,
+      "stroke": "$glass-accent-border",
+      "strokeWidth": 1,
+      "strokeAlignment": "inner",
+      "effect": {
+        "type": "background_blur",
+        "radius": 14
+      },
       "padding": [
         12,
         16
@@ -1615,9 +1585,15 @@
       "y": -780,
       "name": "Button Outline",
       "reusable": true,
-      "cornerRadius": 8,
-      "stroke": "$color-line",
+      "fill": "$glass-surface",
+      "cornerRadius": 12,
+      "stroke": "$glass-border",
       "strokeWidth": 1,
+      "strokeAlignment": "inner",
+      "effect": {
+        "type": "background_blur",
+        "radius": 14
+      },
       "padding": [
         10,
         16
@@ -1663,10 +1639,15 @@
           "id": "RUBOF",
           "name": "Field Box",
           "width": "fill_container",
-          "fill": "$color-surface",
-          "cornerRadius": 8,
-          "stroke": "$color-line",
+          "fill": "$glass-surface",
+          "cornerRadius": 12,
+          "stroke": "$glass-border",
           "strokeWidth": 1,
+          "strokeAlignment": "inner",
+          "effect": {
+            "type": "background_blur",
+            "radius": 14
+          },
           "padding": [
             12,
             16
@@ -1713,10 +1694,15 @@
           "id": "Xmu31",
           "name": "Select Box",
           "width": "fill_container",
-          "fill": "$color-surface",
-          "cornerRadius": 8,
-          "stroke": "$color-line",
+          "fill": "$glass-surface",
+          "cornerRadius": 12,
+          "stroke": "$glass-border",
           "strokeWidth": 1,
+          "strokeAlignment": "inner",
+          "effect": {
+            "type": "background_blur",
+            "radius": 14
+          },
           "padding": 12,
           "justifyContent": "space_between",
           "alignItems": "center",
@@ -1756,6 +1742,38 @@
       "fill": "$color-base",
       "layout": "vertical",
       "children": [
+        {
+          "type": "ellipse",
+          "id": "C9GbyF",
+          "layoutPosition": "absolute",
+          "x": -120,
+          "y": -140,
+          "name": "Glow Accent",
+          "opacity": 0.42,
+          "fill": "$color-accent",
+          "width": 340,
+          "height": 340,
+          "effect": {
+            "type": "blur",
+            "radius": 70
+          }
+        },
+        {
+          "type": "ellipse",
+          "id": "zolSr",
+          "layoutPosition": "absolute",
+          "x": 140,
+          "y": 260,
+          "name": "Glow Accent Alt",
+          "opacity": 0.36,
+          "fill": "$color-accent-alt",
+          "width": 300,
+          "height": 300,
+          "effect": {
+            "type": "blur",
+            "radius": 60
+          }
+        },
         {
           "id": "l8LMx3",
           "type": "ref",
@@ -1961,6 +1979,38 @@
       "layout": "vertical",
       "children": [
         {
+          "type": "ellipse",
+          "id": "fA5hy",
+          "layoutPosition": "absolute",
+          "x": -160,
+          "y": -140,
+          "name": "Glow Accent",
+          "opacity": 0.42,
+          "fill": "$color-accent",
+          "width": 640,
+          "height": 640,
+          "effect": {
+            "type": "blur",
+            "radius": 95
+          }
+        },
+        {
+          "type": "ellipse",
+          "id": "yxbjg",
+          "layoutPosition": "absolute",
+          "x": 760,
+          "y": 80,
+          "name": "Glow Accent Alt",
+          "opacity": 0.36,
+          "fill": "$color-accent-alt",
+          "width": 560,
+          "height": 560,
+          "effect": {
+            "type": "blur",
+            "radius": 85
+          }
+        },
+        {
           "id": "zvFzj",
           "type": "ref",
           "ref": "Dj95u",
@@ -2153,6 +2203,38 @@
       "fill": "$color-base",
       "layout": "vertical",
       "children": [
+        {
+          "type": "ellipse",
+          "id": "Lgudm",
+          "layoutPosition": "absolute",
+          "x": -120,
+          "y": -140,
+          "name": "Glow Accent",
+          "opacity": 0.42,
+          "fill": "$color-accent",
+          "width": 340,
+          "height": 340,
+          "effect": {
+            "type": "blur",
+            "radius": 70
+          }
+        },
+        {
+          "type": "ellipse",
+          "id": "uLEGM",
+          "layoutPosition": "absolute",
+          "x": 140,
+          "y": 260,
+          "name": "Glow Accent Alt",
+          "opacity": 0.36,
+          "fill": "$color-accent-alt",
+          "width": 300,
+          "height": 300,
+          "effect": {
+            "type": "blur",
+            "radius": 60
+          }
+        },
         {
           "id": "r51B1r",
           "type": "ref",
@@ -2440,6 +2522,38 @@
       "layout": "vertical",
       "children": [
         {
+          "type": "ellipse",
+          "id": "deCIE",
+          "layoutPosition": "absolute",
+          "x": -160,
+          "y": -140,
+          "name": "Glow Accent",
+          "opacity": 0.42,
+          "fill": "$color-accent",
+          "width": 640,
+          "height": 640,
+          "effect": {
+            "type": "blur",
+            "radius": 95
+          }
+        },
+        {
+          "type": "ellipse",
+          "id": "MtQDT",
+          "layoutPosition": "absolute",
+          "x": 760,
+          "y": 80,
+          "name": "Glow Accent Alt",
+          "opacity": 0.36,
+          "fill": "$color-accent-alt",
+          "width": 560,
+          "height": 560,
+          "effect": {
+            "type": "blur",
+            "radius": 85
+          }
+        },
+        {
           "id": "wJNWc",
           "type": "ref",
           "ref": "Dj95u",
@@ -2715,6 +2829,38 @@
       "layout": "vertical",
       "children": [
         {
+          "type": "ellipse",
+          "id": "XiPBt",
+          "layoutPosition": "absolute",
+          "x": -120,
+          "y": -140,
+          "name": "Glow Accent",
+          "opacity": 0.42,
+          "fill": "$color-accent",
+          "width": 340,
+          "height": 340,
+          "effect": {
+            "type": "blur",
+            "radius": 70
+          }
+        },
+        {
+          "type": "ellipse",
+          "id": "QJU2z",
+          "layoutPosition": "absolute",
+          "x": 140,
+          "y": 260,
+          "name": "Glow Accent Alt",
+          "opacity": 0.36,
+          "fill": "$color-accent-alt",
+          "width": 300,
+          "height": 300,
+          "effect": {
+            "type": "blur",
+            "radius": 60
+          }
+        },
+        {
           "id": "emHxb",
           "type": "ref",
           "ref": "Dj95u",
@@ -2878,10 +3024,28 @@
                   "id": "y9815P",
                   "name": "選ぶだけで自動計算 Card",
                   "width": "fill_container",
-                  "fill": "$color-surface",
-                  "cornerRadius": 16,
-                  "stroke": "$color-line",
+                  "fill": "$glass-surface-elevated",
+                  "cornerRadius": 20,
+                  "stroke": "$glass-border",
                   "strokeWidth": 1,
+                  "strokeAlignment": "inner",
+                  "effect": [
+                    {
+                      "type": "background_blur",
+                      "radius": 22
+                    },
+                    {
+                      "type": "shadow",
+                      "shadowType": "outer",
+                      "color": "$glass-shadow",
+                      "offset": {
+                        "x": 0,
+                        "y": 8
+                      },
+                      "blur": 32,
+                      "spread": -6
+                    }
+                  ],
                   "layout": "vertical",
                   "gap": 8,
                   "padding": 24,
@@ -2916,10 +3080,28 @@
                   "id": "TQAOJ",
                   "name": "1 枚のカードに Card",
                   "width": "fill_container",
-                  "fill": "$color-surface",
-                  "cornerRadius": 16,
-                  "stroke": "$color-line",
+                  "fill": "$glass-surface-elevated",
+                  "cornerRadius": 20,
+                  "stroke": "$glass-border",
                   "strokeWidth": 1,
+                  "strokeAlignment": "inner",
+                  "effect": [
+                    {
+                      "type": "background_blur",
+                      "radius": 22
+                    },
+                    {
+                      "type": "shadow",
+                      "shadowType": "outer",
+                      "color": "$glass-shadow",
+                      "offset": {
+                        "x": 0,
+                        "y": 8
+                      },
+                      "blur": 32,
+                      "spread": -6
+                    }
+                  ],
                   "layout": "vertical",
                   "gap": 8,
                   "padding": 24,
@@ -2954,10 +3136,28 @@
                   "id": "wvq6n",
                   "name": "SNS 映えする OGP Card",
                   "width": "fill_container",
-                  "fill": "$color-surface",
-                  "cornerRadius": 16,
-                  "stroke": "$color-line",
+                  "fill": "$glass-surface-elevated",
+                  "cornerRadius": 20,
+                  "stroke": "$glass-border",
                   "strokeWidth": 1,
+                  "strokeAlignment": "inner",
+                  "effect": [
+                    {
+                      "type": "background_blur",
+                      "radius": 22
+                    },
+                    {
+                      "type": "shadow",
+                      "shadowType": "outer",
+                      "color": "$glass-shadow",
+                      "offset": {
+                        "x": 0,
+                        "y": 8
+                      },
+                      "blur": 32,
+                      "spread": -6
+                    }
+                  ],
                   "layout": "vertical",
                   "gap": 8,
                   "padding": 24,
@@ -3011,6 +3211,38 @@
       "fill": "$color-base",
       "layout": "vertical",
       "children": [
+        {
+          "type": "ellipse",
+          "id": "XgmQ8",
+          "layoutPosition": "absolute",
+          "x": -160,
+          "y": -140,
+          "name": "Glow Accent",
+          "opacity": 0.42,
+          "fill": "$color-accent",
+          "width": 640,
+          "height": 640,
+          "effect": {
+            "type": "blur",
+            "radius": 95
+          }
+        },
+        {
+          "type": "ellipse",
+          "id": "pK8w6",
+          "layoutPosition": "absolute",
+          "x": 760,
+          "y": 80,
+          "name": "Glow Accent Alt",
+          "opacity": 0.36,
+          "fill": "$color-accent-alt",
+          "width": 560,
+          "height": 560,
+          "effect": {
+            "type": "blur",
+            "radius": 85
+          }
+        },
         {
           "id": "mennL",
           "type": "ref",
@@ -3156,10 +3388,28 @@
                   "id": "kyYPU",
                   "name": "選ぶだけで自動計算 Card",
                   "width": "fill_container",
-                  "fill": "$color-surface",
-                  "cornerRadius": 16,
-                  "stroke": "$color-line",
+                  "fill": "$glass-surface-elevated",
+                  "cornerRadius": 20,
+                  "stroke": "$glass-border",
                   "strokeWidth": 1,
+                  "strokeAlignment": "inner",
+                  "effect": [
+                    {
+                      "type": "background_blur",
+                      "radius": 22
+                    },
+                    {
+                      "type": "shadow",
+                      "shadowType": "outer",
+                      "color": "$glass-shadow",
+                      "offset": {
+                        "x": 0,
+                        "y": 8
+                      },
+                      "blur": 32,
+                      "spread": -6
+                    }
+                  ],
                   "layout": "vertical",
                   "gap": 8,
                   "padding": 24,
@@ -3194,10 +3444,28 @@
                   "id": "ShBWL",
                   "name": "1 枚のカードに Card",
                   "width": "fill_container",
-                  "fill": "$color-surface",
-                  "cornerRadius": 16,
-                  "stroke": "$color-line",
+                  "fill": "$glass-surface-elevated",
+                  "cornerRadius": 20,
+                  "stroke": "$glass-border",
                   "strokeWidth": 1,
+                  "strokeAlignment": "inner",
+                  "effect": [
+                    {
+                      "type": "background_blur",
+                      "radius": 22
+                    },
+                    {
+                      "type": "shadow",
+                      "shadowType": "outer",
+                      "color": "$glass-shadow",
+                      "offset": {
+                        "x": 0,
+                        "y": 8
+                      },
+                      "blur": 32,
+                      "spread": -6
+                    }
+                  ],
                   "layout": "vertical",
                   "gap": 8,
                   "padding": 24,
@@ -3232,10 +3500,28 @@
                   "id": "KqAnx",
                   "name": "SNS 映えする OGP Card",
                   "width": "fill_container",
-                  "fill": "$color-surface",
-                  "cornerRadius": 16,
-                  "stroke": "$color-line",
+                  "fill": "$glass-surface-elevated",
+                  "cornerRadius": 20,
+                  "stroke": "$glass-border",
                   "strokeWidth": 1,
+                  "strokeAlignment": "inner",
+                  "effect": [
+                    {
+                      "type": "background_blur",
+                      "radius": 22
+                    },
+                    {
+                      "type": "shadow",
+                      "shadowType": "outer",
+                      "color": "$glass-shadow",
+                      "offset": {
+                        "x": 0,
+                        "y": 8
+                      },
+                      "blur": 32,
+                      "spread": -6
+                    }
+                  ],
                   "layout": "vertical",
                   "gap": 8,
                   "padding": 24,
@@ -3581,6 +3867,38 @@
       "layout": "vertical",
       "children": [
         {
+          "type": "ellipse",
+          "id": "Oetam",
+          "layoutPosition": "absolute",
+          "x": 190,
+          "y": 880,
+          "name": "Glow Accent Alt",
+          "opacity": 0.32,
+          "fill": "$color-accent-alt",
+          "width": 260,
+          "height": 260,
+          "effect": {
+            "type": "blur",
+            "radius": 85
+          }
+        },
+        {
+          "type": "ellipse",
+          "id": "ehJNK",
+          "layoutPosition": "absolute",
+          "x": -110,
+          "y": -90,
+          "name": "Glow Accent",
+          "opacity": 0.35,
+          "fill": "$color-accent",
+          "width": 300,
+          "height": 300,
+          "effect": {
+            "type": "blur",
+            "radius": 80
+          }
+        },
+        {
           "id": "p9LGg",
           "type": "ref",
           "ref": "Dj95u",
@@ -3904,6 +4222,38 @@
       "fill": "$color-base",
       "layout": "vertical",
       "children": [
+        {
+          "type": "ellipse",
+          "id": "NaQY6",
+          "layoutPosition": "absolute",
+          "x": 940,
+          "y": 680,
+          "name": "Glow Accent Alt",
+          "opacity": 0.2,
+          "fill": "$color-accent-alt",
+          "width": 480,
+          "height": 480,
+          "effect": {
+            "type": "blur",
+            "radius": 130
+          }
+        },
+        {
+          "type": "ellipse",
+          "id": "jBRNW",
+          "layoutPosition": "absolute",
+          "x": -160,
+          "y": -150,
+          "name": "Glow Accent",
+          "opacity": 0.25,
+          "fill": "$color-accent",
+          "width": 560,
+          "height": 560,
+          "effect": {
+            "type": "blur",
+            "radius": 130
+          }
+        },
         {
           "id": "U608RZ",
           "type": "ref",
@@ -5469,6 +5819,34 @@
     "color-danger": {
       "type": "color",
       "value": "#ff5c7a"
+    },
+    "glass-surface": {
+      "type": "color",
+      "value": "#FFFFFF14"
+    },
+    "glass-surface-elevated": {
+      "type": "color",
+      "value": "#FFFFFF20"
+    },
+    "glass-border": {
+      "type": "color",
+      "value": "#FFFFFF26"
+    },
+    "glass-border-soft": {
+      "type": "color",
+      "value": "#FFFFFF14"
+    },
+    "glass-shadow": {
+      "type": "color",
+      "value": "#00000066"
+    },
+    "glass-accent-fill": {
+      "type": "color",
+      "value": "#00E5C7B8"
+    },
+    "glass-accent-border": {
+      "type": "color",
+      "value": "#00E5C766"
     }
   },
   "fileToken": "797ba6c7-da62-4b3b-96d7-b956bc5e7c3d"
