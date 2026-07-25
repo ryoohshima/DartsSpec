@@ -15,7 +15,8 @@
 		"cf-typegen": "wrangler types",
 		"db:generate": "drizzle-kit generate",
 		"db:migrate": "wrangler d1 migrations apply dartsspec --local",
-		"db:seed": "tsx src/db/seed.ts && wrangler d1 execute dartsspec --local --file=.seed/parts.sql"
+		"db:seed": "tsx src/db/seed.ts && wrangler d1 execute dartsspec --local --file=.seed/parts.sql",
+		"doctor": "npx react-doctor@latest"
 	},
 	"dependencies": {
 		"@tailwindcss/vite": "^4.3.2",
