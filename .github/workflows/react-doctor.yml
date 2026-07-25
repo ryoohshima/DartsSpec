@@ -34,7 +34,10 @@ jobs:
         with:
           fetch-depth: 0
 
-      - uses: millionco/react-doctor@v2
+      # サードパーティ製アクションは可変タグ（v2）ではなくコミット SHA で固定する。
+      # 本ジョブは pull-requests / issues への書き込み権限を持つため、タグが
+      # 差し替えられると任意のコードがその権限で動きうる。更新時は SHA を貼り替える。
+      - uses: millionco/react-doctor@01820bb4fd4d0a4aebcd8df2b2a143a098649cb2 # v2
         # Advisory by default: React Doctor reports findings on every PR — a
         # sticky summary comment, inline review comments, and a commit status
         # with the health score — but never fails the check, so it won't red-X
