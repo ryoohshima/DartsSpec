@@ -1,6 +1,6 @@
 import { useSuspenseQuery } from '@tanstack/react-query'
 import { Link, createFileRoute } from '@tanstack/react-router'
-import { motion } from 'framer-motion'
+import { m } from 'framer-motion'
 import { InteractiveDemo } from '@/components/InteractiveDemo'
 import { partsQueryOptions } from '@/lib/queries'
 
@@ -59,7 +59,7 @@ function LandingPage() {
 
       <InteractiveDemo partsList={partsList} />
 
-      <motion.section
+      <m.section
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-80px' }}
@@ -67,7 +67,7 @@ function LandingPage() {
         className="grid gap-4 pb-24 sm:grid-cols-3"
       >
         {FEATURES.map((f, i) => (
-          <motion.div
+          <m.div
             key={f.title}
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -77,9 +77,9 @@ function LandingPage() {
           >
             <h2 className="mb-2 font-bold">{f.title}</h2>
             <p className="text-sm leading-relaxed text-secondary">{f.body}</p>
-          </motion.div>
+          </m.div>
         ))}
-      </motion.section>
+      </m.section>
     </div>
   )
 }
