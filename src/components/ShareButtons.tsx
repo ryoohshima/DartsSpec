@@ -5,7 +5,7 @@ type ShareButtonsProps = {
   title: string
   totalWeightG: number | null
   totalLengthMm: number | null
-  /** 作成完了直後は最大サイズで表示する（docs/03 §5） */
+  /** 作成完了直後は最大サイズで表示する（docs/content/03 §5） */
   prominent?: boolean
 }
 
@@ -15,7 +15,7 @@ function publicUrl(settingId: string): string {
   return `${site}/s/${settingId}`
 }
 
-/** X Web Intent の定型文（docs/03 §5 で確定） */
+/** X Web Intent の定型文（docs/content/03 §5 で確定） */
 function shareText(props: ShareButtonsProps): string {
   const lines = ['自分のダーツセッティングを晒してみた🎯', `「${props.title}」`]
   if (props.totalWeightG !== null || props.totalLengthMm !== null) {

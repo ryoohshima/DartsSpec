@@ -11,7 +11,7 @@ describe('calcSpec', () => {
     const result = calcSpec({ barrel, shaft, flight, tip })
 
     expect(result.totalWeightG).toBe(20.03)
-    // フライトは全長に含めない（docs/02 §4）
+    // フライトは全長に含めない（docs/content/02 §4）
     expect(result.totalLengthMm).toBe(89.0)
     expect(result.isApproximate).toBe(false)
   })

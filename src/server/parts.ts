@@ -10,7 +10,7 @@ const getPartsInput = z
   })
   .optional()
 
-/** カテゴリ別パーツ取得（セレクトボックス用・認証不要、docs/04 §5） */
+/** カテゴリ別パーツ取得（セレクトボックス用・認証不要、docs/content/04 §5） */
 export const getParts = createServerFn({ method: 'GET' })
   .validator(getPartsInput)
   .handler(async ({ data }) => {

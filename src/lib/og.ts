@@ -2,7 +2,7 @@ import { loadGoogleFont } from 'workers-og'
 import { partDisplayName } from '@/lib/partName'
 
 /**
- * OGP 画像（1200×630）の HTML とフォントを組み立てる（docs/03 §6.3 で確定したレイアウト）。
+ * OGP 画像（1200×630）の HTML とフォントを組み立てる（docs/content/03 §6.3 で確定したレイアウト）。
  *
  * フォント戦略: 日本語全字形の base64 埋め込みは Workers 無料枠（3MB gzip）に収まらないため、
  * Google Fonts の `text=` サブセット API で「描画する文字だけ」を毎回取得する。
@@ -80,7 +80,7 @@ export function buildOgHtml(setting: OgSettingInput): string {
   </div>`
 }
 
-/** 汎用のサービス OGP（非公開・削除済みセッティング用のフォールバック、docs/03 §6.4） */
+/** 汎用のサービス OGP（非公開・削除済みセッティング用のフォールバック、docs/content/03 §6.4） */
 export function buildFallbackOgHtml(): string {
   return `
   <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 1200px; height: 630px; background: linear-gradient(135deg, ${COLOR.bgBase} 0%, ${COLOR.bgSurface} 100%); font-family: 'NotoSansJP';">

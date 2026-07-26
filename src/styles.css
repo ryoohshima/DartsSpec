@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap");
 @import "tailwindcss";
 
-/* カラートークン（docs/03 §2 で確定） */
+/* カラートークン（docs/content/03 §2 で確定） */
 @theme {
   --font-sans: "Inter", "Noto Sans JP", ui-sans-serif, system-ui, sans-serif;
 
@@ -22,7 +22,7 @@ html {
   color-scheme: dark;
 }
 
-/* 数値表示用（tabular figures・docs/03 §3） */
+/* 数値表示用（tabular figures・docs/content/03 §3） */
 .numeric {
   font-family: "Inter", "Noto Sans JP", ui-sans-serif, system-ui, sans-serif;
   font-feature-settings: "tnum";

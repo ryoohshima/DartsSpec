@@ -9,7 +9,7 @@ import { buildFallbackOgHtml, buildOgHtml, loadOgFonts } from '@/lib/og'
  * 動的 OGP 画像生成（GET /api/og/{id}、#34）。
  *
  * - 存在しない id → 404
- * - 非公開セッティング → 汎用のサービス OGP（存在の有無を漏らさない、docs/03 §6.4）
+ * - 非公開セッティング → 汎用のサービス OGP（存在の有無を漏らさない、docs/content/03 §6.4）
  * - 生成結果は Cloudflare Cache に 1 日キャッシュ（#38）。
  *   編集時は og:image URL の `?v={updatedAt}` が変わるため実質即時に無効化される。
  */
