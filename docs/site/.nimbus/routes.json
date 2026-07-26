@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "base": "/",
+  "knownRoutes": [
+    "/",
+    "/00-roadmap",
+    "/01-product-requirements",
+    "/02-parts-data",
+    "/03-design-system",
+    "/04-architecture",
+    "/05-development-plan",
+    "/06-launch-plan",
+    "/404"
+  ],
+  "opaqueNamespaces": []
+}

@@ -38,7 +38,7 @@ function NewSettingPage() {
   const [error, setError] = useState<string | null>(null)
   const resumed = useRef(false)
 
-  // 非ログインで保存しようとした際の下書きを復元する（docs/01 §4.3）
+  // 非ログインで保存しようとした際の下書きを復元する（docs/content/01 §4.3）
   useEffect(() => {
     const draft = loadDraft()
     if (draft) setValues(draft)
@@ -56,7 +56,7 @@ function NewSettingPage() {
     },
   })
 
-  // ログインから戻ってきた場合は下書きを自動保存する（docs/01 §4.3）
+  // ログインから戻ってきた場合は下書きを自動保存する（docs/content/01 §4.3）
   useEffect(() => {
     if (resume !== '1' || resumed.current || sessionPending || !session) return
     const draft = loadDraft()

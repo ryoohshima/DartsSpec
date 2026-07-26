@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import { animate, m, useMotionValue, useTransform } from 'framer-motion'
 
 /**
- * 数値のカウントアップ / ダウン表示（docs/03 §4.3）。
+ * 数値のカウントアップ / ダウン表示（docs/content/03 §4.3）。
  * tabular figures 前提でガタつかずに補間される。
  */
 export function AnimatedNumber({ value, className }: { value: number; className?: string }) {

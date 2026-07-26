@@ -55,7 +55,7 @@ function SpecValue({
   )
 }
 
-/** セッティングカード（docs/03 §4.2 で確定したレイアウト） */
+/** セッティングカード（docs/content/03 §4.2 で確定したレイアウト） */
 export function SettingCard({
   title,
   authorName,

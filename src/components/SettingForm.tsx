@@ -39,7 +39,7 @@ type SettingFormProps = {
   submitLabel: string
   submitting: boolean
   error?: string | null
-  /** 未ログイン時の注記（非ログインお試し・docs/01 §4.3） */
+  /** 未ログイン時の注記（非ログインお試し・docs/content/01 §4.3） */
   guestNote?: string | null
 }
 

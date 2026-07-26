@@ -25,7 +25,7 @@ type SelectedParts = Partial<Record<PartCategory, Part>>
 
 /**
  * クライアントから渡されたパーツ ID を DB の実データで解決する。
- * ID の実在・カテゴリの一致を検証し、合算値はサーバ側で再計算する（改ざん防止、docs/04 §5）。
+ * ID の実在・カテゴリの一致を検証し、合算値はサーバ側で再計算する（改ざん防止、docs/content/04 §5）。
  */
 async function resolveParts(input: SettingInput): Promise<SelectedParts> {
   const slots: Array<[PartCategory, string | null | undefined]> = [

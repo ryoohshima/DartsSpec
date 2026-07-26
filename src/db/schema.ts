@@ -1,7 +1,7 @@
 import { sqliteTable, text, real, integer, index } from 'drizzle-orm/sqlite-core'
 
 /**
- * パーツ種別ごとの固有スペック（docs/02 §3）。
+ * パーツ種別ごとの固有スペック（docs/content/02 §3）。
  * DB 上は TEXT(JSON) で保持し、カテゴリにより使うキーが異なる。
  */
 export type PartSpec = {
@@ -26,7 +26,7 @@ export type PartCategory = (typeof PART_CATEGORIES)[number]
 
 // ---------------------------------------------------------------------------
 // better-auth 管理テーブル（user / session / account / verification）
-// スキーマは better-auth v1.6 の標準に合わせる。user には docs/04 §3.2 の
+// スキーマは better-auth v1.6 の標準に合わせる。user には docs/content/04 §3.2 の
 // アプリ拡張列 `handle` を追加している。
 // ---------------------------------------------------------------------------
 
@@ -88,7 +88,7 @@ export const verification = sqliteTable('verification', {
 })
 
 // ---------------------------------------------------------------------------
-// アプリ固有テーブル（docs/04 §3.2）
+// アプリ固有テーブル（docs/content/04 §3.2）
 // ---------------------------------------------------------------------------
 
 export const parts = sqliteTable(

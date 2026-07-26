@@ -1,5 +1,5 @@
 /**
- * パーツマスタ seed スクリプト（docs/02 §5）。
+ * パーツマスタ seed スクリプト（docs/content/02 §5）。
  *
  * src/db/seed/parts.csv を読み込み、.seed/parts.sql（INSERT OR REPLACE 文）を生成する。
  * 実行: `pnpm db:seed`（生成 + ローカル D1 へ投入）
@@ -165,7 +165,7 @@ function main() {
       sqlString(row.name),
       row.standard ? sqlString(row.standard) : 'NULL',
       sqlString(JSON.stringify(spec)),
-      'NULL', // image_url（権利配慮のため収集しない・docs/02 §2）
+      'NULL', // image_url（権利配慮のため収集しない・docs/content/02 §2）
       '1',
       "unixepoch()",
     ]

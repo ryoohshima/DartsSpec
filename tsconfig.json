@@ -1,6 +1,8 @@
 {
   "include": ["**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules", "dist"],
+  // docs/site は Astro の独立プロジェクトであり、`astro:content` 等の仮想モジュールは
+  // 本体の tsconfig からは解決できない。型チェックは docs/site 側の `astro check` に任せる。
+  "exclude": ["node_modules", "dist", "docs"],
   "compilerOptions": {
     "target": "ES2022",
     "jsx": "react-jsx",

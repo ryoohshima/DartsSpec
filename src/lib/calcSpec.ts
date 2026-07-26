@@ -15,7 +15,7 @@ export type CalcSpecResult = {
   totalWeightG: number | null
   /** 全長（mm）。バレル・シャフトのどちらも未選択なら null */
   totalLengthMm: number | null
-  /** 選択中パーツに未登録スペックがあり参考値であることを示す（docs/02 §4） */
+  /** 選択中パーツに未登録スペックがあり参考値であることを示す（docs/content/02 §4） */
   isApproximate: boolean
 }
 
@@ -25,12 +25,12 @@ function round(value: number): number {
 }
 
 /**
- * スペック自動合算ロジック（docs/02 §4 が唯一の仕様）。
+ * スペック自動合算ロジック（docs/content/02 §4 が唯一の仕様）。
  *
  * - 総重量 = barrel.weight_g + (shaft.weight_g ?? 0) + (flight.weight_g ?? 0) + (tip.weight_g ?? 0)
  * - 全長   = barrel.length_mm + shaft.length_mm + (tip.length_mm ?? 0)（フライトは含めない）
  *
- * フロントのリアルタイム表示とサーバの保存時再計算で同一関数を共有する（docs/04 §5）。
+ * フロントのリアルタイム表示とサーバの保存時再計算で同一関数を共有する（docs/content/04 §5）。
  */
 export function calcSpec(selected: SelectedSpecs): CalcSpecResult {
   const { barrel, shaft, flight, tip } = selected
