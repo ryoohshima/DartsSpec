@@ -15,7 +15,8 @@
 		"cf-typegen": "wrangler types",
 		"db:generate": "drizzle-kit generate",
 		"db:migrate": "wrangler d1 migrations apply dartsspec --local",
-		"db:seed": "tsx src/db/seed.ts && wrangler d1 execute dartsspec --local --file=.seed/parts.sql"
+		"db:seed": "tsx src/db/seed.ts && wrangler d1 execute dartsspec --local --file=.seed/parts.sql",
+		"doctor": "npx react-doctor@latest"
 	},
 	"dependencies": {
 		"@tailwindcss/vite": "^4.3.2",
@@ -40,7 +41,7 @@
 		"@vitejs/plugin-react": "^6.0.3",
 		"drizzle-kit": "^0.31.10",
 		"tsx": "^4.23.0",
-		"typescript": "^6.0.3",
+		"typescript": "^7.0.2",
 		"vite": "^8.1.3",
 		"vitest": "^4.1.9",
 		"wrangler": "^4.110.0"

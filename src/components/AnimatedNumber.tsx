@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { animate, motion, useMotionValue, useTransform } from 'framer-motion'
+import { animate, m, useMotionValue, useTransform } from 'framer-motion'
 
 /**
  * 数値のカウントアップ / ダウン表示（docs/03 §4.3）。
@@ -14,5 +14,5 @@ export function AnimatedNumber({ value, className }: { value: number; className?
     return () => controls.stop()
   }, [value, motionValue])
 
-  return <motion.span className={className}>{text}</motion.span>
+  return <m.span className={className}>{text}</m.span>
 }

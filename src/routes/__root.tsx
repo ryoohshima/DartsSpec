@@ -1,5 +1,6 @@
 import type { QueryClient } from '@tanstack/react-query'
 import { HeadContent, Scripts, createRootRouteWithContext } from '@tanstack/react-router'
+import { LazyMotion, MotionConfig, domAnimation } from 'framer-motion'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 
@@ -35,11 +36,15 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         <HeadContent />
       </head>
       <body className="min-h-dvh bg-base font-sans text-primary antialiased">
-        <div className="flex min-h-dvh flex-col">
-          <Header />
-          <main className="flex-1">{children}</main>
-          <Footer />
-        </div>
+        <MotionConfig reducedMotion="user">
+          <LazyMotion features={domAnimation}>
+            <div className="flex min-h-dvh flex-col">
+              <Header />
+              <main className="flex-1">{children}</main>
+              <Footer />
+            </div>
+          </LazyMotion>
+        </MotionConfig>
         <Scripts />
       </body>
     </html>

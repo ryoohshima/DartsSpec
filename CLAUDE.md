@@ -7,51 +7,7 @@
 
 ダーツのマイセッティング（バレル / シャフト / フライト / チップ）を作成・保存し、公開 URL と動的 OGP で SNS にシェアできる CGM サービス。
 
-サービス正式名称: **darts spec**（決定済み、#4）。ドメインは未確定（取得作業は #41）。
-
-## 技術スタック
-
-詳細と選定理由は [docs/04-architecture.md](./docs/04-architecture.md) を参照。
-
-- 言語: TypeScript
-- フレームワーク: TanStack Start v1（React + TanStack Router / Query）+ Tailwind CSS + Framer Motion
-- ホスティング / DB: Cloudflare Workers + D1（SQLite）、ORM は Drizzle
-- 認証: better-auth（メール+パスワード + Google OAuth）
-- 動的 OGP: workers-og（Satori + resvg-wasm）
-- テスト: vitest
-- パッケージマネージャ: pnpm
-
-## ディレクトリ構成
-
-<!-- 主要ディレクトリの役割を簡潔に記述 -->
-
-```
-.
-├── src/           # ソースコード
-├── tests/         # テストコード
-├── docs/          # ドキュメント
-└── tasks/         # Claude Code 作業記録（todo.md / lessons.md）
-```
-
-## 開発コマンド
-
-```sh
-# 起動（Workers ランタイム + ローカル D1）
-pnpm dev
-
-# テスト
-pnpm test
-
-# Type check
-pnpm typecheck
-
-# ビルド
-pnpm build
-
-# DB（ローカル D1）
-pnpm db:migrate   # マイグレーション適用
-pnpm db:seed      # パーツマスタ投入
-```
+サービス正式名称: **darts spec**。ドメインは未確定。
 
 ## このリポジトリ固有の注意事項
 
@@ -62,6 +18,5 @@ pnpm db:seed      # パーツマスタ投入
 
 ## 参照ドキュメント
 
-<!-- README, アーキテクチャドキュメント、外部参照など -->
-
 - [README.md](./README.md)
+- [docs/04-architecture.md](./docs/04-architecture.md) — 技術スタックと選定理由

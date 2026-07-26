@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react'
-import { motion } from 'framer-motion'
+import { m } from 'framer-motion'
 import { Link } from '@tanstack/react-router'
 import { PART_CATEGORIES } from '@/db/schema'
 import type { PartCategory } from '@/db/schema'
@@ -63,7 +63,7 @@ export function InteractiveDemo({ partsList }: InteractiveDemoProps) {
   }
 
   return (
-    <motion.section
+    <m.section
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-80px' }}
@@ -80,7 +80,7 @@ export function InteractiveDemo({ partsList }: InteractiveDemoProps) {
               {(byCategory.get(category) ?? []).map((part) => {
                 const isSelected = selected[category] === part.id
                 return (
-                  <motion.button
+                  <m.button
                     key={part.id}
                     type="button"
                     whileTap={{ scale: 0.96 }}
@@ -92,7 +92,7 @@ export function InteractiveDemo({ partsList }: InteractiveDemoProps) {
                     }`}
                   >
                     {part.brand} {part.name}
-                  </motion.button>
+                  </m.button>
                 )
               })}
             </div>
@@ -121,6 +121,6 @@ export function InteractiveDemo({ partsList }: InteractiveDemoProps) {
           </Link>
         }
       />
-    </motion.section>
+    </m.section>
   )
 }
