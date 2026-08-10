@@ -16,9 +16,8 @@
 		{
 			"binding": "DB",
 			"database_name": "dartsspec",
-			// 本番 D1 作成後（#40）に `wrangler d1 create dartsspec` の出力で差し替える。
 			// ローカル開発（--local / vite dev）ではこの値は使われない。
-			"database_id": "00000000-0000-0000-0000-000000000000",
+			"database_id": "b0d26c69-7e67-430a-8d8d-ba2b836d5f5f",
 			"migrations_dir": "drizzle"
 		}
 	]
