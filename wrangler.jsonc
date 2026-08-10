@@ -12,6 +12,12 @@
 		"enabled": true
 	},
 	"upload_source_maps": true,
+	"routes": [
+		{
+			"pattern": "darts-spec.com/*",
+			"zone_name": "darts-spec.com"
+		}
+	],
 	"d1_databases": [
 		{
 			"binding": "DB",

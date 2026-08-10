@@ -7,7 +7,7 @@
 
 ダーツのマイセッティング（バレル / シャフト / フライト / チップ）を作成・保存し、公開 URL と動的 OGP で SNS にシェアできる CGM サービス。
 
-サービス正式名称: **darts spec**。ドメインは未確定。
+サービス正式名称: **darts spec**。本番ドメインは `darts-spec.com`（Cloudflare zone + Worker route で配信）。
 
 ## このリポジトリ固有の注意事項
 
