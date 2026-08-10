@@ -1,0 +1,30 @@
+/**
+ * Cloudflare Workers 設定。
+ * https://developers.cloudflare.com/workers/wrangler/configuration/
+ */
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "dartsspec",
+	"compatibility_date": "2025-09-02",
+	"compatibility_flags": ["nodejs_compat"],
+	"main": "@tanstack/react-start/server-entry",
+	"observability": {
+		"enabled": true
+	},
+	"upload_source_maps": true,
+	"routes": [
+		{
+			"pattern": "darts-spec.com/*",
+			"zone_name": "darts-spec.com"
+		}
+	],
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "dartsspec",
+			// ローカル開発（--local / vite dev）ではこの値は使われない。
+			"database_id": "b0d26c69-7e67-430a-8d8d-ba2b836d5f5f",
+			"migrations_dir": "drizzle"
+		}
+	]
+}

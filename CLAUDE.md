@@ -5,53 +5,18 @@
 
 ## プロジェクト概要
 
-<!-- このリポジトリの目的・スコープを 2-3 行で記述 -->
+ダーツのマイセッティング（バレル / シャフト / フライト / チップ）を作成・保存し、公開 URL と動的 OGP で SNS にシェアできる CGM サービス。
 
-## 技術スタック
-
-<!-- 言語 / フレームワーク / 主要ライブラリ / DB / インフラ など -->
-
-- 言語:
-- フレームワーク:
-- パッケージマネージャ:
-
-## ディレクトリ構成
-
-<!-- 主要ディレクトリの役割を簡潔に記述 -->
-
-```
-.
-├── src/           # ソースコード
-├── tests/         # テストコード
-├── docs/          # ドキュメント
-└── tasks/         # Claude Code 作業記録（todo.md / lessons.md）
-```
-
-## 開発コマンド
-
-<!-- よく使うコマンドを記載。Claude が即座に実行できるようコピペ可能な形で -->
-
-```sh
-# 起動
-# pnpm dev
-
-# テスト
-# pnpm test
-
-# Lint / Type check
-# pnpm lint
-# pnpm typecheck
-
-# ビルド
-# pnpm build
-```
+サービス正式名称: **darts spec**。本番ドメインは `darts-spec.com`（Cloudflare zone + Worker route で配信）。
 
 ## このリポジトリ固有の注意事項
 
-<!-- 落とし穴・既知の制約・特殊な規約があれば記述 -->
+- **Cloudflare Workers 前提**: Node API 依存のライブラリは避ける。WASM は static import（docs/content/04 §1）。
+- **D1 に RLS はない**: 認可は必ず server function 内で `session.user.id` と `settings.user_id` を突き合わせる（docs/content/04 §4）。
+- **合算ロジックは docs/content/02 §4 が唯一の仕様**: フロント / サーバで `src/lib/calcSpec.ts` を共有し、保存時はサーバで再計算する。
+- **パーツマスタは開発用モックデータ**: 実測未検証（正式な品質チェックは #11）。
 
 ## 参照ドキュメント
 
-<!-- README, アーキテクチャドキュメント、外部参照など -->
-
 - [README.md](./README.md)
+- [docs/content/04-architecture.md](./docs/content/04-architecture.md) — 技術スタックと選定理由
