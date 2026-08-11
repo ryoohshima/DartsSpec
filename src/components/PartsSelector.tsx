@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 import { partDisplayName } from '@/lib/partName'
+import { filterParts } from '@/lib/partsSearch'
 import type { PartOption } from '@/server/parts'
 
 type PartsSelectorProps = {
@@ -7,25 +8,6 @@ type PartsSelectorProps = {
   options: PartOption[]
   value: string | null
   onChange: (id: string | null) => void
-}
-
-/** カナ検索用のブランド別名（シードの全 8 ブランド分） */
-const BRAND_KANA: Record<string, string> = {
-  CONDOR: 'コンドル',
-  'COSMO DARTS': 'コスモ コスモダーツ',
-  DYNASTY: 'ダイナスティー ダイナスティ',
-  Harrows: 'ハローズ',
-  'L-style': 'エルスタイル',
-  TARGET: 'ターゲット',
-  TRiNiDAD: 'トリニダード',
-  unicorn: 'ユニコーン',
-}
-
-/** ひらがなをカタカナへ寄せて小文字化する（「こすも」でもコスモ表記に一致させる） */
-function normalizeQuery(text: string): string {
-  return text
-    .toLowerCase()
-    .replace(/[ぁ-ん]/g, (c) => String.fromCharCode(c.charCodeAt(0) + 0x60))
 }
 
 function optionLabel(part: PartOption): string {
@@ -112,17 +94,7 @@ function PartsSearchModal({ label, options, value, onSelect, onClose }: PartsSea
     return () => window.removeEventListener('keydown', handleKeyDown)
   }, [onClose])
 
-  const filtered = useMemo(() => {
-    const q = normalizeQuery(query.trim())
-    if (!q) return options
-    return options.filter((part) =>
-      normalizeQuery(
-        [part.brand, BRAND_KANA[part.brand], part.series, part.name, part.standard]
-          .filter(Boolean)
-          .join(' '),
-      ).includes(q),
-    )
-  }, [options, query])
+  const filtered = useMemo(() => filterParts(options, query), [options, query])
 
   return (
     <div
