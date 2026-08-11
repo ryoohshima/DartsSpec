@@ -54,7 +54,7 @@ export function Header() {
                 to="/sign-up"
                 className="rounded-lg bg-accent px-3 py-2 font-semibold text-base transition-opacity hover:opacity-90"
               >
-                はじめる
+                登録
               </Link>
             </>
           )}
