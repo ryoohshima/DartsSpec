@@ -25,4 +25,4 @@ design.pen 側の更新（保存ゲート / 検索モーダル / モバイルタ
 - 検索モーダルはカナ検索に対応（BRAND_KANA 別名マップ + ひらがな→カタカナ正規化）。デザインのデモ「コスモ」→ COSMO DARTS を実機で確認済み
 - モバイルのプレビュータブ表示中は保存ボタンごとフォーム列を非表示（design の vQEXf と同挙動）。両列は常時マウントで状態を維持
 - 保存ゲートは下書きを localStorage 保存してからモーダル表示。登録/ログインの両リンクに `redirect=/settings/new?resume=1` を付与し、既存の復帰自動保存フローへ接続
-- **未了**: `src/components/InteractiveDemo.tsx`・`src/lib/curateDemoParts.ts`・`tests/curateDemoParts.test.ts` の削除がパーミッションで拒否されたため残置（参照は全て除去済みでビルドに影響なし）。手動削除が必要
+- `src/components/InteractiveDemo.tsx`・`src/lib/curateDemoParts.ts`・`tests/curateDemoParts.test.ts` はユーザーが手動削除し、コミット済み（セッションのパーミッションで自動削除が拒否されたため）
