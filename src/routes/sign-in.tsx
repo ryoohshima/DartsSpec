@@ -1,17 +1,8 @@
 import { useState } from 'react'
 import { Link, createFileRoute, useNavigate, useRouter } from '@tanstack/react-router'
 import { signIn } from '@/lib/auth-client'
+import { validateRedirectSearch } from '@/lib/redirect'
 import { GoogleSignInButton } from '@/routes/sign-up'
-
-/**
- * ログイン後の戻り先（サイト内パスのみ許可）。
- * `//evil.com` や `/\evil.com` はプロトコル相対 URL として外部へ飛ぶため拒否する（Open Redirect 対策）。
- */
-export function validateRedirectSearch(search: Record<string, unknown>): { redirect?: string } {
-  return typeof search.redirect === 'string' && /^\/(?![/\\])/.test(search.redirect)
-    ? { redirect: search.redirect }
-    : {}
-}
 
 export const Route = createFileRoute('/sign-in')({
   validateSearch: validateRedirectSearch,
@@ -31,16 +22,19 @@ function SignInPage() {
     e.preventDefault()
     setError(null)
     setSubmitting(true)
-    const { error } = await signIn.email({ email, password })
-    setSubmitting(false)
-    if (error) {
-      setError('メールアドレスまたはパスワードが正しくありません。')
-      return
-    }
-    if (redirect) {
-      router.history.push(redirect)
-    } else {
-      navigate({ to: '/' })
+    try {
+      const { error } = await signIn.email({ email, password })
+      if (error) {
+        setError('メールアドレスまたはパスワードが正しくありません。')
+        return
+      }
+      if (redirect) {
+        router.history.push(redirect)
+      } else {
+        navigate({ to: '/' })
+      }
+    } finally {
+      setSubmitting(false)
     }
   }
 

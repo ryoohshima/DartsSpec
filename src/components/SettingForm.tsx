@@ -22,6 +22,9 @@ const SELECTOR_DEFS: Array<{ category: PartCategory; label: string; key: keyof S
     { category: 'tip', label: 'チップ', key: 'tipId' },
   ]
 
+const cardPart = (part: PartOption | null) =>
+  part ? { brand: part.brand, series: part.series, name: part.name } : null
+
 const tabClass = (active: boolean) =>
   `flex-1 rounded-lg px-3 py-2 text-sm transition-colors ${
     active ? 'bg-accent font-bold text-base' : 'text-secondary hover:text-primary'
@@ -87,9 +90,6 @@ export function SettingForm({
     if (values.title.trim() === '') return
     onSubmit()
   }
-
-  const cardPart = (part: PartOption | null) =>
-    part ? { brand: part.brand, series: part.series, name: part.name } : null
 
   return (
     <form onSubmit={handleSubmit} className="grid gap-6 lg:grid-cols-2 lg:gap-8">

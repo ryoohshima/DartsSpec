@@ -184,11 +184,10 @@ export const getSetting = createServerFn({ method: 'GET' })
       return null
     }
 
-    const [withParts] = await attachParts([row])
-    const [author] = await db
-      .select({ name: user.name, handle: user.handle })
-      .from(user)
-      .where(eq(user.id, row.userId))
+    const [[withParts], [author]] = await Promise.all([
+      attachParts([row]),
+      db.select({ name: user.name, handle: user.handle }).from(user).where(eq(user.id, row.userId)),
+    ])
 
     return { ...withParts!, author: author ?? null }
   })
