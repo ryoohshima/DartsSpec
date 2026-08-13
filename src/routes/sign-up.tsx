@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link, createFileRoute, useNavigate, useRouter } from '@tanstack/react-router'
 import { signUp } from '@/lib/auth-client'
-import { validateRedirectSearch } from '@/routes/sign-in'
+import { validateRedirectSearch } from '@/lib/redirect'
 
 export const Route = createFileRoute('/sign-up')({
   validateSearch: validateRedirectSearch,
