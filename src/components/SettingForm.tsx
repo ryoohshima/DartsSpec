@@ -14,15 +14,6 @@ export type SettingFormValues = {
   visibility: 'public' | 'private'
 }
 
-export const EMPTY_SETTING: SettingFormValues = {
-  title: '',
-  barrelId: null,
-  shaftId: null,
-  flightId: null,
-  tipId: null,
-  visibility: 'public',
-}
-
 const SELECTOR_DEFS: Array<{ category: PartCategory; label: string; key: keyof SettingFormValues }> =
   [
     { category: 'barrel', label: 'バレル', key: 'barrelId' },
@@ -30,6 +21,11 @@ const SELECTOR_DEFS: Array<{ category: PartCategory; label: string; key: keyof S
     { category: 'flight', label: 'フライト', key: 'flightId' },
     { category: 'tip', label: 'チップ', key: 'tipId' },
   ]
+
+const tabClass = (active: boolean) =>
+  `flex-1 rounded-lg px-3 py-2 text-sm transition-colors ${
+    active ? 'bg-accent font-bold text-base' : 'text-secondary hover:text-primary'
+  }`
 
 type SettingFormProps = {
   partsList: PartOption[]
@@ -94,11 +90,6 @@ export function SettingForm({
 
   const cardPart = (part: PartOption | null) =>
     part ? { brand: part.brand, series: part.series, name: part.name } : null
-
-  const tabClass = (active: boolean) =>
-    `flex-1 rounded-lg px-3 py-2 text-sm transition-colors ${
-      active ? 'bg-accent font-bold text-base' : 'text-secondary hover:text-primary'
-    }`
 
   return (
     <form onSubmit={handleSubmit} className="grid gap-6 lg:grid-cols-2 lg:gap-8">

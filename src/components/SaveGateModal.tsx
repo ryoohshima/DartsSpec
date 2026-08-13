@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 import { Link } from '@tanstack/react-router'
 
 /** ログイン後にセッティング作成へ戻り、下書きを自動保存させるための戻り先 */
@@ -10,29 +10,27 @@ type SaveGateModalProps = {
 
 /** 未ログイン保存時の登録導線モーダル（design.pen: Modal - Save Gate） */
 export function SaveGateModal({ onClose }: SaveGateModalProps) {
+  const dialogRef = useRef<HTMLDialogElement>(null)
+
+  // native <dialog> の showModal でフォーカストラップと Escape を任せる
   useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') onClose()
-    }
-    window.addEventListener('keydown', handleKeyDown)
-    return () => window.removeEventListener('keydown', handleKeyDown)
-  }, [onClose])
+    dialogRef.current?.showModal()
+  }, [])
 
   return (
-    <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4 backdrop-blur-sm"
-      onClick={onClose}
+    <dialog
+      ref={dialogRef}
+      onClose={onClose}
+      onClick={(e) => {
+        if (e.target === dialogRef.current) dialogRef.current.close()
+      }}
+      aria-labelledby="save-gate-title"
+      className="m-auto w-full max-w-sm rounded-2xl border border-line bg-surface p-8 text-primary shadow-2xl backdrop:bg-black/60 backdrop:backdrop-blur-sm"
     >
-      <div
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="save-gate-title"
-        onClick={(e) => e.stopPropagation()}
-        className="flex w-full max-w-sm flex-col items-center gap-4 rounded-2xl border border-line bg-surface p-8 shadow-2xl"
-      >
+      <div className="flex flex-col items-center gap-4">
         <button
           type="button"
-          onClick={onClose}
+          onClick={() => dialogRef.current?.close()}
           aria-label="閉じる"
           className="self-end text-secondary transition-colors hover:text-primary"
         >
@@ -88,6 +86,6 @@ export function SaveGateModal({ onClose }: SaveGateModalProps) {
           </Link>
         </div>
       </div>
-    </div>
+    </dialog>
   )
 }

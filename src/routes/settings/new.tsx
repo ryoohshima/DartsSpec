@@ -5,9 +5,18 @@ import { useSession } from '@/lib/auth-client'
 import { partsQueryOptions } from '@/lib/queries'
 import { createSetting } from '@/server/settings'
 import { SaveGateModal } from '@/components/SaveGateModal'
-import { EMPTY_SETTING, SettingForm, type SettingFormValues } from '@/components/SettingForm'
+import { SettingForm, type SettingFormValues } from '@/components/SettingForm'
 
 const DRAFT_KEY = 'dartsspec:draft'
+
+const EMPTY_SETTING: SettingFormValues = {
+  title: '',
+  barrelId: null,
+  shaftId: null,
+  flightId: null,
+  tipId: null,
+  visibility: 'public',
+}
 
 export const Route = createFileRoute('/settings/new')({
   // TanStack Router は ?resume=1 を数値 1 にパースするため、数値・文字列の両方を受ける

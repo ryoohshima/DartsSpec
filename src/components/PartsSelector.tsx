@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { partDisplayName } from '@/lib/partName'
 import { filterParts } from '@/lib/partsSearch'
 import type { PartOption } from '@/server/parts'
@@ -85,34 +85,33 @@ type PartsSearchModalProps = {
 
 function PartsSearchModal({ label, options, value, onSelect, onClose }: PartsSearchModalProps) {
   const [query, setQuery] = useState('')
+  const dialogRef = useRef<HTMLDialogElement>(null)
+  const inputRef = useRef<HTMLInputElement>(null)
 
+  // native <dialog> の showModal でフォーカストラップと Escape を任せ、初期フォーカスは検索欄へ
   useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') onClose()
-    }
-    window.addEventListener('keydown', handleKeyDown)
-    return () => window.removeEventListener('keydown', handleKeyDown)
-  }, [onClose])
+    dialogRef.current?.showModal()
+    inputRef.current?.focus()
+  }, [])
 
   const filtered = useMemo(() => filterParts(options, query), [options, query])
 
   return (
-    <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4 backdrop-blur-sm"
-      onClick={onClose}
+    <dialog
+      ref={dialogRef}
+      onClose={onClose}
+      onClick={(e) => {
+        if (e.target === dialogRef.current) dialogRef.current.close()
+      }}
+      aria-label={`${label}を検索`}
+      className="m-auto w-full max-w-md rounded-2xl border border-line bg-surface p-6 text-primary shadow-2xl backdrop:bg-black/60 backdrop:backdrop-blur-sm"
     >
-      <div
-        role="dialog"
-        aria-modal="true"
-        aria-label={`${label}を検索`}
-        onClick={(e) => e.stopPropagation()}
-        className="flex w-full max-w-md flex-col gap-4 rounded-2xl border border-line bg-surface p-6 shadow-2xl"
-      >
+      <div className="flex flex-col gap-4">
         <div className="flex items-center justify-between">
           <h2 className="text-lg font-bold">{label}を検索</h2>
           <button
             type="button"
-            onClick={onClose}
+            onClick={() => dialogRef.current?.close()}
             aria-label="閉じる"
             className="text-secondary transition-colors hover:text-primary"
           >
@@ -130,19 +129,20 @@ function PartsSearchModal({ label, options, value, onSelect, onClose }: PartsSea
             </svg>
           </button>
         </div>
-        <div className="flex items-center gap-2 rounded-xl border border-line bg-base px-3.5 py-2.5 focus-within:border-accent">
+        <label className="flex items-center gap-2 rounded-xl border border-line bg-base px-3.5 py-2.5 focus-within:border-accent">
+          <span className="sr-only">{label}をキーワードで検索</span>
           <span className="text-secondary">
             <SearchIcon />
           </span>
           <input
+            ref={inputRef}
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="ブランド名・製品名で検索"
-            autoFocus
             className="w-full min-w-0 bg-transparent text-[15px] outline-none placeholder:text-secondary"
           />
-        </div>
+        </label>
         <ul className="flex max-h-72 flex-col gap-1 overflow-y-auto">
           <li>
             <SearchResultRow
@@ -169,7 +169,7 @@ function PartsSearchModal({ label, options, value, onSelect, onClose }: PartsSea
           )}
         </ul>
       </div>
-    </div>
+    </dialog>
   )
 }
 
