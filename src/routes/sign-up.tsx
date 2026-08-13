@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link, createFileRoute, useNavigate, useRouter } from '@tanstack/react-router'
 import { signUp } from '@/lib/auth-client'
-import { validateRedirectSearch } from '@/routes/sign-in'
+import { validateRedirectSearch } from '@/lib/redirect'
 
 export const Route = createFileRoute('/sign-up')({
   validateSearch: validateRedirectSearch,
@@ -22,16 +22,19 @@ function SignUpPage() {
     e.preventDefault()
     setError(null)
     setSubmitting(true)
-    const { error } = await signUp.email({ name, email, password })
-    setSubmitting(false)
-    if (error) {
-      setError(error.message ?? '登録に失敗しました。時間をおいて再度お試しください。')
-      return
-    }
-    if (redirect) {
-      router.history.push(redirect)
-    } else {
-      navigate({ to: '/' })
+    try {
+      const { error } = await signUp.email({ name, email, password })
+      if (error) {
+        setError(error.message ?? '登録に失敗しました。時間をおいて再度お試しください。')
+        return
+      }
+      if (redirect) {
+        router.history.push(redirect)
+      } else {
+        navigate({ to: '/' })
+      }
+    } finally {
+      setSubmitting(false)
     }
   }
 
