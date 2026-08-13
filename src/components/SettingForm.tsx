@@ -14,15 +14,6 @@ export type SettingFormValues = {
   visibility: 'public' | 'private'
 }
 
-export const EMPTY_SETTING: SettingFormValues = {
-  title: '',
-  barrelId: null,
-  shaftId: null,
-  flightId: null,
-  tipId: null,
-  visibility: 'public',
-}
-
 const SELECTOR_DEFS: Array<{ category: PartCategory; label: string; key: keyof SettingFormValues }> =
   [
     { category: 'barrel', label: 'バレル', key: 'barrelId' },
@@ -30,6 +21,11 @@ const SELECTOR_DEFS: Array<{ category: PartCategory; label: string; key: keyof S
     { category: 'flight', label: 'フライト', key: 'flightId' },
     { category: 'tip', label: 'チップ', key: 'tipId' },
   ]
+
+const tabClass = (active: boolean) =>
+  `flex-1 rounded-lg px-3 py-2 text-sm transition-colors ${
+    active ? 'bg-accent font-bold text-base' : 'text-secondary hover:text-primary'
+  }`
 
 type SettingFormProps = {
   partsList: PartOption[]
@@ -55,6 +51,8 @@ export function SettingForm({
   guestNote,
 }: SettingFormProps) {
   const [touched, setTouched] = useState(false)
+  // モバイルは入力とプレビューをタブで切り替える（lg 以上は 2 カラムで常時表示）
+  const [mobileTab, setMobileTab] = useState<'input' | 'preview'>('input')
 
   const byCategory = useMemo(() => {
     const map = new Map<PartCategory, PartOption[]>()
@@ -94,8 +92,35 @@ export function SettingForm({
     part ? { brand: part.brand, series: part.series, name: part.name } : null
 
   return (
-    <form onSubmit={handleSubmit} className="grid gap-8 lg:grid-cols-2">
-      <div className="flex min-w-0 flex-col gap-4">
+    <form onSubmit={handleSubmit} className="grid gap-6 lg:grid-cols-2 lg:gap-8">
+      <div
+        role="tablist"
+        aria-label="入力とプレビューの切り替え"
+        className="flex gap-1 rounded-xl border border-line bg-surface p-1 lg:hidden"
+      >
+        <button
+          type="button"
+          role="tab"
+          aria-selected={mobileTab === 'input'}
+          onClick={() => setMobileTab('input')}
+          className={tabClass(mobileTab === 'input')}
+        >
+          入力
+        </button>
+        <button
+          type="button"
+          role="tab"
+          aria-selected={mobileTab === 'preview'}
+          onClick={() => setMobileTab('preview')}
+          className={tabClass(mobileTab === 'preview')}
+        >
+          プレビュー
+        </button>
+      </div>
+
+      <div
+        className={`min-w-0 flex-col gap-4 ${mobileTab === 'input' ? 'flex' : 'hidden'} lg:flex`}
+      >
         <label className="flex flex-col gap-1 text-sm">
           <span className="text-secondary">セッティング名</span>
           <input
@@ -143,7 +168,7 @@ export function SettingForm({
         </button>
       </div>
 
-      <div>
+      <div className={`${mobileTab === 'preview' ? 'block' : 'hidden'} lg:block`}>
         <p className="mb-2 text-xs text-secondary">プレビュー</p>
         <SettingCard
           title={values.title}

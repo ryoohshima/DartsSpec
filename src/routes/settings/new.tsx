@@ -1,12 +1,22 @@
 import { useEffect, useRef, useState } from 'react'
 import { useMutation, useQueryClient, useSuspenseQuery } from '@tanstack/react-query'
-import { createFileRoute, useNavigate, useRouter } from '@tanstack/react-router'
+import { createFileRoute, useNavigate } from '@tanstack/react-router'
 import { useSession } from '@/lib/auth-client'
 import { partsQueryOptions } from '@/lib/queries'
 import { createSetting } from '@/server/settings'
-import { EMPTY_SETTING, SettingForm, type SettingFormValues } from '@/components/SettingForm'
+import { SaveGateModal } from '@/components/SaveGateModal'
+import { SettingForm, type SettingFormValues } from '@/components/SettingForm'
 
 const DRAFT_KEY = 'dartsspec:draft'
+
+const EMPTY_SETTING: SettingFormValues = {
+  title: '',
+  barrelId: null,
+  shaftId: null,
+  flightId: null,
+  tipId: null,
+  visibility: 'public',
+}
 
 export const Route = createFileRoute('/settings/new')({
   // TanStack Router は ?resume=1 を数値 1 にパースするため、数値・文字列の両方を受ける
@@ -30,12 +40,12 @@ function NewSettingPage() {
   const { data: partsList } = useSuspenseQuery(partsQueryOptions)
   const { data: session, isPending: sessionPending } = useSession()
   const navigate = useNavigate()
-  const router = useRouter()
   const queryClient = useQueryClient()
   const { resume } = Route.useSearch()
 
   const [values, setValues] = useState<SettingFormValues>(EMPTY_SETTING)
   const [error, setError] = useState<string | null>(null)
+  const [showSaveGate, setShowSaveGate] = useState(false)
   const resumed = useRef(false)
 
   // 非ログインで保存しようとした際の下書きを復元する（docs/content/01 §4.3）
@@ -70,12 +80,9 @@ function NewSettingPage() {
     setError(null)
     if (sessionPending) return
     if (!session) {
-      // 未ログイン: 下書きを保持してログインへ誘導し、復帰後に自動保存する
+      // 未ログイン: 下書きを保持して登録・ログインへ誘導し、復帰後に自動保存する
       window.localStorage.setItem(DRAFT_KEY, JSON.stringify(values))
-      router.navigate({
-        to: '/sign-in',
-        search: { redirect: '/settings/new?resume=1' },
-      })
+      setShowSaveGate(true)
       return
     }
     mutation.mutate(values)
@@ -101,6 +108,7 @@ function NewSettingPage() {
             : null
         }
       />
+      {showSaveGate && <SaveGateModal onClose={() => setShowSaveGate(false)} />}
     </div>
   )
 }
