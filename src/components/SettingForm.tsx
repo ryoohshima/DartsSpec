@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react'
 import type { PartCategory } from '@/db/schema'
 import { calcSpec } from '@/lib/calcSpec'
+import { findLinkedPart } from '@/lib/linkedPart'
 import type { PartOption } from '@/server/parts'
 import { PartsSelector } from '@/components/PartsSelector'
 import { SettingCard } from '@/components/SettingCard'
@@ -14,13 +15,14 @@ export type SettingFormValues = {
   visibility: 'public' | 'private'
 }
 
-const SELECTOR_DEFS: Array<{ category: PartCategory; label: string; key: keyof SettingFormValues }> =
-  [
-    { category: 'barrel', label: 'バレル', key: 'barrelId' },
-    { category: 'shaft', label: 'シャフト', key: 'shaftId' },
-    { category: 'flight', label: 'フライト', key: 'flightId' },
-    { category: 'tip', label: 'チップ', key: 'tipId' },
-  ]
+type PartIdKey = 'barrelId' | 'shaftId' | 'flightId' | 'tipId'
+
+const SELECTOR_DEFS: Array<{ category: PartCategory; label: string; key: PartIdKey }> = [
+  { category: 'barrel', label: 'バレル', key: 'barrelId' },
+  { category: 'shaft', label: 'シャフト', key: 'shaftId' },
+  { category: 'flight', label: 'フライト', key: 'flightId' },
+  { category: 'tip', label: 'チップ', key: 'tipId' },
+]
 
 const cardPart = (part: PartOption | null) =>
   part ? { brand: part.brand, series: part.series, name: part.name } : null
@@ -82,6 +84,22 @@ export function SettingForm({
     tip: tip?.spec,
   })
 
+  // フライト一体型（shaft/flight 2 行登録）は片方の選択・解除をもう片方へ連動させる
+  const handlePartChange = (def: (typeof SELECTOR_DEFS)[number], id: string | null) => {
+    const next = { ...values, [def.key]: id }
+    if (def.category === 'shaft' || def.category === 'flight') {
+      const otherKey = def.category === 'shaft' ? 'flightId' : 'shaftId'
+      const newPair = findLinkedPart(id ? byId.get(id) : null, partsList)
+      if (newPair) {
+        next[otherKey] = newPair.id
+      } else {
+        const prevPair = findLinkedPart(selectedPart(values[def.key]), partsList)
+        if (prevPair && values[otherKey] === prevPair.id) next[otherKey] = null
+      }
+    }
+    onChange(next)
+  }
+
   const titleError = touched && values.title.trim() === '' ? 'セッティング名を入力してください' : null
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -134,13 +152,13 @@ export function SettingForm({
           {titleError && <span className="text-xs text-danger">{titleError}</span>}
         </label>
 
-        {SELECTOR_DEFS.map(({ category, label, key }) => (
+        {SELECTOR_DEFS.map((def) => (
           <PartsSelector
-            key={category}
-            label={label}
-            options={byCategory.get(category) ?? []}
-            value={values[key] as string | null}
-            onChange={(id) => onChange({ ...values, [key]: id })}
+            key={def.category}
+            label={def.label}
+            options={byCategory.get(def.category) ?? []}
+            value={values[def.key]}
+            onChange={(id) => handlePartChange(def, id)}
           />
         ))}
 
