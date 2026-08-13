@@ -8,8 +8,10 @@ import { SettingForm, type SettingFormValues } from '@/components/SettingForm'
 
 export const Route = createFileRoute('/settings/$id/edit')({
   loader: async ({ context, params }) => {
-    await context.queryClient.ensureQueryData(partsQueryOptions)
-    const setting = await getSetting({ data: { id: params.id } })
+    const [, setting] = await Promise.all([
+      context.queryClient.ensureQueryData(partsQueryOptions),
+      getSetting({ data: { id: params.id } }),
+    ])
     if (!setting) throw notFound()
     return setting
   },
