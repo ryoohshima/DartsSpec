@@ -22,16 +22,19 @@ function SignUpPage() {
     e.preventDefault()
     setError(null)
     setSubmitting(true)
-    const { error } = await signUp.email({ name, email, password })
-    setSubmitting(false)
-    if (error) {
-      setError(error.message ?? '登録に失敗しました。時間をおいて再度お試しください。')
-      return
-    }
-    if (redirect) {
-      router.history.push(redirect)
-    } else {
-      navigate({ to: '/' })
+    try {
+      const { error } = await signUp.email({ name, email, password })
+      if (error) {
+        setError(error.message ?? '登録に失敗しました。時間をおいて再度お試しください。')
+        return
+      }
+      if (redirect) {
+        router.history.push(redirect)
+      } else {
+        navigate({ to: '/' })
+      }
+    } finally {
+      setSubmitting(false)
     }
   }
 

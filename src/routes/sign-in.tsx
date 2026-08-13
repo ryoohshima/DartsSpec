@@ -22,16 +22,19 @@ function SignInPage() {
     e.preventDefault()
     setError(null)
     setSubmitting(true)
-    const { error } = await signIn.email({ email, password })
-    setSubmitting(false)
-    if (error) {
-      setError('メールアドレスまたはパスワードが正しくありません。')
-      return
-    }
-    if (redirect) {
-      router.history.push(redirect)
-    } else {
-      navigate({ to: '/' })
+    try {
+      const { error } = await signIn.email({ email, password })
+      if (error) {
+        setError('メールアドレスまたはパスワードが正しくありません。')
+        return
+      }
+      if (redirect) {
+        router.history.push(redirect)
+      } else {
+        navigate({ to: '/' })
+      }
+    } finally {
+      setSubmitting(false)
     }
   }
 
