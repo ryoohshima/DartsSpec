@@ -1,28 +1,28 @@
-# design.pen 全画面書き起こし
+# design.pen 更新のコード反映（2026-08-11）
 
-対象ファイル: `/Users/ryoohshima/gitfiles/private/DartsSpec/design.pen`（エディタで開かれている既存ファイルに追記。worktree 側に新規作成しない）
-
-計画: `~/.claude/plans/desigin-pen-iterative-glade.md`（承認済み。前提のみ変更: 新規作成 → 既存ファイル拡張。変数 9 色・SettingCard・Pill・LP 案は既存）
+design.pen 側の更新（保存ゲート / 検索モーダル / モバイルタブ / LP 統合ほか）を src/ へ反映する。
+ブランチ: `feature/design-sync-ui`（base: develop）
 
 ## Todo
 
-- [x] セットアップ: スキーマ取得・既存ノード把握
-- [x] コンポーネント: Button Primary / Button Outline / Text Field / Select Field
-- [x] コンポーネント: Header（guest/authed を enabled 切替で 1 本化）・Footer
-- [x] コンポーネント: SettingCard（Title Row + 作者名を追加、パーツ行を折返し対応に改良）
-- [x] コンポーネント: Share Buttons（normal。prominent は作成完了状態がスコープ外のため不要と判断）
-- [x] 画面 02 Sign In（Mobile 375 / Desktop 1280）
-- [x] 画面 03 Sign Up（Mobile / Desktop）
-- [x] 画面 01 Landing（Mobile / Desktop）※既存 LP 案（1440px）は無傷で保持
-- [x] 画面 07 Public /s/$id（Mobile / Desktop）
-- [x] 画面 04 My Page（Mobile / Desktop、公開+非公開カード）
-- [x] 画面 05 New（Mobile / Desktop、チップ未選択+参考値表示）
-- [x] 画面 06 Edit（Mobile / Desktop、全パーツ選択）
-- [x] 全 14 フレーム + 既存 LP を export_nodes で視覚 QA（モバイル 4 件の崩れを修正済み）
+- [x] Header: CTA 文言「はじめる」→「登録」（ログイン時表示は実装済みのため文言のみ）
+- [x] SaveGateModal 新規作成 + new.tsx で未ログイン保存時にモーダル表示（下書き保存→登録/ログインへ redirect 付き遷移）
+- [x] PartsSelector をプルダウン→検索モーダル方式に置換（キーワード絞り込み・チェック表示・未選択行・インライン SVG アイコン）
+- [x] SettingForm にモバイル専用セグメントタブ（入力/プレビュー）を追加（両列マウント維持・CSS 切替、edit 画面は共有フォーム経由で自動対応）
+- [x] LP: InteractiveDemo を削除し SHARE CARD ショーケース（静的 SettingCard 2 枚）へ置換
+- [x] 検証: vitest（18 passed）/ typecheck / build / ブラウザ実機確認（モバイル 375px・デスクトップ 1280px）
+- [x] コミット分割 + develop 宛 draft PR
+
+## コード変更なしと判断した項目
+
+- ログイン時ヘッダー（ZppQt）: セッション分岐は実装済み
+- 品質修正（enabled:false の警告）・配置整理: design.pen 内のみの変更
+- 利用規約・プライバシー: routes/terms.tsx・privacy.tsx と Footer リンクが既存
 
 ## Review
 
-- 7 画面 × Mobile(375)/Desktop(1280) = 14 フレームを design.pen に追加。実装ソース（src/routes/ / src/components/）の文言・レイアウトを忠実に転記
-- 再利用コンポーネント 7 種（Button×2 / Field×2 / Header / Footer / ShareButtons）+ 既存 SettingCard 拡張。画面は全てインスタンス参照（detach なし）で構築し、変数（$color-*）のみで着色
-- QA で検出し修正した崩れ: モバイルヘッダーのナビあふれ / 公開ページのタイトルと作者名の重なり / SHAFT 製品名のはみ出し（マスターで折返し対応）/ New のリード文はみ出し / シャフトセレクト値あふれ（ellipsis 化）
-- Pencil MCP の運用知見は `~/.claude/projects/.../memory/design_workflow_pencil_mcp.md` に追記
+- デザインの glass 系 hex は既存トークン（bg-surface / border-line / bg-accent）へ写像。アイコンはライブラリ未導入のためインライン SVG（search / x / check / lock）で対応
+- 検索モーダルはカナ検索に対応（BRAND_KANA 別名マップ + ひらがな→カタカナ正規化）。デザインのデモ「コスモ」→ COSMO DARTS を実機で確認済み
+- モバイルのプレビュータブ表示中は保存ボタンごとフォーム列を非表示（design の vQEXf と同挙動）。両列は常時マウントで状態を維持
+- 保存ゲートは下書きを localStorage 保存してからモーダル表示。登録/ログインの両リンクに `redirect=/settings/new?resume=1` を付与し、既存の復帰自動保存フローへ接続
+- `src/components/InteractiveDemo.tsx`・`src/lib/curateDemoParts.ts`・`tests/curateDemoParts.test.ts` はユーザーが手動削除し、コミット済み（セッションのパーミッションで自動削除が拒否されたため）

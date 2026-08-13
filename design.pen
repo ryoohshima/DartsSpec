@@ -1,736 +1,11 @@
 {
-  "version": "2.14",
+  "version": "2.17",
   "children": [
     {
       "type": "frame",
-      "id": "jQiZC",
-      "x": 0,
-      "y": 0,
-      "name": "LP — darts spec (1a Cyber Precision)",
-      "clip": true,
-      "width": 1440,
-      "fill": "$color-base",
-      "layout": "vertical",
-      "children": [
-        {
-          "type": "ellipse",
-          "id": "r5y6Ky",
-          "layoutPosition": "absolute",
-          "x": -160,
-          "y": -140,
-          "name": "Glow Accent",
-          "opacity": 0.42,
-          "fill": "$color-accent",
-          "width": 640,
-          "height": 640,
-          "effect": {
-            "type": "blur",
-            "radius": 95
-          }
-        },
-        {
-          "type": "ellipse",
-          "id": "Zg2Cv",
-          "layoutPosition": "absolute",
-          "x": 760,
-          "y": 80,
-          "name": "Glow Accent Alt",
-          "opacity": 0.36,
-          "fill": "$color-accent-alt",
-          "width": 560,
-          "height": 560,
-          "effect": {
-            "type": "blur",
-            "radius": 85
-          }
-        },
-        {
-          "id": "M28aJS",
-          "type": "ref",
-          "ref": "Dj95u",
-          "name": "Header",
-          "width": "fill_container",
-          "padding": [
-            0,
-            40
-          ]
-        },
-        {
-          "type": "frame",
-          "id": "qNUoY",
-          "name": "Hero",
-          "width": "fill_container",
-          "layout": "vertical",
-          "gap": 24,
-          "padding": [
-            96,
-            40
-          ],
-          "alignItems": "center",
-          "children": [
-            {
-              "type": "text",
-              "id": "j8lpNi",
-              "name": "Hero Label",
-              "fill": "$color-accent",
-              "content": "MY DARTS SETTING",
-              "fontFamily": "Inter",
-              "fontSize": 13,
-              "fontWeight": "700",
-              "letterSpacing": 2.6
-            },
-            {
-              "type": "text",
-              "id": "xW6Yr",
-              "name": "Hero Title",
-              "fill": "$color-primary",
-              "textGrowth": "fixed-width",
-              "width": 640,
-              "content": "マイセッティングを、\n美しくシェアしよう。",
-              "lineHeight": 1.35,
-              "textAlign": "center",
-              "fontFamily": "Noto Sans JP",
-              "fontSize": 52,
-              "fontWeight": "700"
-            },
-            {
-              "type": "text",
-              "id": "u9RhaZ",
-              "name": "Hero Description",
-              "fill": "$color-secondary",
-              "textGrowth": "fixed-width",
-              "width": 520,
-              "content": "バレル・シャフト・フライト・チップを選ぶだけで、総重量と全長を自動計算。あなたのセッティングを 1 枚のカードにして、X でシェアできます。",
-              "lineHeight": 1.8,
-              "textAlign": "center",
-              "fontFamily": "Noto Sans JP",
-              "fontSize": 16,
-              "fontWeight": "normal"
-            },
-            {
-              "type": "frame",
-              "id": "WwdW8",
-              "name": "Hero CTA Row",
-              "gap": 12,
-              "children": [
-                {
-                  "id": "jLZAq",
-                  "type": "ref",
-                  "ref": "B7a7Z",
-                  "name": "CTA Create",
-                  "padding": [
-                    16,
-                    32
-                  ],
-                  "descendants": {
-                    "FSHVZ": {
-                      "content": "セッティングをつくる",
-                      "fontSize": 18
-                    }
-                  }
-                },
-                {
-                  "id": "Ok8aL",
-                  "type": "ref",
-                  "ref": "QifoW",
-                  "name": "CTA Login",
-                  "padding": [
-                    16,
-                    32
-                  ],
-                  "cornerRadius": 12,
-                  "descendants": {
-                    "xE7la": {
-                      "content": "ログイン",
-                      "fontSize": 18
-                    }
-                  }
-                }
-              ]
-            },
-            {
-              "type": "text",
-              "id": "j5NJYw",
-              "name": "Hero Caption",
-              "fill": "$color-secondary",
-              "content": "登録なしでもお試しいただけます（保存時にログイン）",
-              "fontFamily": "Noto Sans JP",
-              "fontSize": 12,
-              "fontWeight": "normal"
-            }
-          ]
-        },
-        {
-          "type": "frame",
-          "id": "MGOwW",
-          "name": "Interactive Demo",
-          "width": "fill_container",
-          "gap": 32,
-          "padding": [
-            0,
-            40,
-            96,
-            40
-          ],
-          "children": [
-            {
-              "type": "frame",
-              "id": "gk6Lp",
-              "name": "Demo Parts",
-              "width": "fill_container",
-              "layout": "vertical",
-              "gap": 24,
-              "children": [
-                {
-                  "type": "frame",
-                  "id": "GJDgT",
-                  "name": "BARREL Group",
-                  "width": "fill_container",
-                  "layout": "vertical",
-                  "gap": 8,
-                  "children": [
-                    {
-                      "type": "text",
-                      "id": "WwOg3",
-                      "name": "BARREL Label",
-                      "fill": "$color-accent",
-                      "content": "BARREL",
-                      "fontFamily": "Inter",
-                      "fontSize": 11,
-                      "fontWeight": "700",
-                      "letterSpacing": 1
-                    },
-                    {
-                      "type": "frame",
-                      "id": "qQ5TW",
-                      "name": "BARREL Pill Row 1",
-                      "gap": 8,
-                      "children": [
-                        {
-                          "id": "Yp4BA",
-                          "type": "ref",
-                          "ref": "xiBty",
-                          "name": "BARREL Pill 0",
-                          "fill": "$glass-accent-fill",
-                          "stroke": "$glass-accent-border",
-                          "descendants": {
-                            "NuMqE": {
-                              "content": "COSMO DARTS 96 黒瀧摩紀",
-                              "fill": "$color-base"
-                            }
-                          }
-                        },
-                        {
-                          "id": "QIvHP",
-                          "type": "ref",
-                          "ref": "xiBty",
-                          "name": "BARREL Pill 1",
-                          "descendants": {
-                            "NuMqE": {
-                              "content": "DYNASTY ARCTIC REBIRTH"
-                            }
-                          }
-                        }
-                      ]
-                    },
-                    {
-                      "type": "frame",
-                      "id": "C5Wog5",
-                      "name": "BARREL Pill Row 2",
-                      "gap": 8,
-                      "children": [
-                        {
-                          "id": "sZtiw",
-                          "type": "ref",
-                          "ref": "xiBty",
-                          "name": "BARREL Pill 2",
-                          "descendants": {
-                            "NuMqE": {
-                              "content": "Harrows Assassin 18gR"
-                            }
-                          }
-                        },
-                        {
-                          "id": "PEzAz",
-                          "type": "ref",
-                          "ref": "xiBty",
-                          "name": "BARREL Pill 3",
-                          "descendants": {
-                            "NuMqE": {
-                              "content": "TARGET 975 Q1"
-                            }
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "frame",
-                  "id": "v5CPL",
-                  "name": "SHAFT Group",
-                  "width": "fill_container",
-                  "layout": "vertical",
-                  "gap": 8,
-                  "children": [
-                    {
-                      "type": "text",
-                      "id": "DwrkX",
-                      "name": "SHAFT Label",
-                      "fill": "$color-accent",
-                      "content": "SHAFT",
-                      "fontFamily": "Inter",
-                      "fontSize": 11,
-                      "fontWeight": "700",
-                      "letterSpacing": 1
-                    },
-                    {
-                      "type": "frame",
-                      "id": "FeREx",
-                      "name": "SHAFT Pill Row 1",
-                      "gap": 8,
-                      "children": [
-                        {
-                          "id": "U39l95",
-                          "type": "ref",
-                          "ref": "xiBty",
-                          "name": "SHAFT Pill 0",
-                          "fill": "$color-accent",
-                          "stroke": "$color-accent",
-                          "descendants": {
-                            "NuMqE": {
-                              "content": "COSMO DARTS Fit Shaft Carbon Slim Spin 4",
-                              "fill": "$color-base"
-                            }
-                          }
-                        },
-                        {
-                          "id": "h3Sxgf",
-                          "type": "ref",
-                          "ref": "xiBty",
-                          "name": "SHAFT Pill 1",
-                          "descendants": {
-                            "NuMqE": {
-                              "content": "Harrows Supergrip Carbon Medium"
-                            }
-                          }
-                        }
-                      ]
-                    },
-                    {
-                      "type": "frame",
-                      "id": "l7jZT3",
-                      "name": "SHAFT Pill Row 2",
-                      "gap": 8,
-                      "children": [
-                        {
-                          "id": "pwgv0",
-                          "type": "ref",
-                          "ref": "xiBty",
-                          "name": "SHAFT Pill 2",
-                          "descendants": {
-                            "NuMqE": {
-                              "content": "L-style L-SHaft Carbon Lock 130"
-                            }
-                          }
-                        },
-                        {
-                          "id": "DB2t8",
-                          "type": "ref",
-                          "ref": "xiBty",
-                          "name": "SHAFT Pill 3",
-                          "descendants": {
-                            "NuMqE": {
-                              "content": "TARGET PRO GRIP EVO Medium"
-                            }
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "frame",
-                  "id": "EgAIE",
-                  "name": "FLIGHT Group",
-                  "width": "fill_container",
-                  "layout": "vertical",
-                  "gap": 8,
-                  "children": [
-                    {
-                      "type": "text",
-                      "id": "AB2Qs",
-                      "name": "FLIGHT Label",
-                      "fill": "$color-accent",
-                      "content": "FLIGHT",
-                      "fontFamily": "Inter",
-                      "fontSize": 11,
-                      "fontWeight": "700",
-                      "letterSpacing": 1
-                    },
-                    {
-                      "type": "frame",
-                      "id": "Fpl6z",
-                      "name": "FLIGHT Pill Row 1",
-                      "gap": 8,
-                      "children": [
-                        {
-                          "id": "yRSow",
-                          "type": "ref",
-                          "ref": "xiBty",
-                          "name": "FLIGHT Pill 0",
-                          "fill": "$color-accent",
-                          "stroke": "$color-accent",
-                          "descendants": {
-                            "NuMqE": {
-                              "content": "CONDOR CONDOR AXE Small S",
-                              "fill": "$color-base"
-                            }
-                          }
-                        },
-                        {
-                          "id": "vr9AS",
-                          "type": "ref",
-                          "ref": "xiBty",
-                          "name": "FLIGHT Pill 1",
-                          "descendants": {
-                            "NuMqE": {
-                              "content": "COSMO DARTS Fit Flight AIR Shape"
-                            }
-                          }
-                        }
-                      ]
-                    },
-                    {
-                      "type": "frame",
-                      "id": "xOWjH",
-                      "name": "FLIGHT Pill Row 2",
-                      "gap": 8,
-                      "children": [
-                        {
-                          "id": "i1HH7",
-                          "type": "ref",
-                          "ref": "xiBty",
-                          "name": "FLIGHT Pill 2",
-                          "descendants": {
-                            "NuMqE": {
-                              "content": "Harrows Marathon Shape"
-                            }
-                          }
-                        },
-                        {
-                          "id": "pWp4j",
-                          "type": "ref",
-                          "ref": "xiBty",
-                          "name": "FLIGHT Pill 3",
-                          "descendants": {
-                            "NuMqE": {
-                              "content": "L-style L1 Standard"
-                            }
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "frame",
-                  "id": "TojxL",
-                  "name": "TIP Group",
-                  "width": "fill_container",
-                  "layout": "vertical",
-                  "gap": 8,
-                  "children": [
-                    {
-                      "type": "text",
-                      "id": "Iy12u",
-                      "name": "TIP Label",
-                      "fill": "$color-accent",
-                      "content": "TIP",
-                      "fontFamily": "Inter",
-                      "fontSize": 11,
-                      "fontWeight": "700",
-                      "letterSpacing": 1
-                    },
-                    {
-                      "type": "frame",
-                      "id": "D80Pft",
-                      "name": "TIP Pill Row 1",
-                      "gap": 8,
-                      "children": [
-                        {
-                          "id": "h5O5g",
-                          "type": "ref",
-                          "ref": "xiBty",
-                          "name": "TIP Pill 0",
-                          "fill": "$color-accent",
-                          "stroke": "$color-accent",
-                          "descendants": {
-                            "NuMqE": {
-                              "content": "CONDOR CONDOR TIP",
-                              "fill": "$color-base"
-                            }
-                          }
-                        },
-                        {
-                          "id": "A8F09",
-                          "type": "ref",
-                          "ref": "xiBty",
-                          "name": "TIP Pill 1",
-                          "descendants": {
-                            "NuMqE": {
-                              "content": "COSMO DARTS Fit Point"
-                            }
-                          }
-                        }
-                      ]
-                    },
-                    {
-                      "type": "frame",
-                      "id": "WIJDq",
-                      "name": "TIP Pill Row 2",
-                      "gap": 8,
-                      "children": [
-                        {
-                          "id": "owkbe",
-                          "type": "ref",
-                          "ref": "xiBty",
-                          "name": "TIP Pill 2",
-                          "descendants": {
-                            "NuMqE": {
-                              "content": "Harrows Clic Soft Tip"
-                            }
-                          }
-                        },
-                        {
-                          "id": "SiKp9",
-                          "type": "ref",
-                          "ref": "xiBty",
-                          "name": "TIP Pill 3",
-                          "descendants": {
-                            "NuMqE": {
-                              "content": "L-style Lippoint"
-                            }
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "id": "OmMlz",
-              "type": "ref",
-              "ref": "avqKW",
-              "name": "Demo Setting Card",
-              "width": "fill_container"
-            }
-          ]
-        },
-        {
-          "type": "frame",
-          "id": "qgdrc",
-          "name": "Features",
-          "width": "fill_container",
-          "gap": 16,
-          "padding": [
-            0,
-            40,
-            96,
-            40
-          ],
-          "children": [
-            {
-              "type": "frame",
-              "id": "AQLju",
-              "name": "選ぶだけで自動計算 Card",
-              "width": "fill_container",
-              "fill": "$glass-surface-elevated",
-              "cornerRadius": 20,
-              "stroke": "$glass-border",
-              "strokeWidth": 1,
-              "strokeAlignment": "inner",
-              "effect": [
-                {
-                  "type": "background_blur",
-                  "radius": 22
-                },
-                {
-                  "type": "shadow",
-                  "shadowType": "outer",
-                  "color": "$glass-shadow",
-                  "offset": {
-                    "x": 0,
-                    "y": 8
-                  },
-                  "blur": 32,
-                  "spread": -6
-                }
-              ],
-              "layout": "vertical",
-              "gap": 8,
-              "padding": 24,
-              "children": [
-                {
-                  "type": "text",
-                  "id": "fGHYt",
-                  "name": "選ぶだけで自動計算 Title",
-                  "fill": "$color-primary",
-                  "content": "選ぶだけで自動計算",
-                  "fontFamily": "Noto Sans JP",
-                  "fontSize": 16,
-                  "fontWeight": "700"
-                },
-                {
-                  "type": "text",
-                  "id": "AETUP",
-                  "name": "選ぶだけで自動計算 Body",
-                  "fill": "$color-secondary",
-                  "textGrowth": "fixed-width",
-                  "width": "fill_container",
-                  "content": "パーツを選ぶと総重量・全長がリアルタイムに変わる。数字が動く気持ちよさを体験してほしい。",
-                  "lineHeight": 1.7,
-                  "fontFamily": "Noto Sans JP",
-                  "fontSize": 13,
-                  "fontWeight": "normal"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "YDS5T",
-              "name": "1 枚のカードに Card",
-              "width": "fill_container",
-              "fill": "$glass-surface-elevated",
-              "cornerRadius": 20,
-              "stroke": "$glass-border",
-              "strokeWidth": 1,
-              "strokeAlignment": "inner",
-              "effect": [
-                {
-                  "type": "background_blur",
-                  "radius": 22
-                },
-                {
-                  "type": "shadow",
-                  "shadowType": "outer",
-                  "color": "$glass-shadow",
-                  "offset": {
-                    "x": 0,
-                    "y": 8
-                  },
-                  "blur": 32,
-                  "spread": -6
-                }
-              ],
-              "layout": "vertical",
-              "gap": 8,
-              "padding": 24,
-              "children": [
-                {
-                  "type": "text",
-                  "id": "B1JxS",
-                  "name": "1 枚のカードに Title",
-                  "fill": "$color-primary",
-                  "content": "1 枚のカードに",
-                  "fontFamily": "Noto Sans JP",
-                  "fontSize": 16,
-                  "fontWeight": "700"
-                },
-                {
-                  "type": "text",
-                  "id": "Jzn8j",
-                  "name": "1 枚のカードに Body",
-                  "fill": "$color-secondary",
-                  "textGrowth": "fixed-width",
-                  "width": "fill_container",
-                  "content": "セッティングは美しいカードとして公開 URL に。ログインしていない相手にもそのまま見せられる。",
-                  "lineHeight": 1.7,
-                  "fontFamily": "Noto Sans JP",
-                  "fontSize": 13,
-                  "fontWeight": "normal"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "oKY8s",
-              "name": "SNS 映えする OGP Card",
-              "width": "fill_container",
-              "fill": "$glass-surface-elevated",
-              "cornerRadius": 20,
-              "stroke": "$glass-border",
-              "strokeWidth": 1,
-              "strokeAlignment": "inner",
-              "effect": [
-                {
-                  "type": "background_blur",
-                  "radius": 22
-                },
-                {
-                  "type": "shadow",
-                  "shadowType": "outer",
-                  "color": "$glass-shadow",
-                  "offset": {
-                    "x": 0,
-                    "y": 8
-                  },
-                  "blur": 32,
-                  "spread": -6
-                }
-              ],
-              "layout": "vertical",
-              "gap": 8,
-              "padding": 24,
-              "children": [
-                {
-                  "type": "text",
-                  "id": "jEbVr",
-                  "name": "SNS 映えする OGP Title",
-                  "fill": "$color-primary",
-                  "content": "SNS 映えする OGP",
-                  "fontFamily": "Noto Sans JP",
-                  "fontSize": 16,
-                  "fontWeight": "700"
-                },
-                {
-                  "type": "text",
-                  "id": "SLTF7",
-                  "name": "SNS 映えする OGP Body",
-                  "fill": "$color-secondary",
-                  "textGrowth": "fixed-width",
-                  "width": "fill_container",
-                  "content": "X に URL を貼るだけで、セッティング内容がカード画像として展開される。",
-                  "lineHeight": 1.7,
-                  "fontFamily": "Noto Sans JP",
-                  "fontSize": 13,
-                  "fontWeight": "normal"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "Qmh6f",
-          "type": "ref",
-          "ref": "Fpf2a",
-          "name": "Footer",
-          "width": "fill_container",
-          "layout": "horizontal",
-          "justifyContent": "space_between",
-          "padding": [
-            24,
-            40
-          ]
-        }
-      ]
-    },
-    {
-      "type": "frame",
       "id": "xiBty",
-      "x": 0,
-      "y": -124,
+      "x": -1900,
+      "y": -1600,
       "name": "Pill",
       "reusable": true,
       "fill": "$glass-surface",
@@ -762,8 +37,8 @@
     {
       "type": "frame",
       "id": "avqKW",
-      "x": 0,
-      "y": -624,
+      "x": -1900,
+      "y": -1088,
       "name": "SettingCard",
       "reusable": true,
       "width": 420,
@@ -1194,7 +469,7 @@
       "type": "frame",
       "id": "Dj95u",
       "x": -1900,
-      "y": -1144,
+      "y": -1282,
       "name": "Header",
       "reusable": true,
       "width": 800,
@@ -1205,6 +480,7 @@
         "bottom": 1
       },
       "strokeAlignment": "inner",
+      "strokeLinejoin": "round",
       "effect": {
         "type": "background_blur",
         "radius": 22
@@ -1224,14 +500,12 @@
           "alignItems": "center",
           "children": [
             {
-              "type": "text",
-              "id": "J9Xb5",
+              "id": "UkBFW",
+              "type": "ref",
+              "ref": "BGlI4",
               "name": "Logo Icon",
-              "fill": "$color-primary",
-              "content": "🎯",
-              "fontFamily": "Noto Sans JP",
-              "fontSize": 16,
-              "fontWeight": "normal"
+              "width": 20,
+              "height": 20
             },
             {
               "type": "frame",
@@ -1379,7 +653,7 @@
                   "id": "aHOsC",
                   "name": "Nav SignUp Label",
                   "fill": "$color-base",
-                  "content": "はじめる",
+                  "content": "登録",
                   "fontFamily": "Noto Sans JP",
                   "fontSize": 14,
                   "fontWeight": "600"
@@ -1393,8 +667,8 @@
     {
       "type": "frame",
       "id": "Fpf2a",
-      "x": -1900,
-      "y": -1040,
+      "x": -220,
+      "y": -1282,
       "name": "Footer",
       "reusable": true,
       "width": 800,
@@ -1404,6 +678,7 @@
         "top": 1
       },
       "strokeAlignment": "inner",
+      "strokeLinejoin": "round",
       "effect": {
         "type": "background_blur",
         "radius": 22
@@ -1470,8 +745,8 @@
     {
       "type": "frame",
       "id": "DqyTM",
-      "x": -1900,
-      "y": -880,
+      "x": 620,
+      "y": -1282,
       "name": "Share Buttons",
       "reusable": true,
       "gap": 8,
@@ -1546,8 +821,8 @@
     {
       "type": "frame",
       "id": "B7a7Z",
-      "x": -1900,
-      "y": -780,
+      "x": -1793,
+      "y": -1600,
       "name": "Button Primary",
       "reusable": true,
       "fill": "$glass-accent-fill",
@@ -1581,8 +856,8 @@
     {
       "type": "frame",
       "id": "QifoW",
-      "x": -1750,
-      "y": -780,
+      "x": -1672,
+      "y": -1600,
       "name": "Button Outline",
       "reusable": true,
       "fill": "$glass-surface",
@@ -1617,7 +892,7 @@
       "type": "frame",
       "id": "AOV3e",
       "x": -1900,
-      "y": -690,
+      "y": -1453,
       "name": "Text Field",
       "reusable": true,
       "width": 343,
@@ -1671,8 +946,8 @@
     {
       "type": "frame",
       "id": "jYPkd",
-      "x": -1500,
-      "y": -690,
+      "x": -1517,
+      "y": -1453,
       "name": "Select Field",
       "reusable": true,
       "width": 343,
@@ -1720,10 +995,10 @@
             {
               "type": "icon",
               "id": "OydO3",
-              "name": "Chevron",
+              "name": "Search Icon",
               "width": 16,
               "height": 16,
-              "icon": "chevron-down",
+              "icon": "search",
               "library": "lucide",
               "fill": "$color-secondary"
             }
@@ -3007,6 +2282,85 @@
             },
             {
               "type": "frame",
+              "id": "GpqAa",
+              "name": "Card Showcase",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 16,
+              "padding": [
+                0,
+                0,
+                40,
+                0
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "XrHW2",
+                  "name": "Showcase Label",
+                  "fill": "$color-accent",
+                  "content": "SHARE CARD",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "600",
+                  "letterSpacing": 2
+                },
+                {
+                  "type": "frame",
+                  "id": "N2cy4",
+                  "name": "Cards Col",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 16,
+                  "children": [
+                    {
+                      "id": "Y3Q9X",
+                      "type": "ref",
+                      "ref": "avqKW",
+                      "name": "Showcase Card 1",
+                      "width": "fill_container",
+                      "descendants": {
+                        "o2qnz": {
+                          "enabled": false,
+                          "width": "fit_content"
+                        }
+                      }
+                    },
+                    {
+                      "id": "qKLg7",
+                      "type": "ref",
+                      "ref": "avqKW",
+                      "name": "Showcase Card 2",
+                      "width": "fill_container",
+                      "descendants": {
+                        "dtB3p": {
+                          "content": "サブセッティング（ハウス用）",
+                          "fontSize": 20
+                        },
+                        "V7puh": {
+                          "content": "19.8",
+                          "fontSize": 36
+                        },
+                        "T8vIhT": {
+                          "content": "96.0",
+                          "fontSize": 36
+                        },
+                        "Ucsiy": {
+                          "enabled": false
+                        },
+                        "o2qnz": {
+                          "enabled": false,
+                          "width": "fit_content"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
               "id": "SxCfq",
               "name": "Features",
               "width": "fill_container",
@@ -3367,6 +2721,84 @@
                   "fontFamily": "Noto Sans JP",
                   "fontSize": 12,
                   "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "vRiwn",
+              "name": "Card Showcase",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 24,
+              "padding": [
+                0,
+                0,
+                64,
+                0
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Zq1iT",
+                  "name": "Showcase Label",
+                  "fill": "$color-accent",
+                  "content": "SHARE CARD",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
+                  "fontWeight": "600",
+                  "letterSpacing": 2.2
+                },
+                {
+                  "type": "frame",
+                  "id": "uMejo",
+                  "name": "Cards Row",
+                  "gap": 24,
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "id": "jJDCI",
+                      "type": "ref",
+                      "ref": "avqKW",
+                      "name": "Showcase Card 1",
+                      "width": 380,
+                      "descendants": {
+                        "o2qnz": {
+                          "enabled": false,
+                          "width": "fit_content"
+                        }
+                      }
+                    },
+                    {
+                      "id": "lIUyA",
+                      "type": "ref",
+                      "ref": "avqKW",
+                      "name": "Showcase Card 2",
+                      "width": 380,
+                      "descendants": {
+                        "dtB3p": {
+                          "content": "サブセッティング（ハウス用）",
+                          "fontSize": 20
+                        },
+                        "V7puh": {
+                          "content": "19.8",
+                          "fontSize": 36
+                        },
+                        "T8vIhT": {
+                          "content": "96.0",
+                          "fontSize": 36
+                        },
+                        "Ucsiy": {
+                          "enabled": false
+                        },
+                        "o2qnz": {
+                          "enabled": false,
+                          "width": "fit_content"
+                        }
+                      }
+                    }
+                  ]
                 }
               ]
             },
@@ -4666,6 +4098,13 @@
                   ],
                   "children": [
                     {
+                      "id": "vZDRc",
+                      "type": "ref",
+                      "ref": "CU9sq",
+                      "name": "Setting Tabs",
+                      "width": "fill_container"
+                    },
+                    {
                       "type": "frame",
                       "id": "DrfiV",
                       "name": "Form Fields",
@@ -4813,8 +4252,11 @@
                     {
                       "type": "frame",
                       "id": "qiQZC",
+                      "x": 0,
+                      "y": 582,
                       "name": "Preview Col",
-                      "width": "fill_container",
+                      "enabled": false,
+                      "width": 343,
                       "layout": "vertical",
                       "gap": 8,
                       "children": [
@@ -4856,7 +4298,8 @@
                               "fontWeight": "normal"
                             },
                             "o2qnz": {
-                              "enabled": false
+                              "enabled": false,
+                              "width": "fit_content"
                             }
                           }
                         }
@@ -5157,7 +4600,8 @@
                               "fontWeight": "normal"
                             },
                             "o2qnz": {
-                              "enabled": false
+                              "enabled": false,
+                              "width": "fit_content"
                             }
                           }
                         }
@@ -5281,6 +4725,13 @@
                     0
                   ],
                   "children": [
+                    {
+                      "id": "I5dP5",
+                      "type": "ref",
+                      "ref": "CU9sq",
+                      "name": "Setting Tabs",
+                      "width": "fill_container"
+                    },
                     {
                       "type": "frame",
                       "id": "keQ47",
@@ -5430,8 +4881,11 @@
                     {
                       "type": "frame",
                       "id": "UPswq",
+                      "x": 0,
+                      "y": 582,
                       "name": "Preview Col",
-                      "width": "fill_container",
+                      "enabled": false,
+                      "width": 343,
                       "layout": "vertical",
                       "gap": 8,
                       "children": [
@@ -5468,7 +4922,8 @@
                               "enabled": false
                             },
                             "o2qnz": {
-                              "enabled": false
+                              "enabled": false,
+                              "width": "fit_content"
                             }
                           }
                         }
@@ -5755,7 +5210,8 @@
                               "enabled": false
                             },
                             "o2qnz": {
-                              "enabled": false
+                              "enabled": false,
+                              "width": "fit_content"
                             }
                           }
                         }
@@ -5779,6 +5235,4436 @@
             24,
             128
           ]
+        }
+      ]
+    },
+    {
+      "id": "ZppQt",
+      "type": "ref",
+      "reusable": true,
+      "ref": "Dj95u",
+      "name": "Header - Logged In",
+      "x": -1060,
+      "y": -1282,
+      "descendants": {
+        "SJB8d": {
+          "enabled": true
+        },
+        "JKAlN": {
+          "enabled": true
+        },
+        "J1OCE": {
+          "enabled": false
+        },
+        "p0vW9W": {
+          "enabled": false
+        }
+      }
+    },
+    {
+      "type": "frame",
+      "id": "qXyez",
+      "x": -1900,
+      "y": -513,
+      "name": "Modal - Save Gate",
+      "reusable": true,
+      "width": 400,
+      "fill": "$glass-surface-elevated",
+      "cornerRadius": 20,
+      "stroke": "$glass-border",
+      "strokeWidth": 1,
+      "strokeAlignment": "inner",
+      "effect": [
+        {
+          "type": "background_blur",
+          "radius": 24
+        },
+        {
+          "type": "shadow",
+          "shadowType": "outer",
+          "color": "$glass-shadow",
+          "offset": {
+            "x": 0,
+            "y": 16
+          },
+          "blur": 48
+        }
+      ],
+      "layout": "vertical",
+      "gap": 16,
+      "padding": 32,
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "frame",
+          "id": "mKKTQ",
+          "name": "Close Row",
+          "width": "fill_container",
+          "justifyContent": "end",
+          "children": [
+            {
+              "type": "icon",
+              "id": "dByNC",
+              "name": "Close Icon",
+              "width": 18,
+              "height": 18,
+              "icon": "x",
+              "library": "lucide",
+              "fill": "$color-secondary"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "u30945",
+          "name": "Icon Badge",
+          "width": 56,
+          "height": 56,
+          "fill": "$glass-accent-fill",
+          "cornerRadius": 28,
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "icon",
+              "id": "ly8yb",
+              "name": "Lock Icon",
+              "width": 24,
+              "height": 24,
+              "icon": "lock",
+              "library": "lucide",
+              "fill": "$color-base"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "Tnh42",
+          "name": "Modal Title",
+          "fill": "$color-primary",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "保存には登録が必要です",
+          "textAlign": "center",
+          "fontFamily": "Noto Sans JP",
+          "fontSize": 20,
+          "fontWeight": "700"
+        },
+        {
+          "type": "text",
+          "id": "dBjfl",
+          "name": "Modal Body",
+          "fill": "$color-secondary",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "セッティングの作成・編集は登録なしでお試しいただけます。公開ページとして保存するには、無料のアカウント登録が必要です。",
+          "lineHeight": 1.6,
+          "textAlign": "center",
+          "fontFamily": "Noto Sans JP",
+          "fontSize": 14,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "frame",
+          "id": "XQH7E",
+          "name": "Actions",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 10,
+          "children": [
+            {
+              "id": "iWsRZ",
+              "type": "ref",
+              "ref": "B7a7Z",
+              "name": "Register Button",
+              "width": "fill_container",
+              "descendants": {
+                "FSHVZ": {
+                  "content": "無料で登録して保存"
+                }
+              }
+            },
+            {
+              "id": "Y9fzBo",
+              "type": "ref",
+              "ref": "QifoW",
+              "name": "Login Button",
+              "width": "fill_container",
+              "descendants": {
+                "xE7la": {
+                  "content": "ログインする"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "DowMT",
+      "x": 3580,
+      "y": 5718,
+      "name": "05 New Setting / Desktop — 未ログイン（保存ゲート）",
+      "clip": true,
+      "width": 1280,
+      "fill": "$color-base",
+      "layout": "vertical",
+      "children": [
+        {
+          "id": "fW0Hr",
+          "type": "ref",
+          "ref": "Dj95u",
+          "name": "Header",
+          "width": "fill_container",
+          "padding": [
+            0,
+            128
+          ],
+          "descendants": {
+            "SJB8d": {
+              "enabled": false
+            },
+            "JKAlN": {
+              "enabled": false
+            },
+            "J1OCE": {
+              "enabled": true
+            },
+            "p0vW9W": {
+              "enabled": true
+            }
+          }
+        },
+        {
+          "type": "frame",
+          "id": "Y0qZeH",
+          "name": "Main",
+          "width": "fill_container",
+          "layout": "vertical",
+          "padding": [
+            40,
+            16
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "vuIdm",
+              "name": "Content",
+              "width": 1024,
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "hmWpA",
+                  "name": "Page Title",
+                  "fill": "$color-primary",
+                  "content": "セッティングをつくる",
+                  "fontFamily": "Noto Sans JP",
+                  "fontSize": 24,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "Lonmu",
+                  "name": "Page Lead",
+                  "fill": "$color-secondary",
+                  "content": "パーツを選ぶと総重量・全長がリアルタイムに更新されます。",
+                  "fontFamily": "Noto Sans JP",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "SmM9G",
+                  "name": "Form",
+                  "width": "fill_container",
+                  "gap": 32,
+                  "padding": [
+                    24,
+                    0,
+                    0,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "K0caf",
+                      "name": "Form Fields",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 16,
+                      "children": [
+                        {
+                          "id": "pnVb1",
+                          "type": "ref",
+                          "ref": "AOV3e",
+                          "name": "Title Field",
+                          "width": "fill_container",
+                          "descendants": {
+                            "gda25": {
+                              "content": "セッティング名"
+                            },
+                            "ysQfe": {
+                              "content": "週末リーグ用セッティング",
+                              "fill": "$color-primary"
+                            }
+                          }
+                        },
+                        {
+                          "id": "YYIm5",
+                          "type": "ref",
+                          "ref": "jYPkd",
+                          "name": "バレル Selector",
+                          "width": "fill_container",
+                          "descendants": {
+                            "R770We": {
+                              "content": "バレル"
+                            },
+                            "J8SxkW": {
+                              "content": "96 黒瀧摩紀（18.0g / 40.5mm）",
+                              "fill": "$color-primary"
+                            }
+                          }
+                        },
+                        {
+                          "id": "kWQZ5",
+                          "type": "ref",
+                          "ref": "jYPkd",
+                          "name": "シャフト Selector",
+                          "width": "fill_container",
+                          "descendants": {
+                            "R770We": {
+                              "content": "シャフト"
+                            },
+                            "J8SxkW": {
+                              "content": "Fit Shaft Carbon Slim Spin 4（1.1g / 28.5mm）",
+                              "fill": "$color-primary"
+                            }
+                          }
+                        },
+                        {
+                          "id": "c27s4U",
+                          "type": "ref",
+                          "ref": "jYPkd",
+                          "name": "フライト Selector",
+                          "width": "fill_container",
+                          "descendants": {
+                            "R770We": {
+                              "content": "フライト"
+                            },
+                            "J8SxkW": {
+                              "content": "AXE CONDOR AXE Small S（0.7g / Small）",
+                              "fill": "$color-primary"
+                            }
+                          }
+                        },
+                        {
+                          "id": "MIA51",
+                          "type": "ref",
+                          "ref": "jYPkd",
+                          "name": "チップ Selector",
+                          "width": "fill_container",
+                          "descendants": {
+                            "R770We": {
+                              "content": "チップ"
+                            },
+                            "J8SxkW": {
+                              "content": "未選択"
+                            }
+                          }
+                        },
+                        {
+                          "type": "frame",
+                          "id": "ztK1X",
+                          "name": "Visibility Checkbox",
+                          "gap": 8,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "rectangle",
+                              "cornerRadius": 4,
+                              "id": "sO34s",
+                              "name": "Checkbox Box",
+                              "width": 16,
+                              "height": 16,
+                              "stroke": "$color-line",
+                              "strokeWidth": 1
+                            },
+                            {
+                              "type": "text",
+                              "id": "pOzl5",
+                              "name": "Checkbox Label",
+                              "fill": "$color-secondary",
+                              "content": "非公開にする（自分だけが閲覧できます）",
+                              "fontFamily": "Noto Sans JP",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "r3W3ta",
+                          "name": "Submit Wrap",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "padding": [
+                            8,
+                            0,
+                            0,
+                            0
+                          ],
+                          "children": [
+                            {
+                              "id": "H4mRl",
+                              "type": "ref",
+                              "ref": "B7a7Z",
+                              "name": "Submit Button",
+                              "width": "fill_container",
+                              "descendants": {
+                                "FSHVZ": {
+                                  "content": "保存して公開ページをつくる"
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "IiGtL",
+                      "name": "Preview Col",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "xsm40",
+                          "name": "Preview Label",
+                          "fill": "$color-secondary",
+                          "content": "プレビュー",
+                          "fontFamily": "Noto Sans JP",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "id": "ODL6A",
+                          "type": "ref",
+                          "ref": "avqKW",
+                          "name": "Preview Card",
+                          "width": "fill_container",
+                          "padding": 32,
+                          "descendants": {
+                            "dtB3p": {
+                              "fontSize": 24
+                            },
+                            "V7puh": {
+                              "content": "19.8",
+                              "fontSize": 48
+                            },
+                            "T8vIhT": {
+                              "content": "69.0",
+                              "fontSize": 48
+                            },
+                            "z9ngO": {
+                              "enabled": false
+                            },
+                            "GEXlX": {
+                              "content": "未選択",
+                              "fill": "$color-secondary",
+                              "fontWeight": "normal"
+                            },
+                            "o2qnz": {
+                              "enabled": false,
+                              "width": "fit_content"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "Nw5Ap",
+          "type": "ref",
+          "ref": "Fpf2a",
+          "name": "Footer",
+          "width": "fill_container",
+          "layout": "horizontal",
+          "justifyContent": "space_between",
+          "padding": [
+            24,
+            128
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "XcCAX",
+          "layoutPosition": "absolute",
+          "x": 0,
+          "y": 0,
+          "name": "Modal Backdrop",
+          "width": 1280,
+          "height": 822,
+          "fill": "$scrim",
+          "layout": "vertical",
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "id": "Z49WJA",
+              "type": "ref",
+              "ref": "qXyez",
+              "name": "Save Gate Modal",
+              "width": 420
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "qMepf",
+      "x": 5020,
+      "y": 5718,
+      "name": "05 New Setting / Mobile — 未ログイン（保存ゲート）",
+      "clip": true,
+      "width": 375,
+      "fill": "$color-base",
+      "layout": "vertical",
+      "children": [
+        {
+          "id": "sC8vz",
+          "type": "ref",
+          "ref": "Dj95u",
+          "name": "Header",
+          "width": "fill_container",
+          "padding": [
+            0,
+            12
+          ],
+          "descendants": {
+            "Mpleq": {
+              "gap": 4
+            },
+            "kvrGE": {
+              "padding": [
+                8,
+                6
+              ]
+            },
+            "SJB8d": {
+              "enabled": false,
+              "padding": [
+                8,
+                6
+              ]
+            },
+            "JKAlN": {
+              "enabled": false,
+              "padding": [
+                8,
+                6
+              ]
+            },
+            "J1OCE": {
+              "enabled": true
+            },
+            "p0vW9W": {
+              "enabled": true
+            }
+          }
+        },
+        {
+          "type": "frame",
+          "id": "d5p2CV",
+          "name": "Main",
+          "width": "fill_container",
+          "layout": "vertical",
+          "padding": [
+            40,
+            16
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "ZsJGd",
+              "name": "Content",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "AfCqw",
+                  "name": "Page Title",
+                  "fill": "$color-primary",
+                  "content": "セッティングをつくる",
+                  "fontFamily": "Noto Sans JP",
+                  "fontSize": 24,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "a2Hcu",
+                  "name": "Page Lead",
+                  "fill": "$color-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "パーツを選ぶと総重量・全長がリアルタイムに更新されます。",
+                  "fontFamily": "Noto Sans JP",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "t2lQs",
+                  "name": "Form",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 32,
+                  "padding": [
+                    24,
+                    0,
+                    0,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "id": "XLkh2",
+                      "type": "ref",
+                      "ref": "CU9sq",
+                      "name": "Setting Tabs",
+                      "width": "fill_container"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "duWuT",
+                      "name": "Form Fields",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 16,
+                      "children": [
+                        {
+                          "id": "RLjq1",
+                          "type": "ref",
+                          "ref": "AOV3e",
+                          "name": "Title Field",
+                          "width": "fill_container",
+                          "descendants": {
+                            "gda25": {
+                              "content": "セッティング名"
+                            },
+                            "ysQfe": {
+                              "content": "週末リーグ用セッティング",
+                              "fill": "$color-primary"
+                            }
+                          }
+                        },
+                        {
+                          "id": "FvTMi",
+                          "type": "ref",
+                          "ref": "jYPkd",
+                          "name": "バレル Selector",
+                          "width": "fill_container",
+                          "descendants": {
+                            "R770We": {
+                              "content": "バレル"
+                            },
+                            "J8SxkW": {
+                              "content": "96 黒瀧摩紀（18.0g / 40.5mm）",
+                              "fill": "$color-primary"
+                            }
+                          }
+                        },
+                        {
+                          "id": "v3YvLX",
+                          "type": "ref",
+                          "ref": "jYPkd",
+                          "name": "シャフト Selector",
+                          "width": "fill_container",
+                          "descendants": {
+                            "R770We": {
+                              "content": "シャフト"
+                            },
+                            "J8SxkW": {
+                              "content": "Fit Shaft Carbon Slim Spin 4（1.1g /…",
+                              "fill": "$color-primary"
+                            }
+                          }
+                        },
+                        {
+                          "id": "UGSuZ",
+                          "type": "ref",
+                          "ref": "jYPkd",
+                          "name": "フライト Selector",
+                          "width": "fill_container",
+                          "descendants": {
+                            "R770We": {
+                              "content": "フライト"
+                            },
+                            "J8SxkW": {
+                              "content": "AXE CONDOR AXE Small S（0.7g / Small）",
+                              "fill": "$color-primary"
+                            }
+                          }
+                        },
+                        {
+                          "id": "S4uwGu",
+                          "type": "ref",
+                          "ref": "jYPkd",
+                          "name": "チップ Selector",
+                          "width": "fill_container",
+                          "descendants": {
+                            "R770We": {
+                              "content": "チップ"
+                            },
+                            "J8SxkW": {
+                              "content": "未選択"
+                            }
+                          }
+                        },
+                        {
+                          "type": "frame",
+                          "id": "jMOvg",
+                          "name": "Visibility Checkbox",
+                          "gap": 8,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "rectangle",
+                              "cornerRadius": 4,
+                              "id": "nA3Ff",
+                              "name": "Checkbox Box",
+                              "width": 16,
+                              "height": 16,
+                              "stroke": "$color-line",
+                              "strokeWidth": 1
+                            },
+                            {
+                              "type": "text",
+                              "id": "p4kDHZ",
+                              "name": "Checkbox Label",
+                              "fill": "$color-secondary",
+                              "content": "非公開にする（自分だけが閲覧できます）",
+                              "fontFamily": "Noto Sans JP",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "z1wF6u",
+                          "name": "Submit Wrap",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "padding": [
+                            8,
+                            0,
+                            0,
+                            0
+                          ],
+                          "children": [
+                            {
+                              "id": "WRIuT",
+                              "type": "ref",
+                              "ref": "B7a7Z",
+                              "name": "Submit Button",
+                              "width": "fill_container",
+                              "descendants": {
+                                "FSHVZ": {
+                                  "content": "保存して公開ページをつくる"
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "hhSm0",
+                      "x": 0,
+                      "y": 582,
+                      "name": "Preview Col",
+                      "enabled": false,
+                      "width": 343,
+                      "layout": "vertical",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "JXdzG",
+                          "name": "Preview Label",
+                          "fill": "$color-secondary",
+                          "content": "プレビュー",
+                          "fontFamily": "Noto Sans JP",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "id": "Iltwn",
+                          "type": "ref",
+                          "ref": "avqKW",
+                          "name": "Preview Card",
+                          "width": "fill_container",
+                          "padding": 20,
+                          "descendants": {
+                            "dtB3p": {
+                              "fontSize": 20
+                            },
+                            "V7puh": {
+                              "content": "19.8",
+                              "fontSize": 36
+                            },
+                            "T8vIhT": {
+                              "content": "69.0",
+                              "fontSize": 36
+                            },
+                            "z9ngO": {
+                              "enabled": false
+                            },
+                            "GEXlX": {
+                              "content": "未選択",
+                              "fill": "$color-secondary",
+                              "fontWeight": "normal"
+                            },
+                            "o2qnz": {
+                              "enabled": false,
+                              "width": "fit_content"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "C8m09T",
+          "type": "ref",
+          "ref": "Fpf2a",
+          "name": "Footer",
+          "width": "fill_container"
+        },
+        {
+          "type": "frame",
+          "id": "OtEv7",
+          "layoutPosition": "absolute",
+          "x": 0,
+          "y": 0,
+          "name": "Modal Backdrop",
+          "width": 375,
+          "height": 1320,
+          "fill": "$scrim",
+          "layout": "vertical",
+          "padding": [
+            0,
+            20
+          ],
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "id": "ffyD2",
+              "type": "ref",
+              "ref": "qXyez",
+              "name": "Save Gate Modal",
+              "width": "fill_container"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "GPI6d",
+      "x": -1460,
+      "y": -513,
+      "name": "Modal - Parts Search",
+      "reusable": true,
+      "width": 440,
+      "fill": "$glass-surface-elevated",
+      "cornerRadius": 20,
+      "stroke": "$glass-border",
+      "strokeWidth": 1,
+      "strokeAlignment": "inner",
+      "effect": [
+        {
+          "type": "background_blur",
+          "radius": 24
+        },
+        {
+          "type": "shadow",
+          "shadowType": "outer",
+          "color": "$glass-shadow",
+          "offset": {
+            "x": 0,
+            "y": 16
+          },
+          "blur": 48
+        }
+      ],
+      "layout": "vertical",
+      "gap": 16,
+      "padding": 24,
+      "children": [
+        {
+          "type": "frame",
+          "id": "wVj0Q",
+          "name": "Modal Header",
+          "width": "fill_container",
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "J8l5W",
+              "name": "Modal Title",
+              "fill": "$color-primary",
+              "content": "バレルを検索",
+              "fontFamily": "Noto Sans JP",
+              "fontSize": 18,
+              "fontWeight": "700"
+            },
+            {
+              "type": "icon",
+              "id": "VKvt6",
+              "name": "Close Icon",
+              "width": 18,
+              "height": 18,
+              "icon": "x",
+              "library": "lucide",
+              "fill": "$color-secondary"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "nc5Gh",
+          "name": "Search Input",
+          "width": "fill_container",
+          "fill": "$glass-surface",
+          "cornerRadius": 12,
+          "stroke": "$glass-border",
+          "strokeWidth": 1,
+          "strokeAlignment": "inner",
+          "gap": 8,
+          "padding": [
+            10,
+            14
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "icon",
+              "id": "T1zfn",
+              "name": "Search Icon",
+              "width": 16,
+              "height": 16,
+              "icon": "search",
+              "library": "lucide",
+              "fill": "$color-secondary"
+            },
+            {
+              "type": "text",
+              "id": "nUEGd",
+              "name": "Query Text",
+              "fill": "$color-primary",
+              "content": "コスモ",
+              "fontFamily": "Noto Sans JP",
+              "fontSize": 15,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "RfF8J",
+          "name": "Results List",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 4,
+          "children": [
+            {
+              "id": "WYoau",
+              "type": "ref",
+              "ref": "Zmu4d",
+              "name": "Row - 96 黒瀧摩紀",
+              "width": "fill_container",
+              "fill": "$glass-accent-fill",
+              "descendants": {
+                "Zx84j": {
+                  "content": "COSMO DARTS"
+                },
+                "TtcPH": {
+                  "content": "96 黒瀧摩紀"
+                },
+                "Ld0yM": {
+                  "enabled": true
+                }
+              }
+            },
+            {
+              "id": "X1cYq",
+              "type": "ref",
+              "ref": "Zmu4d",
+              "name": "Row - Fit LABEL A 田内蓮",
+              "width": "fill_container",
+              "descendants": {
+                "Zx84j": {
+                  "content": "COSMO DARTS"
+                },
+                "TtcPH": {
+                  "content": "Fit LABEL A 田内蓮"
+                },
+                "Ld0yM": {
+                  "enabled": false
+                }
+              }
+            },
+            {
+              "id": "pmI2x",
+              "type": "ref",
+              "ref": "Zmu4d",
+              "name": "Row - Fit AK 浅田斉吾",
+              "width": "fill_container",
+              "descendants": {
+                "Zx84j": {
+                  "content": "COSMO DARTS"
+                },
+                "TtcPH": {
+                  "content": "Fit AK 浅田斉吾"
+                },
+                "Ld0yM": {
+                  "enabled": false
+                }
+              }
+            },
+            {
+              "id": "CL3VT",
+              "type": "ref",
+              "ref": "Zmu4d",
+              "name": "Row - Fit M3 えみくん",
+              "width": "fill_container",
+              "descendants": {
+                "Zx84j": {
+                  "content": "COSMO DARTS"
+                },
+                "TtcPH": {
+                  "content": "Fit M3 えみくん"
+                },
+                "Ld0yM": {
+                  "enabled": false
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "Zmu4d",
+      "x": -980,
+      "y": -513,
+      "name": "Search Result Row",
+      "reusable": true,
+      "width": 392,
+      "cornerRadius": 10,
+      "gap": 12,
+      "padding": [
+        10,
+        12
+      ],
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "text",
+          "id": "Zx84j",
+          "name": "Row Brand",
+          "fill": "$color-secondary",
+          "textGrowth": "fixed-width",
+          "width": 90,
+          "content": "COSMO DARTS",
+          "fontFamily": "Noto Sans JP",
+          "fontSize": 12,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "text",
+          "id": "TtcPH",
+          "name": "Row Name",
+          "fill": "$color-primary",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "96 黒瀧摩紀",
+          "fontFamily": "Noto Sans JP",
+          "fontSize": 14,
+          "fontWeight": "600"
+        },
+        {
+          "type": "icon",
+          "id": "Ld0yM",
+          "x": 0,
+          "y": 0,
+          "name": "Row Check",
+          "enabled": false,
+          "width": 16,
+          "height": 16,
+          "icon": "check",
+          "library": "lucide",
+          "fill": "$color-accent"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "Cm0VR",
+      "x": 3580,
+      "y": 7199,
+      "name": "06 Edit Setting / Desktop — バレル検索",
+      "clip": true,
+      "width": 1280,
+      "fill": "$color-base",
+      "layout": "vertical",
+      "children": [
+        {
+          "id": "j73uqQ",
+          "type": "ref",
+          "ref": "Dj95u",
+          "name": "Header",
+          "width": "fill_container",
+          "padding": [
+            0,
+            128
+          ],
+          "descendants": {
+            "SJB8d": {
+              "enabled": true
+            },
+            "JKAlN": {
+              "enabled": true
+            },
+            "J1OCE": {
+              "enabled": false
+            },
+            "p0vW9W": {
+              "enabled": false
+            }
+          }
+        },
+        {
+          "type": "frame",
+          "id": "cqGh9",
+          "name": "Main",
+          "width": "fill_container",
+          "layout": "vertical",
+          "padding": [
+            40,
+            16
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "VgKJ8",
+              "name": "Content",
+              "width": 1024,
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "mxgQl",
+                  "name": "Page Title",
+                  "fill": "$color-primary",
+                  "content": "セッティングを編集",
+                  "fontFamily": "Noto Sans JP",
+                  "fontSize": 24,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "frame",
+                  "id": "hqYpy",
+                  "name": "Form",
+                  "width": "fill_container",
+                  "gap": 32,
+                  "padding": [
+                    24,
+                    0,
+                    0,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "prI6c",
+                      "name": "Form Fields",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 16,
+                      "children": [
+                        {
+                          "id": "kb21V",
+                          "type": "ref",
+                          "ref": "AOV3e",
+                          "name": "Title Field",
+                          "width": "fill_container",
+                          "descendants": {
+                            "gda25": {
+                              "content": "セッティング名"
+                            },
+                            "ysQfe": {
+                              "content": "週末リーグ用セッティング",
+                              "fill": "$color-primary"
+                            }
+                          }
+                        },
+                        {
+                          "id": "pwBHq",
+                          "type": "ref",
+                          "ref": "jYPkd",
+                          "name": "バレル Selector",
+                          "width": "fill_container",
+                          "descendants": {
+                            "R770We": {
+                              "content": "バレル"
+                            },
+                            "J8SxkW": {
+                              "content": "96 黒瀧摩紀（18.0g / 40.5mm）",
+                              "fill": "$color-primary"
+                            }
+                          }
+                        },
+                        {
+                          "id": "cP1HI",
+                          "type": "ref",
+                          "ref": "jYPkd",
+                          "name": "シャフト Selector",
+                          "width": "fill_container",
+                          "descendants": {
+                            "R770We": {
+                              "content": "シャフト"
+                            },
+                            "J8SxkW": {
+                              "content": "Fit Shaft Carbon Slim Spin 4（1.1g / 28.5mm）",
+                              "fill": "$color-primary"
+                            }
+                          }
+                        },
+                        {
+                          "id": "J1kQLu",
+                          "type": "ref",
+                          "ref": "jYPkd",
+                          "name": "フライト Selector",
+                          "width": "fill_container",
+                          "descendants": {
+                            "R770We": {
+                              "content": "フライト"
+                            },
+                            "J8SxkW": {
+                              "content": "AXE CONDOR AXE Small S（0.7g / Small）",
+                              "fill": "$color-primary"
+                            }
+                          }
+                        },
+                        {
+                          "id": "axMqN",
+                          "type": "ref",
+                          "ref": "jYPkd",
+                          "name": "チップ Selector",
+                          "width": "fill_container",
+                          "descendants": {
+                            "R770We": {
+                              "content": "チップ"
+                            },
+                            "J8SxkW": {
+                              "content": "TIP CONDOR TIP（1.3g / 30.5mm）",
+                              "fill": "$color-primary"
+                            }
+                          }
+                        },
+                        {
+                          "type": "frame",
+                          "id": "eRKQf",
+                          "name": "Visibility Checkbox",
+                          "gap": 8,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "rectangle",
+                              "cornerRadius": 4,
+                              "id": "YWH1u",
+                              "name": "Checkbox Box",
+                              "width": 16,
+                              "height": 16,
+                              "stroke": "$color-line",
+                              "strokeWidth": 1
+                            },
+                            {
+                              "type": "text",
+                              "id": "DX2Fm",
+                              "name": "Checkbox Label",
+                              "fill": "$color-secondary",
+                              "content": "非公開にする（自分だけが閲覧できます）",
+                              "fontFamily": "Noto Sans JP",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "MnOoA",
+                          "name": "Submit Wrap",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "padding": [
+                            8,
+                            0,
+                            0,
+                            0
+                          ],
+                          "children": [
+                            {
+                              "id": "tpPWr",
+                              "type": "ref",
+                              "ref": "B7a7Z",
+                              "name": "Submit Button",
+                              "width": "fill_container",
+                              "descendants": {
+                                "FSHVZ": {
+                                  "content": "更新する"
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "L30Yg2",
+                      "name": "Preview Col",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "rolN1",
+                          "name": "Preview Label",
+                          "fill": "$color-secondary",
+                          "content": "プレビュー",
+                          "fontFamily": "Noto Sans JP",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "id": "e0mxZ",
+                          "type": "ref",
+                          "ref": "avqKW",
+                          "name": "Preview Card",
+                          "width": "fill_container",
+                          "padding": 32,
+                          "descendants": {
+                            "dtB3p": {
+                              "fontSize": 24
+                            },
+                            "V7puh": {
+                              "content": "21.1",
+                              "fontSize": 48
+                            },
+                            "T8vIhT": {
+                              "content": "99.5",
+                              "fontSize": 48
+                            },
+                            "Ucsiy": {
+                              "enabled": false
+                            },
+                            "o2qnz": {
+                              "enabled": false,
+                              "width": "fit_content"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "artNP",
+          "type": "ref",
+          "ref": "Fpf2a",
+          "name": "Footer",
+          "width": "fill_container",
+          "layout": "horizontal",
+          "justifyContent": "space_between",
+          "padding": [
+            24,
+            128
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "F9pEfu",
+          "layoutPosition": "absolute",
+          "x": 0,
+          "y": 0,
+          "name": "Modal Backdrop",
+          "width": 1280,
+          "height": 794,
+          "fill": "$scrim",
+          "layout": "vertical",
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "id": "cqTBk",
+              "type": "ref",
+              "ref": "GPI6d",
+              "name": "Parts Search Modal",
+              "width": 440
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "Pjc9p",
+      "x": 5020,
+      "y": 7199,
+      "name": "06 Edit Setting / Mobile — バレル検索",
+      "clip": true,
+      "width": 375,
+      "fill": "$color-base",
+      "layout": "vertical",
+      "children": [
+        {
+          "id": "ZKTvi",
+          "type": "ref",
+          "ref": "Dj95u",
+          "name": "Header",
+          "width": "fill_container",
+          "padding": [
+            0,
+            12
+          ],
+          "descendants": {
+            "Mpleq": {
+              "gap": 4
+            },
+            "kvrGE": {
+              "padding": [
+                8,
+                6
+              ]
+            },
+            "SJB8d": {
+              "enabled": true,
+              "padding": [
+                8,
+                6
+              ]
+            },
+            "JKAlN": {
+              "enabled": true,
+              "padding": [
+                8,
+                6
+              ]
+            },
+            "J1OCE": {
+              "enabled": false
+            },
+            "p0vW9W": {
+              "enabled": false
+            }
+          }
+        },
+        {
+          "type": "frame",
+          "id": "vyw5V",
+          "name": "Main",
+          "width": "fill_container",
+          "layout": "vertical",
+          "padding": [
+            40,
+            16
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "F0AbIa",
+              "name": "Content",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "DetuW",
+                  "name": "Page Title",
+                  "fill": "$color-primary",
+                  "content": "セッティングを編集",
+                  "fontFamily": "Noto Sans JP",
+                  "fontSize": 24,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "frame",
+                  "id": "jXbqN",
+                  "name": "Form",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 32,
+                  "padding": [
+                    24,
+                    0,
+                    0,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "YuNb0",
+                      "name": "Form Fields",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 16,
+                      "children": [
+                        {
+                          "id": "F9OJU3",
+                          "type": "ref",
+                          "ref": "AOV3e",
+                          "name": "Title Field",
+                          "width": "fill_container",
+                          "descendants": {
+                            "gda25": {
+                              "content": "セッティング名"
+                            },
+                            "ysQfe": {
+                              "content": "週末リーグ用セッティング",
+                              "fill": "$color-primary"
+                            }
+                          }
+                        },
+                        {
+                          "id": "k82r2v",
+                          "type": "ref",
+                          "ref": "jYPkd",
+                          "name": "バレル Selector",
+                          "width": "fill_container",
+                          "descendants": {
+                            "R770We": {
+                              "content": "バレル"
+                            },
+                            "J8SxkW": {
+                              "content": "96 黒瀧摩紀（18.0g / 40.5mm）",
+                              "fill": "$color-primary"
+                            }
+                          }
+                        },
+                        {
+                          "id": "yhJQt",
+                          "type": "ref",
+                          "ref": "jYPkd",
+                          "name": "シャフト Selector",
+                          "width": "fill_container",
+                          "descendants": {
+                            "R770We": {
+                              "content": "シャフト"
+                            },
+                            "J8SxkW": {
+                              "content": "Fit Shaft Carbon Slim Spin 4（1.1g /…",
+                              "fill": "$color-primary"
+                            }
+                          }
+                        },
+                        {
+                          "id": "oYKwO",
+                          "type": "ref",
+                          "ref": "jYPkd",
+                          "name": "フライト Selector",
+                          "width": "fill_container",
+                          "descendants": {
+                            "R770We": {
+                              "content": "フライト"
+                            },
+                            "J8SxkW": {
+                              "content": "AXE CONDOR AXE Small S（0.7g / Small）",
+                              "fill": "$color-primary"
+                            }
+                          }
+                        },
+                        {
+                          "id": "p9O8h",
+                          "type": "ref",
+                          "ref": "jYPkd",
+                          "name": "チップ Selector",
+                          "width": "fill_container",
+                          "descendants": {
+                            "R770We": {
+                              "content": "チップ"
+                            },
+                            "J8SxkW": {
+                              "content": "TIP CONDOR TIP（1.3g / 30.5mm）",
+                              "fill": "$color-primary"
+                            }
+                          }
+                        },
+                        {
+                          "type": "frame",
+                          "id": "AYvtH",
+                          "name": "Visibility Checkbox",
+                          "gap": 8,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "rectangle",
+                              "cornerRadius": 4,
+                              "id": "LUHhQ",
+                              "name": "Checkbox Box",
+                              "width": 16,
+                              "height": 16,
+                              "stroke": "$color-line",
+                              "strokeWidth": 1
+                            },
+                            {
+                              "type": "text",
+                              "id": "lTMAF",
+                              "name": "Checkbox Label",
+                              "fill": "$color-secondary",
+                              "content": "非公開にする（自分だけが閲覧できます）",
+                              "fontFamily": "Noto Sans JP",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "RliKJ",
+                          "name": "Submit Wrap",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "padding": [
+                            8,
+                            0,
+                            0,
+                            0
+                          ],
+                          "children": [
+                            {
+                              "id": "a3W2Q",
+                              "type": "ref",
+                              "ref": "B7a7Z",
+                              "name": "Submit Button",
+                              "width": "fill_container",
+                              "descendants": {
+                                "FSHVZ": {
+                                  "content": "更新する"
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "DbLHM",
+                      "name": "Preview Col",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "FCoY4",
+                          "name": "Preview Label",
+                          "fill": "$color-secondary",
+                          "content": "プレビュー",
+                          "fontFamily": "Noto Sans JP",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "id": "oygrS",
+                          "type": "ref",
+                          "ref": "avqKW",
+                          "name": "Preview Card",
+                          "width": "fill_container",
+                          "padding": 20,
+                          "descendants": {
+                            "dtB3p": {
+                              "fontSize": 20
+                            },
+                            "V7puh": {
+                              "content": "21.1",
+                              "fontSize": 36
+                            },
+                            "T8vIhT": {
+                              "content": "99.5",
+                              "fontSize": 36
+                            },
+                            "Ucsiy": {
+                              "enabled": false
+                            },
+                            "o2qnz": {
+                              "enabled": false,
+                              "width": "fit_content"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "oszrL",
+          "type": "ref",
+          "ref": "Fpf2a",
+          "name": "Footer",
+          "width": "fill_container"
+        },
+        {
+          "type": "frame",
+          "id": "AshqQ",
+          "layoutPosition": "absolute",
+          "x": 0,
+          "y": 0,
+          "name": "Modal Backdrop",
+          "width": 375,
+          "height": 1235,
+          "fill": "$scrim",
+          "layout": "vertical",
+          "padding": [
+            0,
+            16
+          ],
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "id": "szH1z",
+              "type": "ref",
+              "ref": "GPI6d",
+              "name": "Parts Search Modal",
+              "width": "fill_container"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "CU9sq",
+      "x": -1900,
+      "y": -19,
+      "name": "Tabs - Segmented",
+      "reusable": true,
+      "width": 343,
+      "fill": "$glass-surface",
+      "cornerRadius": 12,
+      "stroke": "$glass-border",
+      "strokeWidth": 1,
+      "strokeAlignment": "inner",
+      "gap": 4,
+      "padding": 4,
+      "children": [
+        {
+          "type": "frame",
+          "id": "l8X3T",
+          "name": "Tab Input",
+          "width": "fill_container",
+          "fill": "$glass-accent-fill",
+          "cornerRadius": 8,
+          "padding": [
+            8,
+            0
+          ],
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "IW8AS",
+              "name": "Tab Input Label",
+              "fill": "$color-base",
+              "content": "入力",
+              "fontFamily": "Noto Sans JP",
+              "fontSize": 14,
+              "fontWeight": "700"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "GJ2Ay",
+          "name": "Tab Preview",
+          "width": "fill_container",
+          "cornerRadius": 8,
+          "padding": [
+            8,
+            0
+          ],
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "hGAav",
+              "name": "Tab Preview Label",
+              "fill": "$color-secondary",
+              "content": "プレビュー",
+              "fontFamily": "Noto Sans JP",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "vQEXf",
+      "x": 5555,
+      "y": 7199,
+      "name": "06 Edit Setting / Mobile — プレビュータブ",
+      "clip": true,
+      "width": 375,
+      "fill": "$color-base",
+      "layout": "vertical",
+      "children": [
+        {
+          "id": "S1pUw",
+          "type": "ref",
+          "ref": "Dj95u",
+          "name": "Header",
+          "width": "fill_container",
+          "padding": [
+            0,
+            12
+          ],
+          "descendants": {
+            "Mpleq": {
+              "gap": 4
+            },
+            "kvrGE": {
+              "padding": [
+                8,
+                6
+              ]
+            },
+            "SJB8d": {
+              "enabled": true,
+              "padding": [
+                8,
+                6
+              ]
+            },
+            "JKAlN": {
+              "enabled": true,
+              "padding": [
+                8,
+                6
+              ]
+            },
+            "J1OCE": {
+              "enabled": false
+            },
+            "p0vW9W": {
+              "enabled": false
+            }
+          }
+        },
+        {
+          "type": "frame",
+          "id": "nYbn9",
+          "name": "Main",
+          "width": "fill_container",
+          "layout": "vertical",
+          "padding": [
+            40,
+            16
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "gJF45",
+              "name": "Content",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "fGgEt",
+                  "name": "Page Title",
+                  "fill": "$color-primary",
+                  "content": "セッティングを編集",
+                  "fontFamily": "Noto Sans JP",
+                  "fontSize": 24,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "frame",
+                  "id": "Y7qJcU",
+                  "name": "Form",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 32,
+                  "padding": [
+                    24,
+                    0,
+                    0,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "id": "cpL6D",
+                      "type": "ref",
+                      "ref": "CU9sq",
+                      "name": "Setting Tabs",
+                      "width": "fill_container",
+                      "descendants": {
+                        "l8X3T": {
+                          "fill": "#00000000"
+                        },
+                        "IW8AS": {
+                          "fill": "$color-secondary",
+                          "fontWeight": "normal"
+                        },
+                        "GJ2Ay": {
+                          "fill": "$glass-accent-fill"
+                        },
+                        "hGAav": {
+                          "fill": "$color-base",
+                          "fontWeight": "700"
+                        }
+                      }
+                    },
+                    {
+                      "type": "frame",
+                      "id": "DuU94",
+                      "x": 0,
+                      "y": 100,
+                      "name": "Form Fields",
+                      "enabled": false,
+                      "width": 343,
+                      "layout": "vertical",
+                      "gap": 16,
+                      "children": [
+                        {
+                          "id": "Ixvhd",
+                          "type": "ref",
+                          "ref": "AOV3e",
+                          "name": "Title Field",
+                          "width": "fill_container",
+                          "descendants": {
+                            "gda25": {
+                              "content": "セッティング名"
+                            },
+                            "ysQfe": {
+                              "content": "週末リーグ用セッティング",
+                              "fill": "$color-primary"
+                            }
+                          }
+                        },
+                        {
+                          "id": "tsvrj",
+                          "type": "ref",
+                          "ref": "jYPkd",
+                          "name": "バレル Selector",
+                          "width": "fill_container",
+                          "descendants": {
+                            "R770We": {
+                              "content": "バレル"
+                            },
+                            "J8SxkW": {
+                              "content": "96 黒瀧摩紀（18.0g / 40.5mm）",
+                              "fill": "$color-primary"
+                            }
+                          }
+                        },
+                        {
+                          "id": "KLWdY",
+                          "type": "ref",
+                          "ref": "jYPkd",
+                          "name": "シャフト Selector",
+                          "width": "fill_container",
+                          "descendants": {
+                            "R770We": {
+                              "content": "シャフト"
+                            },
+                            "J8SxkW": {
+                              "content": "Fit Shaft Carbon Slim Spin 4（1.1g /…",
+                              "fill": "$color-primary"
+                            }
+                          }
+                        },
+                        {
+                          "id": "tNV5p",
+                          "type": "ref",
+                          "ref": "jYPkd",
+                          "name": "フライト Selector",
+                          "width": "fill_container",
+                          "descendants": {
+                            "R770We": {
+                              "content": "フライト"
+                            },
+                            "J8SxkW": {
+                              "content": "AXE CONDOR AXE Small S（0.7g / Small）",
+                              "fill": "$color-primary"
+                            }
+                          }
+                        },
+                        {
+                          "id": "mBwNa",
+                          "type": "ref",
+                          "ref": "jYPkd",
+                          "name": "チップ Selector",
+                          "width": "fill_container",
+                          "descendants": {
+                            "R770We": {
+                              "content": "チップ"
+                            },
+                            "J8SxkW": {
+                              "content": "TIP CONDOR TIP（1.3g / 30.5mm）",
+                              "fill": "$color-primary"
+                            }
+                          }
+                        },
+                        {
+                          "type": "frame",
+                          "id": "wnpXt",
+                          "name": "Visibility Checkbox",
+                          "gap": 8,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "rectangle",
+                              "cornerRadius": 4,
+                              "id": "vyZCj",
+                              "name": "Checkbox Box",
+                              "width": 16,
+                              "height": 16,
+                              "stroke": "$color-line",
+                              "strokeWidth": 1
+                            },
+                            {
+                              "type": "text",
+                              "id": "JrOdP",
+                              "name": "Checkbox Label",
+                              "fill": "$color-secondary",
+                              "content": "非公開にする（自分だけが閲覧できます）",
+                              "fontFamily": "Noto Sans JP",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "l26rMa",
+                          "name": "Submit Wrap",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "padding": [
+                            8,
+                            0,
+                            0,
+                            0
+                          ],
+                          "children": [
+                            {
+                              "id": "mdl3p",
+                              "type": "ref",
+                              "ref": "B7a7Z",
+                              "name": "Submit Button",
+                              "width": "fill_container",
+                              "descendants": {
+                                "FSHVZ": {
+                                  "content": "更新する"
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "n5RSO6",
+                      "name": "Preview Col",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "l3cI2E",
+                          "name": "Preview Label",
+                          "fill": "$color-secondary",
+                          "content": "プレビュー",
+                          "fontFamily": "Noto Sans JP",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "id": "jpIjB",
+                          "type": "ref",
+                          "ref": "avqKW",
+                          "name": "Preview Card",
+                          "width": "fill_container",
+                          "padding": 20,
+                          "descendants": {
+                            "dtB3p": {
+                              "fontSize": 20
+                            },
+                            "V7puh": {
+                              "content": "21.1",
+                              "fontSize": 36
+                            },
+                            "T8vIhT": {
+                              "content": "99.5",
+                              "fontSize": 36
+                            },
+                            "Ucsiy": {
+                              "enabled": false
+                            },
+                            "o2qnz": {
+                              "enabled": false,
+                              "width": "fit_content"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "BbnM7",
+          "type": "ref",
+          "ref": "Fpf2a",
+          "name": "Footer",
+          "width": "fill_container"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "QsfNi",
+      "x": 5555,
+      "y": 5718,
+      "name": "05 New Setting / Mobile — プレビュータブ",
+      "clip": true,
+      "width": 375,
+      "fill": "$color-base",
+      "layout": "vertical",
+      "children": [
+        {
+          "id": "eIURs",
+          "type": "ref",
+          "ref": "Dj95u",
+          "name": "Header",
+          "width": "fill_container",
+          "padding": [
+            0,
+            12
+          ],
+          "descendants": {
+            "Mpleq": {
+              "gap": 4
+            },
+            "kvrGE": {
+              "padding": [
+                8,
+                6
+              ]
+            },
+            "SJB8d": {
+              "enabled": true,
+              "padding": [
+                8,
+                6
+              ]
+            },
+            "JKAlN": {
+              "enabled": true,
+              "padding": [
+                8,
+                6
+              ]
+            },
+            "J1OCE": {
+              "enabled": false
+            },
+            "p0vW9W": {
+              "enabled": false
+            }
+          }
+        },
+        {
+          "type": "frame",
+          "id": "U5QOBL",
+          "name": "Main",
+          "width": "fill_container",
+          "layout": "vertical",
+          "padding": [
+            40,
+            16
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "ZFleX",
+              "name": "Content",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Zb4m8",
+                  "name": "Page Title",
+                  "fill": "$color-primary",
+                  "content": "セッティングをつくる",
+                  "fontFamily": "Noto Sans JP",
+                  "fontSize": 24,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "A9KfU",
+                  "name": "Page Lead",
+                  "fill": "$color-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "パーツを選ぶと総重量・全長がリアルタイムに更新されます。",
+                  "fontFamily": "Noto Sans JP",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "xDGBe",
+                  "name": "Form",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 32,
+                  "padding": [
+                    24,
+                    0,
+                    0,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "id": "iU6rz",
+                      "type": "ref",
+                      "ref": "CU9sq",
+                      "name": "Setting Tabs",
+                      "width": "fill_container",
+                      "descendants": {
+                        "l8X3T": {
+                          "fill": "#00000000"
+                        },
+                        "IW8AS": {
+                          "fill": "$color-secondary",
+                          "fontWeight": "normal"
+                        },
+                        "GJ2Ay": {
+                          "fill": "$glass-accent-fill"
+                        },
+                        "hGAav": {
+                          "fill": "$color-base",
+                          "fontWeight": "700"
+                        }
+                      }
+                    },
+                    {
+                      "type": "frame",
+                      "id": "H87oB",
+                      "x": 0,
+                      "y": 100,
+                      "name": "Form Fields",
+                      "enabled": false,
+                      "width": 343,
+                      "layout": "vertical",
+                      "gap": 16,
+                      "children": [
+                        {
+                          "id": "Rvrx3",
+                          "type": "ref",
+                          "ref": "AOV3e",
+                          "name": "Title Field",
+                          "width": "fill_container",
+                          "descendants": {
+                            "gda25": {
+                              "content": "セッティング名"
+                            },
+                            "ysQfe": {
+                              "content": "週末リーグ用セッティング",
+                              "fill": "$color-primary"
+                            }
+                          }
+                        },
+                        {
+                          "id": "nMDKY",
+                          "type": "ref",
+                          "ref": "jYPkd",
+                          "name": "バレル Selector",
+                          "width": "fill_container",
+                          "descendants": {
+                            "R770We": {
+                              "content": "バレル"
+                            },
+                            "J8SxkW": {
+                              "content": "96 黒瀧摩紀（18.0g / 40.5mm）",
+                              "fill": "$color-primary"
+                            }
+                          }
+                        },
+                        {
+                          "id": "o415R",
+                          "type": "ref",
+                          "ref": "jYPkd",
+                          "name": "シャフト Selector",
+                          "width": "fill_container",
+                          "descendants": {
+                            "R770We": {
+                              "content": "シャフト"
+                            },
+                            "J8SxkW": {
+                              "content": "Fit Shaft Carbon Slim Spin 4（1.1g /…",
+                              "fill": "$color-primary"
+                            }
+                          }
+                        },
+                        {
+                          "id": "jK1Yq",
+                          "type": "ref",
+                          "ref": "jYPkd",
+                          "name": "フライト Selector",
+                          "width": "fill_container",
+                          "descendants": {
+                            "R770We": {
+                              "content": "フライト"
+                            },
+                            "J8SxkW": {
+                              "content": "AXE CONDOR AXE Small S（0.7g / Small）",
+                              "fill": "$color-primary"
+                            }
+                          }
+                        },
+                        {
+                          "id": "xFoxu",
+                          "type": "ref",
+                          "ref": "jYPkd",
+                          "name": "チップ Selector",
+                          "width": "fill_container",
+                          "descendants": {
+                            "R770We": {
+                              "content": "チップ"
+                            },
+                            "J8SxkW": {
+                              "content": "未選択"
+                            }
+                          }
+                        },
+                        {
+                          "type": "frame",
+                          "id": "VsV6z",
+                          "name": "Visibility Checkbox",
+                          "gap": 8,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "rectangle",
+                              "cornerRadius": 4,
+                              "id": "bVrbZ",
+                              "name": "Checkbox Box",
+                              "width": 16,
+                              "height": 16,
+                              "stroke": "$color-line",
+                              "strokeWidth": 1
+                            },
+                            {
+                              "type": "text",
+                              "id": "Q1XjP",
+                              "name": "Checkbox Label",
+                              "fill": "$color-secondary",
+                              "content": "非公開にする（自分だけが閲覧できます）",
+                              "fontFamily": "Noto Sans JP",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "o2sh7",
+                          "name": "Submit Wrap",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "padding": [
+                            8,
+                            0,
+                            0,
+                            0
+                          ],
+                          "children": [
+                            {
+                              "id": "F8IXM",
+                              "type": "ref",
+                              "ref": "B7a7Z",
+                              "name": "Submit Button",
+                              "width": "fill_container",
+                              "descendants": {
+                                "FSHVZ": {
+                                  "content": "保存して公開ページをつくる"
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "L6c6b",
+                      "name": "Preview Col",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "tleU3",
+                          "name": "Preview Label",
+                          "fill": "$color-secondary",
+                          "content": "プレビュー",
+                          "fontFamily": "Noto Sans JP",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "id": "Xseuw",
+                          "type": "ref",
+                          "ref": "avqKW",
+                          "name": "Preview Card",
+                          "width": "fill_container",
+                          "padding": 20,
+                          "descendants": {
+                            "dtB3p": {
+                              "fontSize": 20
+                            },
+                            "V7puh": {
+                              "content": "19.8",
+                              "fontSize": 36
+                            },
+                            "T8vIhT": {
+                              "content": "69.0",
+                              "fontSize": 36
+                            },
+                            "z9ngO": {
+                              "enabled": false
+                            },
+                            "GEXlX": {
+                              "content": "未選択",
+                              "fill": "$color-secondary",
+                              "fontWeight": "normal"
+                            },
+                            "o2qnz": {
+                              "enabled": false,
+                              "width": "fit_content"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "B4kT4D",
+          "type": "ref",
+          "ref": "Fpf2a",
+          "name": "Footer",
+          "width": "fill_container"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "u30P0a",
+      "x": 2140,
+      "y": 8634,
+      "name": "08 Terms / Desktop",
+      "clip": true,
+      "width": 1280,
+      "layout": "vertical",
+      "children": [
+        {
+          "id": "fh0Ar",
+          "type": "ref",
+          "ref": "Dj95u",
+          "name": "Header",
+          "width": "fill_container",
+          "padding": [
+            0,
+            128
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "DEwnr",
+          "name": "Main",
+          "width": "fill_container",
+          "layout": "vertical",
+          "padding": [
+            0,
+            128
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "QBPUj",
+              "name": "Content",
+              "width": 720,
+              "layout": "vertical",
+              "gap": 40,
+              "padding": [
+                64,
+                0,
+                96,
+                0
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "qIxQQ",
+                  "name": "Page Title",
+                  "fill": "$color-primary",
+                  "content": "利用規約",
+                  "fontFamily": "Noto Sans JP",
+                  "fontSize": 32,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "h01dL",
+                  "name": "Updated Date",
+                  "fill": "$color-secondary",
+                  "content": "最終更新日：2026年8月10日",
+                  "fontFamily": "Noto Sans JP",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "q5Ncy",
+                  "name": "Lead",
+                  "fill": "$color-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "この利用規約（以下「本規約」といいます。）は、darts spec（以下「本サービス」といいます。）の利用条件を定めるものです。ご利用にあたっては、本規約に同意いただく必要があります。",
+                  "lineHeight": 1.8,
+                  "fontFamily": "Noto Sans JP",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "EvZnI",
+                  "name": "第1条（適用）",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "GMUFC",
+                      "name": "Article Heading",
+                      "fill": "$color-primary",
+                      "content": "第1条（適用）",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 17,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "OgALT",
+                      "name": "Article Body",
+                      "fill": "$color-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "本規約は、ユーザーと運営者との間の本サービスの利用に関わる一切の関係に適用されるものとします。",
+                      "lineHeight": 1.8,
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "yWgAU",
+                  "name": "第2条（利用登録）",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "LGd8s",
+                      "name": "Article Heading",
+                      "fill": "$color-primary",
+                      "content": "第2条（利用登録）",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 17,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "bhBbM",
+                      "name": "Article Body",
+                      "fill": "$color-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "本サービスの一部機能（セッティングの保存・公開等）の利用を希望する方は、本規約に同意の上、運営者の定める方法によって利用登録を申請し、運営者がこれを承認することによって利用登録が完了するものとします。なお、セッティングの作成・編集自体は利用登録なしでお試しいただけます。",
+                      "lineHeight": 1.8,
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "nZg05",
+                  "name": "第3条（アカウントの管理）",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "aZyur",
+                      "name": "Article Heading",
+                      "fill": "$color-primary",
+                      "content": "第3条（アカウントの管理）",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 17,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "n1ghYz",
+                      "name": "Article Body",
+                      "fill": "$color-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "ユーザーは、自己の責任において本サービスのアカウントを適切に管理するものとします。ユーザーは、いかなる場合にもアカウントを第三者に譲渡または貸与することはできません。",
+                      "lineHeight": 1.8,
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "KTSUt",
+                  "name": "第4条（禁止事項）",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "bKKIX",
+                      "name": "Article Heading",
+                      "fill": "$color-primary",
+                      "content": "第4条（禁止事項）",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 17,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "tdBzf",
+                      "name": "Article Body",
+                      "fill": "$color-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "ユーザーは、本サービスの利用にあたり、法令または公序良俗に違反する行為、犯罪行為に関連する行為、運営者・他のユーザーその他第三者の権利や利益を侵害する行為、本サービスの運営を妨害する行為、不正アクセスを試みる行為、その他運営者が不適切と判断する行為をしてはなりません。",
+                      "lineHeight": 1.8,
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Itq3N",
+                  "name": "第5条（本サービスの提供の停止等）",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "lPqdz",
+                      "name": "Article Heading",
+                      "fill": "$color-primary",
+                      "content": "第5条（本サービスの提供の停止等）",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 17,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "xM8vM",
+                      "name": "Article Body",
+                      "fill": "$color-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "運営者は、システムの保守点検、天災等の不可抗力、その他運営者が必要と判断した場合には、ユーザーへの事前通知なく本サービスの全部または一部の提供を停止または中断することができるものとします。",
+                      "lineHeight": 1.8,
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "hXAwz",
+                  "name": "第6条（著作権）",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "jFGGa",
+                      "name": "Article Heading",
+                      "fill": "$color-primary",
+                      "content": "第6条（著作権）",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 17,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "DhlMn",
+                      "name": "Article Body",
+                      "fill": "$color-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "ユーザーが本サービスを利用して作成・投稿したセッティング情報等に関する著作権は、当該ユーザーに帰属します。ただし、本サービスの運営・改善・宣伝等に必要な範囲で運営者がこれを利用できるものとし、ユーザーはあらかじめこれを承諾するものとします。",
+                      "lineHeight": 1.8,
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "ja2Gi",
+                  "name": "第7条（利用制限および登録抹消）",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "qq9mo",
+                      "name": "Article Heading",
+                      "fill": "$color-primary",
+                      "content": "第7条（利用制限および登録抹消）",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 17,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "VxfgA",
+                      "name": "Article Body",
+                      "fill": "$color-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "運営者は、ユーザーが本規約に違反したと判断した場合、事前の通知なく投稿データを削除し、本サービスの利用を制限し、またはユーザー登録を抹消することができるものとします。",
+                      "lineHeight": 1.8,
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "G0HDr",
+                  "name": "第8条（保証の否認および免責事項）",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "HW1ZV",
+                      "name": "Article Heading",
+                      "fill": "$color-primary",
+                      "content": "第8条（保証の否認および免責事項）",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 17,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "o29Be",
+                      "name": "Article Body",
+                      "fill": "$color-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "運営者は、本サービスに事実上または法律上の瑕疵がないことを保証しません。本サービスに掲載される重量・寸法等の数値は目安であり、その正確性を保証するものではありません。運営者は、本サービスに起因してユーザーに生じた損害について一切の責任を負わないものとします。",
+                      "lineHeight": 1.8,
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "r0x6Kj",
+                  "name": "第9条（サービス内容の変更等）",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "aJ2py",
+                      "name": "Article Heading",
+                      "fill": "$color-primary",
+                      "content": "第9条（サービス内容の変更等）",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 17,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "AoaJM",
+                      "name": "Article Body",
+                      "fill": "$color-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "運営者は、ユーザーへの事前の告知をもって、本サービスの内容を変更、追加または廃止することがあり、ユーザーはこれを承諾するものとします。",
+                      "lineHeight": 1.8,
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "E5aDe",
+                  "name": "第10条（利用規約の変更）",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "MOcXn",
+                      "name": "Article Heading",
+                      "fill": "$color-primary",
+                      "content": "第10条（利用規約の変更）",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 17,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "e5NVD",
+                      "name": "Article Body",
+                      "fill": "$color-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "運営者は、必要と判断した場合には、ユーザーへの通知なくいつでも本規約を変更できるものとします。変更後の利用規約は、本サービス上に掲載した時点から効力を生じるものとします。",
+                      "lineHeight": 1.8,
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "mMk2F",
+                  "name": "第11条（個人情報の取扱い）",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "PlraY",
+                      "name": "Article Heading",
+                      "fill": "$color-primary",
+                      "content": "第11条（個人情報の取扱い）",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 17,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "C9ZVeY",
+                      "name": "Article Body",
+                      "fill": "$color-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "運営者は、本サービスの利用によって取得する個人情報について、運営者「プライバシーポリシー」に従い適切に取り扱うものとします。",
+                      "lineHeight": 1.8,
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "zCnz7",
+                  "name": "第12条（準拠法・裁判管轄）",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "VdOoi",
+                      "name": "Article Heading",
+                      "fill": "$color-primary",
+                      "content": "第12条（準拠法・裁判管轄）",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 17,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "mEkRz",
+                      "name": "Article Body",
+                      "fill": "$color-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "本規約の解釈にあたっては日本法を準拠法とします。本サービスに関して紛争が生じた場合には、運営者の本店所在地を管轄する裁判所を専属的合意管轄とします。",
+                      "lineHeight": 1.8,
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "yQQ6J",
+          "type": "ref",
+          "ref": "Fpf2a",
+          "name": "Footer",
+          "width": "fill_container"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "KWJV3",
+      "x": 2140,
+      "y": 11366,
+      "name": "09 Privacy / Desktop",
+      "clip": true,
+      "width": 1280,
+      "layout": "vertical",
+      "children": [
+        {
+          "id": "gT5RW",
+          "type": "ref",
+          "ref": "Dj95u",
+          "name": "Header",
+          "width": "fill_container",
+          "padding": [
+            0,
+            128
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "WkD8j",
+          "name": "Main",
+          "width": "fill_container",
+          "layout": "vertical",
+          "padding": [
+            0,
+            128
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "Ox4Gh",
+              "name": "Content",
+              "width": 720,
+              "layout": "vertical",
+              "gap": 40,
+              "padding": [
+                64,
+                0,
+                96,
+                0
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "rvn3R",
+                  "name": "Page Title",
+                  "fill": "$color-primary",
+                  "content": "プライバシーポリシー",
+                  "fontFamily": "Noto Sans JP",
+                  "fontSize": 32,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "L7VJAd",
+                  "name": "Updated Date",
+                  "fill": "$color-secondary",
+                  "content": "最終更新日：2026年8月10日",
+                  "fontFamily": "Noto Sans JP",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "pyvrk",
+                  "name": "Lead",
+                  "fill": "$color-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "darts spec（以下「本サービス」といいます。）は、ユーザーの個人情報の重要性を認識し、以下のとおりプライバシーポリシー（以下「本ポリシー」といいます。）を定め、個人情報の適切な取り扱いに努めます。",
+                  "lineHeight": 1.8,
+                  "fontFamily": "Noto Sans JP",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "V8hyR",
+                  "name": "1. 個人情報の定義",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Evhlo",
+                      "name": "Article Heading",
+                      "fill": "$color-primary",
+                      "content": "1. 個人情報の定義",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 17,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "tPvmL",
+                      "name": "Article Body",
+                      "fill": "$color-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "本ポリシーにおいて「個人情報」とは、個人情報保護法にいう「個人情報」を指し、生存する個人に関する情報であって、メールアドレスその他の記述等により特定の個人を識別できる情報をいいます。",
+                      "lineHeight": 1.8,
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "qk5tx",
+                  "name": "2. 個人情報の収集方法",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "MT3Fm",
+                      "name": "Article Heading",
+                      "fill": "$color-primary",
+                      "content": "2. 個人情報の収集方法",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 17,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "JRUGg",
+                      "name": "Article Body",
+                      "fill": "$color-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "運営者は、ユーザーが利用登録をする際に、メールアドレス等の個人情報をお尋ねすることがあります。外部の認証サービスを利用した登録の場合、当該サービスの利用規約に基づきユーザーが同意した範囲の情報を取得します。",
+                      "lineHeight": 1.8,
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "EQrT7",
+                  "name": "3. 個人情報を収集・利用する目的",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "eDug3",
+                      "name": "Article Heading",
+                      "fill": "$color-primary",
+                      "content": "3. 個人情報を収集・利用する目的",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 17,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "FNpR4",
+                      "name": "Article Body",
+                      "fill": "$color-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "運営者は、本サービスの提供・運営、お問い合わせへの対応、利用規約に違反したユーザーへの対応、本サービスの改善・新機能の開発、およびこれらに付随する目的のために個人情報を利用します。",
+                      "lineHeight": 1.8,
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "k9cYu",
+                  "name": "4. 利用目的の変更",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "aPowk",
+                      "name": "Article Heading",
+                      "fill": "$color-primary",
+                      "content": "4. 利用目的の変更",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 17,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "WGRJ9",
+                      "name": "Article Body",
+                      "fill": "$color-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "運営者は、利用目的が変更前と関連性を有すると合理的に認められる場合に限り、個人情報の利用目的を変更するものとします。変更を行った場合には、本サービス上での掲示その他分かりやすい方法によりユーザーに通知します。",
+                      "lineHeight": 1.8,
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "m4DXwy",
+                  "name": "5. 個人情報の第三者提供",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "djgxI",
+                      "name": "Article Heading",
+                      "fill": "$color-primary",
+                      "content": "5. 個人情報の第三者提供",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 17,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "gnE8d",
+                      "name": "Article Body",
+                      "fill": "$color-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "運営者は、法令に基づく場合を除き、あらかじめユーザーの同意を得ることなく第三者に個人情報を提供しません。ただし、人の生命・身体・財産の保護のために必要がある場合など、法令の定める例外に該当するときはこの限りではありません。",
+                      "lineHeight": 1.8,
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "ikIeG",
+                  "name": "6. Cookie（クッキー）等の使用について",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "OHbJO",
+                      "name": "Article Heading",
+                      "fill": "$color-primary",
+                      "content": "6. Cookie（クッキー）等の使用について",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 17,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Ttosi",
+                      "name": "Article Body",
+                      "fill": "$color-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "本サービスは、ログイン状態の維持やサービス改善のため、Cookie等の技術を使用することがあります。ユーザーはブラウザの設定によりCookieの利用を無効化できますが、その場合、本サービスの一部機能が利用できなくなることがあります。",
+                      "lineHeight": 1.8,
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "dbRbV",
+                  "name": "7. 個人情報の開示・訂正・削除",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "D0mLEX",
+                      "name": "Article Heading",
+                      "fill": "$color-primary",
+                      "content": "7. 個人情報の開示・訂正・削除",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 17,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "V7iw6e",
+                      "name": "Article Body",
+                      "fill": "$color-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "運営者は、本人から個人情報の開示、訂正、追加または削除を求められた場合には、運営者の定める手続きに従い、遅滞なく必要な対応を行います。",
+                      "lineHeight": 1.8,
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "aQCQY",
+                  "name": "8. 個人情報の利用停止等",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "PlPw8",
+                      "name": "Article Heading",
+                      "fill": "$color-primary",
+                      "content": "8. 個人情報の利用停止等",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 17,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "VADo5",
+                      "name": "Article Body",
+                      "fill": "$color-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "運営者は、本人から、個人情報が利用目的の範囲を超えて取り扱われているという理由により利用の停止または消去を求められた場合には、遅滞なく必要な調査を行い、その結果に基づき利用停止等の対応を行います。",
+                      "lineHeight": 1.8,
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "uPWPy",
+                  "name": "9. プライバシーポリシーの変更",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "ULUA3",
+                      "name": "Article Heading",
+                      "fill": "$color-primary",
+                      "content": "9. プライバシーポリシーの変更",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 17,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "svtR8",
+                      "name": "Article Body",
+                      "fill": "$color-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "本ポリシーの内容は、法令その他本ポリシーに別段の定めのある事項を除き、ユーザーへの通知なく変更することができるものとします。変更後のプライバシーポリシーは、本サービス上に掲載したときから効力を生じます。",
+                      "lineHeight": 1.8,
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "qF3jR",
+                  "name": "10. お問い合わせ窓口",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Yq4Ps",
+                      "name": "Article Heading",
+                      "fill": "$color-primary",
+                      "content": "10. お問い合わせ窓口",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 17,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "i3gt2v",
+                      "name": "Article Body",
+                      "fill": "$color-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "本ポリシーに関するお問い合わせは、本サービス内のお問い合わせフォームよりご連絡ください。",
+                      "lineHeight": 1.8,
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "wSkh6",
+          "type": "ref",
+          "ref": "Fpf2a",
+          "name": "Footer",
+          "width": "fill_container"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "e6XvG",
+      "x": 1640,
+      "y": 8634,
+      "name": "08 Terms / Mobile",
+      "clip": true,
+      "width": 375,
+      "layout": "vertical",
+      "children": [
+        {
+          "id": "IxeMd",
+          "type": "ref",
+          "ref": "Dj95u",
+          "name": "Header",
+          "width": "fill_container",
+          "padding": [
+            0,
+            16
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "n3i1iW",
+          "name": "Main",
+          "width": "fill_container",
+          "layout": "vertical",
+          "padding": [
+            0,
+            20
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "LbEae",
+              "name": "Content",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 28,
+              "padding": [
+                32,
+                0,
+                48,
+                0
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "vtqHA",
+                  "name": "Page Title",
+                  "fill": "$color-primary",
+                  "content": "利用規約",
+                  "fontFamily": "Noto Sans JP",
+                  "fontSize": 32,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "fnAx6",
+                  "name": "Updated Date",
+                  "fill": "$color-secondary",
+                  "content": "最終更新日：2026年8月10日",
+                  "fontFamily": "Noto Sans JP",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "VkNWD",
+                  "name": "Lead",
+                  "fill": "$color-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "この利用規約（以下「本規約」といいます。）は、darts spec（以下「本サービス」といいます。）の利用条件を定めるものです。ご利用にあたっては、本規約に同意いただく必要があります。",
+                  "lineHeight": 1.8,
+                  "fontFamily": "Noto Sans JP",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "QDkRO",
+                  "name": "第1条（適用）",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Ctrj7",
+                      "name": "Article Heading",
+                      "fill": "$color-primary",
+                      "content": "第1条（適用）",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 17,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "n0H4u",
+                      "name": "Article Body",
+                      "fill": "$color-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "本規約は、ユーザーと運営者との間の本サービスの利用に関わる一切の関係に適用されるものとします。",
+                      "lineHeight": 1.8,
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "E6xzhw",
+                  "name": "第2条（利用登録）",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "xgOV1",
+                      "name": "Article Heading",
+                      "fill": "$color-primary",
+                      "content": "第2条（利用登録）",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 17,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "aoxVJ",
+                      "name": "Article Body",
+                      "fill": "$color-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "本サービスの一部機能（セッティングの保存・公開等）の利用を希望する方は、本規約に同意の上、運営者の定める方法によって利用登録を申請し、運営者がこれを承認することによって利用登録が完了するものとします。なお、セッティングの作成・編集自体は利用登録なしでお試しいただけます。",
+                      "lineHeight": 1.8,
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "kTx1e",
+                  "name": "第3条（アカウントの管理）",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "x5oWp",
+                      "name": "Article Heading",
+                      "fill": "$color-primary",
+                      "content": "第3条（アカウントの管理）",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 17,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "X9W1k",
+                      "name": "Article Body",
+                      "fill": "$color-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "ユーザーは、自己の責任において本サービスのアカウントを適切に管理するものとします。ユーザーは、いかなる場合にもアカウントを第三者に譲渡または貸与することはできません。",
+                      "lineHeight": 1.8,
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "kJaFr",
+                  "name": "第4条（禁止事項）",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "SSIKT",
+                      "name": "Article Heading",
+                      "fill": "$color-primary",
+                      "content": "第4条（禁止事項）",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 17,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "virDl",
+                      "name": "Article Body",
+                      "fill": "$color-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "ユーザーは、本サービスの利用にあたり、法令または公序良俗に違反する行為、犯罪行為に関連する行為、運営者・他のユーザーその他第三者の権利や利益を侵害する行為、本サービスの運営を妨害する行為、不正アクセスを試みる行為、その他運営者が不適切と判断する行為をしてはなりません。",
+                      "lineHeight": 1.8,
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "qdrBI",
+                  "name": "第5条（本サービスの提供の停止等）",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "UWotI",
+                      "name": "Article Heading",
+                      "fill": "$color-primary",
+                      "content": "第5条（本サービスの提供の停止等）",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 17,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "a2WBW",
+                      "name": "Article Body",
+                      "fill": "$color-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "運営者は、システムの保守点検、天災等の不可抗力、その他運営者が必要と判断した場合には、ユーザーへの事前通知なく本サービスの全部または一部の提供を停止または中断することができるものとします。",
+                      "lineHeight": 1.8,
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "eJNpI",
+                  "name": "第6条（著作権）",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "oJygZ",
+                      "name": "Article Heading",
+                      "fill": "$color-primary",
+                      "content": "第6条（著作権）",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 17,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "W4HJv",
+                      "name": "Article Body",
+                      "fill": "$color-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "ユーザーが本サービスを利用して作成・投稿したセッティング情報等に関する著作権は、当該ユーザーに帰属します。ただし、本サービスの運営・改善・宣伝等に必要な範囲で運営者がこれを利用できるものとし、ユーザーはあらかじめこれを承諾するものとします。",
+                      "lineHeight": 1.8,
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "MGhlN",
+                  "name": "第7条（利用制限および登録抹消）",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "GPDJw",
+                      "name": "Article Heading",
+                      "fill": "$color-primary",
+                      "content": "第7条（利用制限および登録抹消）",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 17,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "fXLxw",
+                      "name": "Article Body",
+                      "fill": "$color-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "運営者は、ユーザーが本規約に違反したと判断した場合、事前の通知なく投稿データを削除し、本サービスの利用を制限し、またはユーザー登録を抹消することができるものとします。",
+                      "lineHeight": 1.8,
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "yg9qM",
+                  "name": "第8条（保証の否認および免責事項）",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "z41xb4",
+                      "name": "Article Heading",
+                      "fill": "$color-primary",
+                      "content": "第8条（保証の否認および免責事項）",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 17,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Kodxn",
+                      "name": "Article Body",
+                      "fill": "$color-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "運営者は、本サービスに事実上または法律上の瑕疵がないことを保証しません。本サービスに掲載される重量・寸法等の数値は目安であり、その正確性を保証するものではありません。運営者は、本サービスに起因してユーザーに生じた損害について一切の責任を負わないものとします。",
+                      "lineHeight": 1.8,
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "I1dWP",
+                  "name": "第9条（サービス内容の変更等）",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "uPbjx",
+                      "name": "Article Heading",
+                      "fill": "$color-primary",
+                      "content": "第9条（サービス内容の変更等）",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 17,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Sm6rX",
+                      "name": "Article Body",
+                      "fill": "$color-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "運営者は、ユーザーへの事前の告知をもって、本サービスの内容を変更、追加または廃止することがあり、ユーザーはこれを承諾するものとします。",
+                      "lineHeight": 1.8,
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "On4oi",
+                  "name": "第10条（利用規約の変更）",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "V3vWf",
+                      "name": "Article Heading",
+                      "fill": "$color-primary",
+                      "content": "第10条（利用規約の変更）",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 17,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "R7FwD",
+                      "name": "Article Body",
+                      "fill": "$color-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "運営者は、必要と判断した場合には、ユーザーへの通知なくいつでも本規約を変更できるものとします。変更後の利用規約は、本サービス上に掲載した時点から効力を生じるものとします。",
+                      "lineHeight": 1.8,
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "K2KsO2",
+                  "name": "第11条（個人情報の取扱い）",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "zpKPM",
+                      "name": "Article Heading",
+                      "fill": "$color-primary",
+                      "content": "第11条（個人情報の取扱い）",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 17,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "PBYj7",
+                      "name": "Article Body",
+                      "fill": "$color-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "運営者は、本サービスの利用によって取得する個人情報について、運営者「プライバシーポリシー」に従い適切に取り扱うものとします。",
+                      "lineHeight": 1.8,
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "MxD9W",
+                  "name": "第12条（準拠法・裁判管轄）",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "r8Yzd",
+                      "name": "Article Heading",
+                      "fill": "$color-primary",
+                      "content": "第12条（準拠法・裁判管轄）",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 17,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "grji5",
+                      "name": "Article Body",
+                      "fill": "$color-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "本規約の解釈にあたっては日本法を準拠法とします。本サービスに関して紛争が生じた場合には、運営者の本店所在地を管轄する裁判所を専属的合意管轄とします。",
+                      "lineHeight": 1.8,
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "S3ay3b",
+          "type": "ref",
+          "ref": "Fpf2a",
+          "name": "Footer",
+          "width": "fill_container"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "eT47C",
+      "x": 1640,
+      "y": 11366,
+      "name": "09 Privacy / Mobile",
+      "clip": true,
+      "width": 375,
+      "layout": "vertical",
+      "children": [
+        {
+          "id": "VsK7R",
+          "type": "ref",
+          "ref": "Dj95u",
+          "name": "Header",
+          "width": "fill_container",
+          "padding": [
+            0,
+            16
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "ixZIN",
+          "name": "Main",
+          "width": "fill_container",
+          "layout": "vertical",
+          "padding": [
+            0,
+            20
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "qDsbp",
+              "name": "Content",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 28,
+              "padding": [
+                32,
+                0,
+                48,
+                0
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "kZCIk",
+                  "name": "Page Title",
+                  "fill": "$color-primary",
+                  "content": "プライバシーポリシー",
+                  "fontFamily": "Noto Sans JP",
+                  "fontSize": 32,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "WUCPb",
+                  "name": "Updated Date",
+                  "fill": "$color-secondary",
+                  "content": "最終更新日：2026年8月10日",
+                  "fontFamily": "Noto Sans JP",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "UiMsT",
+                  "name": "Lead",
+                  "fill": "$color-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "darts spec（以下「本サービス」といいます。）は、ユーザーの個人情報の重要性を認識し、以下のとおりプライバシーポリシー（以下「本ポリシー」といいます。）を定め、個人情報の適切な取り扱いに努めます。",
+                  "lineHeight": 1.8,
+                  "fontFamily": "Noto Sans JP",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "IVgg3",
+                  "name": "1. 個人情報の定義",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "tEU8s",
+                      "name": "Article Heading",
+                      "fill": "$color-primary",
+                      "content": "1. 個人情報の定義",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 17,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "hcN9w",
+                      "name": "Article Body",
+                      "fill": "$color-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "本ポリシーにおいて「個人情報」とは、個人情報保護法にいう「個人情報」を指し、生存する個人に関する情報であって、メールアドレスその他の記述等により特定の個人を識別できる情報をいいます。",
+                      "lineHeight": 1.8,
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "vWNay",
+                  "name": "2. 個人情報の収集方法",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "tNyzn",
+                      "name": "Article Heading",
+                      "fill": "$color-primary",
+                      "content": "2. 個人情報の収集方法",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 17,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "IK7Dc",
+                      "name": "Article Body",
+                      "fill": "$color-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "運営者は、ユーザーが利用登録をする際に、メールアドレス等の個人情報をお尋ねすることがあります。外部の認証サービスを利用した登録の場合、当該サービスの利用規約に基づきユーザーが同意した範囲の情報を取得します。",
+                      "lineHeight": 1.8,
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "aWjnq",
+                  "name": "3. 個人情報を収集・利用する目的",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "ALBg7",
+                      "name": "Article Heading",
+                      "fill": "$color-primary",
+                      "content": "3. 個人情報を収集・利用する目的",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 17,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "xXNBD",
+                      "name": "Article Body",
+                      "fill": "$color-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "運営者は、本サービスの提供・運営、お問い合わせへの対応、利用規約に違反したユーザーへの対応、本サービスの改善・新機能の開発、およびこれらに付随する目的のために個人情報を利用します。",
+                      "lineHeight": 1.8,
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "lnduK",
+                  "name": "4. 利用目的の変更",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "hCjP6",
+                      "name": "Article Heading",
+                      "fill": "$color-primary",
+                      "content": "4. 利用目的の変更",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 17,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "wpbNW",
+                      "name": "Article Body",
+                      "fill": "$color-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "運営者は、利用目的が変更前と関連性を有すると合理的に認められる場合に限り、個人情報の利用目的を変更するものとします。変更を行った場合には、本サービス上での掲示その他分かりやすい方法によりユーザーに通知します。",
+                      "lineHeight": 1.8,
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "JbSb8",
+                  "name": "5. 個人情報の第三者提供",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Q0Rg7r",
+                      "name": "Article Heading",
+                      "fill": "$color-primary",
+                      "content": "5. 個人情報の第三者提供",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 17,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "OLN2r",
+                      "name": "Article Body",
+                      "fill": "$color-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "運営者は、法令に基づく場合を除き、あらかじめユーザーの同意を得ることなく第三者に個人情報を提供しません。ただし、人の生命・身体・財産の保護のために必要がある場合など、法令の定める例外に該当するときはこの限りではありません。",
+                      "lineHeight": 1.8,
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "wrgc4",
+                  "name": "6. Cookie（クッキー）等の使用について",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "AYyqN",
+                      "name": "Article Heading",
+                      "fill": "$color-primary",
+                      "content": "6. Cookie（クッキー）等の使用について",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 17,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "wRTig",
+                      "name": "Article Body",
+                      "fill": "$color-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "本サービスは、ログイン状態の維持やサービス改善のため、Cookie等の技術を使用することがあります。ユーザーはブラウザの設定によりCookieの利用を無効化できますが、その場合、本サービスの一部機能が利用できなくなることがあります。",
+                      "lineHeight": 1.8,
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "vXTrb",
+                  "name": "7. 個人情報の開示・訂正・削除",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "kW6SU",
+                      "name": "Article Heading",
+                      "fill": "$color-primary",
+                      "content": "7. 個人情報の開示・訂正・削除",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 17,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "vn7y9",
+                      "name": "Article Body",
+                      "fill": "$color-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "運営者は、本人から個人情報の開示、訂正、追加または削除を求められた場合には、運営者の定める手続きに従い、遅滞なく必要な対応を行います。",
+                      "lineHeight": 1.8,
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "fsTWO",
+                  "name": "8. 個人情報の利用停止等",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "dUDtY",
+                      "name": "Article Heading",
+                      "fill": "$color-primary",
+                      "content": "8. 個人情報の利用停止等",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 17,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "LgOZQ",
+                      "name": "Article Body",
+                      "fill": "$color-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "運営者は、本人から、個人情報が利用目的の範囲を超えて取り扱われているという理由により利用の停止または消去を求められた場合には、遅滞なく必要な調査を行い、その結果に基づき利用停止等の対応を行います。",
+                      "lineHeight": 1.8,
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Isaej",
+                  "name": "9. プライバシーポリシーの変更",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "TVAow",
+                      "name": "Article Heading",
+                      "fill": "$color-primary",
+                      "content": "9. プライバシーポリシーの変更",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 17,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "T8ZMU3",
+                      "name": "Article Body",
+                      "fill": "$color-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "本ポリシーの内容は、法令その他本ポリシーに別段の定めのある事項を除き、ユーザーへの通知なく変更することができるものとします。変更後のプライバシーポリシーは、本サービス上に掲載したときから効力を生じます。",
+                      "lineHeight": 1.8,
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "gEg7W",
+                  "name": "10. お問い合わせ窓口",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "razpq",
+                      "name": "Article Heading",
+                      "fill": "$color-primary",
+                      "content": "10. お問い合わせ窓口",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 17,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "AzWAI",
+                      "name": "Article Body",
+                      "fill": "$color-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "本ポリシーに関するお問い合わせは、本サービス内のお問い合わせフォームよりご連絡ください。",
+                      "lineHeight": 1.8,
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "M4QmH",
+          "type": "ref",
+          "ref": "Fpf2a",
+          "name": "Footer",
+          "width": "fill_container"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "hRQqL",
+      "x": -1900,
+      "y": -2212,
+      "name": "Logo Icon Concepts",
+      "fill": "$color-base",
+      "cornerRadius": 16,
+      "layout": "vertical",
+      "gap": 20,
+      "padding": 32,
+      "children": [
+        {
+          "type": "text",
+          "id": "W1vec5",
+          "name": "Section Title",
+          "fill": "$color-primary",
+          "content": "ロゴアイコン候補",
+          "fontFamily": "Noto Sans JP",
+          "fontSize": 16,
+          "fontWeight": "700"
+        },
+        {
+          "type": "frame",
+          "id": "w4di2k",
+          "name": "Concepts Row 4 - 外部制作",
+          "gap": 24,
+          "children": [
+            {
+              "type": "frame",
+              "id": "x4mANS",
+              "name": "Concept L - 外部制作案",
+              "width": 180,
+              "layout": "vertical",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "B6aMS",
+                  "name": "Swatch",
+                  "width": 160,
+                  "height": 160,
+                  "fill": "$glass-surface-elevated",
+                  "cornerRadius": 28,
+                  "stroke": "$glass-border",
+                  "strokeWidth": 1,
+                  "strokeAlignment": "inner",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "psdwX",
+                      "name": "Icon Canvas L",
+                      "clip": true,
+                      "width": 32.95009375,
+                      "height": 112,
+                      "layout": "none",
+                      "children": [
+                        {
+                          "type": "path",
+                          "id": "jXSHn",
+                          "x": 0,
+                          "y": 0,
+                          "geometry": "M139.32697 75.03451l-4.70826 238.49689-134.1159-139.07553-0.50281-114.50595 47.08228-46.30518 92.24469 61.38977z m161.93103-14.58181l-0.31995 114.0488-134.09308 138.82415-4.29681-238.77115 91.35333-60.68127 47.35651 46.57947z m-119.5113 510.43133c-19.47821 8.22498-41.43902 8.30725-60.97839 0.22852l10.8335-65.18381-1.2342-128.60779c-0.10864-10.97534 5.88843-21.1026 15.56458-26.28375 5.56683-1.07745 11.32788 0.3017 15.80347 3.78314 4.47552 3.48151 7.22961 8.72614 7.55481 14.38697 0.64727 11.40838 0.95214 22.83361 0.91424 34.26031l-0.25146 87.5365c-0.06525 27.06509 3.90973 53.98843 11.79345 79.87991m3.51978 35.51746l19.15289 89.22766c-34.99096 11.20166-72.62591 11.06555-107.53503-0.38843l19.19861-88.70215c22.74035 5.48706 46.46508 5.43995 69.18353-0.13708m-1.50855 249.12463l-28.93499 137.63575-4.61676 30.80903-10.87921-57.93855-20.27283-110.94043 64.70379 0.4342z m-21.6441-539.93771l-22.78686-0.04572 5.96527-234.86288 4.98248-80.67981c1.99713 15.5329 3.23273 31.15425 3.70257 46.80798l8.13654 268.78043z m41.13983 384.29196c-2.31964 11.63403-4.34686 23.32446-6.07953 35.0603-30.28863 9.47876-62.7326 9.59815-93.09033 0.34278-2.64081-11.90296-4.86682-23.89405-6.67377-35.95166 34.27375 11.78808 71.47248 11.98083 105.86652 0.54858m-7.51947 39.90564c-1.01001 9.61939-2.5282 19.17871-4.54822 28.63794-25.65167 12.81299-55.80035 12.98193-81.59399 0.45703-2.06989-9.62585-3.6944-19.34216-4.86829-29.11792 29.50318 9.26856 61.15265 9.17273 90.59918-0.27429l0.41132 0.29724z m-79.46844 60.33838c-2.66926-8.48657-4.50635-17.21277-5.4853-26.05518 25.01868 11.04639 53.56135 10.89661 78.46283-0.41137 1.36744 11.5094-2.38397 23.0393-10.26208 31.54052-19.84528 11.86829-45.03619 9.8302-62.71545-5.07397",
+                          "fill": "$color-accent",
+                          "width": 32.95009375,
+                          "height": 112
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "U7Dea",
+                  "name": "Label",
+                  "fill": "$color-secondary",
+                  "content": "外部制作案",
+                  "fontFamily": "Noto Sans JP",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "BGlI4",
+      "x": -1558,
+      "y": -1600,
+      "name": "Logo Icon",
+      "reusable": true,
+      "width": 20,
+      "height": 20,
+      "layout": "vertical",
+      "justifyContent": "center",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "path",
+          "id": "h0Pzf",
+          "geometry": "M139.32697 75.03451l-4.70826 238.49689-134.1159-139.07553-0.50281-114.50595 47.08228-46.30518 92.24469 61.38977z m161.93103-14.58181l-0.31995 114.0488-134.09308 138.82415-4.29681-238.77115 91.35333-60.68127 47.35651 46.57947z m-119.5113 510.43133c-19.47821 8.22498-41.43902 8.30725-60.97839 0.22852l10.8335-65.18381-1.2342-128.60779c-0.10864-10.97534 5.88843-21.1026 15.56458-26.28375 5.56683-1.07745 11.32788 0.3017 15.80347 3.78314 4.47552 3.48151 7.22961 8.72614 7.55481 14.38697 0.64727 11.40838 0.95214 22.83361 0.91424 34.26031l-0.25146 87.5365c-0.06525 27.06509 3.90973 53.98843 11.79345 79.87991m3.51978 35.51746l19.15289 89.22766c-34.99096 11.20166-72.62591 11.06555-107.53503-0.38843l19.19861-88.70215c22.74035 5.48706 46.46508 5.43995 69.18353-0.13708m-1.50855 249.12463l-28.93499 137.63575-4.61676 30.80903-10.87921-57.93855-20.27283-110.94043 64.70379 0.4342z m-21.6441-539.93771l-22.78686-0.04572 5.96527-234.86288 4.98248-80.67981c1.99713 15.5329 3.23273 31.15425 3.70257 46.80798l8.13654 268.78043z m41.13983 384.29196c-2.31964 11.63403-4.34686 23.32446-6.07953 35.0603-30.28863 9.47876-62.7326 9.59815-93.09033 0.34278-2.64081-11.90296-4.86682-23.89405-6.67377-35.95166 34.27375 11.78808 71.47248 11.98083 105.86652 0.54858m-7.51947 39.90564c-1.01001 9.61939-2.5282 19.17871-4.54822 28.63794-25.65167 12.81299-55.80035 12.98193-81.59399 0.45703-2.06989-9.62585-3.6944-19.34216-4.86829-29.11792 29.50318 9.26856 61.15265 9.17273 90.59918-0.27429l0.41132 0.29724z m-79.46844 60.33838c-2.66926-8.48657-4.50635-17.21277-5.4853-26.05518 25.01868 11.04639 53.56135 10.89661 78.46283-0.41137 1.36744 11.5094-2.38397 23.0393-10.26208 31.54052-19.84528 11.86829-45.03619 9.8302-62.71545-5.07397",
+          "fill": "$color-accent",
+          "width": 4.70715625,
+          "height": 16
         }
       ]
     }
@@ -5847,6 +9733,10 @@
     "glass-accent-border": {
       "type": "color",
       "value": "#00E5C766"
+    },
+    "scrim": {
+      "type": "color",
+      "value": "#000000A6"
     }
   },
   "fileToken": "797ba6c7-da62-4b3b-96d7-b956bc5e7c3d"
