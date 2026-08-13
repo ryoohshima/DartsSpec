@@ -100,9 +100,7 @@ function PartsSearchModal({ label, options, value, onSelect, onClose }: PartsSea
     <dialog
       ref={dialogRef}
       onClose={onClose}
-      onClick={(e) => {
-        if (e.target === dialogRef.current) dialogRef.current.close()
-      }}
+      closedby="any"
       aria-label={`${label}を検索`}
       className="m-auto w-full max-w-md rounded-2xl border border-line bg-surface p-6 text-primary shadow-2xl backdrop:bg-black/60 backdrop:backdrop-blur-sm"
     >

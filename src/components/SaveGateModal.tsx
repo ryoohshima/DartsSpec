@@ -21,9 +21,7 @@ export function SaveGateModal({ onClose }: SaveGateModalProps) {
     <dialog
       ref={dialogRef}
       onClose={onClose}
-      onClick={(e) => {
-        if (e.target === dialogRef.current) dialogRef.current.close()
-      }}
+      closedby="any"
       aria-labelledby="save-gate-title"
       className="m-auto w-full max-w-sm rounded-2xl border border-line bg-surface p-8 text-primary shadow-2xl backdrop:bg-black/60 backdrop:backdrop-blur-sm"
     >
