@@ -1,0 +1,41 @@
+# 本番 seed 投入: Actions タブから手動実行で parts マスタを本番 D1 へ反映する。
+#
+# 生成される SQL は「全 seed 行を無効化 → 現行 CSV 分を upsert」の 2 段構成のため、
+# CSV から削除・改名された行も自動で無効化される（src/db/seed.ts 参照）。
+#
+# 必要な Secrets は deploy.yml と共通（CLOUDFLARE_API_TOKEN に D1:Edit が必要）。
+
+name: Seed
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: seed-production
+  cancel-in-progress: false
+
+jobs:
+  seed:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment: production
+    steps:
+      - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v6
+        with:
+          version: 11
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - name: seed SQL 生成
+        run: pnpm exec tsx src/db/seed.ts
+      - name: 本番 D1 へ投入
+        run: pnpm exec wrangler d1 execute dartsspec --remote --file=.seed/parts.sql -y
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}

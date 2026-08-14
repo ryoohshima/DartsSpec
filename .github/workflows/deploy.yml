@@ -1,7 +1,9 @@
 # 本番デプロイ: main への push で Cloudflare Workers へデプロイする。
 #
 # 必要な Secrets（Settings → Secrets and variables → Actions）:
-#   CLOUDFLARE_API_TOKEN  … 権限は Workers Scripts:Edit + D1:Edit が必要
+#   CLOUDFLARE_API_TOKEN  … 権限は Account: Workers Scripts:Edit + D1:Edit、
+#                           Zone(darts-spec.com): Workers Routes:Edit + Zone:Read が必要
+#                           （zone route 方式のため Zone 権限も必須。#42 で検証済み）
 #   CLOUDFLARE_ACCOUNT_ID
 
 name: Deploy

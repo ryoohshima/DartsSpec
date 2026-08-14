@@ -3,13 +3,17 @@
  *
  * src/db/seed/parts.csv を読み込み、.seed/parts.sql（INSERT OR REPLACE 文）を生成する。
  * 実行: `pnpm db:seed`（生成 + ローカル D1 へ投入）
- * 本番: 生成された .seed/parts.sql を `wrangler d1 execute dartsspec --remote --file` で投入（#42）
+ * 本番: Actions の「Seed」ワークフロー（.github/workflows/seed.yml）を手動実行して投入
  *
  * ID は内容（category / brand / name / standard / weight）から決定的に導出するため、
  * 再実行しても重複せず、CSV の更新分だけが上書きされる。
  *
  * 注意: parts.csv は Web 上の公称スペックを基にした開発用モックデータであり、
  * 一部の値は同シリーズの代表値で補完している。正式な品質チェックは #11 を参照。
+ *
+ * フライト一体型（CONDOR 等）は shaft / flight 両カテゴリに brand・series・name
+ * 完全一致で 2 行登録する（UI が src/lib/linkedPart.ts でこの一致を対と判定して連動させる）。
+ * 重量二重計上を避けるため weight_g / length_mm は shaft 行に持たせ、flight 行の weight_g は 0 とする。
  */
 import { createHash } from 'node:crypto'
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs'
@@ -155,7 +159,11 @@ function main() {
     seen.set(id, row)
   }
 
-  const statements = [...seen.entries()].map(([id, row]) => {
+  // 先頭で全 seed 行を一旦無効化し、現行 CSV 分だけを is_active = 1 で upsert する。
+  // これにより CSV から削除・改名（= ID 変化）された行が自動的に無効化される。
+  // 適用中の一瞬だけ seed パーツが検索から消えるが、現状の規模では許容する。
+  const statements = ["UPDATE parts SET is_active = 0 WHERE id LIKE 'seed-%';"]
+  statements.push(...[...seen.entries()].map(([id, row]) => {
     const spec = buildSpec(row)
     const values = [
       sqlString(id),
@@ -170,7 +178,7 @@ function main() {
       "unixepoch()",
     ]
     return `INSERT OR REPLACE INTO parts (id, category, brand, series, name, standard, spec, image_url, is_active, created_at) VALUES (${values.join(', ')});`
-  })
+  }))
 
   mkdirSync(dirname(OUT_PATH), { recursive: true })
   writeFileSync(OUT_PATH, `${statements.join('\n')}\n`)
