@@ -1,4 +1,5 @@
-# 本番デプロイ: main への push で Cloudflare Workers へデプロイする。
+# 本番デプロイ: main への push、または release.yml からの workflow_call で
+# Cloudflare Workers へデプロイする。
 #
 # 必要な Secrets（Settings → Secrets and variables → Actions）:
 #   CLOUDFLARE_API_TOKEN  … 権限は Account: Workers Scripts:Edit + D1:Edit、
@@ -11,6 +12,13 @@ name: Deploy
 on:
   push:
     branches: [main]
+  workflow_call:
+    inputs:
+      ref:
+        description: デプロイ対象の ref（タグなど。省略時はトリガー時点の SHA）
+        required: false
+        default: ''
+        type: string
 
 permissions:
   contents: read
@@ -26,6 +34,8 @@ jobs:
     environment: production
     steps:
       - uses: actions/checkout@v7
+        with:
+          ref: ${{ inputs.ref || '' }}
       - uses: pnpm/action-setup@v6
         with:
           version: 11
