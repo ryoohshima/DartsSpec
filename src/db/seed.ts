@@ -10,6 +10,10 @@
  *
  * 注意: parts.csv は Web 上の公称スペックを基にした開発用モックデータであり、
  * 一部の値は同シリーズの代表値で補完している。正式な品質チェックは #11 を参照。
+ *
+ * フライト一体型（CONDOR 等）は shaft / flight 両カテゴリに brand・series・name
+ * 完全一致で 2 行登録する（UI が src/lib/linkedPart.ts でこの一致を対と判定して連動させる）。
+ * 重量二重計上を避けるため weight_g / length_mm は shaft 行に持たせ、flight 行の weight_g は 0 とする。
  */
 import { createHash } from 'node:crypto'
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs'
