@@ -81,6 +81,24 @@ barrel,TIGA,,LOCHE2,2BA,17.5,42.0,7.3,タングステン90%,,,,http://tiga-darts
 barrel,TIGA,,LUMINOUS3,2BA,16.0,40.0,6.9,タングステン90%,,,,http://tiga-darts.jp/2025/05/21/luminous3/
 barrel,TIGA,,UNRAVEL,2BA,20.0,41.5,7.5,,,,,http://tiga-darts.jp/2024/07/12/unravel/
 barrel,TIGA,,HERMIT2,2BA,18.0,42.0,7.6,タングステン90%,,,,http://tiga-darts.jp/2026/07/02/hermit2/
+barrel,DMC,,NO NAME 01,2BA,17.0,49.0,6.3,タングステン90%,,,,https://www.dmc-japan.co.jp/view/item/000000001089
+barrel,DMC,,Sabre Tetsuya_SP3,2BA,20.0,43.5,7.3,タングステン90%,,,,https://www.dmc-japan.co.jp/view/item/000000001169
+barrel,DMC,,Hawk Masaki_SP1.5,2BA,18.0,42.5,7.3,タングステン90%,,,,https://www.dmc-japan.co.jp/view/item/000000000107
+barrel,DMC,,Avenger 18g,2BA,18.0,40.0,7.5,タングステン90%,,,,https://www.dmc-japan.co.jp/view/item/000000001170
+barrel,DMC,,Avenger 20g,2BA,20.0,42.0,7.5,タングステン90%,,,,https://www.dmc-japan.co.jp/view/item/000000001098
+barrel,Samurai,,Samurai17,2BA,19.0,41.0,7.5,タングステン90%,,,,http://samurai-darts.co.jp/2025/09/11/samurai17/
+barrel,Samurai,,Samurai1 改,2BA,19.7,43.0,7.2,タングステン90%,,,,http://samurai-darts.co.jp/2026/04/07/samurai1-%e6%94%b9/
+barrel,ULTIMA DARTS,KAISER,KAISERⅥ GOLD,2BA,16.5,37.0,7.3,タングステン90%,,,,https://www.ultima-darts.com/html/barrel_kaiser6_gold.html
+barrel,ULTIMA DARTS,Rush Burn,Rush BurnⅡ,2BA,17.5,43.0,7.2,タングステン90%,,,,https://www.ultima-darts.com/html/barrel_rushburn2.html
+barrel,ULTIMA DARTS,RAGNAROK,RAGNAROK 18.5g,2BA,18.5,42.5,7.6,タングステン90%,,,,https://www.ultima-darts.com/html/barrel_ragnarok185g.html
+barrel,ULTIMA DARTS,GLANZ,GLANZⅢ,2BA,16.7,44.0,7.4,タングステン90%,,,,https://www.ultima-darts.com/html/barrel_glanz3.html
+barrel,One80,GRIPTRON,GRIPTRON GT4 17.9g,2BA,17.9,47.5,6.7,タングステン90%,,,,https://one80dart.jp/softtip/9716.html
+barrel,One80,GRIPTRON,GRIPTRON GT4 20g,2BA,20.0,47.5,6.7,タングステン90%,,,,https://one80dart.jp/softtip/9717.html
+barrel,One80,VAELKRIS,VAELKRIS V6 18g,2BA,18.0,45.5,6.6,タングステン90%,,,,https://one80dart.jp/softtip/9645.html
+barrel,One80,VAELKRIS,VAELKRIS V6 20g,2BA,20.0,49.0,6.6,タングステン90%,,,,https://one80dart.jp/softtip/9646.html
+barrel,D.craft,,GOBLET,2BA,18.5,32.0,8.6,タングステン90%,,,,https://www.dcraftjapan.com/product/goblet/
+barrel,D.craft,,DIEZ,2BA,18.7,45.0,6.6,タングステン90%,,,,https://www.dcraftjapan.com/product/dies/
+barrel,D.craft,,ZONE BRASS mHz-2 RED,2BA,16.5,54.0,8.0,ブラス,,,,https://www.dcraftjapan.com/product/zone-brass-mhz-2-red/
 shaft,L-style,L-SHaft Carbon,L-SHaft Carbon Lock 130,L-style,0.65,19.0,,カーボン,,,,https://l-style.info/product/shaft/carbon/
 shaft,L-style,L-SHaft Carbon,L-SHaft Carbon Lock 190,L-style,0.75,24.0,,カーボン,,,,https://l-style.info/product/shaft/carbon/
 shaft,L-style,L-SHaft Carbon,L-SHaft Carbon Lock 260,L-style,0.90,28.5,,カーボン,,,,https://l-style.info/product/shaft/carbon/
@@ -159,6 +177,8 @@ tip,L-style,Lippoint,Lippoint,2BA,0.25,24.0,,,,,ソフト,https://l-style.info/
 tip,L-style,Premium Lippoint,Premium Lippoint,2BA,0.26,24.0,,,,,ソフト,https://www.dartshopper.com/l-style-premium-lip-points/
 tip,L-style,Premium Lippoint,Premium Lippoint ShortLip,2BA,0.22,20.0,,,,,ソフト,https://breakfordarts.com/product/l-style-premium-lippoint-short-lip-soft-tip-points/
 tip,L-style,ShortLip,ShortLip,2BA,0.21,20.0,,,,,ソフト,https://l-style.info/
+tip,L-style,Premium Lippoint,Premium Lippoint 30,2BA,0.34,30.0,,,,,ソフト,https://l-style.info/product/tip/p-lip-30
+tip,L-style,Premium Lippoint,Premium Lippoint No.5,No.5,0.19,21.2,,,,,ソフト,https://l-style.info/product/tip/p-lip-no5
 tip,COSMO DARTS,Fit Point,Fit Point,2BA,0.28,25.0,,,,,ソフト,https://www.fitflight.jp/
 tip,COSMO DARTS,Fit Point PLUS,Fit Point PLUS,2BA,0.30,25.0,5.7,,,,ソフト,https://www.darts.com/products/cosmo-darts-fit-point-plus-soft-tips
 tip,TARGET,Pixel Tip,Pixel Tip,2BA,0.25,24.0,,,,,ソフト,https://top.target-darts.jp/
