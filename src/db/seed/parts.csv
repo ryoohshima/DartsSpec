@@ -103,6 +103,17 @@ shaft,TARGET,PRO GRIP EVO,PRO GRIP EVO Short,スタンダード,1.00,34.0,,樹�
 shaft,TARGET,PRO GRIP EVO,PRO GRIP EVO Medium,スタンダード,1.30,47.0,,樹脂/アルミ,,,,https://top.target-darts.jp/
 shaft,Harrows,Supergrip,Supergrip Carbon Short,スタンダード,0.95,34.0,,カーボン,,,,https://www.dartshive.jp/
 shaft,Harrows,Supergrip,Supergrip Carbon Medium,スタンダード,1.25,47.0,,カーボン,,,,https://www.dartshive.jp/
+shaft,CONDOR,AXE,CONDOR AXE Standard S,CONDOR,1.6,21.5,,特殊樹脂,,,,https://www.tito-shop.com/product/detail/fl-con-039-
+shaft,CONDOR,AXE,CONDOR AXE Standard M,CONDOR,1.6,27.5,,特殊樹脂,,,,https://www.tito-shop.com/product/detail/fl-con-039-
+shaft,CONDOR,AXE,CONDOR AXE Standard L,CONDOR,1.6,33.5,,特殊樹脂,,,,https://www.tito-shop.com/product/detail/fl-con-039-
+shaft,CONDOR,AXE,CONDOR AXE Standard XL,CONDOR,1.6,37.5,,特殊樹脂,,,,https://www.tito-shop.com/product/detail/fl-con-039-
+shaft,CONDOR,AXE,CONDOR AXE Small S,CONDOR,1.6,21.5,,特殊樹脂,,,,https://www.tito-shop.com/product/detail/fl-con-040-
+shaft,CONDOR,AXE,CONDOR AXE Small M,CONDOR,1.6,27.5,,特殊樹脂,,,,https://www.tito-shop.com/product/detail/fl-con-040-
+shaft,CONDOR,AXE,CONDOR AXE Small L,CONDOR,1.6,33.5,,特殊樹脂,,,,https://www.tito-shop.com/product/detail/fl-con-040-
+shaft,CONDOR,AXE,CONDOR AXE Small XL,CONDOR,1.6,37.5,,特殊樹脂,,,,https://www.tito-shop.com/product/detail/fl-con-040-
+shaft,CONDOR,AXE,CONDOR AXE Wing Slim S,CONDOR,1.6,21.5,,特殊樹脂,,,,https://www.tito-shop.com/product/detail/fl-con-108-
+shaft,CONDOR,AXE,CONDOR AXE Wing Slim M,CONDOR,1.6,27.5,,特殊樹脂,,,,https://www.tito-shop.com/product/detail/fl-con-108-
+shaft,CONDOR,AXE,CONDOR AXE Wing Slim L,CONDOR,1.6,33.5,,特殊樹脂,,,,https://www.tito-shop.com/product/detail/fl-con-108-
 flight,L-style,L-Flight PRO,L1 Standard,L-style,0.68,,,,スタンダード,100μ,,https://l-style.info/product/flight/pro/l1/
 flight,L-style,L-Flight PRO,L3 Shape,L-style,0.62,,,,シェイプ,100μ,,https://l-style.info/product/flight/pro/l3/
 flight,L-style,L-Flight PRO,L4 Kite,L-style,0.60,,,,カイト,100μ,,https://l-style.info/product/flight/pro/l4/
@@ -123,8 +134,17 @@ flight,TARGET,Pro Ultra,Pro Ultra No.6 Shape,スタンダード,0.85,,,,シェ�
 flight,TARGET,Pro 100,Pro 100 Standard,スタンダード,0.88,,,,スタンダード,100μ,,https://top.target-darts.jp/
 flight,Harrows,Retina,Retina Standard,スタンダード,0.90,,,,スタンダード,100μ,,https://www.dartshive.jp/
 flight,Harrows,Marathon,Marathon Shape,スタンダード,0.85,,,,シェイプ,100μ,,https://www.dartshive.jp/
-flight,CONDOR,AXE,CONDOR AXE Standard M,CONDOR,,,,樹脂一体成型,スタンダード,,,https://www.dartshive.jp/
-flight,CONDOR,AXE,CONDOR AXE Small S,CONDOR,,,,樹脂一体成型,シェイプ,,,https://www.dartshive.jp/
+flight,CONDOR,AXE,CONDOR AXE Standard S,CONDOR,0,,,,スタンダード,0.4mm,,https://www.tito-shop.com/product/detail/fl-con-039-
+flight,CONDOR,AXE,CONDOR AXE Standard M,CONDOR,0,,,,スタンダード,0.4mm,,https://www.tito-shop.com/product/detail/fl-con-039-
+flight,CONDOR,AXE,CONDOR AXE Standard L,CONDOR,0,,,,スタンダード,0.4mm,,https://www.tito-shop.com/product/detail/fl-con-039-
+flight,CONDOR,AXE,CONDOR AXE Standard XL,CONDOR,0,,,,スタンダード,0.4mm,,https://www.tito-shop.com/product/detail/fl-con-039-
+flight,CONDOR,AXE,CONDOR AXE Small S,CONDOR,0,,,,シェイプ,0.4mm,,https://www.tito-shop.com/product/detail/fl-con-040-
+flight,CONDOR,AXE,CONDOR AXE Small M,CONDOR,0,,,,シェイプ,0.4mm,,https://www.tito-shop.com/product/detail/fl-con-040-
+flight,CONDOR,AXE,CONDOR AXE Small L,CONDOR,0,,,,シェイプ,0.4mm,,https://www.tito-shop.com/product/detail/fl-con-040-
+flight,CONDOR,AXE,CONDOR AXE Small XL,CONDOR,0,,,,シェイプ,0.4mm,,https://www.tito-shop.com/product/detail/fl-con-040-
+flight,CONDOR,AXE,CONDOR AXE Wing Slim S,CONDOR,0,,,,スリム,0.4mm,,https://www.tito-shop.com/product/detail/fl-con-108-
+flight,CONDOR,AXE,CONDOR AXE Wing Slim M,CONDOR,0,,,,スリム,0.4mm,,https://www.tito-shop.com/product/detail/fl-con-108-
+flight,CONDOR,AXE,CONDOR AXE Wing Slim L,CONDOR,0,,,,スリム,0.4mm,,https://www.tito-shop.com/product/detail/fl-con-108-
 tip,L-style,Lippoint,Lippoint,2BA,0.25,24.0,,,,,ソフト,https://l-style.info/
 tip,L-style,Premium Lippoint,Premium Lippoint,2BA,0.26,24.0,,,,,ソフト,https://www.dartshopper.com/l-style-premium-lip-points/
 tip,L-style,Premium Lippoint,Premium Lippoint ShortLip,2BA,0.22,20.0,,,,,ソフト,https://breakfordarts.com/product/l-style-premium-lippoint-short-lip-soft-tip-points/
@@ -133,7 +153,8 @@ tip,COSMO DARTS,Fit Point,Fit Point,2BA,0.28,25.0,,,,,ソフト,https://www.fitf
 tip,COSMO DARTS,Fit Point PLUS,Fit Point PLUS,2BA,0.30,25.0,5.7,,,,ソフト,https://www.darts.com/products/cosmo-darts-fit-point-plus-soft-tips
 tip,TARGET,Pixel Tip,Pixel Tip,2BA,0.25,24.0,,,,,ソフト,https://top.target-darts.jp/
 tip,TARGET,Grip Tip,Grip Tip,2BA,0.26,24.0,,,,,ソフト,https://top.target-darts.jp/
-tip,CONDOR,TIP,CONDOR TIP,2BA,0.27,25.0,,,,,ソフト,https://www.dartshive.jp/
+tip,CONDOR,TIP,CONDOR TIP,2BA,0.3,,,,,,ソフト,https://www.tito-shop.com/product/detail/condor-tip
+tip,CONDOR,TIP,CONDOR TIP ULTIMATE,2BA,0.4,31.0,,,,,ソフト,https://www.tito-shop.com/product/detail/ti-con-001-
 tip,Harrows,Clic,Clic Soft Tip,2BA,0.25,24.0,,,,,ソフト,https://www.dartshive.jp/
 tip,TRiNiDAD,Steel Point,Steel Conversion Point 32mm,No.5,1.20,32.0,,スチール,,,ハード,https://e-tri.jp/
 tip,unicorn,Steel Point,Gary Anderson Steel Point 35mm,No.5,1.30,35.0,,スチール,,,ハード,https://www.dartshive.jp/
