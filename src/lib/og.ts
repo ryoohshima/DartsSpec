@@ -15,7 +15,7 @@ const COLOR = {
   textPrimary: '#F5F5F7',
   textSecondary: '#9A9AAF',
   border: '#2A2A38',
-  accent: '#00E5C7',
+  accent: '#22E0FF',
 } as const
 
 export type OgPart = { brand: string; series?: string | null; name: string } | null
