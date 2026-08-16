@@ -14,7 +14,7 @@
 - [x] DYNASTY shaft・flight: 全見送り（シャフト単体製品なし、Dee.flight は数値スペック非公開）
 - [x] カナ検索別名に新 5 ブランドを追加（計 16 ブランド）
 - [x] 検証: db:seed（189 件）/ typecheck / vitest 25 passed / UI 表示・カナ検索（「あるてぃま」）確認
-- [ ] develop 宛 draft PR + #101 へ見送り分の追記
+- [x] develop 宛 draft PR（#102）+ #101 へ見送り分の追記（コメント済み）
 
 ## Review
 
