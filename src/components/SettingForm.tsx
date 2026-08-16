@@ -169,7 +169,7 @@ export function SettingForm({
             onChange={(e) =>
               onChange({ ...values, visibility: e.target.checked ? 'private' : 'public' })
             }
-            className="h-4 w-4 accent-[#00e5c7]"
+            className="h-4 w-4 accent-accent"
           />
           非公開にする（自分だけが閲覧できます）
         </label>
