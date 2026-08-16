@@ -1,28 +1,27 @@
-# design.pen 更新のコード反映（2026-08-11）
+# #89 パーツマスタ seed の実データ収集（2026-08-16）
 
-design.pen 側の更新（保存ゲート / 検索モーダル / モバイルタブ / LP 統合ほか）を src/ へ反映する。
-ブランチ: `feature/design-sync-ui`（base: develop）
+ブランチ: `feature/seed-parts-real-data`（base: develop）
+方針: 公式スペックページを出典（source_url）に、issue #89 の着手順でブランドごとに 1 コミットずつ積む。検証済み分だけ PR に載せる。
 
 ## Todo
 
-- [x] Header: CTA 文言「はじめる」→「登録」（ログイン時表示は実装済みのため文言のみ）
-- [x] SaveGateModal 新規作成 + new.tsx で未ログイン保存時にモーダル表示（下書き保存→登録/ログインへ redirect 付き遷移）
-- [x] PartsSelector をプルダウン→検索モーダル方式に置換（キーワード絞り込み・チェック表示・未選択行・インライン SVG アイコン）
-- [x] SettingForm にモバイル専用セグメントタブ（入力/プレビュー）を追加（両列マウント維持・CSS 切替、edit 画面は共有フォーム経由で自動対応）
-- [x] LP: InteractiveDemo を削除し SHARE CARD ショーケース（静的 SettingCard 2 枚）へ置換
-- [x] 検証: vitest（18 passed）/ typecheck / build / ブラウザ実機確認（モバイル 375px・デスクトップ 1280px）
-- [x] コミット分割 + develop 宛 draft PR
-
-## コード変更なしと判断した項目
-
-- ログイン時ヘッダー（ZppQt）: セッション分岐は実装済み
-- 品質修正（enabled:false の警告）・配置整理: design.pen 内のみの変更
-- 利用規約・プライバシー: routes/terms.tsx・privacy.tsx と Footer リンクが既存
+- [x] CONDOR: 一体型 2 行規約で shaft/flight 対を登録（AXE 3 形状 11 対）+ TIP 公式化 + ULTIMATE 追加
+- [x] `pnpm db:seed` → 実 UI で flight⇔shaft の連動を双方向確認（Wing Slim M / Standard S で双方向 OK）
+- [x] JOKER DRIVER: バレル 4 種追加（CRYSTAL VALKYRIE / HALCYON、DRASTIC IZZY / DEATH CUBE）
+- [x] MONSTER: バレル 2 種追加（OGRE Ⅶ / GUNNER Ⅴ）。tip は公式製品を確認できず見送り
+- [x] TIGA: バレル 4 種追加（LOCHE2 / LUMINOUS3 / UNRAVEL / HERMIT2）
+- [x] 検証: db:seed（169 件）/ typecheck / vitest 25 passed / UI でバレル一覧表示確認
+- [x] コミット分割（ブランドごと 4 コミット）+ develop 宛 draft PR
 
 ## Review
 
-- デザインの glass 系 hex は既存トークン（bg-surface / border-line / bg-accent）へ写像。アイコンはライブラリ未導入のためインライン SVG（search / x / check / lock）で対応
-- 検索モーダルはカナ検索に対応（BRAND_KANA 別名マップ + ひらがな→カタカナ正規化）。デザインのデモ「コスモ」→ COSMO DARTS を実機で確認済み
-- モバイルのプレビュータブ表示中は保存ボタンごとフォーム列を非表示（design の vQEXf と同挙動）。両列は常時マウントで状態を維持
-- 保存ゲートは下書きを localStorage 保存してからモーダル表示。登録/ログインの両リンクに `redirect=/settings/new?resume=1` を付与し、既存の復帰自動保存フローへ接続
-- `src/components/InteractiveDemo.tsx`・`src/lib/curateDemoParts.ts`・`tests/curateDemoParts.test.ts` はユーザーが手動削除し、コミット済み（セッションのパーミッションで自動削除が拒否されたため）
+- CONDOR AXE は Standard/Small（S/M/L/XL）+ Wing Slim（S/M/L、XL なし）の 11 対を 2 行規約で登録。UI で flight⇔shaft の双方向連動を実機確認済み
+- shaft 行の重量 1.6g は公式計測値（Small L・1 本）の代表値補完。サイズ別実測は公式未公表のため #11 の品質チェック対象
+- 出典はすべてメーカー公式（TiTO 直営 / JOKERDIRECT / MONSTER 公式 / TIGA 公式）。公式で数値が確認できないモデル（CRYSTAL INSPIRE、THE KING、KITTEN Ⅲ、CIVIL、MONSTER チップ）は登録を見送り
+- 旧 CONDOR 行（dartshive 出典・weight 空欄）は ID 変化により再 seed で自動 is_active=0 化
+
+## メモ
+
+- seed.ts は全 seed 行を is_active=0 にしてから upsert するため、改名（ID 変化）した旧行は自動無効化される
+- flight 行は weight_g=0（空欄は参考値表示になる）、実測値は shaft 行に持たせる
+- 公式にスペック表が無い値は代表値補完せず、その行を見送る
