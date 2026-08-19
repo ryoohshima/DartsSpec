@@ -7,13 +7,17 @@ const MARK_PATH =
 export function BackgroundDartsMark() {
   return (
     <div aria-hidden className="pointer-events-none fixed inset-0 overflow-hidden">
-      <svg
-        viewBox="0 0 301.258 1023.971"
-        preserveAspectRatio="none"
-        className="absolute top-[54px] -right-[61px] h-[450px] w-[160px] origin-top-left rotate-45 overflow-visible opacity-30 blur-[11px] lg:top-[48px] lg:-right-[155px] lg:h-[1153px] lg:w-[323px] lg:rotate-[70deg] lg:opacity-[0.22] lg:blur-[35px]"
-      >
-        <path d={MARK_PATH} fill="var(--color-accent)" />
-      </svg>
+      {/* design.pen デスクトップ（1280px）の中央寄せカラムにアンカーする。
+          viewport 直接基準だと 1280px 超の画面でマークだけ右端に離れてしまう */}
+      <div className="relative mx-auto h-full max-w-[1280px]">
+        <svg
+          viewBox="0 0 301.258 1023.971"
+          preserveAspectRatio="none"
+          className="absolute top-[54px] -right-[61px] h-[450px] w-[160px] origin-top-left rotate-45 overflow-visible opacity-30 blur-[11px] lg:top-[48px] lg:-right-[155px] lg:h-[1153px] lg:w-[323px] lg:rotate-[70deg] lg:opacity-[0.22] lg:blur-[35px]"
+        >
+          <path d={MARK_PATH} fill="var(--color-accent)" />
+        </svg>
+      </div>
     </div>
   )
 }

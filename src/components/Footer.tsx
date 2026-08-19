@@ -12,13 +12,8 @@ export function Footer() {
           <Link to="/privacy" className="transition-colors hover:text-primary">
             プライバシーポリシー
           </Link>
-          <a
-            href="https://github.com/ryoohshima/DartsSpec/issues"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="transition-colors hover:text-primary"
-          >
-            お問い合わせ・バグ報告
+          <a href="mailto:contact@darts-spec.com" className="transition-colors hover:text-primary">
+            お問い合わせ
           </a>
         </nav>
       </div>
