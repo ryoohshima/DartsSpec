@@ -79,13 +79,8 @@ function TermsPage() {
           <h2 className="mb-2 font-bold">お問い合わせ</h2>
           <p className="text-sm leading-relaxed text-secondary">
             本規約に関するお問い合わせは{' '}
-            <a
-              href="https://github.com/ryoohshima/DartsSpec/issues"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-accent hover:underline"
-            >
-              GitHub Issues
+            <a href="mailto:contact@darts-spec.com" className="text-accent hover:underline">
+              contact@darts-spec.com
             </a>{' '}
             までお願いします。
           </p>
