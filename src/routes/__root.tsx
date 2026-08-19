@@ -37,8 +37,8 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         <MotionConfig reducedMotion="user">
           <LazyMotion features={domAnimation}>
             <BackgroundDartsMark />
-            {/* relative: 固定背景（positioned）より後に描画させるため */}
-            <div className="relative flex min-h-dvh flex-col">
+            {/* relative: 固定背景（positioned）より後に描画させるため。pt-14 は固定ヘッダー（h-14）の逃し */}
+            <div className="relative flex min-h-dvh flex-col pt-14">
               <Header />
               <main className="flex-1">{children}</main>
               <Footer />
