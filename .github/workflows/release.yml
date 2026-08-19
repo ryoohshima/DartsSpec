@@ -1,0 +1,66 @@
+# リリース: 手動トリガー一発で develop→main マージ → タグ作成 → GitHub Release
+# （ノート自動生成）→ 本番デプロイまでを一貫実行する。
+#
+# 使い方: Actions → Release → Run workflow でバージョン（例: v0.2.0）を入力して起動。
+#
+# 備考: GITHUB_TOKEN による push はワークフローを連鎖発火させないため、
+# デプロイは deploy.yml を workflow_call で呼んで同一ラン内で実行する。
+
+name: Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: リリースバージョン（例 v0.2.0）
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      VERSION: ${{ inputs.version }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: バージョン形式とタグ重複を検証
+        run: |
+          echo "$VERSION" | grep -Eq '^v[0-9]+\.[0-9]+\.[0-9]+$' || {
+            echo "::error::バージョン形式が不正でござる（v0.2.0 の形式）: $VERSION"
+            exit 1
+          }
+          if git rev-parse -q --verify "refs/tags/$VERSION" > /dev/null; then
+            echo "::error::タグ $VERSION は既に存在するでござる"
+            exit 1
+          fi
+      - name: develop を main にマージ
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git merge --no-ff origin/develop -m "release: $VERSION"
+          git push origin main
+      - name: タグと GitHub Release を作成
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git tag "$VERSION"
+          git push origin "$VERSION"
+          gh release create "$VERSION" --target main --title "$VERSION" --generate-notes
+
+  deploy:
+    needs: release
+    uses: ./.github/workflows/deploy.yml
+    with:
+      ref: ${{ inputs.version }}
+    secrets: inherit

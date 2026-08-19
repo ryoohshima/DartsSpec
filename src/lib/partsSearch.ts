@@ -1,12 +1,20 @@
-/** カナ検索用のブランド別名（シードの全 8 ブランド分） */
+/** カナ検索用のブランド別名（シードの全 16 ブランド分） */
 const BRAND_KANA: Record<string, string> = {
   CONDOR: 'コンドル',
   'COSMO DARTS': 'コスモ コスモダーツ',
+  'D.craft': 'ディークラフト',
+  DMC: 'ディーエムシー',
   DYNASTY: 'ダイナスティー ダイナスティ',
   Harrows: 'ハローズ',
+  'JOKER DRIVER': 'ジョーカードライバー ジョーカー',
   'L-style': 'エルスタイル',
+  MONSTER: 'モンスター',
+  One80: 'ワンエイティ',
+  Samurai: 'サムライ',
   TARGET: 'ターゲット',
+  TIGA: 'ティガ',
   TRiNiDAD: 'トリニダード',
+  'ULTIMA DARTS': 'アルティマ アルティマダーツ',
   unicorn: 'ユニコーン',
 }
 

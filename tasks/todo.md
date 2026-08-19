@@ -1,28 +1,23 @@
-# design.pen 更新のコード反映（2026-08-11）
+# #89 パーツマスタ seed の実データ収集・第 2 弾（2026-08-16）
 
-design.pen 側の更新（保存ゲート / 検索モーダル / モバイルタブ / LP 統合ほか）を src/ へ反映する。
-ブランチ: `feature/design-sync-ui`（base: develop）
+ブランチ: `feature/seed-parts-remaining-brands`（base: develop）
+前提: 第 1 弾（CONDOR / JOKER DRIVER / MONSTER / TIGA）は PR #100 でマージ済み。見送り分の再調査は #101。
 
 ## Todo
 
-- [x] Header: CTA 文言「はじめる」→「登録」（ログイン時表示は実装済みのため文言のみ）
-- [x] SaveGateModal 新規作成 + new.tsx で未ログイン保存時にモーダル表示（下書き保存→登録/ログインへ redirect 付き遷移）
-- [x] PartsSelector をプルダウン→検索モーダル方式に置換（キーワード絞り込み・チェック表示・未選択行・インライン SVG アイコン）
-- [x] SettingForm にモバイル専用セグメントタブ（入力/プレビュー）を追加（両列マウント維持・CSS 切替、edit 画面は共有フォーム経由で自動対応）
-- [x] LP: InteractiveDemo を削除し SHARE CARD ショーケース（静的 SettingCard 2 枚）へ置換
-- [x] 検証: vitest（18 passed）/ typecheck / build / ブラウザ実機確認（モバイル 375px・デスクトップ 1280px）
-- [x] コミット分割 + develop 宛 draft PR
-
-## コード変更なしと判断した項目
-
-- ログイン時ヘッダー（ZppQt）: セッション分岐は実装済み
-- 品質修正（enabled:false の警告）・配置整理: design.pen 内のみの変更
-- 利用規約・プライバシー: routes/terms.tsx・privacy.tsx と Footer リンクが既存
+- [x] L-style: チップ拡充（Premium Lippoint 30 / Premium Lippoint No.5）
+- [x] DMC: バレル 5 種（NO NAME 01 / Sabre Tetsuya_SP3 / Hawk Masaki_SP1.5 / Avenger 18g・20g）
+- [x] Samurai: バレル 2 種（Samurai17 / Samurai1 改）。公式は旧 TLS で WebFetch 不可 → curl で直接確認
+- [x] ULTIMA DARTS: バレル 4 種（KAISERⅥ GOLD / Rush BurnⅡ / RAGNAROK 18.5g / GLANZⅢ）
+- [x] One80: バレル 4 種（GRIPTRON GT4 17.9g・20g / VAELKRIS V6 18g・20g、日本公式 one80dart.jp）
+- [x] D.craft: バレル 3 種（GOBLET / DIEZ / ZONE BRASS mHz-2 RED）。DC チップ / PC シャフトは公式ページ不在で見送り
+- [x] DYNASTY shaft・flight: 全見送り（シャフト単体製品なし、Dee.flight は数値スペック非公開）
+- [x] カナ検索別名に新 5 ブランドを追加（計 16 ブランド）
+- [x] 検証: db:seed（189 件）/ typecheck / vitest 25 passed / UI 表示・カナ検索（「あるてぃま」）確認
+- [x] develop 宛 draft PR（#102）+ #101 へ見送り分の追記（コメント済み）
 
 ## Review
 
-- デザインの glass 系 hex は既存トークン（bg-surface / border-line / bg-accent）へ写像。アイコンはライブラリ未導入のためインライン SVG（search / x / check / lock）で対応
-- 検索モーダルはカナ検索に対応（BRAND_KANA 別名マップ + ひらがな→カタカナ正規化）。デザインのデモ「コスモ」→ COSMO DARTS を実機で確認済み
-- モバイルのプレビュータブ表示中は保存ボタンごとフォーム列を非表示（design の vQEXf と同挙動）。両列は常時マウントで状態を維持
-- 保存ゲートは下書きを localStorage 保存してからモーダル表示。登録/ログインの両リンクに `redirect=/settings/new?resume=1` を付与し、既存の復帰自動保存フローへ接続
-- `src/components/InteractiveDemo.tsx`・`src/lib/curateDemoParts.ts`・`tests/curateDemoParts.test.ts` はユーザーが手動削除し、コミット済み（セッションのパーミッションで自動削除が拒否されたため）
+- 調査はブランド別サブエージェント 4 班に並列オフロードし、報告値は必ず公式ページの直接取得で抜き打ち検証した。検証により「KAISER III → 実際は KAISERⅥ GOLD」の名称誤りを検出・修正。One80 は台湾サイト（規格・素材未記載）でなく日本公式（2BA・タングステン 90% 明記）の現行モデルを採用
+- Samurai / DYNASTY 公式は旧 TLS 構成で WebFetch 不可。curl 直叩きで Samurai は取得成功（規格 2BA のみ小売表記で裏取り）
+- 新規見送り: D.craft の DC チップ・PC シャフト（公式サイトに商品ページ無し）、DYNASTY の shaft（単体製品なし）・flight（Dee.flight は数値非公開）→ #101 に追記

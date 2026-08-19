@@ -1,6 +1,7 @@
 import type { QueryClient } from '@tanstack/react-query'
 import { HeadContent, Scripts, createRootRouteWithContext } from '@tanstack/react-router'
 import { LazyMotion, MotionConfig, domAnimation } from 'framer-motion'
+import { BackgroundDartsMark } from '@/components/BackgroundDartsMark'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 
@@ -35,7 +36,9 @@ function RootDocument({ children }: { children: React.ReactNode }) {
       <body className="min-h-dvh bg-base font-sans text-primary antialiased">
         <MotionConfig reducedMotion="user">
           <LazyMotion features={domAnimation}>
-            <div className="flex min-h-dvh flex-col">
+            <BackgroundDartsMark />
+            {/* relative: 固定背景（positioned）より後に描画させるため */}
+            <div className="relative flex min-h-dvh flex-col">
               <Header />
               <main className="flex-1">{children}</main>
               <Footer />
