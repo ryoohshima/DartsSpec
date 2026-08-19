@@ -2,6 +2,8 @@
 
 ダーツのマイセッティング（バレル / シャフト / フライト / チップ）を作成・保存し、公開 URL と動的 OGP で SNS にシェアできる CGM サービス。
 
+本番環境: <https://darts-spec.com>
+
 ## 技術スタック
 
 TanStack Start / React 19 / Tailwind CSS v4 / Drizzle ORM / D1 / better-auth / Cloudflare Workers
