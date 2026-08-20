@@ -51,7 +51,7 @@ export const Route = createFileRoute('/s/$id')({
 function PublicSettingPage() {
   const setting = Route.useLoaderData()
   const { created } = Route.useSearch()
-  const { data: session } = useSession()
+  const { data: session, isPending } = useSession()
   const isOwner = session?.user.id === setting.userId
 
   return (
@@ -103,12 +103,15 @@ function PublicSettingPage() {
         }
       />
 
-      <p className="mt-8 text-center text-sm text-secondary">
-        自分のセッティングもつくってみませんか？{' '}
-        <Link to="/settings/new" className="text-accent hover:underline">
-          無料でつくる
-        </Link>
-      </p>
+      {/* 未登録の訪問者（シェア URL 経由）向けの導線。ログイン済みには表示しない */}
+      {!isPending && !session && (
+        <p className="mt-8 text-center text-sm text-secondary">
+          自分のセッティングもつくってみませんか？{' '}
+          <Link to="/settings/new" className="text-accent hover:underline">
+            無料でつくる
+          </Link>
+        </p>
+      )}
     </div>
   )
 }
