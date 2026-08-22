@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import { Link, useNavigate } from '@tanstack/react-router'
+import { MorphIcon } from 'morphicons/react'
+import { Menu, X } from 'lucide'
 import { signOut, useSession } from '@/lib/auth-client'
 
 const linkClass = 'rounded-lg px-3 py-2 text-secondary transition-colors hover:text-primary'
@@ -70,21 +72,7 @@ export function Header() {
           aria-expanded={menuOpen}
           className="rounded-lg p-2 text-secondary transition-colors hover:text-primary sm:hidden"
         >
-          <svg
-            aria-hidden
-            viewBox="0 0 24 24"
-            className="h-6 w-6"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-          >
-            {menuOpen ? (
-              <path d="M6 6l12 12M18 6L6 18" />
-            ) : (
-              <path d="M4 7h16M4 12h16M4 17h16" />
-            )}
-          </svg>
+          <MorphIcon icon={menuOpen ? X : Menu} size={24} strokeWidth={2} reducedMotion="user" />
         </button>
       </div>
       {menuOpen && (
