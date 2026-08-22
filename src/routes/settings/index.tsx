@@ -34,7 +34,7 @@ function MyPage() {
       </div>
 
       {settings.length === 0 ? (
-        <div className="rounded-2xl border border-line bg-surface p-10 text-center text-secondary">
+        <div className="rounded-2xl border border-line bg-surface p-10 text-secondary">
           <p className="mb-4">まだセッティングがありません。</p>
           <Link to="/settings/new" className="text-accent hover:underline">
             最初のセッティングをつくる
