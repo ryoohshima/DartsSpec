@@ -39,7 +39,7 @@ export const Route = createFileRoute('/s/$id')({
   },
   component: PublicSettingPage,
   notFoundComponent: () => (
-    <div className="mx-auto max-w-md px-4 py-24 text-center">
+    <div className="mx-auto max-w-md px-4 py-24">
       <p className="mb-4 text-secondary">このセッティングは存在しないか、非公開です。</p>
       <Link to="/" className="text-accent hover:underline">
         トップへ戻る
@@ -105,7 +105,7 @@ function PublicSettingPage() {
 
       {/* 未登録の訪問者（シェア URL 経由）向けの導線。ログイン済みには表示しない */}
       {!isPending && !session && (
-        <p className="mt-8 text-center text-sm text-secondary">
+        <p className="mt-8 text-sm text-secondary">
           自分のセッティングもつくってみませんか？{' '}
           <Link to="/settings/new" className="text-accent hover:underline">
             無料でつくる
