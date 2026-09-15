@@ -32,7 +32,7 @@ const SHOWCASE_PARTS = {
 function LandingPage() {
   return (
     <div className="mx-auto max-w-5xl px-4">
-      <section className="flex flex-col items-center gap-6 py-24 text-center">
+      <section className="flex flex-col items-start gap-6 py-24">
         <p className="text-sm font-semibold tracking-[0.2em] text-accent">MY DARTS SETTING</p>
         <h1 className="max-w-2xl text-4xl font-bold leading-tight sm:text-5xl">
           マイセッティングを、
@@ -43,7 +43,7 @@ function LandingPage() {
           バレル・シャフト・フライト・チップを選ぶだけで、総重量と全長を自動計算。
           あなたのセッティングを 1 枚のカードにして、X でシェアできます。
         </p>
-        <div className="flex flex-col items-center gap-3 sm:flex-row">
+        <div className="flex flex-col items-stretch gap-3 self-stretch sm:flex-row sm:items-center sm:self-auto">
           <Link
             to="/settings/new"
             className="rounded-xl bg-accent px-8 py-4 text-lg font-bold text-base transition-opacity hover:opacity-90"
@@ -65,7 +65,7 @@ function LandingPage() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-80px' }}
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-        className="flex flex-col items-center gap-6 pb-16"
+        className="flex flex-col items-start gap-6 pb-16"
       >
         <p className="text-[13px] font-semibold tracking-[0.17em] text-accent">SHARE CARD</p>
         <div className="grid w-full gap-6 sm:grid-cols-2">

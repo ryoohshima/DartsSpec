@@ -3,7 +3,7 @@ import { Link } from '@tanstack/react-router'
 export function Footer() {
   return (
     <footer className="border-t border-line">
-      <div className="mx-auto flex max-w-5xl flex-col items-center gap-3 px-4 py-6 text-xs text-secondary sm:flex-row sm:justify-between">
+      <div className="mx-auto flex max-w-5xl flex-col items-start gap-3 px-4 py-6 text-xs text-secondary sm:flex-row sm:items-center sm:justify-between">
         <p>© {new Date().getFullYear()} darts spec</p>
         <nav className="flex flex-wrap items-center gap-4">
           <Link to="/terms" className="transition-colors hover:text-primary">
