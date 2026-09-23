@@ -23,6 +23,7 @@ darts spec 実装（2026-07-05、PR #57〜#60）で得た教訓。同じミス�
 - **日本語 OGP のフォント**: Noto Sans JP の全字形 base64 埋め込みは無料枠（3MB gzip）に収まらない。Google Fonts の `text=` サブセット API で描画文字だけ取得し、生成結果を Cloudflare Cache に載せる構成が現実的（gzip 合計 1.3MB に収まった）。
 - Satori の絵文字は `emoji: 'twemoji'` オプションで解決（デフォルトは豆腐になる）。
 - `caches.default` は DOM の CacheStorage 型と衝突する。Workers 実体に合わせてキャストが必要。
+- **`VITE_` プレフィックスのビルド時変数は CI のビルドステップ env に設定する**: Workers のシークレット / vars ではビルド後に注入できない。未設定でもビルドは通り「ローカルでは動くが本番では空文字」と静かに壊れる（v0.1.0 で og:image が相対 URL になり SNS カードが壊れかけた。deploy.yml に直接記載して解決）。
 
 ## pnpm / ツール
 

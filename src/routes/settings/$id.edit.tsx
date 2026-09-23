@@ -17,7 +17,7 @@ export const Route = createFileRoute('/settings/$id/edit')({
   },
   component: EditSettingPage,
   notFoundComponent: () => (
-    <div className="mx-auto max-w-md px-4 py-24 text-center text-secondary">
+    <div className="mx-auto max-w-md px-4 py-24 text-secondary">
       セッティングが見つかりませんでした。
     </div>
   ),
@@ -53,7 +53,7 @@ function EditSettingPage() {
   // 所有者チェックは server function 側でも必ず行う（ここは表示制御のみ）
   if (!sessionPending && session && session.user.id !== setting.userId) {
     return (
-      <div className="mx-auto max-w-md px-4 py-24 text-center text-secondary">
+      <div className="mx-auto max-w-md px-4 py-24 text-secondary">
         このセッティングを編集する権限がありません。
       </div>
     )
