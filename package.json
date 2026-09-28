@@ -33,7 +33,7 @@
 		"react-dom": "^19.2.7",
 		"tailwindcss": "^4.3.2",
 		"workers-og": "^0.0.27",
-		"zod": "^4.4.3"
+		"zod": "^4.6.5"
 	},
 	"devDependencies": {
 		"@cloudflare/vite-plugin": "^1.43.0",
