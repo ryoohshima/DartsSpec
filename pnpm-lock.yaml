@@ -36,8 +36,8 @@ importers:
         specifier: ^1.31.0
         version: 1.31.0
       morphicons:
-        specifier: ^1.7.0
-        version: 1.7.0(react@19.3.0)
+        specifier: ^1.7.1
+        version: 1.7.1(react@19.3.0)
       react:
         specifier: ^19.3.0
         version: 19.3.0
@@ -2108,8 +2108,8 @@ packages:
     engines: {node: '>=22.0.0'}
     hasBin: true
 
-  morphicons@1.7.0:
-    resolution: {integrity: sha512-MOqSK+O5RdxynER5016vUvvqQaHkqqWYmNpocsk9TEszUZ9PB/K52Yqq8AGTRK1NUO5dj8znGSEVf9slqEIQaw==}
+  morphicons@1.7.1:
+    resolution: {integrity: sha512-q5ylxy5/d7vBg0OAzanlooXf05PekovMYDuuQVpr6vAQZxl99lrJbaIi+jJ32PXQf9WEEaDO2pbNBsx1ZhEnFQ==}
     peerDependencies:
       react: '>=18'
       react-native: '>=0.71'
@@ -4067,7 +4067,7 @@ snapshots:
       - bufferutil
       - utf-8-validate
 
-  morphicons@1.7.0(react@19.3.0):
+  morphicons@1.7.1(react@19.3.0):
     optionalDependencies:
       react: 19.3.0
 
