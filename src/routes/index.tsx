@@ -3,6 +3,10 @@ import { m } from 'framer-motion'
 import { SettingCard } from '@/components/SettingCard'
 
 export const Route = createFileRoute('/')({
+  head: () => ({ meta: [
+    { title: 'darts spec | ダーツを知る・観る・投げる' },
+    { name: 'description', content: 'ダーツの基本ルール、大会日程、投げられる場所を紹介。道具を選んで自分のセッティングを計算・保存・共有できます。' },
+  ] }),
   component: LandingPage,
 })
 
@@ -32,32 +36,37 @@ const SHOWCASE_PARTS = {
 function LandingPage() {
   return (
     <div className="mx-auto max-w-5xl px-4">
-      <section className="flex flex-col items-start gap-6 py-24">
-        <p className="text-sm font-semibold tracking-[0.2em] text-accent">MY DARTS SETTING</p>
-        <h1 className="max-w-2xl text-4xl font-bold leading-tight sm:text-5xl">
-          マイセッティングを、
-          <br />
-          美しくシェアしよう。
+      <section className="flex flex-col items-start gap-6 py-14 sm:py-20">
+        <p className="text-sm font-semibold tracking-[0.2em] text-accent">DARTS GUIDE & SETTING</p>
+        <h1 className="max-w-2xl text-balance text-4xl font-bold leading-tight sm:text-5xl">
+          <span className="block sm:inline">ダーツを、</span>
+          <span className="block sm:inline">もっと身近に。</span>
         </h1>
         <p className="max-w-xl text-secondary">
-          バレル・シャフト・フライト・チップを選ぶだけで、総重量と全長を自動計算。
-          あなたのセッティングを 1 枚のカードにして、X でシェアできます。
+          ルールを知る。大会を観る。投げる場所を見つける。
+          初めての一投から、自分だけのセッティングまで。
         </p>
-        <div className="flex flex-col items-stretch gap-3 self-stretch sm:flex-row sm:items-center sm:self-auto">
-          <Link
-            to="/settings/new"
-            className="rounded-xl bg-accent px-8 py-4 text-lg font-bold text-base transition-opacity hover:opacity-90"
-          >
-            セッティングをつくる
-          </Link>
-          <Link
-            to="/sign-in"
-            className="rounded-xl border border-line px-8 py-4 text-lg text-secondary transition-colors hover:text-primary"
-          >
-            ログイン
-          </Link>
+        <div className="flex flex-wrap gap-3">
+          <Link to="/rules" className="rounded-xl bg-accent px-6 py-3 font-bold text-base hover:opacity-90">基本ルールを読む</Link>
+          <Link to="/settings/new" className="rounded-xl border border-line px-6 py-3 font-semibold hover:border-accent">セッティングをつくる</Link>
         </div>
-        <p className="text-xs text-secondary">登録なしでもお試しいただけます（保存時にログイン）</p>
+      </section>
+
+      <section aria-labelledby="explore-heading" className="pb-16">
+        <h2 id="explore-heading" className="mb-6 text-2xl font-bold">今日のダーツを、ここから。</h2>
+        <div className="grid gap-4 sm:grid-cols-2">
+          {[
+            { to: '/rules', title: 'ルールを知る', detail: 'カウントアップ・01・クリケットの遊び方と、基本のマナー。' },
+            { to: '/tournaments', title: '大会を探す', detail: '開催日や地域から、大会日程と公式の案内を確認。' },
+            { to: '/places', title: '投げる場所を探す', detail: '機種別の公式店舗検索と、お店選びのポイント。' },
+            { to: '/settings/new', title: '道具を組み合わせる', detail: '4つのパーツから総重量・全長を計算。保存して共有。' },
+          ].map((item) => (
+            <Link key={item.to} to={item.to} className="group rounded-2xl border border-line bg-surface p-6 transition-colors hover:border-accent">
+              <h3 className="text-lg font-bold group-hover:text-accent">{item.title} →</h3>
+              <p className="mt-3 text-sm leading-relaxed text-secondary">{item.detail}</p>
+            </Link>
+          ))}
+        </div>
       </section>
 
       <m.section
@@ -67,7 +76,9 @@ function LandingPage() {
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
         className="flex flex-col items-start gap-6 pb-16"
       >
-        <p className="text-[13px] font-semibold tracking-[0.17em] text-accent">SHARE CARD</p>
+        <p className="text-[13px] font-semibold tracking-[0.17em] text-accent">MY DARTS SETTING</p>
+        <h2 className="text-2xl font-bold">自分の道具を、1枚のカードに。</h2>
+        <p className="text-secondary">パーツを選ぶと総重量・全長を自動計算。登録なしで試せて、ログインすると保存・共有できます。</p>
         <div className="grid w-full gap-6 sm:grid-cols-2">
           <SettingCard
             title="週末リーグ用セッティング"
