@@ -12,11 +12,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { title: 'darts spec | ダーツのマイセッティングを美しくシェア' },
+      { title: 'darts spec | ダーツを知る・観る・投げる' },
       {
         name: 'description',
         content:
-          'バレル・シャフト・フライト・チップを選ぶだけで総重量と全長を自動計算。あなたのダーツセッティングを 1 枚のカードにして SNS でシェアできます。',
+          'ダーツのルール、大会日程、投げられる場所を紹介。セッティングの計算・保存・共有もできるダーツ情報サイト。',
       },
     ],
     links: [

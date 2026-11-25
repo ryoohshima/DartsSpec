@@ -23,6 +23,9 @@ export function Header() {
   // モバイルメニューとデスクトップ nav で共通のリンク群
   const navItems = (
     <>
+      <Link to="/rules" onClick={closeMenu} className={linkClass} activeProps={{ 'aria-current': 'page', style: { color: 'var(--color-accent)' } }}>ルール</Link>
+      <Link to="/tournaments" onClick={closeMenu} className={linkClass} activeProps={{ 'aria-current': 'page', style: { color: 'var(--color-accent)' } }}>大会</Link>
+      <Link to="/places" onClick={closeMenu} className={linkClass} activeProps={{ 'aria-current': 'page', style: { color: 'var(--color-accent)' } }}>場所</Link>
       <Link to="/settings/new" onClick={closeMenu} className={linkClass}>
         つくる
       </Link>
@@ -47,7 +50,7 @@ export function Header() {
           <Link
             to="/sign-up"
             onClick={closeMenu}
-            className="rounded-lg bg-accent px-3 py-2 font-semibold text-base transition-opacity hover:opacity-90 sm:text-center"
+            className="rounded-lg bg-accent px-3 py-2 font-semibold text-base transition-opacity hover:opacity-90 lg:text-center"
           >
             登録
           </Link>
@@ -61,7 +64,7 @@ export function Header() {
     // header 自身に変えるため、内側に置くと全画面配置（top-14 bottom-0）が潰れる
     <>
       {menuOpen && (
-        <nav className="fixed inset-x-0 top-14 bottom-0 z-40 flex flex-col gap-1 border-t border-line bg-base/80 px-4 py-6 text-base backdrop-blur sm:hidden">
+        <nav id="mobile-navigation" aria-label="メインメニュー" className="fixed inset-x-0 top-14 bottom-0 z-40 flex flex-col gap-1 overflow-y-auto border-t border-line bg-base/80 px-4 py-6 text-base backdrop-blur lg:hidden">
           {navItems}
         </nav>
       )}
@@ -76,13 +79,14 @@ export function Header() {
             darts <span className="text-accent">spec</span>
           </span>
         </Link>
-        <nav className="hidden items-center gap-2 text-sm sm:flex">{navItems}</nav>
+        <nav aria-label="メインメニュー" className="hidden items-center gap-2 text-sm lg:flex">{navItems}</nav>
         <button
           type="button"
           onClick={() => setMenuOpen((open) => !open)}
           aria-label="メニュー"
           aria-expanded={menuOpen}
-          className="rounded-lg p-2 text-secondary transition-colors hover:text-primary sm:hidden"
+          aria-controls={menuOpen ? 'mobile-navigation' : undefined}
+          className="rounded-lg p-2 text-secondary transition-colors hover:text-primary lg:hidden"
         >
           <MorphIcon icon={menuOpen ? X : Menu} size={24} strokeWidth={2} reducedMotion="user" />
         </button>

@@ -9,31 +9,29 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as TermsRouteImport } from './routes/terms'
-import { Route as SignUpRouteImport } from './routes/sign-up'
-import { Route as SignInRouteImport } from './routes/sign-in'
-import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as PlacesRouteImport } from './routes/places'
+import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as RulesRouteImport } from './routes/rules'
+import { Route as SignInRouteImport } from './routes/sign-in'
+import { Route as SignUpRouteImport } from './routes/sign-up'
+import { Route as TermsRouteImport } from './routes/terms'
+import { Route as TournamentsRouteImport } from './routes/tournaments'
+import { Route as SIdRouteImport } from './routes/s/$id'
 import { Route as SettingsIndexRouteImport } from './routes/settings/index'
 import { Route as SettingsNewRouteImport } from './routes/settings/new'
-import { Route as SIdRouteImport } from './routes/s/$id'
-import { Route as SettingsIdEditRouteImport } from './routes/settings/$id.edit'
-import { Route as ApiOgIdRouteImport } from './routes/api/og/$id'
 import { Route as ApiAuthSplatRouteImport } from './routes/api/auth/$'
+import { Route as ApiOgIdRouteImport } from './routes/api/og/$id'
+import { Route as SettingsIdEditRouteImport } from './routes/settings/$id.edit'
 
-const TermsRoute = TermsRouteImport.update({
-  id: '/terms',
-  path: '/terms',
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const SignUpRoute = SignUpRouteImport.update({
-  id: '/sign-up',
-  path: '/sign-up',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SignInRoute = SignInRouteImport.update({
-  id: '/sign-in',
-  path: '/sign-in',
+const PlacesRoute = PlacesRouteImport.update({
+  id: '/places',
+  path: '/places',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PrivacyRoute = PrivacyRouteImport.update({
@@ -41,9 +39,34 @@ const PrivacyRoute = PrivacyRouteImport.update({
   path: '/privacy',
   getParentRoute: () => rootRouteImport,
 } as any)
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
+const RulesRoute = RulesRouteImport.update({
+  id: '/rules',
+  path: '/rules',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SignInRoute = SignInRouteImport.update({
+  id: '/sign-in',
+  path: '/sign-in',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SignUpRoute = SignUpRouteImport.update({
+  id: '/sign-up',
+  path: '/sign-up',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TournamentsRoute = TournamentsRouteImport.update({
+  id: '/tournaments',
+  path: '/tournaments',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SIdRoute = SIdRouteImport.update({
+  id: '/s/$id',
+  path: '/s/$id',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SettingsIndexRoute = SettingsIndexRouteImport.update({
@@ -56,14 +79,9 @@ const SettingsNewRoute = SettingsNewRouteImport.update({
   path: '/settings/new',
   getParentRoute: () => rootRouteImport,
 } as any)
-const SIdRoute = SIdRouteImport.update({
-  id: '/s/$id',
-  path: '/s/$id',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SettingsIdEditRoute = SettingsIdEditRouteImport.update({
-  id: '/settings/$id/edit',
-  path: '/settings/$id/edit',
+const ApiAuthSplatRoute = ApiAuthSplatRouteImport.update({
+  id: '/api/auth/$',
+  path: '/api/auth/$',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ApiOgIdRoute = ApiOgIdRouteImport.update({
@@ -71,18 +89,21 @@ const ApiOgIdRoute = ApiOgIdRouteImport.update({
   path: '/api/og/$id',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ApiAuthSplatRoute = ApiAuthSplatRouteImport.update({
-  id: '/api/auth/$',
-  path: '/api/auth/$',
+const SettingsIdEditRoute = SettingsIdEditRouteImport.update({
+  id: '/settings/$id/edit',
+  path: '/settings/$id/edit',
   getParentRoute: () => rootRouteImport,
 } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/places': typeof PlacesRoute
   '/privacy': typeof PrivacyRoute
+  '/rules': typeof RulesRoute
   '/sign-in': typeof SignInRoute
   '/sign-up': typeof SignUpRoute
   '/terms': typeof TermsRoute
+  '/tournaments': typeof TournamentsRoute
   '/s/$id': typeof SIdRoute
   '/settings/new': typeof SettingsNewRoute
   '/settings/': typeof SettingsIndexRoute
@@ -92,10 +113,13 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/places': typeof PlacesRoute
   '/privacy': typeof PrivacyRoute
+  '/rules': typeof RulesRoute
   '/sign-in': typeof SignInRoute
   '/sign-up': typeof SignUpRoute
   '/terms': typeof TermsRoute
+  '/tournaments': typeof TournamentsRoute
   '/s/$id': typeof SIdRoute
   '/settings/new': typeof SettingsNewRoute
   '/settings': typeof SettingsIndexRoute
@@ -106,10 +130,13 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/places': typeof PlacesRoute
   '/privacy': typeof PrivacyRoute
+  '/rules': typeof RulesRoute
   '/sign-in': typeof SignInRoute
   '/sign-up': typeof SignUpRoute
   '/terms': typeof TermsRoute
+  '/tournaments': typeof TournamentsRoute
   '/s/$id': typeof SIdRoute
   '/settings/new': typeof SettingsNewRoute
   '/settings/': typeof SettingsIndexRoute
@@ -121,10 +148,13 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/places'
     | '/privacy'
+    | '/rules'
     | '/sign-in'
     | '/sign-up'
     | '/terms'
+    | '/tournaments'
     | '/s/$id'
     | '/settings/new'
     | '/settings/'
@@ -134,10 +164,13 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/places'
     | '/privacy'
+    | '/rules'
     | '/sign-in'
     | '/sign-up'
     | '/terms'
+    | '/tournaments'
     | '/s/$id'
     | '/settings/new'
     | '/settings'
@@ -147,10 +180,13 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/places'
     | '/privacy'
+    | '/rules'
     | '/sign-in'
     | '/sign-up'
     | '/terms'
+    | '/tournaments'
     | '/s/$id'
     | '/settings/new'
     | '/settings/'
@@ -161,10 +197,13 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  PlacesRoute: typeof PlacesRoute
   PrivacyRoute: typeof PrivacyRoute
+  RulesRoute: typeof RulesRoute
   SignInRoute: typeof SignInRoute
   SignUpRoute: typeof SignUpRoute
   TermsRoute: typeof TermsRoute
+  TournamentsRoute: typeof TournamentsRoute
   SIdRoute: typeof SIdRoute
   SettingsNewRoute: typeof SettingsNewRoute
   SettingsIndexRoute: typeof SettingsIndexRoute
@@ -175,25 +214,18 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/terms': {
-      id: '/terms'
-      path: '/terms'
-      fullPath: '/terms'
-      preLoaderRoute: typeof TermsRouteImport
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/sign-up': {
-      id: '/sign-up'
-      path: '/sign-up'
-      fullPath: '/sign-up'
-      preLoaderRoute: typeof SignUpRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/sign-in': {
-      id: '/sign-in'
-      path: '/sign-in'
-      fullPath: '/sign-in'
-      preLoaderRoute: typeof SignInRouteImport
+    '/places': {
+      id: '/places'
+      path: '/places'
+      fullPath: '/places'
+      preLoaderRoute: typeof PlacesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/privacy': {
@@ -203,11 +235,46 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PrivacyRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
+    '/rules': {
+      id: '/rules'
+      path: '/rules'
+      fullPath: '/rules'
+      preLoaderRoute: typeof RulesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sign-in': {
+      id: '/sign-in'
+      path: '/sign-in'
+      fullPath: '/sign-in'
+      preLoaderRoute: typeof SignInRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sign-up': {
+      id: '/sign-up'
+      path: '/sign-up'
+      fullPath: '/sign-up'
+      preLoaderRoute: typeof SignUpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tournaments': {
+      id: '/tournaments'
+      path: '/tournaments'
+      fullPath: '/tournaments'
+      preLoaderRoute: typeof TournamentsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/s/$id': {
+      id: '/s/$id'
+      path: '/s/$id'
+      fullPath: '/s/$id'
+      preLoaderRoute: typeof SIdRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/settings/': {
@@ -224,18 +291,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SettingsNewRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/s/$id': {
-      id: '/s/$id'
-      path: '/s/$id'
-      fullPath: '/s/$id'
-      preLoaderRoute: typeof SIdRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/settings/$id/edit': {
-      id: '/settings/$id/edit'
-      path: '/settings/$id/edit'
-      fullPath: '/settings/$id/edit'
-      preLoaderRoute: typeof SettingsIdEditRouteImport
+    '/api/auth/$': {
+      id: '/api/auth/$'
+      path: '/api/auth/$'
+      fullPath: '/api/auth/$'
+      preLoaderRoute: typeof ApiAuthSplatRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/api/og/$id': {
@@ -245,11 +305,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiOgIdRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/api/auth/$': {
-      id: '/api/auth/$'
-      path: '/api/auth/$'
-      fullPath: '/api/auth/$'
-      preLoaderRoute: typeof ApiAuthSplatRouteImport
+    '/settings/$id/edit': {
+      id: '/settings/$id/edit'
+      path: '/settings/$id/edit'
+      fullPath: '/settings/$id/edit'
+      preLoaderRoute: typeof SettingsIdEditRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
@@ -257,10 +317,13 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  PlacesRoute: PlacesRoute,
   PrivacyRoute: PrivacyRoute,
+  RulesRoute: RulesRoute,
   SignInRoute: SignInRoute,
   SignUpRoute: SignUpRoute,
   TermsRoute: TermsRoute,
+  TournamentsRoute: TournamentsRoute,
   SIdRoute: SIdRoute,
   SettingsNewRoute: SettingsNewRoute,
   SettingsIndexRoute: SettingsIndexRoute,
